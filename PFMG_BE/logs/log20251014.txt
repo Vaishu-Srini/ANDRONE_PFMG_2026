@@ -1,0 +1,2084 @@
+2025-10-14 10:47:06.261 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-14 10:47:07.783 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-14 10:47:08.237 +05:30 [INF] Executed DbCommand (430ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-14 10:47:08.483 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-14 10:47:08.562 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-14 10:47:08.589 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-14 10:47:08.676 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-14 10:47:08.678 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-14 10:47:08.680 +05:30 [INF] Hosting environment: Development
+2025-10-14 10:47:08.683 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-14 10:47:18.561 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/index.html - null null
+2025-10-14 10:47:18.930 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/index.html - 200 null text/html;charset=utf-8 374.3769ms
+2025-10-14 10:47:19.560 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-10-14 10:47:20.148 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 587.9778ms
+2025-10-14 10:47:35.912 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 1459
+2025-10-14 10:47:35.947 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:47:35.971 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-14 10:47:36.213 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 10:47:36.303 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-14 10:47:36.694 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-14 10:47:36.743 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 410.1255ms
+2025-10-14 10:47:36.754 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 10:47:36.770 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 795.0651 ms
+2025-10-14 10:47:36.788 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 876.0145ms
+2025-10-14 10:48:27.685 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 1467
+2025-10-14 10:48:27.712 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:48:27.725 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 10:48:27.735 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-14 10:48:29.340 +05:30 [INF] Executed DbCommand (157ms) [Parameters=[@__p_0='0'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[DateCreated], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[PlatformId], [e].[Symbol]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-14 10:48:29.436 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-14 10:48:29.449 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 1698.674ms
+2025-10-14 10:48:29.461 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 10:48:29.473 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 1752.3756 ms
+2025-10-14 10:48:29.499 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 1814.3203ms
+2025-10-14 10:49:29.398 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mission/save - application/json 182
+2025-10-14 10:49:29.416 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:49:29.430 +05:30 [INF] Executing endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-14 10:49:29.455 +05:30 [INF] Route matched with {action = "SaveMission", controller = "Mission"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMission(Anadrone_BackEnd.DTOs.MissionDto) on controller MissionController (Anadrone_BackEnd).
+2025-10-14 10:49:29.855 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@__name_0='string' (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionName] = @__name_0
+2025-10-14 10:49:30.509 +05:30 [INF] Executed DbCommand (110ms) [Parameters=[@p0='string' (Nullable = false) (Size = 4000), @p1='2025-10-14T05:19:24.4990000Z', @p2='string' (Nullable = false) (Size = 4000), @p3='0', @p4='0', @p5='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [missions] ([Description], [MissionDate], [MissionName], [MissionType], [Status], [UserId])
+OUTPUT INSERTED.[MissionId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-14 10:49:30.609 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.MissionDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 10:49:30.638 +05:30 [INF] Executed action MissionController.SaveMission (Anadrone_BackEnd) in 1170.1612ms
+2025-10-14 10:49:30.647 +05:30 [INF] Executed endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-14 10:49:30.655 +05:30 [INF] HTTP POST /api/Mission/save responded 201 in 1232.8596 ms
+2025-10-14 10:49:30.669 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mission/save - 201 null application/json; charset=utf-8 1271.6321ms
+2025-10-14 10:49:45.850 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 394
+2025-10-14 10:49:45.868 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:49:45.876 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:49:45.896 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-14 10:49:45.989 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-14 10:49:46.049 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 140.0569ms
+2025-10-14 10:49:46.058 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:49:46.065 +05:30 [INF] HTTP POST /api/Platform/save responded 400 in 189.4720 ms
+2025-10-14 10:49:46.078 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 400 null application/problem+json; charset=utf-8 228.0486ms
+2025-10-14 10:50:12.209 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 395
+2025-10-14 10:50:12.232 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:50:12.238 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:50:12.248 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-14 10:50:12.269 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-14 10:50:12.280 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 15.7076ms
+2025-10-14 10:50:12.290 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:50:12.298 +05:30 [INF] HTTP POST /api/Platform/save responded 400 in 59.8414 ms
+2025-10-14 10:50:12.311 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 400 null application/problem+json; charset=utf-8 102.2113ms
+2025-10-14 10:51:11.030 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 409
+2025-10-14 10:51:11.057 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:51:11.065 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:51:11.074 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-14 10:51:11.103 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-14 10:51:11.113 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 24.4555ms
+2025-10-14 10:51:11.123 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:51:11.132 +05:30 [INF] HTTP POST /api/Platform/save responded 400 in 67.1294 ms
+2025-10-14 10:51:11.145 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 400 null application/problem+json; charset=utf-8 114.8186ms
+2025-10-14 10:51:29.611 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 503
+2025-10-14 10:51:29.642 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:51:29.650 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:51:29.658 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-14 10:51:29.832 +05:30 [INF] Executed DbCommand (91ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__p_0
+2025-10-14 10:51:29.848 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-14 10:51:29.860 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 186.8685ms
+2025-10-14 10:51:29.870 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:51:29.878 +05:30 [INF] HTTP POST /api/Platform/save responded 400 in 229.1732 ms
+2025-10-14 10:51:29.892 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 400 null application/json; charset=utf-8 281.5093ms
+2025-10-14 10:51:36.915 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 503
+2025-10-14 10:51:36.953 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:51:36.960 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:51:36.969 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-14 10:51:37.030 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__p_0
+2025-10-14 10:51:37.160 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__name_0='BetaDrone' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[PlatformName] = @__name_0
+2025-10-14 10:51:37.452 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@p0='UAV-01' (Nullable = false) (Size = 4000), @p1='#000000' (Nullable = false) (Size = 4000), @p2='2025-09-09T05:00:10.9750000Z', @p3='Unmanned aerial vehicle detected near border zone' (Nullable = false) (Size = 4000), @p4='True', @p5='#FF0000' (Nullable = false) (Size = 4000), @p6='1', @p7='BetaDrone' (Nullable = false) (Size = 200), @p8='0x536F6D65417564696F44617461' (Nullable = false) (Size = 8000), @p9='2', @p10='0', @p11='0', @p12='0x536F6D65417564696F44617461' (Nullable = false) (Size = 8000), @p13='501'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [platforms] ([AlternateSymbol], [BackGroundColor], [CreatedAt], [Description], [DisplayStatus], [ForeGroundColor], [MissionId], [PlatformName], [PreviewSymbol], [Priority], [SymbolCodeType], [ThreatType], [ThumbnailImage], [UserId])
+OUTPUT INSERTED.[PlatformId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-14 10:51:37.483 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.PlatformDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 10:51:37.508 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 524.5671ms
+2025-10-14 10:51:37.519 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:51:37.527 +05:30 [INF] HTTP POST /api/Platform/save responded 201 in 567.4435 ms
+2025-10-14 10:51:37.542 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 201 null application/json; charset=utf-8 626.5915ms
+2025-10-14 10:51:58.107 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 382
+2025-10-14 10:51:58.129 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:51:58.139 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-14 10:51:58.164 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-14 10:51:58.230 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-14 10:51:58.241 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 62.0093ms
+2025-10-14 10:51:58.251 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-14 10:51:58.259 +05:30 [INF] HTTP POST /api/Emitter/save responded 400 in 121.2823 ms
+2025-10-14 10:51:58.274 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 400 null application/json; charset=utf-8 167.1141ms
+2025-10-14 10:52:31.023 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 384
+2025-10-14 10:52:31.063 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:52:31.070 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-14 10:52:31.077 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-14 10:52:31.111 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-14 10:52:31.122 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 30.212ms
+2025-10-14 10:52:31.132 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-14 10:52:31.141 +05:30 [INF] HTTP POST /api/Emitter/save responded 400 in 71.6440 ms
+2025-10-14 10:52:31.155 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 400 null application/json; charset=utf-8 131.277ms
+2025-10-14 10:53:17.379 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 384
+2025-10-14 10:53:17.398 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:53:17.406 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-14 10:53:17.415 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-14 10:53:17.519 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[PlatformId] = @__p_0
+2025-10-14 10:53:17.655 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__dto_EmitterName_0='string' (Size = 200), @__dto_EmitterId_1='0'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[DateCreated], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[PlatformId], [e].[Symbol]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterName] = @__dto_EmitterName_0 AND [e].[EmitterId] <> @__dto_EmitterId_1
+2025-10-14 10:53:17.830 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p0='#0011FF' (Nullable = false) (Size = 4000), @p1='2025-10-14T05:23:17.6862553Z', @p2='string' (Nullable = false) (Size = 4000), @p3='string' (Nullable = false) (Size = 200), @p4='0', @p5='#1122FF' (Nullable = false) (Size = 4000), @p6='True', @p7='True', @p8='2025-10-14T05:23:17.6863554Z', @p9='24.5' (Nullable = false) (Size = 4000), @p10='36.5' (Nullable = false) (Size = 4000), @p11='1', @p12='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitters] ([BackgroundColor], [DateCreated], [Description], [EmitterName], [EmitterType], [ForegroundColor], [IsGroundOnly], [IsUnknown], [LastModified], [Latitude], [Longitude], [PlatformId], [Symbol])
+OUTPUT INSERTED.[EmitterId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2025-10-14 10:53:17.857 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.EmitterDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 10:53:17.883 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 452.7562ms
+2025-10-14 10:53:17.894 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-14 10:53:17.902 +05:30 [INF] HTTP POST /api/Emitter/save responded 201 in 496.5199 ms
+2025-10-14 10:53:17.916 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 201 null application/json; charset=utf-8 537.6249ms
+2025-10-14 10:53:30.479 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 1467
+2025-10-14 10:53:30.503 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:53:30.514 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 10:53:30.524 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-14 10:53:30.604 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[DateCreated], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[PlatformId], [e].[Symbol]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-14 10:53:30.699 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__dto_ModeName_0='string' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[ModeId], [m].[AlternateSymbol], [m].[BgColor], [m].[DateCreated], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[GroundOnly], [m].[LastModified], [m].[LethalRange], [m].[ModeName], [m].[ModeType], [m].[PlatformType], [m].[PriStaggerLevel], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[ModeName] = @__dto_ModeName_0
+2025-10-14 10:53:31.052 +05:30 [INF] Executed DbCommand (57ms) [Parameters=[@p0='string' (Nullable = false) (Size = 4000), @p1='string' (Nullable = false) (Size = 4000), @p2='2025-10-14T05:23:30.7194171Z', @p3='string' (Nullable = false) (Size = 4000), @p4='0', @p5='1', @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8='2025-10-14T05:23:30.7194180Z', @p9='0', @p10='string' (Nullable = false) (Size = 200), @p11='0', @p12='0', @p13=NULL (Nullable = false) (Size = 4000), @p14='0', @p15='0', @p16='0', @p17='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modes] ([AlternateSymbol], [BgColor], [DateCreated], [Description], [EirpValue], [EmitterId], [FgColor], [GroundOnly], [LastModified], [LethalRange], [ModeName], [ModeType], [PlatformType], [PriStaggerLevel], [SubMode], [SymbolCodeType], [TestType], [ThreatType])
+OUTPUT INSERTED.[ModeId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2025-10-14 10:53:31.146 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Anadrone_BackEnd.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'PriStaggerLevel', table 'anadronev_latest.dbo.modes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:f4b8759b-9548-4b11-8f98-da9cb61720d9
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'PriStaggerLevel', table 'anadronev_latest.dbo.modes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:f4b8759b-9548-4b11-8f98-da9cb61720d9
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-10-14 10:53:31.212 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-14 10:53:31.223 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 686.2238ms
+2025-10-14 10:53:31.233 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 10:53:31.240 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 726.0635 ms
+2025-10-14 10:53:31.253 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 773.4325ms
+2025-10-14 10:53:59.258 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 1537
+2025-10-14 10:53:59.276 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 10:53:59.284 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-14 10:53:59.315 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[DateCreated], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[PlatformId], [e].[Symbol]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-14 10:53:59.345 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__dto_ModeName_0='string' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[ModeId], [m].[AlternateSymbol], [m].[BgColor], [m].[DateCreated], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[GroundOnly], [m].[LastModified], [m].[LethalRange], [m].[ModeName], [m].[ModeType], [m].[PlatformType], [m].[PriStaggerLevel], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[ModeName] = @__dto_ModeName_0
+2025-10-14 10:53:59.379 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p0='string' (Nullable = false) (Size = 4000), @p1='string' (Nullable = false) (Size = 4000), @p2='2025-10-14T05:23:59.3629722Z', @p3='string' (Nullable = false) (Size = 4000), @p4='0', @p5='1', @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8='2025-10-14T05:23:59.3629724Z', @p9='0', @p10='string' (Nullable = false) (Size = 200), @p11='0', @p12='0', @p13=NULL (Nullable = false) (Size = 4000), @p14='0', @p15='0', @p16='0', @p17='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modes] ([AlternateSymbol], [BgColor], [DateCreated], [Description], [EirpValue], [EmitterId], [FgColor], [GroundOnly], [LastModified], [LethalRange], [ModeName], [ModeType], [PlatformType], [PriStaggerLevel], [SubMode], [SymbolCodeType], [TestType], [ThreatType])
+OUTPUT INSERTED.[ModeId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2025-10-14 10:53:59.401 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Anadrone_BackEnd.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'PriStaggerLevel', table 'anadronev_latest.dbo.modes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:f4b8759b-9548-4b11-8f98-da9cb61720d9
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'PriStaggerLevel', table 'anadronev_latest.dbo.modes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:f4b8759b-9548-4b11-8f98-da9cb61720d9
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-10-14 10:53:59.464 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-14 10:53:59.474 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 177.2253ms
+2025-10-14 10:53:59.484 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 10:53:59.492 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 216.2814 ms
+2025-10-14 10:53:59.507 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 249.7489ms
+2025-10-14 10:57:53.290 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-14 10:57:54.319 +05:30 [INF] Executed DbCommand (478ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE DATABASE [anadronev11];
+2025-10-14 10:57:54.523 +05:30 [INF] Executed DbCommand (187ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [anadronev11] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-10-14 10:57:54.575 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-14 10:57:54.739 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [drones] (
+    [DroneId] int NOT NULL IDENTITY,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_drones] PRIMARY KEY ([DroneId])
+);
+2025-10-14 10:57:54.754 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitterLibraries] (
+    [EmitterId] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [EmitterType] int NOT NULL,
+    [Symbol] int NOT NULL,
+    [ForegroundColor] nvarchar(max) NOT NULL,
+    [BackgroundColor] nvarchar(max) NOT NULL,
+    [IsUnknown] bit NOT NULL,
+    [IsGroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [Latitude] nvarchar(max) NOT NULL,
+    [Longitude] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_emitterLibraries] PRIMARY KEY ([EmitterId])
+);
+2025-10-14 10:57:54.768 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitterReadings] (
+    [Id] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(max) NOT NULL,
+    [TimeUtc] datetime2 NOT NULL,
+    [BoresightError] smallint NOT NULL,
+    CONSTRAINT [PK_emitterReadings] PRIMARY KEY ([Id])
+);
+2025-10-14 10:57:54.780 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [jammingLibraries] (
+    [JammingId] int NOT NULL IDENTITY,
+    [TechniqueName] nvarchar(200) NOT NULL,
+    [TechniqueType] int NOT NULL,
+    [PullInOut] bit NOT NULL,
+    [MinRange] real NOT NULL,
+    [MaxRange] real NOT NULL,
+    [RateOfChangeOfRange] real NOT NULL,
+    [MinVelocity] real NOT NULL,
+    [MaxVelocity] real NOT NULL,
+    [RateOfChangeOfVelocity] real NOT NULL,
+    [WalkTime] nvarchar(max) NOT NULL,
+    [HoldTime] nvarchar(max) NOT NULL,
+    [StopTime] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_jammingLibraries] PRIMARY KEY ([JammingId])
+);
+2025-10-14 10:57:54.796 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [missions] (
+    [MissionId] int NOT NULL IDENTITY,
+    [MissionName] nvarchar(max) NOT NULL,
+    [MissionDate] datetime2 NOT NULL,
+    [MissionType] int NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    [Status] int NOT NULL,
+    CONSTRAINT [PK_missions] PRIMARY KEY ([MissionId])
+);
+2025-10-14 10:57:54.815 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeLibraries] (
+    [ModeLibraryId] int NOT NULL IDENTITY,
+    [ModeName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [AudioId] varbinary(max) NOT NULL,
+    [ModeType] int NOT NULL,
+    [PlatformType] int NOT NULL,
+    [SubMode] int NOT NULL,
+    [ThreatType] int NOT NULL,
+    [TestType] int NOT NULL,
+    [PriManualFlag] bit NOT NULL,
+    [PriSwitchEpgFlag] bit NOT NULL,
+    [PriStaggerLevel] nvarchar(max) NOT NULL,
+    [FreqIsSwitch] bit NOT NULL,
+    [FreqCount] int NOT NULL,
+    [PriCount] int NOT NULL,
+    [PwCount] int NOT NULL,
+    [SymbolCodeType] smallint NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [BgColor] nvarchar(max) NOT NULL,
+    [FgColor] nvarchar(max) NOT NULL,
+    [EirpValue] int NOT NULL,
+    [LethalRange] int NOT NULL,
+    [GroundOnly] bit NOT NULL,
+    [DisplayPriority] bit NOT NULL,
+    [IsAntennaScan] bit NOT NULL,
+    [AngleSwitch] smallint NOT NULL,
+    [CreatedBy] nvarchar(max) NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [PowerLevelDb] int NOT NULL,
+    [PvTimeBaseMsec] int NOT NULL,
+    [PvOfMinSample] int NOT NULL,
+    [PvMeasurementTime] int NOT NULL,
+    [MlPercentage] real NOT NULL,
+    [MlTimeBase] int NOT NULL,
+    [MlMinSamples] int NOT NULL,
+    [MlMeasurementTime] int NOT NULL,
+    [FrequencyAttribute] nvarchar(max) NOT NULL,
+    [PriAttribute] nvarchar(max) NOT NULL,
+    [MaxPowerThreshouldDb] int NOT NULL,
+    [LssName] nvarchar(max) NOT NULL,
+    [Comment] nvarchar(max) NOT NULL,
+    [RangeEstimation] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_modeLibraries] PRIMARY KEY ([ModeLibraryId])
+);
+2025-10-14 10:57:54.835 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [platformLibraries] (
+    [PlatformId] int NOT NULL IDENTITY,
+    [PlatformName] nvarchar(200) NOT NULL,
+    [ThreatType] int NOT NULL,
+    [Priority] int NOT NULL,
+    [DisplayStatus] bit NOT NULL,
+    [SymbolCodeType] int NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [ForeGroundColor] nvarchar(max) NOT NULL,
+    [BackGroundColor] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ThumbnailImage] varbinary(max) NOT NULL,
+    [PreviewSymbol] varbinary(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_platformLibraries] PRIMARY KEY ([PlatformId])
+);
+2025-10-14 10:57:54.856 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(max) NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    [Role] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2025-10-14 10:57:54.872 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [userTokens] (
+    [Id] int NOT NULL IDENTITY,
+    [Token] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_userTokens] PRIMARY KEY ([Id])
+);
+2025-10-14 10:57:54.899 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [platforms] (
+    [PlatformId] int NOT NULL IDENTITY,
+    [PlatformName] nvarchar(200) NOT NULL,
+    [ThreatType] int NOT NULL,
+    [Priority] int NOT NULL,
+    [DisplayStatus] bit NOT NULL,
+    [SymbolCodeType] int NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [ForeGroundColor] nvarchar(max) NOT NULL,
+    [BackGroundColor] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ThumbnailImage] varbinary(max) NOT NULL,
+    [PreviewSymbol] varbinary(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UserId] int NOT NULL,
+    [MissionId] int NOT NULL,
+    CONSTRAINT [PK_platforms] PRIMARY KEY ([PlatformId]),
+    CONSTRAINT [FK_platforms_missions_MissionId] FOREIGN KEY ([MissionId]) REFERENCES [missions] ([MissionId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:54.919 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeDfLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeDfLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeDfLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:54.934 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [MinFrequency] real NOT NULL,
+    [MaxFrequency] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:54.950 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange1] real NOT NULL,
+    [MaxTestRange1] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:54.963 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeLssDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [DistanceKm] real NOT NULL,
+    [MinPowerDbm] real NOT NULL,
+    [MaxPowerDbm] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeLssDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeLssDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:54.974 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [MinPri] real NOT NULL,
+    [MaxPri] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [JitterMean] real NOT NULL,
+    [JitterPercentage] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:54.987 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriPwRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange1] real NOT NULL,
+    [MaxTestRange1] real NOT NULL,
+    [MinTestRange2] real NOT NULL,
+    [MaxTestRange2] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriPwRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriPwRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:54.999 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:55.013 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriStaggerLevelLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriStaggerLevelLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriStaggerLevelLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:55.027 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePwDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [MinPw] real NOT NULL,
+    [MaxPw] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePwDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePwDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:55.039 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeScanDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [ScanType] int NOT NULL,
+    [MinScanSector] real NOT NULL,
+    [MaxScanSector] real NOT NULL,
+    [MinScanRate] real NOT NULL,
+    [MaxScanRate] real NOT NULL,
+    [NominalScanRate] real NOT NULL,
+    [SideLobeLevel] real NOT NULL,
+    [SideLobeStd] real NOT NULL,
+    [MinBeamWidth] real NOT NULL,
+    [MaxBeamWidth] real NOT NULL,
+    [CalculatedTot] real NOT NULL,
+    [MinTot] real NOT NULL,
+    [MaxTot] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeScanDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeScanDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:55.055 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitters] (
+    [EmitterId] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [EmitterType] int NOT NULL,
+    [Symbol] int NOT NULL,
+    [ForegroundColor] nvarchar(max) NOT NULL,
+    [BackgroundColor] nvarchar(max) NOT NULL,
+    [IsUnknown] bit NOT NULL,
+    [IsGroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [Latitude] nvarchar(max) NOT NULL,
+    [Longitude] nvarchar(max) NOT NULL,
+    [PlatformId] int NOT NULL,
+    CONSTRAINT [PK_emitters] PRIMARY KEY ([EmitterId]),
+    CONSTRAINT [FK_emitters_platforms_PlatformId] FOREIGN KEY ([PlatformId]) REFERENCES [platforms] ([PlatformId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:55.071 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modes] (
+    [ModeId] int NOT NULL IDENTITY,
+    [ModeName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ModeType] int NOT NULL,
+    [PlatformType] int NOT NULL,
+    [SubMode] int NOT NULL,
+    [ThreatType] int NOT NULL,
+    [TestType] int NOT NULL,
+    [PriStaggerLevel] nvarchar(max) NOT NULL,
+    [SymbolCodeType] smallint NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [BgColor] nvarchar(max) NOT NULL,
+    [FgColor] nvarchar(max) NOT NULL,
+    [EirpValue] int NOT NULL,
+    [LethalRange] int NOT NULL,
+    [GroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [EmitterId] int NOT NULL,
+    CONSTRAINT [PK_modes] PRIMARY KEY ([ModeId]),
+    CONSTRAINT [FK_modes_emitters_EmitterId] FOREIGN KEY ([EmitterId]) REFERENCES [emitters] ([EmitterId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:55.088 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [jammings] (
+    [JammingId] int NOT NULL IDENTITY,
+    [TechniqueName] nvarchar(200) NOT NULL,
+    [TechniqueType] int NOT NULL,
+    [PullInOut] bit NOT NULL,
+    [MinRange] real NOT NULL,
+    [MaxRange] real NOT NULL,
+    [RateOfChangeOfRange] real NOT NULL,
+    [MinVelocity] real NOT NULL,
+    [MaxVelocity] real NOT NULL,
+    [RateOfChangeOfVelocity] real NOT NULL,
+    [WalkTime] nvarchar(max) NOT NULL,
+    [HoldTime] nvarchar(max) NOT NULL,
+    [StopTime] nvarchar(max) NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_jammings] PRIMARY KEY ([JammingId]),
+    CONSTRAINT [FK_jammings_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:55.105 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [MinFrequency] real NOT NULL,
+    [MaxFrequency] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:55.121 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [MinPri] real NOT NULL,
+    [MaxPri] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [JitterMean] real NOT NULL,
+    [JitterPercentage] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modePriDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:55.136 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePwDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [MinPw] real NOT NULL,
+    [MaxPw] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modePwDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePwDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:55.153 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeScanDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [ScanType] int NOT NULL,
+    [MinScanSector] real NOT NULL,
+    [MaxScanSector] real NOT NULL,
+    [MinScanRate] real NOT NULL,
+    [MaxScanRate] real NOT NULL,
+    [NominalScanRate] real NOT NULL,
+    [SideLobeLevel] real NOT NULL,
+    [SideLobeStd] real NOT NULL,
+    [MinBeamWidth] real NOT NULL,
+    [MaxBeamWidth] real NOT NULL,
+    [CalculatedTot] real NOT NULL,
+    [MinTot] real NOT NULL,
+    [MaxTot] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modeScanDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeScanDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 10:57:55.174 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_emitters_PlatformId] ON [emitters] ([PlatformId]);
+2025-10-14 10:57:55.187 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_jammings_ModeId] ON [jammings] ([ModeId]);
+2025-10-14 10:57:55.201 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeDfLibraries_ModeLibraryId] ON [modeDfLibraries] ([ModeLibraryId]);
+2025-10-14 10:57:55.215 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyDetailLibraries_ModeLibraryId] ON [modeFrequencyDetailLibraries] ([ModeLibraryId]);
+2025-10-14 10:57:55.229 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyDetails_ModeId] ON [modeFrequencyDetails] ([ModeId]);
+2025-10-14 10:57:55.243 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyRangeLibraries_ModeLibraryId] ON [modeFrequencyRangeLibraries] ([ModeLibraryId]);
+2025-10-14 10:57:55.257 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeLssDetailLibraries_ModeLibraryId] ON [modeLssDetailLibraries] ([ModeLibraryId]);
+2025-10-14 10:57:55.271 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriDetailLibraries_ModeLibraryId] ON [modePriDetailLibraries] ([ModeLibraryId]);
+2025-10-14 10:57:55.284 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriDetails_ModeId] ON [modePriDetails] ([ModeId]);
+2025-10-14 10:57:55.298 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriPwRangeLibraries_ModeLibraryId] ON [modePriPwRangeLibraries] ([ModeLibraryId]);
+2025-10-14 10:57:55.313 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriRangeLibraries_ModeLibraryId] ON [modePriRangeLibraries] ([ModeLibraryId]);
+2025-10-14 10:57:55.328 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriStaggerLevelLibraries_ModeLibraryId] ON [modePriStaggerLevelLibraries] ([ModeLibraryId]);
+2025-10-14 10:57:55.343 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePwDetailLibraries_ModeLibraryId] ON [modePwDetailLibraries] ([ModeLibraryId]);
+2025-10-14 10:57:55.357 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePwDetails_ModeId] ON [modePwDetails] ([ModeId]);
+2025-10-14 10:57:55.371 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modes_EmitterId] ON [modes] ([EmitterId]);
+2025-10-14 10:57:55.386 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeScanDetailLibraries_ModeLibraryId] ON [modeScanDetailLibraries] ([ModeLibraryId]);
+2025-10-14 10:57:55.400 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeScanDetails_ModeId] ON [modeScanDetails] ([ModeId]);
+2025-10-14 10:57:55.414 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_platforms_MissionId] ON [platforms] ([MissionId]);
+2025-10-14 10:57:55.556 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-14 10:57:55.591 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-14 10:57:55.609 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-14 10:57:55.676 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-14 10:57:55.680 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-14 10:57:55.682 +05:30 [INF] Hosting environment: Development
+2025-10-14 10:57:55.685 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-14 10:58:31.381 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mission/save - application/json 182
+2025-10-14 10:58:31.468 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:58:31.525 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-14 10:58:31.633 +05:30 [INF] Executing endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-14 10:58:31.693 +05:30 [INF] Route matched with {action = "SaveMission", controller = "Mission"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMission(Anadrone_BackEnd.DTOs.MissionDto) on controller MissionController (Anadrone_BackEnd).
+2025-10-14 10:58:33.128 +05:30 [INF] Executed DbCommand (146ms) [Parameters=[@__name_0='string' (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionName] = @__name_0
+2025-10-14 10:58:34.145 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[@p0='string' (Nullable = false) (Size = 4000), @p1='2025-10-14T05:19:24.4990000Z', @p2='string' (Nullable = false) (Size = 4000), @p3='0', @p4='0', @p5='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [missions] ([Description], [MissionDate], [MissionName], [MissionType], [Status], [UserId])
+OUTPUT INSERTED.[MissionId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-14 10:58:34.301 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.MissionDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 10:58:34.389 +05:30 [INF] Executed action MissionController.SaveMission (Anadrone_BackEnd) in 2672.4914ms
+2025-10-14 10:58:34.417 +05:30 [INF] Executed endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-14 10:58:34.437 +05:30 [INF] HTTP POST /api/Mission/save responded 201 in 2909.0446 ms
+2025-10-14 10:58:34.475 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mission/save - 201 null application/json; charset=utf-8 3100.3909ms
+2025-10-14 10:58:41.406 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 503
+2025-10-14 10:58:41.429 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:58:41.440 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:58:41.461 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-14 10:58:41.888 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__p_0
+2025-10-14 10:58:41.993 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__name_0='BetaDrone' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[PlatformName] = @__name_0
+2025-10-14 10:58:42.255 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@p0='UAV-01' (Nullable = false) (Size = 4000), @p1='#000000' (Nullable = false) (Size = 4000), @p2='2025-09-09T05:00:10.9750000Z', @p3='Unmanned aerial vehicle detected near border zone' (Nullable = false) (Size = 4000), @p4='True', @p5='#FF0000' (Nullable = false) (Size = 4000), @p6='1', @p7='BetaDrone' (Nullable = false) (Size = 200), @p8='0x536F6D65417564696F44617461' (Nullable = false) (Size = 8000), @p9='2', @p10='0', @p11='0', @p12='0x536F6D65417564696F44617461' (Nullable = false) (Size = 8000), @p13='501'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [platforms] ([AlternateSymbol], [BackGroundColor], [CreatedAt], [Description], [DisplayStatus], [ForeGroundColor], [MissionId], [PlatformName], [PreviewSymbol], [Priority], [SymbolCodeType], [ThreatType], [ThumbnailImage], [UserId])
+OUTPUT INSERTED.[PlatformId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-14 10:58:42.289 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.PlatformDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 10:58:42.320 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 845.1104ms
+2025-10-14 10:58:42.330 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 10:58:42.338 +05:30 [INF] HTTP POST /api/Platform/save responded 201 in 900.9749 ms
+2025-10-14 10:58:42.353 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 201 null application/json; charset=utf-8 947.6327ms
+2025-10-14 10:58:52.371 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 384
+2025-10-14 10:58:52.407 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:58:52.422 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-14 10:58:52.442 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-14 10:58:52.621 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[PlatformId] = @__p_0
+2025-10-14 10:58:52.753 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@__dto_EmitterName_0='string' (Size = 200), @__dto_EmitterId_1='0'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[DateCreated], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[PlatformId], [e].[Symbol]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterName] = @__dto_EmitterName_0 AND [e].[EmitterId] <> @__dto_EmitterId_1
+2025-10-14 10:58:52.944 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@p0='#0011FF' (Nullable = false) (Size = 4000), @p1='2025-10-14T05:28:52.7817810Z', @p2='string' (Nullable = false) (Size = 4000), @p3='string' (Nullable = false) (Size = 200), @p4='0', @p5='#1122FF' (Nullable = false) (Size = 4000), @p6='True', @p7='True', @p8='2025-10-14T05:28:52.7818689Z', @p9='24.5' (Nullable = false) (Size = 4000), @p10='36.5' (Nullable = false) (Size = 4000), @p11='1', @p12='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitters] ([BackgroundColor], [DateCreated], [Description], [EmitterName], [EmitterType], [ForegroundColor], [IsGroundOnly], [IsUnknown], [LastModified], [Latitude], [Longitude], [PlatformId], [Symbol])
+OUTPUT INSERTED.[EmitterId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2025-10-14 10:58:52.974 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.EmitterDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 10:58:52.999 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 542.2442ms
+2025-10-14 10:58:53.009 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-14 10:58:53.017 +05:30 [INF] HTTP POST /api/Emitter/save responded 201 in 600.9010 ms
+2025-10-14 10:58:53.031 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 201 null application/json; charset=utf-8 659.4325ms
+2025-10-14 10:59:01.544 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 1467
+2025-10-14 10:59:01.578 +05:30 [INF] CORS policy execution successful.
+2025-10-14 10:59:01.587 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 10:59:01.607 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-14 10:59:02.015 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[DateCreated], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[PlatformId], [e].[Symbol]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-14 10:59:02.109 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__dto_ModeName_0='string' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[ModeId], [m].[AlternateSymbol], [m].[BgColor], [m].[DateCreated], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[GroundOnly], [m].[LastModified], [m].[LethalRange], [m].[ModeName], [m].[ModeType], [m].[PlatformType], [m].[PriStaggerLevel], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[ModeName] = @__dto_ModeName_0
+2025-10-14 10:59:02.466 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@p0='string' (Nullable = false) (Size = 4000), @p1='string' (Nullable = false) (Size = 4000), @p2='2025-10-14T05:29:02.1305603Z', @p3='string' (Nullable = false) (Size = 4000), @p4='0', @p5='1', @p6='string' (Nullable = false) (Size = 4000), @p7='True', @p8='2025-10-14T05:29:02.1305611Z', @p9='0', @p10='string' (Nullable = false) (Size = 200), @p11='0', @p12='0', @p13=NULL (Nullable = false) (Size = 4000), @p14='0', @p15='0', @p16='0', @p17='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modes] ([AlternateSymbol], [BgColor], [DateCreated], [Description], [EirpValue], [EmitterId], [FgColor], [GroundOnly], [LastModified], [LethalRange], [ModeName], [ModeType], [PlatformType], [PriStaggerLevel], [SubMode], [SymbolCodeType], [TestType], [ThreatType])
+OUTPUT INSERTED.[ModeId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2025-10-14 10:59:02.546 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Anadrone_BackEnd.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'PriStaggerLevel', table 'anadronev11.dbo.modes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5fd52df9-0a16-4a6c-a8f2-9e3e785b3f8b
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'PriStaggerLevel', table 'anadronev11.dbo.modes'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5fd52df9-0a16-4a6c-a8f2-9e3e785b3f8b
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-10-14 10:59:02.611 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-14 10:59:02.626 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 1003.8597ms
+2025-10-14 10:59:02.636 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 10:59:02.644 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 1056.3898 ms
+2025-10-14 10:59:02.656 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 1112.1551ms
+2025-10-14 11:38:47.478 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-14 11:38:48.321 +05:30 [INF] Executed DbCommand (275ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE DATABASE [anadronev11];
+2025-10-14 11:38:48.430 +05:30 [INF] Executed DbCommand (97ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [anadronev11] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-10-14 11:38:48.468 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-14 11:38:48.597 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [drones] (
+    [DroneId] int NOT NULL IDENTITY,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_drones] PRIMARY KEY ([DroneId])
+);
+2025-10-14 11:38:48.610 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitterLibraries] (
+    [EmitterId] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [EmitterType] int NOT NULL,
+    [Symbol] int NOT NULL,
+    [ForegroundColor] nvarchar(max) NOT NULL,
+    [BackgroundColor] nvarchar(max) NOT NULL,
+    [IsUnknown] bit NOT NULL,
+    [IsGroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [Latitude] nvarchar(max) NOT NULL,
+    [Longitude] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_emitterLibraries] PRIMARY KEY ([EmitterId])
+);
+2025-10-14 11:38:48.622 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitterReadings] (
+    [Id] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(max) NOT NULL,
+    [TimeUtc] datetime2 NOT NULL,
+    [BoresightError] smallint NOT NULL,
+    CONSTRAINT [PK_emitterReadings] PRIMARY KEY ([Id])
+);
+2025-10-14 11:38:48.632 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [jammingLibraries] (
+    [JammingId] int NOT NULL IDENTITY,
+    [TechniqueName] nvarchar(200) NOT NULL,
+    [TechniqueType] int NOT NULL,
+    [PullInOut] bit NOT NULL,
+    [MinRange] real NOT NULL,
+    [MaxRange] real NOT NULL,
+    [RateOfChangeOfRange] real NOT NULL,
+    [MinVelocity] real NOT NULL,
+    [MaxVelocity] real NOT NULL,
+    [RateOfChangeOfVelocity] real NOT NULL,
+    [WalkTime] nvarchar(max) NOT NULL,
+    [HoldTime] nvarchar(max) NOT NULL,
+    [StopTime] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_jammingLibraries] PRIMARY KEY ([JammingId])
+);
+2025-10-14 11:38:48.642 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [missions] (
+    [MissionId] int NOT NULL IDENTITY,
+    [MissionName] nvarchar(max) NOT NULL,
+    [MissionDate] datetime2 NOT NULL,
+    [MissionType] int NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    [Status] int NOT NULL,
+    CONSTRAINT [PK_missions] PRIMARY KEY ([MissionId])
+);
+2025-10-14 11:38:48.651 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeLibraries] (
+    [ModeLibraryId] int NOT NULL IDENTITY,
+    [ModeName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ModeType] int NOT NULL,
+    [PlatformType] int NOT NULL,
+    [SubMode] int NOT NULL,
+    [ThreatType] int NOT NULL,
+    [TestType] int NOT NULL,
+    [PriStaggerLevel] nvarchar(max) NOT NULL,
+    [SymbolCodeType] smallint NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [BgColor] nvarchar(max) NOT NULL,
+    [FgColor] nvarchar(max) NOT NULL,
+    [EirpValue] int NOT NULL,
+    [LethalRange] int NOT NULL,
+    [GroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    CONSTRAINT [PK_modeLibraries] PRIMARY KEY ([ModeLibraryId])
+);
+2025-10-14 11:38:48.658 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [platformLibraries] (
+    [PlatformId] int NOT NULL IDENTITY,
+    [PlatformName] nvarchar(200) NOT NULL,
+    [ThreatType] int NOT NULL,
+    [Priority] int NOT NULL,
+    [DisplayStatus] bit NOT NULL,
+    [SymbolCodeType] int NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [ForeGroundColor] nvarchar(max) NOT NULL,
+    [BackGroundColor] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ThumbnailImage] varbinary(max) NOT NULL,
+    [PreviewSymbol] varbinary(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_platformLibraries] PRIMARY KEY ([PlatformId])
+);
+2025-10-14 11:38:48.668 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(max) NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    [Role] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2025-10-14 11:38:48.675 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [userTokens] (
+    [Id] int NOT NULL IDENTITY,
+    [Token] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_userTokens] PRIMARY KEY ([Id])
+);
+2025-10-14 11:38:48.685 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [platforms] (
+    [PlatformId] int NOT NULL IDENTITY,
+    [PlatformName] nvarchar(200) NOT NULL,
+    [ThreatType] int NOT NULL,
+    [Priority] int NOT NULL,
+    [DisplayStatus] bit NOT NULL,
+    [SymbolCodeType] int NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [ForeGroundColor] nvarchar(max) NOT NULL,
+    [BackGroundColor] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ThumbnailImage] varbinary(max) NOT NULL,
+    [PreviewSymbol] varbinary(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UserId] int NOT NULL,
+    [MissionId] int NOT NULL,
+    CONSTRAINT [PK_platforms] PRIMARY KEY ([PlatformId]),
+    CONSTRAINT [FK_platforms_missions_MissionId] FOREIGN KEY ([MissionId]) REFERENCES [missions] ([MissionId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.695 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeDfLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeDfLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeDfLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.706 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [MinFrequency] real NOT NULL,
+    [MaxFrequency] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.717 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange1] real NOT NULL,
+    [MaxTestRange1] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.727 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeLssDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [DistanceKm] real NOT NULL,
+    [MinPowerDbm] real NOT NULL,
+    [MaxPowerDbm] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeLssDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeLssDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.740 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [MinPri] real NOT NULL,
+    [MaxPri] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [JitterMean] real NOT NULL,
+    [JitterPercentage] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.752 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriPwRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange1] real NOT NULL,
+    [MaxTestRange1] real NOT NULL,
+    [MinTestRange2] real NOT NULL,
+    [MaxTestRange2] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriPwRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriPwRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.765 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.782 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriStaggerLevelLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriStaggerLevelLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriStaggerLevelLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.798 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePwDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [MinPw] real NOT NULL,
+    [MaxPw] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePwDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePwDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.816 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeScanDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [ScanType] int NOT NULL,
+    [MinScanSector] real NOT NULL,
+    [MaxScanSector] real NOT NULL,
+    [MinScanRate] real NOT NULL,
+    [MaxScanRate] real NOT NULL,
+    [NominalScanRate] real NOT NULL,
+    [SideLobeLevel] real NOT NULL,
+    [SideLobeStd] real NOT NULL,
+    [MinBeamWidth] real NOT NULL,
+    [MaxBeamWidth] real NOT NULL,
+    [CalculatedTot] real NOT NULL,
+    [MinTot] real NOT NULL,
+    [MaxTot] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeScanDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeScanDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.834 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitters] (
+    [EmitterId] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [EmitterType] int NOT NULL,
+    [Symbol] int NOT NULL,
+    [ForegroundColor] nvarchar(max) NOT NULL,
+    [BackgroundColor] nvarchar(max) NOT NULL,
+    [IsUnknown] bit NOT NULL,
+    [IsGroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [Latitude] nvarchar(max) NOT NULL,
+    [Longitude] nvarchar(max) NOT NULL,
+    [PlatformId] int NOT NULL,
+    CONSTRAINT [PK_emitters] PRIMARY KEY ([EmitterId]),
+    CONSTRAINT [FK_emitters_platforms_PlatformId] FOREIGN KEY ([PlatformId]) REFERENCES [platforms] ([PlatformId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.855 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modes] (
+    [ModeId] int NOT NULL IDENTITY,
+    [ModeName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ModeType] int NOT NULL,
+    [PlatformType] int NOT NULL,
+    [SubMode] int NOT NULL,
+    [ThreatType] int NOT NULL,
+    [TestType] int NOT NULL,
+    [PriStaggerLevel] nvarchar(max) NOT NULL,
+    [SymbolCodeType] smallint NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [BgColor] nvarchar(max) NOT NULL,
+    [FgColor] nvarchar(max) NOT NULL,
+    [EirpValue] int NOT NULL,
+    [LethalRange] int NOT NULL,
+    [GroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [EmitterId] int NOT NULL,
+    CONSTRAINT [PK_modes] PRIMARY KEY ([ModeId]),
+    CONSTRAINT [FK_modes_emitters_EmitterId] FOREIGN KEY ([EmitterId]) REFERENCES [emitters] ([EmitterId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.878 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [jammings] (
+    [JammingId] int NOT NULL IDENTITY,
+    [TechniqueName] nvarchar(200) NOT NULL,
+    [TechniqueType] int NOT NULL,
+    [PullInOut] bit NOT NULL,
+    [MinRange] real NOT NULL,
+    [MaxRange] real NOT NULL,
+    [RateOfChangeOfRange] real NOT NULL,
+    [MinVelocity] real NOT NULL,
+    [MaxVelocity] real NOT NULL,
+    [RateOfChangeOfVelocity] real NOT NULL,
+    [WalkTime] nvarchar(max) NOT NULL,
+    [HoldTime] nvarchar(max) NOT NULL,
+    [StopTime] nvarchar(max) NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_jammings] PRIMARY KEY ([JammingId]),
+    CONSTRAINT [FK_jammings_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.900 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [MinFrequency] real NOT NULL,
+    [MaxFrequency] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.916 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [MinPri] real NOT NULL,
+    [MaxPri] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [JitterMean] real NOT NULL,
+    [JitterPercentage] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modePriDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.935 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePwDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [MinPw] real NOT NULL,
+    [MaxPw] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modePwDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePwDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.954 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeScanDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [ScanType] int NOT NULL,
+    [MinScanSector] real NOT NULL,
+    [MaxScanSector] real NOT NULL,
+    [MinScanRate] real NOT NULL,
+    [MaxScanRate] real NOT NULL,
+    [NominalScanRate] real NOT NULL,
+    [SideLobeLevel] real NOT NULL,
+    [SideLobeStd] real NOT NULL,
+    [MinBeamWidth] real NOT NULL,
+    [MaxBeamWidth] real NOT NULL,
+    [CalculatedTot] real NOT NULL,
+    [MinTot] real NOT NULL,
+    [MaxTot] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modeScanDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeScanDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 11:38:48.968 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_emitters_PlatformId] ON [emitters] ([PlatformId]);
+2025-10-14 11:38:48.982 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_jammings_ModeId] ON [jammings] ([ModeId]);
+2025-10-14 11:38:48.998 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeDfLibraries_ModeLibraryId] ON [modeDfLibraries] ([ModeLibraryId]);
+2025-10-14 11:38:49.013 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyDetailLibraries_ModeLibraryId] ON [modeFrequencyDetailLibraries] ([ModeLibraryId]);
+2025-10-14 11:38:49.026 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyDetails_ModeId] ON [modeFrequencyDetails] ([ModeId]);
+2025-10-14 11:38:49.039 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyRangeLibraries_ModeLibraryId] ON [modeFrequencyRangeLibraries] ([ModeLibraryId]);
+2025-10-14 11:38:49.053 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeLssDetailLibraries_ModeLibraryId] ON [modeLssDetailLibraries] ([ModeLibraryId]);
+2025-10-14 11:38:49.067 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriDetailLibraries_ModeLibraryId] ON [modePriDetailLibraries] ([ModeLibraryId]);
+2025-10-14 11:38:49.082 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriDetails_ModeId] ON [modePriDetails] ([ModeId]);
+2025-10-14 11:38:49.094 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriPwRangeLibraries_ModeLibraryId] ON [modePriPwRangeLibraries] ([ModeLibraryId]);
+2025-10-14 11:38:49.108 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriRangeLibraries_ModeLibraryId] ON [modePriRangeLibraries] ([ModeLibraryId]);
+2025-10-14 11:38:49.119 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriStaggerLevelLibraries_ModeLibraryId] ON [modePriStaggerLevelLibraries] ([ModeLibraryId]);
+2025-10-14 11:38:49.132 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePwDetailLibraries_ModeLibraryId] ON [modePwDetailLibraries] ([ModeLibraryId]);
+2025-10-14 11:38:49.142 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePwDetails_ModeId] ON [modePwDetails] ([ModeId]);
+2025-10-14 11:38:49.155 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modes_EmitterId] ON [modes] ([EmitterId]);
+2025-10-14 11:38:49.165 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeScanDetailLibraries_ModeLibraryId] ON [modeScanDetailLibraries] ([ModeLibraryId]);
+2025-10-14 11:38:49.175 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeScanDetails_ModeId] ON [modeScanDetails] ([ModeId]);
+2025-10-14 11:38:49.186 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_platforms_MissionId] ON [platforms] ([MissionId]);
+2025-10-14 11:38:49.394 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-14 11:38:49.482 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-14 11:38:49.520 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-14 11:38:49.657 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-14 11:38:49.661 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-14 11:38:49.664 +05:30 [INF] Hosting environment: Development
+2025-10-14 11:38:49.667 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-14 11:39:27.837 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/index.html - null null
+2025-10-14 11:39:28.181 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/index.html - 200 null text/html;charset=utf-8 344.8097ms
+2025-10-14 11:39:28.497 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-10-14 11:39:29.135 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 637.435ms
+2025-10-14 11:40:40.828 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mission/save - application/json 199
+2025-10-14 11:40:40.853 +05:30 [INF] CORS policy execution successful.
+2025-10-14 11:40:40.875 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-14 11:40:40.998 +05:30 [INF] Executing endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-14 11:40:41.082 +05:30 [INF] Route matched with {action = "SaveMission", controller = "Mission"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMission(Anadrone_BackEnd.DTOs.MissionDto) on controller MissionController (Anadrone_BackEnd).
+2025-10-14 11:40:41.277 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-14 11:40:41.376 +05:30 [INF] Executed action MissionController.SaveMission (Anadrone_BackEnd) in 268.5802ms
+2025-10-14 11:40:41.385 +05:30 [INF] Executed endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-14 11:40:41.401 +05:30 [INF] HTTP POST /api/Mission/save responded 400 in 523.6643 ms
+2025-10-14 11:40:41.419 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mission/save - 400 null application/problem+json; charset=utf-8 590.5303ms
+2025-10-14 11:41:14.365 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mission/save - application/json 194
+2025-10-14 11:41:14.388 +05:30 [INF] CORS policy execution successful.
+2025-10-14 11:41:14.400 +05:30 [INF] Executing endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-14 11:41:14.408 +05:30 [INF] Route matched with {action = "SaveMission", controller = "Mission"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMission(Anadrone_BackEnd.DTOs.MissionDto) on controller MissionController (Anadrone_BackEnd).
+2025-10-14 11:41:15.816 +05:30 [INF] Executed DbCommand (158ms) [Parameters=[@__name_0='Mission-01' (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionName] = @__name_0
+2025-10-14 11:41:16.613 +05:30 [INF] Executed DbCommand (51ms) [Parameters=[@p0='TEST_MISSION' (Nullable = false) (Size = 4000), @p1='2025-09-23T05:15:59.9200000Z', @p2='Mission-01' (Nullable = false) (Size = 4000), @p3='0', @p4='0', @p5='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [missions] ([Description], [MissionDate], [MissionName], [MissionType], [Status], [UserId])
+OUTPUT INSERTED.[MissionId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-14 11:41:16.729 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.MissionDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 11:41:16.773 +05:30 [INF] Executed action MissionController.SaveMission (Anadrone_BackEnd) in 2351.4746ms
+2025-10-14 11:41:16.784 +05:30 [INF] Executed endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-14 11:41:16.794 +05:30 [INF] HTTP POST /api/Mission/save responded 201 in 2397.7053 ms
+2025-10-14 11:41:16.816 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mission/save - 201 null application/json; charset=utf-8 2451.4022ms
+2025-10-14 11:41:48.384 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 503
+2025-10-14 11:41:48.404 +05:30 [INF] CORS policy execution successful.
+2025-10-14 11:41:48.421 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 11:41:48.443 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-14 11:41:48.746 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__p_0
+2025-10-14 11:41:48.865 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__name_0='BetaDrone' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[PlatformName] = @__name_0
+2025-10-14 11:41:49.130 +05:30 [INF] Executed DbCommand (38ms) [Parameters=[@p0='UAV-01' (Nullable = false) (Size = 4000), @p1='#000000' (Nullable = false) (Size = 4000), @p2='2025-09-09T05:00:10.9750000Z', @p3='Unmanned aerial vehicle detected near border zone' (Nullable = false) (Size = 4000), @p4='True', @p5='#FF0000' (Nullable = false) (Size = 4000), @p6='1', @p7='BetaDrone' (Nullable = false) (Size = 200), @p8='0x536F6D65417564696F44617461' (Nullable = false) (Size = 8000), @p9='2', @p10='0', @p11='0', @p12='0x536F6D65417564696F44617461' (Nullable = false) (Size = 8000), @p13='501'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [platforms] ([AlternateSymbol], [BackGroundColor], [CreatedAt], [Description], [DisplayStatus], [ForeGroundColor], [MissionId], [PlatformName], [PreviewSymbol], [Priority], [SymbolCodeType], [ThreatType], [ThumbnailImage], [UserId])
+OUTPUT INSERTED.[PlatformId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-14 11:41:49.148 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.PlatformDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 11:41:49.161 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 704.9553ms
+2025-10-14 11:41:49.167 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 11:41:49.171 +05:30 [INF] HTTP POST /api/Platform/save responded 201 in 760.7082 ms
+2025-10-14 11:41:49.178 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 201 null application/json; charset=utf-8 793.8512ms
+2025-10-14 11:49:48.584 +05:30 [INF] Application is shutting down...
+2025-10-14 11:50:25.939 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-14 11:50:27.201 +05:30 [INF] Executed DbCommand (557ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE DATABASE [anadronev11];
+2025-10-14 11:50:27.387 +05:30 [INF] Executed DbCommand (172ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [anadronev11] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-10-14 11:50:27.432 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-14 11:50:27.597 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [drones] (
+    [DroneId] int NOT NULL IDENTITY,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_drones] PRIMARY KEY ([DroneId])
+);
+2025-10-14 11:50:27.608 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitterLibraries] (
+    [EmitterId] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [EmitterType] int NOT NULL,
+    [Symbol] int NOT NULL,
+    [ForegroundColor] nvarchar(max) NOT NULL,
+    [BackgroundColor] nvarchar(max) NOT NULL,
+    [IsUnknown] bit NOT NULL,
+    [IsGroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [Latitude] nvarchar(max) NOT NULL,
+    [Longitude] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_emitterLibraries] PRIMARY KEY ([EmitterId])
+);
+2025-10-14 11:50:27.621 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitterReadings] (
+    [Id] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(max) NOT NULL,
+    [TimeUtc] datetime2 NOT NULL,
+    [BoresightError] smallint NOT NULL,
+    CONSTRAINT [PK_emitterReadings] PRIMARY KEY ([Id])
+);
+2025-10-14 11:50:27.636 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [jammingLibraries] (
+    [JammingId] int NOT NULL IDENTITY,
+    [TechniqueName] nvarchar(200) NOT NULL,
+    [TechniqueType] int NOT NULL,
+    [PullInOut] bit NOT NULL,
+    [MinRange] real NOT NULL,
+    [MaxRange] real NOT NULL,
+    [RateOfChangeOfRange] real NOT NULL,
+    [MinVelocity] real NOT NULL,
+    [MaxVelocity] real NOT NULL,
+    [RateOfChangeOfVelocity] real NOT NULL,
+    [WalkTime] nvarchar(max) NOT NULL,
+    [HoldTime] nvarchar(max) NOT NULL,
+    [StopTime] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_jammingLibraries] PRIMARY KEY ([JammingId])
+);
+2025-10-14 11:50:27.650 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [missions] (
+    [MissionId] int NOT NULL IDENTITY,
+    [MissionName] nvarchar(max) NOT NULL,
+    [MissionDate] datetime2 NOT NULL,
+    [MissionType] int NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    [Status] int NOT NULL,
+    CONSTRAINT [PK_missions] PRIMARY KEY ([MissionId])
+);
+2025-10-14 11:50:27.664 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeLibraries] (
+    [ModeLibraryId] int NOT NULL IDENTITY,
+    [ModeName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ModeType] int NOT NULL,
+    [PlatformType] int NOT NULL,
+    [SubMode] int NOT NULL,
+    [ThreatType] int NOT NULL,
+    [TestType] int NOT NULL,
+    [PriStaggerLevel] nvarchar(max) NOT NULL,
+    [SymbolCodeType] smallint NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [BgColor] nvarchar(max) NOT NULL,
+    [FgColor] nvarchar(max) NOT NULL,
+    [EirpValue] int NOT NULL,
+    [LethalRange] int NOT NULL,
+    [GroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    CONSTRAINT [PK_modeLibraries] PRIMARY KEY ([ModeLibraryId])
+);
+2025-10-14 11:50:27.679 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [platformLibraries] (
+    [PlatformId] int NOT NULL IDENTITY,
+    [PlatformName] nvarchar(200) NOT NULL,
+    [ThreatType] int NOT NULL,
+    [Priority] int NOT NULL,
+    [DisplayStatus] bit NOT NULL,
+    [SymbolCodeType] int NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [ForeGroundColor] nvarchar(max) NOT NULL,
+    [BackGroundColor] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ThumbnailImage] varbinary(max) NOT NULL,
+    [PreviewSymbol] varbinary(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_platformLibraries] PRIMARY KEY ([PlatformId])
+);
+2025-10-14 11:50:27.693 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(max) NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    [Role] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2025-10-14 11:50:27.707 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [userTokens] (
+    [Id] int NOT NULL IDENTITY,
+    [Token] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_userTokens] PRIMARY KEY ([Id])
+);
+2025-10-14 11:50:27.725 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [platforms] (
+    [PlatformId] int NOT NULL IDENTITY,
+    [PlatformName] nvarchar(200) NOT NULL,
+    [ThreatType] int NOT NULL,
+    [Priority] int NOT NULL,
+    [DisplayStatus] bit NOT NULL,
+    [SymbolCodeType] int NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [ForeGroundColor] nvarchar(max) NOT NULL,
+    [BackGroundColor] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ThumbnailImage] varbinary(max) NOT NULL,
+    [PreviewSymbol] varbinary(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UserId] int NOT NULL,
+    [MissionId] int NOT NULL,
+    CONSTRAINT [PK_platforms] PRIMARY KEY ([PlatformId]),
+    CONSTRAINT [FK_platforms_missions_MissionId] FOREIGN KEY ([MissionId]) REFERENCES [missions] ([MissionId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.742 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeDfLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeDfLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeDfLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.758 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [MinFrequency] real NOT NULL,
+    [MaxFrequency] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.776 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange1] real NOT NULL,
+    [MaxTestRange1] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.790 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeLssDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [DistanceKm] real NOT NULL,
+    [MinPowerDbm] real NOT NULL,
+    [MaxPowerDbm] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeLssDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeLssDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.804 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [MinPri] real NOT NULL,
+    [MaxPri] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [JitterMean] real NOT NULL,
+    [JitterPercentage] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.815 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriPwRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange1] real NOT NULL,
+    [MaxTestRange1] real NOT NULL,
+    [MinTestRange2] real NOT NULL,
+    [MaxTestRange2] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriPwRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriPwRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.827 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.841 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriStaggerLevelLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriStaggerLevelLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriStaggerLevelLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.857 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePwDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [MinPw] real NOT NULL,
+    [MaxPw] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePwDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePwDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.872 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeScanDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [ScanType] int NOT NULL,
+    [MinScanSector] real NOT NULL,
+    [MaxScanSector] real NOT NULL,
+    [MinScanRate] real NOT NULL,
+    [MaxScanRate] real NOT NULL,
+    [NominalScanRate] real NOT NULL,
+    [SideLobeLevel] real NOT NULL,
+    [SideLobeStd] real NOT NULL,
+    [MinBeamWidth] real NOT NULL,
+    [MaxBeamWidth] real NOT NULL,
+    [CalculatedTot] real NOT NULL,
+    [MinTot] real NOT NULL,
+    [MaxTot] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeScanDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeScanDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.888 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitters] (
+    [EmitterId] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [EmitterType] int NOT NULL,
+    [Symbol] int NOT NULL,
+    [ForegroundColor] nvarchar(max) NOT NULL,
+    [BackgroundColor] nvarchar(max) NOT NULL,
+    [IsUnknown] bit NOT NULL,
+    [IsGroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [Latitude] nvarchar(max) NOT NULL,
+    [Longitude] nvarchar(max) NOT NULL,
+    [PlatformId] int NOT NULL,
+    CONSTRAINT [PK_emitters] PRIMARY KEY ([EmitterId]),
+    CONSTRAINT [FK_emitters_platforms_PlatformId] FOREIGN KEY ([PlatformId]) REFERENCES [platforms] ([PlatformId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.908 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modes] (
+    [ModeId] int NOT NULL IDENTITY,
+    [ModeName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ModeType] int NOT NULL,
+    [PlatformType] int NOT NULL,
+    [SubMode] int NOT NULL,
+    [ThreatType] int NOT NULL,
+    [TestType] int NOT NULL,
+    [PriStaggerLevel] nvarchar(max) NOT NULL,
+    [SymbolCodeType] smallint NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [BgColor] nvarchar(max) NOT NULL,
+    [FgColor] nvarchar(max) NOT NULL,
+    [EirpValue] int NOT NULL,
+    [LethalRange] int NOT NULL,
+    [GroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [EmitterId] int NOT NULL,
+    CONSTRAINT [PK_modes] PRIMARY KEY ([ModeId]),
+    CONSTRAINT [FK_modes_emitters_EmitterId] FOREIGN KEY ([EmitterId]) REFERENCES [emitters] ([EmitterId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.929 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [jammings] (
+    [JammingId] int NOT NULL IDENTITY,
+    [TechniqueName] nvarchar(200) NOT NULL,
+    [TechniqueType] int NOT NULL,
+    [PullInOut] bit NOT NULL,
+    [MinRange] real NOT NULL,
+    [MaxRange] real NOT NULL,
+    [RateOfChangeOfRange] real NOT NULL,
+    [MinVelocity] real NOT NULL,
+    [MaxVelocity] real NOT NULL,
+    [RateOfChangeOfVelocity] real NOT NULL,
+    [WalkTime] nvarchar(max) NOT NULL,
+    [HoldTime] nvarchar(max) NOT NULL,
+    [StopTime] nvarchar(max) NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_jammings] PRIMARY KEY ([JammingId]),
+    CONSTRAINT [FK_jammings_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.947 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [MinFrequency] real NOT NULL,
+    [MaxFrequency] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.961 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [MinPri] real NOT NULL,
+    [MaxPri] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [JitterMean] real NOT NULL,
+    [JitterPercentage] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modePriDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.975 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePwDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [MinPw] real NOT NULL,
+    [MaxPw] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modePwDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePwDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:27.990 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeScanDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [ScanType] int NOT NULL,
+    [MinScanSector] real NOT NULL,
+    [MaxScanSector] real NOT NULL,
+    [MinScanRate] real NOT NULL,
+    [MaxScanRate] real NOT NULL,
+    [NominalScanRate] real NOT NULL,
+    [SideLobeLevel] real NOT NULL,
+    [SideLobeStd] real NOT NULL,
+    [MinBeamWidth] real NOT NULL,
+    [MaxBeamWidth] real NOT NULL,
+    [CalculatedTot] real NOT NULL,
+    [MinTot] real NOT NULL,
+    [MaxTot] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modeScanDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeScanDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-14 11:50:28.003 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_emitters_PlatformId] ON [emitters] ([PlatformId]);
+2025-10-14 11:50:28.017 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_jammings_ModeId] ON [jammings] ([ModeId]);
+2025-10-14 11:50:28.029 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeDfLibraries_ModeLibraryId] ON [modeDfLibraries] ([ModeLibraryId]);
+2025-10-14 11:50:28.041 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyDetailLibraries_ModeLibraryId] ON [modeFrequencyDetailLibraries] ([ModeLibraryId]);
+2025-10-14 11:50:28.053 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyDetails_ModeId] ON [modeFrequencyDetails] ([ModeId]);
+2025-10-14 11:50:28.064 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyRangeLibraries_ModeLibraryId] ON [modeFrequencyRangeLibraries] ([ModeLibraryId]);
+2025-10-14 11:50:28.073 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeLssDetailLibraries_ModeLibraryId] ON [modeLssDetailLibraries] ([ModeLibraryId]);
+2025-10-14 11:50:28.085 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriDetailLibraries_ModeLibraryId] ON [modePriDetailLibraries] ([ModeLibraryId]);
+2025-10-14 11:50:28.095 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriDetails_ModeId] ON [modePriDetails] ([ModeId]);
+2025-10-14 11:50:28.104 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriPwRangeLibraries_ModeLibraryId] ON [modePriPwRangeLibraries] ([ModeLibraryId]);
+2025-10-14 11:50:28.114 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriRangeLibraries_ModeLibraryId] ON [modePriRangeLibraries] ([ModeLibraryId]);
+2025-10-14 11:50:28.124 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriStaggerLevelLibraries_ModeLibraryId] ON [modePriStaggerLevelLibraries] ([ModeLibraryId]);
+2025-10-14 11:50:28.134 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePwDetailLibraries_ModeLibraryId] ON [modePwDetailLibraries] ([ModeLibraryId]);
+2025-10-14 11:50:28.143 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePwDetails_ModeId] ON [modePwDetails] ([ModeId]);
+2025-10-14 11:50:28.153 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modes_EmitterId] ON [modes] ([EmitterId]);
+2025-10-14 11:50:28.162 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeScanDetailLibraries_ModeLibraryId] ON [modeScanDetailLibraries] ([ModeLibraryId]);
+2025-10-14 11:50:28.170 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeScanDetails_ModeId] ON [modeScanDetails] ([ModeId]);
+2025-10-14 11:50:28.180 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_platforms_MissionId] ON [platforms] ([MissionId]);
+2025-10-14 11:50:28.285 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-14 11:50:28.321 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-14 11:50:28.348 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-14 11:50:28.425 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-14 11:50:28.428 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-14 11:50:28.431 +05:30 [INF] Hosting environment: Development
+2025-10-14 11:50:28.434 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-14 11:50:40.501 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/index.html - null null
+2025-10-14 11:50:40.731 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/index.html - 200 null text/html;charset=utf-8 234.2863ms
+2025-10-14 11:50:40.892 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-10-14 11:50:41.632 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 740.1005ms
+2025-10-14 11:58:16.808 +05:30 [INF] Application is shutting down...
+2025-10-14 11:59:41.165 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-14 11:59:41.727 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-14 11:59:41.879 +05:30 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-14 11:59:41.990 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-14 11:59:42.021 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-14 11:59:42.037 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-14 11:59:42.090 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-14 11:59:42.093 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-14 11:59:42.095 +05:30 [INF] Hosting environment: Development
+2025-10-14 11:59:42.097 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-14 11:59:49.550 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/index.html - null null
+2025-10-14 11:59:49.828 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/index.html - 200 null text/html;charset=utf-8 282.6721ms
+2025-10-14 11:59:50.052 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-10-14 11:59:50.532 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 480.4503ms
+2025-10-14 12:00:32.212 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mission/save - application/json 192
+2025-10-14 12:00:32.231 +05:30 [INF] CORS policy execution successful.
+2025-10-14 12:00:32.253 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-14 12:00:32.322 +05:30 [INF] Executing endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-14 12:00:32.360 +05:30 [INF] Route matched with {action = "SaveMission", controller = "Mission"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMission(Anadrone_BackEnd.DTOs.MissionDto) on controller MissionController (Anadrone_BackEnd).
+2025-10-14 12:00:33.488 +05:30 [INF] Executed DbCommand (70ms) [Parameters=[@__name_0='Mission-01' (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionName] = @__name_0
+2025-10-14 12:00:33.917 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@p0='Test Mission' (Nullable = false) (Size = 4000), @p1='2025-10-14T06:30:01.7680000Z', @p2='Mission-01' (Nullable = false) (Size = 4000), @p3='0', @p4='0', @p5='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [missions] ([Description], [MissionDate], [MissionName], [MissionType], [Status], [UserId])
+OUTPUT INSERTED.[MissionId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-14 12:00:33.993 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.MissionDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 12:00:34.042 +05:30 [INF] Executed action MissionController.SaveMission (Anadrone_BackEnd) in 1662.9538ms
+2025-10-14 12:00:34.049 +05:30 [INF] Executed endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-14 12:00:34.061 +05:30 [INF] HTTP POST /api/Mission/save responded 201 in 1806.8589 ms
+2025-10-14 12:00:34.081 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mission/save - 201 null application/json; charset=utf-8 1868.81ms
+2025-10-14 12:02:42.379 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 442
+2025-10-14 12:02:42.395 +05:30 [INF] CORS policy execution successful.
+2025-10-14 12:02:42.404 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 12:02:42.426 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-14 12:02:42.510 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-14 12:02:42.524 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 87.0164ms
+2025-10-14 12:02:42.534 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 12:02:42.541 +05:30 [INF] HTTP POST /api/Platform/save responded 400 in 140.8281 ms
+2025-10-14 12:02:42.554 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 400 null application/json; charset=utf-8 174.9672ms
+2025-10-14 12:03:11.635 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 442
+2025-10-14 12:03:11.653 +05:30 [INF] CORS policy execution successful.
+2025-10-14 12:03:11.665 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 12:03:11.673 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-14 12:03:12.163 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__p_0
+2025-10-14 12:03:12.310 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__name_0='Test Platform-01' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[PlatformName] = @__name_0
+2025-10-14 12:03:12.671 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@p0='ABCD' (Nullable = false) (Size = 4000), @p1='#FF0000' (Nullable = false) (Size = 4000), @p2='2025-10-14T06:30:41.7710000Z', @p3='Test platform 01' (Nullable = false) (Size = 4000), @p4='True', @p5='#FF0000' (Nullable = false) (Size = 4000), @p6='1', @p7='Test Platform-01' (Nullable = false) (Size = 200), @p8='0x536F6D65417564696F44617461' (Nullable = false) (Size = 8000), @p9='0', @p10='0', @p11='0', @p12='0x536F6D65417564696F44617461' (Nullable = false) (Size = 8000), @p13='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [platforms] ([AlternateSymbol], [BackGroundColor], [CreatedAt], [Description], [DisplayStatus], [ForeGroundColor], [MissionId], [PlatformName], [PreviewSymbol], [Priority], [SymbolCodeType], [ThreatType], [ThumbnailImage], [UserId])
+OUTPUT INSERTED.[PlatformId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-14 12:03:12.703 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.PlatformDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 12:03:12.726 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 1039.2705ms
+2025-10-14 12:03:12.736 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-14 12:03:12.745 +05:30 [INF] HTTP POST /api/Platform/save responded 201 in 1086.9507 ms
+2025-10-14 12:03:12.759 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 201 null application/json; charset=utf-8 1124.2811ms
+2025-10-14 12:04:33.986 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 404
+2025-10-14 12:04:34.002 +05:30 [INF] CORS policy execution successful.
+2025-10-14 12:04:34.007 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-14 12:04:34.027 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-14 12:04:34.201 +05:30 [INF] Executed DbCommand (45ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[PlatformId] = @__p_0
+2025-10-14 12:04:34.317 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@__dto_EmitterName_0='TestEmitter-01' (Size = 200), @__dto_EmitterId_1='0'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[DateCreated], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[PlatformId], [e].[Symbol]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterName] = @__dto_EmitterName_0 AND [e].[EmitterId] <> @__dto_EmitterId_1
+2025-10-14 12:04:34.511 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[@p0='#FF0000' (Nullable = false) (Size = 4000), @p1='2025-10-14T06:34:34.3352446Z', @p2='Test emitter 01' (Nullable = false) (Size = 4000), @p3='TestEmitter-01' (Nullable = false) (Size = 200), @p4='0', @p5='#FF0000' (Nullable = false) (Size = 4000), @p6='True', @p7='True', @p8='2025-10-14T06:34:34.3353919Z', @p9='75.89' (Nullable = false) (Size = 4000), @p10='145.63' (Nullable = false) (Size = 4000), @p11='1', @p12='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitters] ([BackgroundColor], [DateCreated], [Description], [EmitterName], [EmitterType], [ForegroundColor], [IsGroundOnly], [IsUnknown], [LastModified], [Latitude], [Longitude], [PlatformId], [Symbol])
+OUTPUT INSERTED.[EmitterId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2025-10-14 12:04:34.539 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.EmitterDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 12:04:34.565 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 524.8644ms
+2025-10-14 12:04:34.575 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-14 12:04:34.582 +05:30 [INF] HTTP POST /api/Emitter/save responded 201 in 576.3406 ms
+2025-10-14 12:04:34.596 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 201 null application/json; charset=utf-8 609.993ms
+2025-10-14 12:08:43.159 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 1437
+2025-10-14 12:08:43.180 +05:30 [INF] CORS policy execution successful.
+2025-10-14 12:08:43.187 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 12:08:43.210 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-14 12:08:43.563 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[DateCreated], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[PlatformId], [e].[Symbol]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-14 12:08:43.675 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__dto_ModeName_0='Test Mode-01' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[ModeId], [m].[AlternateSymbol], [m].[BgColor], [m].[DateCreated], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[GroundOnly], [m].[LastModified], [m].[LethalRange], [m].[ModeName], [m].[ModeType], [m].[PlatformType], [m].[PriStaggerLevel], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[ModeName] = @__dto_ModeName_0
+2025-10-14 12:08:44.056 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[@p0='ABC123' (Nullable = false) (Size = 4000), @p1='#FF0000' (Nullable = false) (Size = 4000), @p2='2025-10-14T06:38:43.6973834Z', @p3='Test Mode 01' (Nullable = false) (Size = 4000), @p4='0', @p5='1', @p6='#FF0000' (Nullable = false) (Size = 4000), @p7='True', @p8='2025-10-14T06:38:43.6973841Z', @p9='100', @p10='Test Mode-01' (Nullable = false) (Size = 200), @p11='0', @p12='0', @p13='12' (Nullable = false) (Size = 4000), @p14='0', @p15='0', @p16='0', @p17='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modes] ([AlternateSymbol], [BgColor], [DateCreated], [Description], [EirpValue], [EmitterId], [FgColor], [GroundOnly], [LastModified], [LethalRange], [ModeName], [ModeType], [PlatformType], [PriStaggerLevel], [SubMode], [SymbolCodeType], [TestType], [ThreatType])
+OUTPUT INSERTED.[ModeId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2025-10-14 12:08:44.231 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@p0='0', @p1='0', @p2='10.3', @p3='10', @p4='1'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modeFrequencyDetails] ([FrequencyClass], [FrequencyType], [MaxFrequency], [MinFrequency], [ModeId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-10-14 12:08:44.425 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[@p0='0', @p1='0', @p2='0', @p3='0', @p4='0', @p5='0', @p6='0', @p7='0', @p8='0', @p9='1', @p10='0', @p11='0', @p12='0', @p13='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modeScanDetails] ([CalculatedTot], [MaxBeamWidth], [MaxScanRate], [MaxScanSector], [MaxTot], [MinBeamWidth], [MinScanRate], [MinScanSector], [MinTot], [ModeId], [NominalScanRate], [ScanType], [SideLobeLevel], [SideLobeStd])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-14 12:08:44.634 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p0='0', @p1='0', @p2='0', @p3='100', @p4='10', @p5='1', @p6='0', @p7='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modePriDetails] ([Deviation], [JitterMean], [JitterPercentage], [MaxPri], [MinPri], [ModeId], [PriClass], [PriType])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-10-14 12:08:44.737 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p0='100', @p1='10', @p2='1', @p3='0', @p4='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modePwDetails] ([MaxPw], [MinPw], [ModeId], [PwClass], [PwType])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-10-14 12:08:44.771 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.ModeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 12:08:44.836 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 1610.5512ms
+2025-10-14 12:08:44.845 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-14 12:08:44.853 +05:30 [INF] HTTP POST /api/Mode/save responded 201 in 1666.6382 ms
+2025-10-14 12:08:44.867 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 201 null application/json; charset=utf-8 1708.9301ms
+2025-10-14 12:09:17.469 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Jamming/save - application/json 319
+2025-10-14 12:09:17.485 +05:30 [INF] CORS policy execution successful.
+2025-10-14 12:09:17.492 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd)'
+2025-10-14 12:09:17.518 +05:30 [INF] Route matched with {action = "SaveJamming", controller = "Jamming"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveJamming(Anadrone_BackEnd.DTOs.JammingDto) on controller Anadrone_BackEnd.Controllers.JammingController (Anadrone_BackEnd).
+2025-10-14 12:09:17.577 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-14 12:09:17.587 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd) in 56.8611ms
+2025-10-14 12:09:17.597 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd)'
+2025-10-14 12:09:17.604 +05:30 [INF] HTTP POST /api/Jamming/save responded 400 in 112.9072 ms
+2025-10-14 12:09:17.618 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Jamming/save - 400 null application/json; charset=utf-8 148.6319ms
+2025-10-14 12:09:33.013 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Jamming/save - application/json 323
+2025-10-14 12:09:33.026 +05:30 [INF] CORS policy execution successful.
+2025-10-14 12:09:33.031 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd)'
+2025-10-14 12:09:33.038 +05:30 [INF] Route matched with {action = "SaveJamming", controller = "Jamming"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveJamming(Anadrone_BackEnd.DTOs.JammingDto) on controller Anadrone_BackEnd.Controllers.JammingController (Anadrone_BackEnd).
+2025-10-14 12:09:33.317 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-10-14 12:09:33.617 +05:30 [INF] Executed DbCommand (78ms) [Parameters=[@__id_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m4].[ModeId], [m4].[AlternateSymbol], [m4].[BgColor], [m4].[DateCreated], [m4].[Description], [m4].[EirpValue], [m4].[EmitterId], [m4].[FgColor], [m4].[GroundOnly], [m4].[LastModified], [m4].[LethalRange], [m4].[ModeName], [m4].[ModeType], [m4].[PlatformType], [m4].[PriStaggerLevel], [m4].[SubMode], [m4].[SymbolCodeType], [m4].[TestType], [m4].[ThreatType], [m0].[Id], [m0].[FrequencyClass], [m0].[FrequencyType], [m0].[MaxFrequency], [m0].[MinFrequency], [m0].[ModeId], [m1].[Id], [m1].[Deviation], [m1].[JitterMean], [m1].[JitterPercentage], [m1].[MaxPri], [m1].[MinPri], [m1].[ModeId], [m1].[PriClass], [m1].[PriType], [m2].[Id], [m2].[CalculatedTot], [m2].[MaxBeamWidth], [m2].[MaxScanRate], [m2].[MaxScanSector], [m2].[MaxTot], [m2].[MinBeamWidth], [m2].[MinScanRate], [m2].[MinScanSector], [m2].[MinTot], [m2].[ModeId], [m2].[NominalScanRate], [m2].[ScanType], [m2].[SideLobeLevel], [m2].[SideLobeStd], [m3].[Id], [m3].[MaxPw], [m3].[MinPw], [m3].[ModeId], [m3].[PwClass], [m3].[PwType]
+FROM (
+    SELECT TOP(1) [m].[ModeId], [m].[AlternateSymbol], [m].[BgColor], [m].[DateCreated], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[GroundOnly], [m].[LastModified], [m].[LethalRange], [m].[ModeName], [m].[ModeType], [m].[PlatformType], [m].[PriStaggerLevel], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+    FROM [modes] AS [m]
+    WHERE [m].[ModeId] = @__id_0
+) AS [m4]
+LEFT JOIN [modeFrequencyDetails] AS [m0] ON [m4].[ModeId] = [m0].[ModeId]
+LEFT JOIN [modePriDetails] AS [m1] ON [m4].[ModeId] = [m1].[ModeId]
+LEFT JOIN [modeScanDetails] AS [m2] ON [m4].[ModeId] = [m2].[ModeId]
+LEFT JOIN [modePwDetails] AS [m3] ON [m4].[ModeId] = [m3].[ModeId]
+ORDER BY [m4].[ModeId], [m0].[Id], [m1].[Id], [m2].[Id]
+2025-10-14 12:09:33.881 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[@p0='string' (Nullable = false) (Size = 4000), @p1='0.8', @p2='0', @p3='0.8', @p4='0', @p5='1', @p6='True', @p7='0', @p8='0', @p9='string' (Nullable = false) (Size = 4000), @p10='RGPO_I' (Nullable = false) (Size = 200), @p11='0', @p12='string' (Nullable = false) (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [jammings] ([HoldTime], [MaxRange], [MaxVelocity], [MinRange], [MinVelocity], [ModeId], [PullInOut], [RateOfChangeOfRange], [RateOfChangeOfVelocity], [StopTime], [TechniqueName], [TechniqueType], [WalkTime])
+OUTPUT INSERTED.[JammingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2025-10-14 12:09:33.902 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.JammingDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-14 12:09:33.923 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd) in 872.6881ms
+2025-10-14 12:09:33.931 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd)'
+2025-10-14 12:09:33.938 +05:30 [INF] HTTP POST /api/Jamming/save responded 201 in 907.2798 ms
+2025-10-14 12:09:33.951 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Jamming/save - 201 null application/json; charset=utf-8 937.8229ms
+2025-10-14 12:09:48.340 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Pfm/pfm-generation/1 - null null
+2025-10-14 12:09:48.360 +05:30 [INF] Executing endpoint 'PfmController.GetPfmGeneration (Anadrone_BackEnd)'
+2025-10-14 12:09:48.402 +05:30 [INF] Route matched with {action = "GetPfmGeneration", controller = "Pfm"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPfmGeneration(Int32) on controller PfmController (Anadrone_BackEnd).
+2025-10-14 12:09:48.481 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__missionId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__missionId_0
+2025-10-14 12:09:48.575 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[MissionId] = @__p_0
+2025-10-14 12:09:48.647 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [e].[EmitterId], [e].[BackgroundColor], [e].[DateCreated], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[PlatformId], [e].[Symbol]
+FROM [emitters] AS [e]
+WHERE [e].[PlatformId] = @__p_0
+2025-10-14 12:09:48.758 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[ModeId], [m].[AlternateSymbol], [m].[BgColor], [m].[DateCreated], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[GroundOnly], [m].[LastModified], [m].[LethalRange], [m].[ModeName], [m].[ModeType], [m].[PlatformType], [m].[PriStaggerLevel], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[EmitterId] = @__p_0
+2025-10-14 12:09:48.828 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[FrequencyClass], [m].[FrequencyType], [m].[MaxFrequency], [m].[MinFrequency], [m].[ModeId]
+FROM [modeFrequencyDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-14 12:09:48.902 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[Deviation], [m].[JitterMean], [m].[JitterPercentage], [m].[MaxPri], [m].[MinPri], [m].[ModeId], [m].[PriClass], [m].[PriType]
+FROM [modePriDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-14 12:09:48.970 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxPw], [m].[MinPw], [m].[ModeId], [m].[PwClass], [m].[PwType]
+FROM [modePwDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-14 12:09:49.036 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[CalculatedTot], [m].[MaxBeamWidth], [m].[MaxScanRate], [m].[MaxScanSector], [m].[MaxTot], [m].[MinBeamWidth], [m].[MinScanRate], [m].[MinScanSector], [m].[MinTot], [m].[ModeId], [m].[NominalScanRate], [m].[ScanType], [m].[SideLobeLevel], [m].[SideLobeStd]
+FROM [modeScanDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-14 12:09:49.123 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [j].[JammingId], [j].[HoldTime], [j].[MaxRange], [j].[MaxVelocity], [j].[MinRange], [j].[MinVelocity], [j].[ModeId], [j].[PullInOut], [j].[RateOfChangeOfRange], [j].[RateOfChangeOfVelocity], [j].[StopTime], [j].[TechniqueName], [j].[TechniqueType], [j].[WalkTime]
+FROM [jammings] AS [j]
+WHERE [j].[ModeId] = @__p_0
+2025-10-14 12:09:51.396 +05:30 [INF] Executing FileContentResult, sending file with download name 'mission_1_emitters.csv' ...
+2025-10-14 12:09:51.423 +05:30 [INF] Executed action PfmController.GetPfmGeneration (Anadrone_BackEnd) in 3010.0205ms
+2025-10-14 12:09:51.432 +05:30 [INF] Executed endpoint 'PfmController.GetPfmGeneration (Anadrone_BackEnd)'
+2025-10-14 12:09:51.441 +05:30 [INF] HTTP GET /api/Pfm/pfm-generation/1 responded 200 in 3081.5494 ms
+2025-10-14 12:09:51.456 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Pfm/pfm-generation/1 - 200 742 text/csv 3115.4535ms
+2025-10-14 12:13:25.860 +05:30 [INF] Application is shutting down...

@@ -1,0 +1,11 @@
+@layer utilities{
+    .spin{
+        @apply animate-spin!;
+    }
+    .trans-200{
+        @apply transition-all duration-200;
+    }
+    .trans-300{
+        @apply transition-transform! duration-300!;
+    }
+}

@@ -1,0 +1,36 @@
+/*Vaishnavi Created on 29/12/2025 {10:30 am} */
+/* Remove white background of toast wrapper */
+.Toastify__toast {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Remove white border */
+.Toastify__toast-container {
+  background: transparent !important;
+  margin-right: 12px;
+}
+
+/* Remove default dark theme container */
+.Toastify__toast-theme--dark {
+  background: transparent !important;
+}
+/* Custom Toast Layout */
+
+.toast {
+  @apply flex items-center gap-3 bg-[#303030] px-4 py-3 rounded-xl shadow-md w-[350px] border;
+}
+
+.toast-icon {
+  @apply w-5 h-5;
+}
+
+.toast-spinner {
+  @apply border-dashed border-3 border-gray-500 border-t-white rounded-full animate-spin;
+}
+
+ /* Toast Text */
+  .text-toast{
+    @apply text-[16px] leading-6 capitalize;
+  }

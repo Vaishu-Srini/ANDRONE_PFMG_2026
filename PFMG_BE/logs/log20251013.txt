@@ -1,0 +1,506 @@
+2025-10-13 21:07:47.573 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-13 21:07:49.191 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-13 21:07:49.601 +05:30 [INF] Executed DbCommand (380ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-13 21:07:49.844 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-13 21:07:49.916 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-13 21:07:49.946 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-13 21:07:50.055 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-13 21:07:50.059 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-13 21:07:50.063 +05:30 [INF] Hosting environment: Development
+2025-10-13 21:07:50.067 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-13 21:08:01.309 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/index.html - null null
+2025-10-13 21:08:01.692 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/index.html - 200 null text/html;charset=utf-8 387.1805ms
+2025-10-13 21:08:01.993 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-10-13 21:08:02.570 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 576.9595ms
+2025-10-13 21:09:42.420 +05:30 [INF] Application is shutting down...
+2025-10-13 21:09:49.804 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-13 21:09:50.276 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-13 21:09:50.369 +05:30 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-13 21:09:50.465 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-13 21:09:50.498 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-13 21:09:50.513 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-13 21:09:50.550 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-13 21:09:50.553 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-13 21:09:50.555 +05:30 [INF] Hosting environment: Development
+2025-10-13 21:09:50.558 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-13 21:10:36.069 +05:30 [INF] Application is shutting down...
+2025-10-13 21:10:44.820 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-13 21:10:45.748 +05:30 [INF] Executed DbCommand (412ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE DATABASE [anadronev_latest];
+2025-10-13 21:10:45.940 +05:30 [INF] Executed DbCommand (180ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [anadronev_latest] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-10-13 21:10:45.977 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-13 21:10:46.136 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [drones] (
+    [DroneId] int NOT NULL IDENTITY,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_drones] PRIMARY KEY ([DroneId])
+);
+2025-10-13 21:10:46.150 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitterLibraries] (
+    [EmitterId] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [EmitterType] int NOT NULL,
+    [Symbol] int NOT NULL,
+    [ForegroundColor] nvarchar(max) NOT NULL,
+    [BackgroundColor] nvarchar(max) NOT NULL,
+    [IsUnknown] bit NOT NULL,
+    [IsGroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [Latitude] nvarchar(max) NOT NULL,
+    [Longitude] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_emitterLibraries] PRIMARY KEY ([EmitterId])
+);
+2025-10-13 21:10:46.159 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitterReadings] (
+    [Id] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(max) NOT NULL,
+    [TimeUtc] datetime2 NOT NULL,
+    [BoresightError] smallint NOT NULL,
+    CONSTRAINT [PK_emitterReadings] PRIMARY KEY ([Id])
+);
+2025-10-13 21:10:46.170 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [jammingLibraries] (
+    [JammingId] int NOT NULL IDENTITY,
+    [TechniqueName] nvarchar(200) NOT NULL,
+    [TechniqueType] int NOT NULL,
+    [PullInOut] bit NOT NULL,
+    [MinRange] real NOT NULL,
+    [MaxRange] real NOT NULL,
+    [RateOfChangeOfRange] real NOT NULL,
+    [MinVelocity] real NOT NULL,
+    [MaxVelocity] real NOT NULL,
+    [RateOfChangeOfVelocity] real NOT NULL,
+    [WalkTime] nvarchar(max) NOT NULL,
+    [HoldTime] nvarchar(max) NOT NULL,
+    [StopTime] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_jammingLibraries] PRIMARY KEY ([JammingId])
+);
+2025-10-13 21:10:46.178 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [missions] (
+    [MissionId] int NOT NULL IDENTITY,
+    [MissionName] nvarchar(max) NOT NULL,
+    [MissionDate] datetime2 NOT NULL,
+    [MissionType] int NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    [Status] int NOT NULL,
+    CONSTRAINT [PK_missions] PRIMARY KEY ([MissionId])
+);
+2025-10-13 21:10:46.194 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeLibraries] (
+    [ModeLibraryId] int NOT NULL IDENTITY,
+    [ModeName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [AudioId] varbinary(max) NOT NULL,
+    [ModeType] int NOT NULL,
+    [PlatformType] int NOT NULL,
+    [SubMode] int NOT NULL,
+    [ThreatType] int NOT NULL,
+    [TestType] int NOT NULL,
+    [PriManualFlag] bit NOT NULL,
+    [PriSwitchEpgFlag] bit NOT NULL,
+    [PriStaggerLevel] nvarchar(max) NOT NULL,
+    [FreqIsSwitch] bit NOT NULL,
+    [FreqCount] int NOT NULL,
+    [PriCount] int NOT NULL,
+    [PwCount] int NOT NULL,
+    [SymbolCodeType] smallint NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [BgColor] nvarchar(max) NOT NULL,
+    [FgColor] nvarchar(max) NOT NULL,
+    [EirpValue] int NOT NULL,
+    [LethalRange] int NOT NULL,
+    [GroundOnly] bit NOT NULL,
+    [DisplayPriority] bit NOT NULL,
+    [IsAntennaScan] bit NOT NULL,
+    [AngleSwitch] smallint NOT NULL,
+    [CreatedBy] nvarchar(max) NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [PowerLevelDb] int NOT NULL,
+    [PvTimeBaseMsec] int NOT NULL,
+    [PvOfMinSample] int NOT NULL,
+    [PvMeasurementTime] int NOT NULL,
+    [MlPercentage] real NOT NULL,
+    [MlTimeBase] int NOT NULL,
+    [MlMinSamples] int NOT NULL,
+    [MlMeasurementTime] int NOT NULL,
+    [FrequencyAttribute] nvarchar(max) NOT NULL,
+    [PriAttribute] nvarchar(max) NOT NULL,
+    [MaxPowerThreshouldDb] int NOT NULL,
+    [LssName] nvarchar(max) NOT NULL,
+    [Comment] nvarchar(max) NOT NULL,
+    [RangeEstimation] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_modeLibraries] PRIMARY KEY ([ModeLibraryId])
+);
+2025-10-13 21:10:46.215 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [platformLibraries] (
+    [PlatformId] int NOT NULL IDENTITY,
+    [PlatformName] nvarchar(200) NOT NULL,
+    [ThreatType] int NOT NULL,
+    [Priority] int NOT NULL,
+    [DisplayStatus] bit NOT NULL,
+    [SymbolCodeType] int NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [ForeGroundColor] nvarchar(max) NOT NULL,
+    [BackGroundColor] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ThumbnailImage] varbinary(max) NOT NULL,
+    [PreviewSymbol] varbinary(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_platformLibraries] PRIMARY KEY ([PlatformId])
+);
+2025-10-13 21:10:46.229 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(max) NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    [Role] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2025-10-13 21:10:46.238 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [userTokens] (
+    [Id] int NOT NULL IDENTITY,
+    [Token] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_userTokens] PRIMARY KEY ([Id])
+);
+2025-10-13 21:10:46.250 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [platforms] (
+    [PlatformId] int NOT NULL IDENTITY,
+    [PlatformName] nvarchar(200) NOT NULL,
+    [ThreatType] int NOT NULL,
+    [Priority] int NOT NULL,
+    [DisplayStatus] bit NOT NULL,
+    [SymbolCodeType] int NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [ForeGroundColor] nvarchar(max) NOT NULL,
+    [BackGroundColor] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ThumbnailImage] varbinary(max) NOT NULL,
+    [PreviewSymbol] varbinary(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UserId] int NOT NULL,
+    [MissionId] int NOT NULL,
+    CONSTRAINT [PK_platforms] PRIMARY KEY ([PlatformId]),
+    CONSTRAINT [FK_platforms_missions_MissionId] FOREIGN KEY ([MissionId]) REFERENCES [missions] ([MissionId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.264 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeDfLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeDfLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeDfLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.274 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [MinFrequency] real NOT NULL,
+    [MaxFrequency] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.286 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange1] real NOT NULL,
+    [MaxTestRange1] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.297 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeLssDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [DistanceKm] real NOT NULL,
+    [MinPowerDbm] real NOT NULL,
+    [MaxPowerDbm] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeLssDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeLssDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.306 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [MinPri] real NOT NULL,
+    [MaxPri] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [JitterMean] real NOT NULL,
+    [JitterPercentage] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.316 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriPwRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange1] real NOT NULL,
+    [MaxTestRange1] real NOT NULL,
+    [MinTestRange2] real NOT NULL,
+    [MaxTestRange2] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriPwRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriPwRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.326 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriRangeLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriRangeLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriRangeLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.341 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriStaggerLevelLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [MinTestRange] real NOT NULL,
+    [MaxTestRange] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePriStaggerLevelLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriStaggerLevelLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.354 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePwDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [MinPw] real NOT NULL,
+    [MaxPw] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modePwDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePwDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.367 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeScanDetailLibraries] (
+    [Id] int NOT NULL IDENTITY,
+    [ScanType] int NOT NULL,
+    [MinScanSector] real NOT NULL,
+    [MaxScanSector] real NOT NULL,
+    [MinScanRate] real NOT NULL,
+    [MaxScanRate] real NOT NULL,
+    [NominalScanRate] real NOT NULL,
+    [SideLobeLevel] real NOT NULL,
+    [SideLobeStd] real NOT NULL,
+    [MinBeamWidth] real NOT NULL,
+    [MaxBeamWidth] real NOT NULL,
+    [CalculatedTot] real NOT NULL,
+    [MinTot] real NOT NULL,
+    [MaxTot] real NOT NULL,
+    [ModeLibraryId] int NOT NULL,
+    CONSTRAINT [PK_modeScanDetailLibraries] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeScanDetailLibraries_modeLibraries_ModeLibraryId] FOREIGN KEY ([ModeLibraryId]) REFERENCES [modeLibraries] ([ModeLibraryId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.383 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitters] (
+    [EmitterId] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [EmitterType] int NOT NULL,
+    [Symbol] int NOT NULL,
+    [ForegroundColor] nvarchar(max) NOT NULL,
+    [BackgroundColor] nvarchar(max) NOT NULL,
+    [IsUnknown] bit NOT NULL,
+    [IsGroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [Latitude] nvarchar(max) NOT NULL,
+    [Longitude] nvarchar(max) NOT NULL,
+    [PlatformId] int NOT NULL,
+    CONSTRAINT [PK_emitters] PRIMARY KEY ([EmitterId]),
+    CONSTRAINT [FK_emitters_platforms_PlatformId] FOREIGN KEY ([PlatformId]) REFERENCES [platforms] ([PlatformId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.399 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modes] (
+    [ModeId] int NOT NULL IDENTITY,
+    [ModeName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ModeType] int NOT NULL,
+    [PlatformType] int NOT NULL,
+    [SubMode] int NOT NULL,
+    [ThreatType] int NOT NULL,
+    [TestType] int NOT NULL,
+    [PriStaggerLevel] nvarchar(max) NOT NULL,
+    [SymbolCodeType] smallint NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [BgColor] nvarchar(max) NOT NULL,
+    [FgColor] nvarchar(max) NOT NULL,
+    [EirpValue] int NOT NULL,
+    [LethalRange] int NOT NULL,
+    [GroundOnly] bit NOT NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [LastModified] datetime2 NOT NULL,
+    [EmitterId] int NOT NULL,
+    CONSTRAINT [PK_modes] PRIMARY KEY ([ModeId]),
+    CONSTRAINT [FK_modes_emitters_EmitterId] FOREIGN KEY ([EmitterId]) REFERENCES [emitters] ([EmitterId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.417 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [jammings] (
+    [JammingId] int NOT NULL IDENTITY,
+    [TechniqueName] nvarchar(200) NOT NULL,
+    [TechniqueType] int NOT NULL,
+    [PullInOut] bit NOT NULL,
+    [MinRange] real NOT NULL,
+    [MaxRange] real NOT NULL,
+    [RateOfChangeOfRange] real NOT NULL,
+    [MinVelocity] real NOT NULL,
+    [MaxVelocity] real NOT NULL,
+    [RateOfChangeOfVelocity] real NOT NULL,
+    [WalkTime] nvarchar(max) NOT NULL,
+    [HoldTime] nvarchar(max) NOT NULL,
+    [StopTime] nvarchar(max) NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_jammings] PRIMARY KEY ([JammingId]),
+    CONSTRAINT [FK_jammings_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.435 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [MinFrequency] real NOT NULL,
+    [MaxFrequency] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.450 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [MinPri] real NOT NULL,
+    [MaxPri] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [JitterMean] real NOT NULL,
+    [JitterPercentage] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modePriDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.464 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePwDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [MinPw] real NOT NULL,
+    [MaxPw] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modePwDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePwDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.482 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeScanDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [ScanType] int NOT NULL,
+    [MinScanSector] real NOT NULL,
+    [MaxScanSector] real NOT NULL,
+    [MinScanRate] real NOT NULL,
+    [MaxScanRate] real NOT NULL,
+    [NominalScanRate] real NOT NULL,
+    [SideLobeLevel] real NOT NULL,
+    [SideLobeStd] real NOT NULL,
+    [MinBeamWidth] real NOT NULL,
+    [MaxBeamWidth] real NOT NULL,
+    [CalculatedTot] real NOT NULL,
+    [MinTot] real NOT NULL,
+    [MaxTot] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modeScanDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeScanDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-13 21:10:46.501 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_emitters_PlatformId] ON [emitters] ([PlatformId]);
+2025-10-13 21:10:46.513 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_jammings_ModeId] ON [jammings] ([ModeId]);
+2025-10-13 21:10:46.525 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeDfLibraries_ModeLibraryId] ON [modeDfLibraries] ([ModeLibraryId]);
+2025-10-13 21:10:46.538 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyDetailLibraries_ModeLibraryId] ON [modeFrequencyDetailLibraries] ([ModeLibraryId]);
+2025-10-13 21:10:46.552 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyDetails_ModeId] ON [modeFrequencyDetails] ([ModeId]);
+2025-10-13 21:10:46.564 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyRangeLibraries_ModeLibraryId] ON [modeFrequencyRangeLibraries] ([ModeLibraryId]);
+2025-10-13 21:10:46.577 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeLssDetailLibraries_ModeLibraryId] ON [modeLssDetailLibraries] ([ModeLibraryId]);
+2025-10-13 21:10:46.588 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriDetailLibraries_ModeLibraryId] ON [modePriDetailLibraries] ([ModeLibraryId]);
+2025-10-13 21:10:46.599 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriDetails_ModeId] ON [modePriDetails] ([ModeId]);
+2025-10-13 21:10:46.610 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriPwRangeLibraries_ModeLibraryId] ON [modePriPwRangeLibraries] ([ModeLibraryId]);
+2025-10-13 21:10:46.621 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriRangeLibraries_ModeLibraryId] ON [modePriRangeLibraries] ([ModeLibraryId]);
+2025-10-13 21:10:46.631 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriStaggerLevelLibraries_ModeLibraryId] ON [modePriStaggerLevelLibraries] ([ModeLibraryId]);
+2025-10-13 21:10:46.641 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePwDetailLibraries_ModeLibraryId] ON [modePwDetailLibraries] ([ModeLibraryId]);
+2025-10-13 21:10:46.653 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePwDetails_ModeId] ON [modePwDetails] ([ModeId]);
+2025-10-13 21:10:46.664 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modes_EmitterId] ON [modes] ([EmitterId]);
+2025-10-13 21:10:46.676 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeScanDetailLibraries_ModeLibraryId] ON [modeScanDetailLibraries] ([ModeLibraryId]);
+2025-10-13 21:10:46.687 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeScanDetails_ModeId] ON [modeScanDetails] ([ModeId]);
+2025-10-13 21:10:46.697 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_platforms_MissionId] ON [platforms] ([MissionId]);
+2025-10-13 21:10:46.812 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-13 21:10:46.853 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-13 21:10:46.872 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-13 21:10:46.922 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-13 21:10:46.925 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-13 21:10:46.929 +05:30 [INF] Hosting environment: Development
+2025-10-13 21:10:46.931 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-13 21:11:32.383 +05:30 [INF] Application is shutting down...

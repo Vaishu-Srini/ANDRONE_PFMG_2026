@@ -1,0 +1,1156 @@
+2025-10-04 10:38:54.321 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-04 10:38:54.764 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-04 10:38:54.903 +05:30 [INF] Executed DbCommand (112ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-04 10:38:55.198 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 10:38:55.250 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-04 10:38:55.273 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-04 10:38:55.362 +05:30 [INF] Now listening on: http://localhost:5058
+2025-10-04 10:38:55.364 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 10:38:55.367 +05:30 [INF] Hosting environment: Development
+2025-10-04 10:38:55.370 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-04 10:40:57.331 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3551
+2025-10-04 10:40:57.470 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-04 10:40:57.580 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:40:57.651 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:40:58.087 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-04 10:40:58.180 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 500.8828ms
+2025-10-04 10:40:58.205 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:40:58.222 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 747.7871 ms
+2025-10-04 10:40:58.250 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/problem+json; charset=utf-8 923.6772ms
+2025-10-04 10:41:14.050 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3552
+2025-10-04 10:41:14.082 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:41:14.092 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:41:14.127 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-04 10:41:14.138 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 29.6723ms
+2025-10-04 10:41:14.150 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:41:14.158 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 79.2578 ms
+2025-10-04 10:41:14.171 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/problem+json; charset=utf-8 121.198ms
+2025-10-04 10:41:28.356 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3549
+2025-10-04 10:41:28.391 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:41:28.402 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:41:28.540 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-04 10:41:28.552 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 134.5725ms
+2025-10-04 10:41:28.565 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:41:28.574 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 188.9836 ms
+2025-10-04 10:41:28.588 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/problem+json; charset=utf-8 232.3641ms
+2025-10-04 10:42:07.587 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3858
+2025-10-04 10:42:07.604 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:42:07.613 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:42:09.148 +05:30 [INF] Executed DbCommand (94ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[AlternateSymbol], [e].[Altitude], [e].[AudioId], [e].[BackgroundColor], [e].[CreatedBy], [e].[DateCreated], [e].[Description], [e].[EmitterModeCount], [e].[EmitterName], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[ModesText], [e].[PlatformId], [e].[PreviewSymbol], [e].[Status], [e].[SymbolCodeType], [e].[Type]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-04 10:42:09.239 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-04 10:42:09.268 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 1643.3068ms
+2025-10-04 10:42:09.280 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:42:09.291 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 1686.4355 ms
+2025-10-04 10:42:09.314 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 1726.4452ms
+2025-10-04 10:42:28.265 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3858
+2025-10-04 10:42:28.289 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:42:28.300 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:42:28.541 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[AlternateSymbol], [e].[Altitude], [e].[AudioId], [e].[BackgroundColor], [e].[CreatedBy], [e].[DateCreated], [e].[Description], [e].[EmitterModeCount], [e].[EmitterName], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[ModesText], [e].[PlatformId], [e].[PreviewSymbol], [e].[Status], [e].[SymbolCodeType], [e].[Type]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-04 10:42:28.976 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__dto_ModeName_0='Test_MODE21' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[ModeId], [m].[AlternateSymbol], [m].[AngleSwitch], [m].[AudioId], [m].[BgColor], [m].[Comment], [m].[CreatedBy], [m].[DateCreated], [m].[Description], [m].[DisplayPriority], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[FreqCount], [m].[FreqIsSwitch], [m].[FrequencyAttribute], [m].[GroundOnly], [m].[IsAntennaScan], [m].[LastModified], [m].[LethalRange], [m].[LssName], [m].[MaxPowerThreshouldDb], [m].[MlMeasurementTime], [m].[MlMinSamples], [m].[MlPercentage], [m].[MlTimeBase], [m].[ModeName], [m].[ModeType], [m].[PlatformType], [m].[PowerLevelDb], [m].[PriAttribute], [m].[PriCount], [m].[PriManualFlag], [m].[PriStaggerLevel], [m].[PriSwitchEpgFlag], [m].[PvMeasurementTime], [m].[PvOfMinSample], [m].[PvTimeBaseMsec], [m].[PwCount], [m].[RangeEstimation], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[ModeName] = @__dto_ModeName_0
+2025-10-04 10:42:29.871 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@p0='ABC123' (Nullable = false) (Size = 4000), @p1='30', @p2='0x536F6D65417564696F44617461' (Nullable = false) (Size = 8000), @p3='#0000' (Nullable = false) (Size = 4000), @p4='Used in simulation testing' (Nullable = false) (Size = 4000), @p5='pavan' (Nullable = false) (Size = 4000), @p6='2025-10-04T05:12:29.0049499Z', @p7='Mode used for high priority tracking' (Nullable = false) (Size = 4000), @p8='True', @p9='50', @p10='1', @p11='#FFFF' (Nullable = false) (Size = 4000), @p12='5', @p13='True', @p14='WIDE_BAND' (Nullable = false) (Size = 4000), @p15='False', @p16='True', @p17='2025-10-04T05:12:29.0049510Z', @p18='120', @p19='LSS_Test' (Nullable = false) (Size = 4000), @p20='-10', @p21='300', @p22='5', @p23='85', @p24='50', @p25='Test_MODE21' (Nullable = false) (Size = 200), @p26='0', @p27='0', @p28='-20', @p29='HIGH_JITTER' (Nullable = false) (Size = 4000), @p30='3', @p31='True', @p32='' (Nullable = false) (Size = 4000), @p33='False', @p34='200', @p35='10', @p36='100', @p37='2', @p38='string' (Nullable = false) (Size = 4000), @p39='0', @p40='123', @p41='0', @p42='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modes] ([AlternateSymbol], [AngleSwitch], [AudioId], [BgColor], [Comment], [CreatedBy], [DateCreated], [Description], [DisplayPriority], [EirpValue], [EmitterId], [FgColor], [FreqCount], [FreqIsSwitch], [FrequencyAttribute], [GroundOnly], [IsAntennaScan], [LastModified], [LethalRange], [LssName], [MaxPowerThreshouldDb], [MlMeasurementTime], [MlMinSamples], [MlPercentage], [MlTimeBase], [ModeName], [ModeType], [PlatformType], [PowerLevelDb], [PriAttribute], [PriCount], [PriManualFlag], [PriStaggerLevel], [PriSwitchEpgFlag], [PvMeasurementTime], [PvOfMinSample], [PvTimeBaseMsec], [PwCount], [RangeEstimation], [SubMode], [SymbolCodeType], [TestType], [ThreatType])
+OUTPUT INSERTED.[ModeId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, @p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, @p42);
+2025-10-04 10:42:30.021 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p0='700', @p1='100', @p2='4'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modeDfs] ([MaxTestRange], [MinTestRange], [ModeId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 10:42:30.160 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@p0='1', @p1='0', @p2='0', @p3='2.5', @p4='2.4', @p5='4'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modeFrequencyDetails] ([Deviation], [FrequencyClass], [FrequencyType], [MaxFrequency], [MinFrequency], [ModeId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-04 10:42:30.240 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@p0='2500', @p1='2200', @p2='4'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modeFrequencyRanges] ([MaxTestRange1], [MinTestRange1], [ModeId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 10:42:30.325 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='15', @p1='-35', @p2='-120', @p3='4'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modeLssDetails] ([DistanceKm], [MaxPowerDbm], [MinPowerDbm], [ModeId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-10-04 10:42:30.397 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='15', @p1='5', @p2='4'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modePriStaggerLevels] ([MaxTestRange], [MinTestRange], [ModeId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 10:42:30.478 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p0='20', @p1='40', @p2='10', @p3='30', @p4='4'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modePriPwRanges] ([MaxTestRange1], [MaxTestRange2], [MinTestRange1], [MinTestRange2], [ModeId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-10-04 10:42:30.555 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='500', @p1='200', @p2='4'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modePriRanges] ([MaxTestRange], [MinTestRange], [ModeId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 10:42:30.703 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@p0='120', @p1='10', @p2='20', @p3='180', @p4='150', @p5='3', @p6='5', @p7='10', @p8='80', @p9='4', @p10='12', @p11='1', @p12='-25', @p13='2'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modeScanDetails] ([CalculatedTot], [MaxBeamWidth], [MaxScanRate], [MaxScanSector], [MaxTot], [MinBeamWidth], [MinScanRate], [MinScanSector], [MinTot], [ModeId], [NominalScanRate], [ScanType], [SideLobeLevel], [SideLobeStd])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-04 10:42:30.838 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@p0='50', @p1='0', @p2='0', @p3='50840', @p4='1000', @p5='4', @p6='0', @p7='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modePriDetails] ([Deviation], [JitterMean], [JitterPercentage], [MaxPri], [MinPri], [ModeId], [PriClass], [PriType])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-10-04 10:42:30.958 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@p0='5', @p1='500', @p2='50', @p3='4', @p4='0', @p5='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modePwDetails] ([Deviation], [MaxPw], [MinPw], [ModeId], [PwClass], [PwType])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-04 10:42:31.001 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.ModeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-04 10:42:31.101 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 2785.1286ms
+2025-10-04 10:42:31.111 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:42:31.120 +05:30 [INF] HTTP POST /api/Mode/save responded 201 in 2832.0485 ms
+2025-10-04 10:42:31.133 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 201 null application/json; charset=utf-8 2868.5363ms
+2025-10-04 10:43:19.155 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3860
+2025-10-04 10:43:19.174 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:43:19.184 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:43:19.202 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-04 10:43:19.212 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 16.6528ms
+2025-10-04 10:43:19.223 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:43:19.232 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 57.8586 ms
+2025-10-04 10:43:19.246 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/problem+json; charset=utf-8 91.3386ms
+2025-10-04 10:44:47.323 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3858
+2025-10-04 10:44:47.345 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:44:47.358 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:44:47.443 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[AlternateSymbol], [e].[Altitude], [e].[AudioId], [e].[BackgroundColor], [e].[CreatedBy], [e].[DateCreated], [e].[Description], [e].[EmitterModeCount], [e].[EmitterName], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[ModesText], [e].[PlatformId], [e].[PreviewSymbol], [e].[Status], [e].[SymbolCodeType], [e].[Type]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-04 10:44:47.475 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__dto_ModeName_0='Test_MODE21' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[ModeId], [m].[AlternateSymbol], [m].[AngleSwitch], [m].[AudioId], [m].[BgColor], [m].[Comment], [m].[CreatedBy], [m].[DateCreated], [m].[Description], [m].[DisplayPriority], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[FreqCount], [m].[FreqIsSwitch], [m].[FrequencyAttribute], [m].[GroundOnly], [m].[IsAntennaScan], [m].[LastModified], [m].[LethalRange], [m].[LssName], [m].[MaxPowerThreshouldDb], [m].[MlMeasurementTime], [m].[MlMinSamples], [m].[MlPercentage], [m].[MlTimeBase], [m].[ModeName], [m].[ModeType], [m].[PlatformType], [m].[PowerLevelDb], [m].[PriAttribute], [m].[PriCount], [m].[PriManualFlag], [m].[PriStaggerLevel], [m].[PriSwitchEpgFlag], [m].[PvMeasurementTime], [m].[PvOfMinSample], [m].[PvTimeBaseMsec], [m].[PwCount], [m].[RangeEstimation], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[ModeName] = @__dto_ModeName_0
+2025-10-04 10:44:47.503 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-04 10:44:47.515 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 130.9696ms
+2025-10-04 10:44:47.523 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:44:47.529 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 184.0113 ms
+2025-10-04 10:44:47.540 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 217.555ms
+2025-10-04 10:45:29.723 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3858
+2025-10-04 10:45:29.741 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:45:29.748 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:45:29.772 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-04 10:45:29.782 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 20.5988ms
+2025-10-04 10:45:29.791 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:45:29.799 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 58.8010 ms
+2025-10-04 10:45:29.812 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 88.8373ms
+2025-10-04 10:46:01.388 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3858
+2025-10-04 10:46:01.408 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:46:01.417 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:46:01.470 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[AlternateSymbol], [e].[Altitude], [e].[AudioId], [e].[BackgroundColor], [e].[CreatedBy], [e].[DateCreated], [e].[Description], [e].[EmitterModeCount], [e].[EmitterName], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[ModesText], [e].[PlatformId], [e].[PreviewSymbol], [e].[Status], [e].[SymbolCodeType], [e].[Type]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-04 10:46:01.498 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__dto_ModeName_0='Test_MODE21' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[ModeId], [m].[AlternateSymbol], [m].[AngleSwitch], [m].[AudioId], [m].[BgColor], [m].[Comment], [m].[CreatedBy], [m].[DateCreated], [m].[Description], [m].[DisplayPriority], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[FreqCount], [m].[FreqIsSwitch], [m].[FrequencyAttribute], [m].[GroundOnly], [m].[IsAntennaScan], [m].[LastModified], [m].[LethalRange], [m].[LssName], [m].[MaxPowerThreshouldDb], [m].[MlMeasurementTime], [m].[MlMinSamples], [m].[MlPercentage], [m].[MlTimeBase], [m].[ModeName], [m].[ModeType], [m].[PlatformType], [m].[PowerLevelDb], [m].[PriAttribute], [m].[PriCount], [m].[PriManualFlag], [m].[PriStaggerLevel], [m].[PriSwitchEpgFlag], [m].[PvMeasurementTime], [m].[PvOfMinSample], [m].[PvTimeBaseMsec], [m].[PwCount], [m].[RangeEstimation], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[ModeName] = @__dto_ModeName_0
+2025-10-04 10:46:01.521 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-04 10:46:01.534 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 100.8714ms
+2025-10-04 10:46:01.545 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:46:01.554 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 146.4655 ms
+2025-10-04 10:46:01.572 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 183.9562ms
+2025-10-04 10:46:32.784 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3859
+2025-10-04 10:46:32.802 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:46:32.811 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:46:32.829 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-04 10:46:32.840 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 14.6434ms
+2025-10-04 10:46:32.850 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:46:32.860 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 58.2670 ms
+2025-10-04 10:46:32.873 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 89.49ms
+2025-10-04 10:46:40.913 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3860
+2025-10-04 10:46:40.939 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:46:40.949 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:46:40.975 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[AlternateSymbol], [e].[Altitude], [e].[AudioId], [e].[BackgroundColor], [e].[CreatedBy], [e].[DateCreated], [e].[Description], [e].[EmitterModeCount], [e].[EmitterName], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[ModesText], [e].[PlatformId], [e].[PreviewSymbol], [e].[Status], [e].[SymbolCodeType], [e].[Type]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-04 10:46:40.998 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__dto_ModeName_0='Test_MODE21' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[ModeId], [m].[AlternateSymbol], [m].[AngleSwitch], [m].[AudioId], [m].[BgColor], [m].[Comment], [m].[CreatedBy], [m].[DateCreated], [m].[Description], [m].[DisplayPriority], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[FreqCount], [m].[FreqIsSwitch], [m].[FrequencyAttribute], [m].[GroundOnly], [m].[IsAntennaScan], [m].[LastModified], [m].[LethalRange], [m].[LssName], [m].[MaxPowerThreshouldDb], [m].[MlMeasurementTime], [m].[MlMinSamples], [m].[MlPercentage], [m].[MlTimeBase], [m].[ModeName], [m].[ModeType], [m].[PlatformType], [m].[PowerLevelDb], [m].[PriAttribute], [m].[PriCount], [m].[PriManualFlag], [m].[PriStaggerLevel], [m].[PriSwitchEpgFlag], [m].[PvMeasurementTime], [m].[PvOfMinSample], [m].[PvTimeBaseMsec], [m].[PwCount], [m].[RangeEstimation], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[ModeName] = @__dto_ModeName_0
+2025-10-04 10:46:41.017 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-04 10:46:41.027 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 61.9051ms
+2025-10-04 10:46:41.036 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:46:41.044 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 105.0811 ms
+2025-10-04 10:46:41.057 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 143.5464ms
+2025-10-04 10:47:38.717 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3863
+2025-10-04 10:47:38.735 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:47:38.744 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-04 10:47:38.761 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-04 10:47:38.771 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 12.3211ms
+2025-10-04 10:47:38.778 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-04 10:47:38.787 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 52.1998 ms
+2025-10-04 10:47:38.801 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/problem+json; charset=utf-8 83.1915ms
+2025-10-04 12:21:46.338 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-10-04 12:21:46.649 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 310.5655ms
+2025-10-04 12:22:06.173 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Pfm/pfm-generation/1 - null null
+2025-10-04 12:22:06.196 +05:30 [INF] Executing endpoint 'PfmController.GetPfmGeneration (Anadrone_BackEnd)'
+2025-10-04 12:22:06.217 +05:30 [INF] Route matched with {action = "GetPfmGeneration", controller = "Pfm"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPfmGeneration(Int32) on controller PfmController (Anadrone_BackEnd).
+2025-10-04 12:22:06.338 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[@__missionId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__missionId_0
+2025-10-04 12:22:06.461 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[MissionId] = @__p_0
+2025-10-04 12:22:06.575 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [e].[EmitterId], [e].[AlternateSymbol], [e].[Altitude], [e].[AudioId], [e].[BackgroundColor], [e].[CreatedBy], [e].[DateCreated], [e].[Description], [e].[EmitterModeCount], [e].[EmitterName], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[LastModified], [e].[Latitude], [e].[Longitude], [e].[ModesText], [e].[PlatformId], [e].[PreviewSymbol], [e].[Status], [e].[SymbolCodeType], [e].[Type]
+FROM [emitters] AS [e]
+WHERE [e].[PlatformId] = @__p_0
+2025-10-04 12:22:06.652 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[ModeId], [m].[AlternateSymbol], [m].[AngleSwitch], [m].[AudioId], [m].[BgColor], [m].[Comment], [m].[CreatedBy], [m].[DateCreated], [m].[Description], [m].[DisplayPriority], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[FreqCount], [m].[FreqIsSwitch], [m].[FrequencyAttribute], [m].[GroundOnly], [m].[IsAntennaScan], [m].[LastModified], [m].[LethalRange], [m].[LssName], [m].[MaxPowerThreshouldDb], [m].[MlMeasurementTime], [m].[MlMinSamples], [m].[MlPercentage], [m].[MlTimeBase], [m].[ModeName], [m].[ModeType], [m].[PlatformType], [m].[PowerLevelDb], [m].[PriAttribute], [m].[PriCount], [m].[PriManualFlag], [m].[PriStaggerLevel], [m].[PriSwitchEpgFlag], [m].[PvMeasurementTime], [m].[PvOfMinSample], [m].[PvTimeBaseMsec], [m].[PwCount], [m].[RangeEstimation], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[EmitterId] = @__p_0
+2025-10-04 12:22:06.698 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange], [m].[MinTestRange], [m].[ModeId]
+FROM [modeDfs] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:06.756 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[Deviation], [m].[FrequencyClass], [m].[FrequencyType], [m].[MaxFrequency], [m].[MinFrequency], [m].[ModeId]
+FROM [modeFrequencyDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:06.801 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange1], [m].[MinTestRange1], [m].[ModeId]
+FROM [modeFrequencyRanges] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:06.844 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[DistanceKm], [m].[MaxPowerDbm], [m].[MinPowerDbm], [m].[ModeId]
+FROM [modeLssDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:06.892 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[Deviation], [m].[JitterMean], [m].[JitterPercentage], [m].[MaxPri], [m].[MinPri], [m].[ModeId], [m].[PriClass], [m].[PriType]
+FROM [modePriDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:06.934 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange], [m].[MinTestRange], [m].[ModeId]
+FROM [modePriRanges] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:06.976 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange1], [m].[MaxTestRange2], [m].[MinTestRange1], [m].[MinTestRange2], [m].[ModeId]
+FROM [modePriPwRanges] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.019 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange], [m].[MinTestRange], [m].[ModeId]
+FROM [modePriStaggerLevels] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.063 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[Deviation], [m].[MaxPw], [m].[MinPw], [m].[ModeId], [m].[PwClass], [m].[PwType]
+FROM [modePwDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.117 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[CalculatedTot], [m].[MaxBeamWidth], [m].[MaxScanRate], [m].[MaxScanSector], [m].[MaxTot], [m].[MinBeamWidth], [m].[MinScanRate], [m].[MinScanSector], [m].[MinTot], [m].[ModeId], [m].[NominalScanRate], [m].[ScanType], [m].[SideLobeLevel], [m].[SideLobeStd]
+FROM [modeScanDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.180 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [j].[JammingId], [j].[HoldTime], [j].[MaxRange], [j].[MaxVelocity], [j].[MinRange], [j].[MinVelocity], [j].[ModeId], [j].[PullInOut], [j].[RateOfChangeOfRange], [j].[RateOfChangeOfVelocity], [j].[StopTime], [j].[TechniqueName], [j].[TechniqueType], [j].[WalkTime]
+FROM [jammings] AS [j]
+WHERE [j].[ModeId] = @__p_0
+2025-10-04 12:22:07.196 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange], [m].[MinTestRange], [m].[ModeId]
+FROM [modeDfs] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.213 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[Deviation], [m].[FrequencyClass], [m].[FrequencyType], [m].[MaxFrequency], [m].[MinFrequency], [m].[ModeId]
+FROM [modeFrequencyDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.231 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange1], [m].[MinTestRange1], [m].[ModeId]
+FROM [modeFrequencyRanges] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.247 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[DistanceKm], [m].[MaxPowerDbm], [m].[MinPowerDbm], [m].[ModeId]
+FROM [modeLssDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.264 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[Deviation], [m].[JitterMean], [m].[JitterPercentage], [m].[MaxPri], [m].[MinPri], [m].[ModeId], [m].[PriClass], [m].[PriType]
+FROM [modePriDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.281 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange], [m].[MinTestRange], [m].[ModeId]
+FROM [modePriRanges] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.298 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange1], [m].[MaxTestRange2], [m].[MinTestRange1], [m].[MinTestRange2], [m].[ModeId]
+FROM [modePriPwRanges] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.315 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange], [m].[MinTestRange], [m].[ModeId]
+FROM [modePriStaggerLevels] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.332 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[Deviation], [m].[MaxPw], [m].[MinPw], [m].[ModeId], [m].[PwClass], [m].[PwType]
+FROM [modePwDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.348 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[CalculatedTot], [m].[MaxBeamWidth], [m].[MaxScanRate], [m].[MaxScanSector], [m].[MaxTot], [m].[MinBeamWidth], [m].[MinScanRate], [m].[MinScanSector], [m].[MinTot], [m].[ModeId], [m].[NominalScanRate], [m].[ScanType], [m].[SideLobeLevel], [m].[SideLobeStd]
+FROM [modeScanDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.363 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='3'], CommandType='"Text"', CommandTimeout='120']
+SELECT [j].[JammingId], [j].[HoldTime], [j].[MaxRange], [j].[MaxVelocity], [j].[MinRange], [j].[MinVelocity], [j].[ModeId], [j].[PullInOut], [j].[RateOfChangeOfRange], [j].[RateOfChangeOfVelocity], [j].[StopTime], [j].[TechniqueName], [j].[TechniqueType], [j].[WalkTime]
+FROM [jammings] AS [j]
+WHERE [j].[ModeId] = @__p_0
+2025-10-04 12:22:07.377 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='4'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange], [m].[MinTestRange], [m].[ModeId]
+FROM [modeDfs] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.391 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='4'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[Deviation], [m].[FrequencyClass], [m].[FrequencyType], [m].[MaxFrequency], [m].[MinFrequency], [m].[ModeId]
+FROM [modeFrequencyDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.404 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='4'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange1], [m].[MinTestRange1], [m].[ModeId]
+FROM [modeFrequencyRanges] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.418 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='4'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[DistanceKm], [m].[MaxPowerDbm], [m].[MinPowerDbm], [m].[ModeId]
+FROM [modeLssDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.434 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='4'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[Deviation], [m].[JitterMean], [m].[JitterPercentage], [m].[MaxPri], [m].[MinPri], [m].[ModeId], [m].[PriClass], [m].[PriType]
+FROM [modePriDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.445 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='4'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange], [m].[MinTestRange], [m].[ModeId]
+FROM [modePriRanges] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.457 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='4'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange1], [m].[MaxTestRange2], [m].[MinTestRange1], [m].[MinTestRange2], [m].[ModeId]
+FROM [modePriPwRanges] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.467 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='4'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[MaxTestRange], [m].[MinTestRange], [m].[ModeId]
+FROM [modePriStaggerLevels] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.480 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='4'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[Deviation], [m].[MaxPw], [m].[MinPw], [m].[ModeId], [m].[PwClass], [m].[PwType]
+FROM [modePwDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.493 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='4'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[Id], [m].[CalculatedTot], [m].[MaxBeamWidth], [m].[MaxScanRate], [m].[MaxScanSector], [m].[MaxTot], [m].[MinBeamWidth], [m].[MinScanRate], [m].[MinScanSector], [m].[MinTot], [m].[ModeId], [m].[NominalScanRate], [m].[ScanType], [m].[SideLobeLevel], [m].[SideLobeStd]
+FROM [modeScanDetails] AS [m]
+WHERE [m].[ModeId] = @__p_0
+2025-10-04 12:22:07.506 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='4'], CommandType='"Text"', CommandTimeout='120']
+SELECT [j].[JammingId], [j].[HoldTime], [j].[MaxRange], [j].[MaxVelocity], [j].[MinRange], [j].[MinVelocity], [j].[ModeId], [j].[PullInOut], [j].[RateOfChangeOfRange], [j].[RateOfChangeOfVelocity], [j].[StopTime], [j].[TechniqueName], [j].[TechniqueType], [j].[WalkTime]
+FROM [jammings] AS [j]
+WHERE [j].[ModeId] = @__p_0
+2025-10-04 12:22:28.698 +05:30 [INF] Executing FileContentResult, sending file with download name 'mission_1_emitters.csv' ...
+2025-10-04 12:22:28.721 +05:30 [INF] Executed action PfmController.GetPfmGeneration (Anadrone_BackEnd) in 22494.2477ms
+2025-10-04 12:22:28.729 +05:30 [INF] Executed endpoint 'PfmController.GetPfmGeneration (Anadrone_BackEnd)'
+2025-10-04 12:22:28.737 +05:30 [INF] HTTP GET /api/Pfm/pfm-generation/1 responded 200 in 22541.7067 ms
+2025-10-04 12:22:28.749 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Pfm/pfm-generation/1 - 200 1207 text/csv 22576.3472ms
+2025-10-04 13:23:08.173 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/ws/telemetry - null null
+2025-10-04 13:23:08.197 +05:30 [INF] Executing endpoint '/ws/telemetry'
+2025-10-04 13:23:08.244 +05:30 [INF] WS connected: ::1
+2025-10-04 13:25:07.127 +05:30 [INF] Client connected: 127.0.0.1:61135
+2025-10-04 13:25:07.138 +05:30 [INF] Packet start: emitterCount=13
+2025-10-04 13:25:07.357 +05:30 [INF] Executed DbCommand (82ms) [Parameters=[@p0='31603', @p1='Test Emitter - 01' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.402 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='123', @p1='Test Drone Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.424 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='-45', @p1='Search Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.445 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='0', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.464 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='123', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.482 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='12', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.503 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.526 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.557 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.602 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.638 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.662 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.678 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T07:55:07.1784286Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:25:07.714 +05:30 [INF] Decoded: Test Emitter - 01 -> 31603
+2025-10-04 13:25:07.725 +05:30 [INF] Decoded: Test Drone Emitter -> 123
+2025-10-04 13:25:07.735 +05:30 [INF] Decoded: Search Emitter -> -45
+2025-10-04 13:25:07.745 +05:30 [INF] Decoded: Track Emitter -> 0
+2025-10-04 13:25:07.755 +05:30 [INF] Decoded: Track Emitter -> 123
+2025-10-04 13:25:07.762 +05:30 [INF] Decoded: Track Emitter -> 12
+2025-10-04 13:25:07.770 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:25:07.777 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:25:07.787 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:25:07.795 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:25:07.803 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:25:07.809 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:25:07.822 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:26:23.457 +05:30 [INF] WS disconnected
+2025-10-04 13:26:23.461 +05:30 [INF] Executed endpoint '/ws/telemetry'
+2025-10-04 13:26:23.467 +05:30 [INF] HTTP GET /ws/telemetry responded 101 in 195271.3811 ms
+2025-10-04 13:26:23.478 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/ws/telemetry - 101 null null 195304.8274ms
+2025-10-04 13:26:53.205 +05:30 [INF] Application is shutting down...
+2025-10-04 13:27:06.953 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-04 13:27:07.434 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-04 13:27:07.568 +05:30 [INF] Executed DbCommand (113ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-04 13:27:07.719 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 13:27:07.866 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-04 13:27:07.898 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-04 13:27:08.000 +05:30 [INF] Now listening on: http://localhost:5058
+2025-10-04 13:27:08.006 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 13:27:08.011 +05:30 [INF] Hosting environment: Development
+2025-10-04 13:27:08.017 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-04 13:27:48.378 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/ws/telemetry - null null
+2025-10-04 13:27:48.503 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-04 13:27:48.601 +05:30 [INF] Executing endpoint '/ws/telemetry'
+2025-10-04 13:27:48.642 +05:30 [INF] WS connected: ::1
+2025-10-04 13:28:09.699 +05:30 [INF] WS disconnected
+2025-10-04 13:28:09.705 +05:30 [INF] Executed endpoint '/ws/telemetry'
+2025-10-04 13:28:09.725 +05:30 [INF] HTTP GET /ws/telemetry responded 101 in 21220.0874 ms
+2025-10-04 13:28:09.760 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/ws/telemetry - 101 null null 21384.4669ms
+2025-10-04 13:28:41.221 +05:30 [INF] Application is shutting down...
+2025-10-04 13:28:49.892 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-04 13:28:50.382 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-04 13:28:50.502 +05:30 [INF] Executed DbCommand (93ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-04 13:28:50.609 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 13:28:50.645 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-04 13:28:50.658 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-04 13:28:50.745 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-04 13:28:50.750 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 13:28:50.754 +05:30 [INF] Hosting environment: Development
+2025-10-04 13:28:50.758 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-04 13:28:58.659 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/ws/telemetry - null null
+2025-10-04 13:28:58.797 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-04 13:28:58.868 +05:30 [INF] Executing endpoint '/ws/telemetry'
+2025-10-04 13:28:58.894 +05:30 [INF] WS connected: 127.0.0.1
+2025-10-04 13:30:13.477 +05:30 [INF] Client connected: 127.0.0.1:54938
+2025-10-04 13:30:13.502 +05:30 [INF] Packet start: emitterCount=13
+2025-10-04 13:30:14.623 +05:30 [INF] Executed DbCommand (150ms) [Parameters=[@p0='31603', @p1='Test Emitter - 01' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:14.774 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='123', @p1='Test Drone Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:14.803 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='-45', @p1='Search Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:14.832 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='0', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:14.855 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='123', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:14.879 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='12', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:14.905 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:14.948 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:14.977 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:15.001 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:15.020 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:15.043 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:15.062 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:00:13.5249870Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:30:15.154 +05:30 [INF] Decoded: Test Emitter - 01 -> 31603
+2025-10-04 13:30:15.162 +05:30 [INF] Decoded: Test Drone Emitter -> 123
+2025-10-04 13:30:15.169 +05:30 [INF] Decoded: Search Emitter -> -45
+2025-10-04 13:30:15.178 +05:30 [INF] Decoded: Track Emitter -> 0
+2025-10-04 13:30:15.186 +05:30 [INF] Decoded: Track Emitter -> 123
+2025-10-04 13:30:15.193 +05:30 [INF] Decoded: Track Emitter -> 12
+2025-10-04 13:30:15.200 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:30:15.207 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:30:15.217 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:30:15.224 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:30:15.231 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:30:15.239 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:30:15.247 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:30:43.220 +05:30 [INF] WS disconnected
+2025-10-04 13:30:43.230 +05:30 [INF] Executed endpoint '/ws/telemetry'
+2025-10-04 13:30:43.248 +05:30 [INF] HTTP GET /ws/telemetry responded 101 in 104448.5016 ms
+2025-10-04 13:30:43.276 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/ws/telemetry - 101 null null 104619.1702ms
+2025-10-04 13:30:48.117 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/ws/telemetry - null null
+2025-10-04 13:30:48.151 +05:30 [INF] Executing endpoint '/ws/telemetry'
+2025-10-04 13:30:48.160 +05:30 [INF] WS connected: 127.0.0.1
+2025-10-04 13:31:52.958 +05:30 [INF] Client connected: 127.0.0.1:54959
+2025-10-04 13:31:52.974 +05:30 [INF] Packet start: emitterCount=13
+2025-10-04 13:31:53.329 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='31603', @p1='Test Emitter - 01' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.350 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='123', @p1='Test Drone Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.376 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='-45', @p1='Search Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.398 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='0', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.417 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='123', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.439 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='12', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.459 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.481 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.500 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.519 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.540 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.560 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.579 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T08:01:52.9988637Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 13:31:53.595 +05:30 [INF] Decoded: Test Emitter - 01 -> 31603
+2025-10-04 13:31:53.604 +05:30 [INF] Decoded: Test Drone Emitter -> 123
+2025-10-04 13:31:53.611 +05:30 [INF] Decoded: Search Emitter -> -45
+2025-10-04 13:31:53.619 +05:30 [INF] Decoded: Track Emitter -> 0
+2025-10-04 13:31:53.625 +05:30 [INF] Decoded: Track Emitter -> 123
+2025-10-04 13:31:53.633 +05:30 [INF] Decoded: Track Emitter -> 12
+2025-10-04 13:31:53.641 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:31:53.648 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:31:53.655 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:31:53.661 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:31:53.668 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:31:53.675 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:31:53.683 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 13:33:05.622 +05:30 [INF] WS disconnected
+2025-10-04 13:33:05.632 +05:30 [INF] Executed endpoint '/ws/telemetry'
+2025-10-04 13:33:05.641 +05:30 [INF] HTTP GET /ws/telemetry responded 101 in 137493.3764 ms
+2025-10-04 13:33:05.656 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/ws/telemetry - 101 null null 137538.9409ms
+2025-10-04 13:33:08.817 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/ws/telemetry - null null
+2025-10-04 13:33:08.857 +05:30 [INF] Executing endpoint '/ws/telemetry'
+2025-10-04 13:33:08.865 +05:30 [INF] WS connected: 127.0.0.1
+2025-10-04 13:38:23.680 +05:30 [INF] Application is shutting down...
+2025-10-04 13:38:53.727 +05:30 [INF] Connection id "0HNG33FFS0PAR", Request id "0HNG33FFS0PAR:00000001": the application aborted the connection.
+2025-10-04 13:38:53.760 +05:30 [INF] WS disconnected
+2025-10-04 13:38:53.771 +05:30 [INF] Executed endpoint '/ws/telemetry'
+2025-10-04 13:38:53.777 +05:30 [ERR] HTTP GET /ws/telemetry responded 500 in 344925.5888 ms
+Microsoft.AspNetCore.Connections.ConnectionAbortedException: The connection was aborted because the server is shutting down and request processing didn't complete within the time specified by HostOptions.ShutdownTimeout.
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1UpgradeMessageBody.ReadAsyncInternalAwaited(ValueTask`1 readTask, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.IO.Stream.ReadAtLeastAsyncCore(Memory`1 buffer, Int32 minimumBytes, Boolean throwOnEndOfStream, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TResult](Memory`1 payloadBuffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Anadrones\Anadrone_BackEnd\Program.cs:line 210
+--- End of stack trace from previous location ---
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Anadrones\Anadrone_BackEnd\Program.cs:line 219
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-10-04 13:38:53.877 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/ws/telemetry - 101 null null 345059.5836ms
+2025-10-04 13:39:34.817 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-04 13:39:35.210 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-04 13:39:35.258 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-04 13:39:35.345 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 13:39:35.377 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-04 13:39:35.392 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-04 13:39:35.447 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-04 13:39:35.450 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 13:39:35.453 +05:30 [INF] Hosting environment: Development
+2025-10-04 13:39:35.456 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-04 13:39:56.832 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/ws/telemetry - null null
+2025-10-04 13:39:56.922 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-04 13:39:56.961 +05:30 [INF] Executing endpoint '/ws/telemetry'
+2025-10-04 13:39:56.982 +05:30 [INF] WS connected: 127.0.0.1
+2025-10-04 16:36:08.582 +05:30 [INF] Application is shutting down...
+2025-10-04 16:36:38.605 +05:30 [INF] Connection id "0HNG33LK0TOTT", Request id "0HNG33LK0TOTT:00000001": the application aborted the connection.
+2025-10-04 16:36:38.638 +05:30 [INF] WS disconnected
+2025-10-04 16:36:38.645 +05:30 [INF] Executed endpoint '/ws/telemetry'
+2025-10-04 16:36:38.663 +05:30 [ERR] HTTP GET /ws/telemetry responded 500 in 10601737.7737 ms
+Microsoft.AspNetCore.Connections.ConnectionAbortedException: The connection was aborted because the server is shutting down and request processing didn't complete within the time specified by HostOptions.ShutdownTimeout.
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1UpgradeMessageBody.ReadAsyncInternalAwaited(ValueTask`1 readTask, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.IO.Stream.ReadAtLeastAsyncCore(Memory`1 buffer, Int32 minimumBytes, Boolean throwOnEndOfStream, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TResult](Memory`1 payloadBuffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Anadrones\Anadrone_BackEnd\Program.cs:line 210
+--- End of stack trace from previous location ---
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Anadrones\Anadrone_BackEnd\Program.cs:line 219
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-10-04 16:36:38.770 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/ws/telemetry - 101 null null 10601940.5892ms
+2025-10-04 16:39:26.019 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-04 16:39:26.433 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-04 16:39:26.567 +05:30 [INF] Executed DbCommand (117ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-04 16:39:26.695 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 16:39:26.727 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-04 16:39:26.740 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-04 16:39:26.793 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-04 16:39:26.796 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 16:39:26.799 +05:30 [INF] Hosting environment: Development
+2025-10-04 16:39:26.801 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-04 16:40:58.180 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/ws/telemetry - null null
+2025-10-04 16:40:58.278 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-04 16:40:58.337 +05:30 [INF] Executing endpoint '/ws/telemetry'
+2025-10-04 16:40:58.359 +05:30 [INF] WS connected: 127.0.0.1
+2025-10-04 16:49:56.134 +05:30 [INF] Client connected: 127.0.0.1:56468
+2025-10-04 16:49:56.141 +05:30 [INF] Packet start: emitterCount=13
+2025-10-04 16:49:57.039 +05:30 [INF] Executed DbCommand (95ms) [Parameters=[@p0='31603', @p1='Test Emitter - 01' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.175 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='123', @p1='Test Drone Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.204 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='-45', @p1='Search Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.231 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='0', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.256 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='123', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.279 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='12', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.301 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.324 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.346 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.366 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.387 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.407 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.427 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:19:56.1548222Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 16:49:57.525 +05:30 [INF] Decoded: Test Emitter - 01 -> 31603
+2025-10-04 16:49:57.533 +05:30 [INF] Decoded: Test Drone Emitter -> 123
+2025-10-04 16:49:57.543 +05:30 [INF] Decoded: Search Emitter -> -45
+2025-10-04 16:49:57.555 +05:30 [INF] Decoded: Track Emitter -> 0
+2025-10-04 16:49:57.563 +05:30 [INF] Decoded: Track Emitter -> 123
+2025-10-04 16:49:57.573 +05:30 [INF] Decoded: Track Emitter -> 12
+2025-10-04 16:49:57.584 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 16:49:57.594 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 16:49:57.605 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 16:49:57.613 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 16:49:57.618 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 16:49:57.622 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 16:49:57.627 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 16:56:35.228 +05:30 [INF] WS disconnected
+2025-10-04 16:56:35.237 +05:30 [INF] Executed endpoint '/ws/telemetry'
+2025-10-04 16:56:35.259 +05:30 [INF] HTTP GET /ws/telemetry responded 101 in 936978.2906 ms
+2025-10-04 16:56:35.288 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/ws/telemetry - 101 null null 937111.8019ms
+2025-10-04 16:57:48.971 +05:30 [INF] Application is shutting down...
+2025-10-04 16:58:07.846 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-04 16:58:08.275 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-04 16:58:08.405 +05:30 [INF] Executed DbCommand (112ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-04 16:58:08.501 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-04 16:58:08.533 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-04 16:58:08.548 +05:30 [WRN] The WebRootPath was not found: C:\Anadrones\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-04 16:58:08.625 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-04 16:58:08.627 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-04 16:58:08.629 +05:30 [INF] Hosting environment: Development
+2025-10-04 16:58:08.632 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-10-04 16:58:17.628 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/ws/telemetry - null null
+2025-10-04 16:58:17.722 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-04 16:58:17.763 +05:30 [INF] Executing endpoint '/ws/telemetry'
+2025-10-04 16:58:17.790 +05:30 [INF] WS connected: 127.0.0.1
+2025-10-04 16:59:14.796 +05:30 [INF] Request starting HTTP/1.1 GET http://192.168.1.8:5058/ws/telemetry - null null
+2025-10-04 16:59:14.828 +05:30 [INF] CORS policy execution successful.
+2025-10-04 16:59:14.851 +05:30 [INF] Executing endpoint '/ws/telemetry'
+2025-10-04 16:59:14.865 +05:30 [INF] WS connected: 192.168.1.7
+2025-10-04 16:59:24.943 +05:30 [INF] Request starting HTTP/1.1 GET http://192.168.1.8:5058/ws/telemetry - null null
+2025-10-04 16:59:24.947 +05:30 [INF] Connection id "0HNG374ENOTDJ", Request id "0HNG374ENOTDJ:00000001": the application aborted the connection.
+2025-10-04 16:59:24.962 +05:30 [INF] Request starting HTTP/1.1 GET http://192.168.1.8:5058/ws/telemetry - null null
+2025-10-04 16:59:24.971 +05:30 [INF] CORS policy execution successful.
+2025-10-04 16:59:24.997 +05:30 [INF] CORS policy execution successful.
+2025-10-04 16:59:25.012 +05:30 [INF] WS disconnected
+2025-10-04 16:59:25.015 +05:30 [INF] Executing endpoint '/ws/telemetry'
+2025-10-04 16:59:25.015 +05:30 [INF] Executing endpoint '/ws/telemetry'
+2025-10-04 16:59:25.021 +05:30 [INF] Executed endpoint '/ws/telemetry'
+2025-10-04 16:59:25.027 +05:30 [INF] WS connected: 192.168.1.7
+2025-10-04 16:59:25.035 +05:30 [INF] WS connected: 192.168.1.7
+2025-10-04 16:59:25.051 +05:30 [INF] Connection id "0HNG374ENOTDK", Request id "0HNG374ENOTDK:00000001": the application aborted the connection.
+2025-10-04 16:59:25.056 +05:30 [INF] HTTP GET /ws/telemetry responded 101 in 10198.6115 ms
+2025-10-04 16:59:25.068 +05:30 [INF] WS disconnected
+2025-10-04 16:59:25.096 +05:30 [INF] Executed endpoint '/ws/telemetry'
+2025-10-04 16:59:25.100 +05:30 [INF] Request finished HTTP/1.1 GET http://192.168.1.8:5058/ws/telemetry - 101 null null 10301.3697ms
+2025-10-04 16:59:25.106 +05:30 [ERR] HTTP GET /ws/telemetry responded 500 in 100.1244 ms
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TResult](Memory`1 payloadBuffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.GetTaskForValueTaskSource(IValueTaskSource`1 t)
+--- End of stack trace from previous location ---
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Anadrones\Anadrone_BackEnd\Program.cs:line 210
+--- End of stack trace from previous location ---
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Anadrones\Anadrone_BackEnd\Program.cs:line 219
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-10-04 16:59:25.198 +05:30 [INF] Request finished HTTP/1.1 GET http://192.168.1.8:5058/ws/telemetry - 101 null null 254.9962ms
+2025-10-04 17:01:38.392 +05:30 [INF] Client connected: 127.0.0.1:55433
+2025-10-04 17:01:38.402 +05:30 [INF] Packet start: emitterCount=13
+2025-10-04 17:01:39.351 +05:30 [INF] Executed DbCommand (111ms) [Parameters=[@p0='31603', @p1='Test Emitter - 01' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.493 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='123', @p1='Test Drone Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.522 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='-45', @p1='Search Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.547 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='0', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.570 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='123', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.591 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='12', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.612 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.634 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.655 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.677 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.706 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.741 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.770 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='10', @p1='Track Emitter' (Nullable = false) (Size = 4000), @p2='2025-10-04T11:31:38.4164443Z'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitterReadings] ([BoresightError], [EmitterName], [TimeUtc])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-04 17:01:39.894 +05:30 [INF] Decoded: Test Emitter - 01 -> 31603
+2025-10-04 17:01:39.906 +05:30 [INF] Decoded: Test Drone Emitter -> 123
+2025-10-04 17:01:39.916 +05:30 [INF] Decoded: Search Emitter -> -45
+2025-10-04 17:01:39.926 +05:30 [INF] Decoded: Track Emitter -> 0
+2025-10-04 17:01:39.935 +05:30 [INF] Decoded: Track Emitter -> 123
+2025-10-04 17:01:39.944 +05:30 [INF] Decoded: Track Emitter -> 12
+2025-10-04 17:01:39.951 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 17:01:39.960 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 17:01:39.967 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 17:01:39.977 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 17:01:39.985 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 17:01:39.990 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 17:01:39.997 +05:30 [INF] Decoded: Track Emitter -> 10
+2025-10-04 17:02:14.505 +05:30 [INF] Connection id "0HNG374ENOTDI", Request id "0HNG374ENOTDI:00000001": the application aborted the connection.
+2025-10-04 17:02:14.520 +05:30 [INF] WS disconnected
+2025-10-04 17:02:14.528 +05:30 [INF] Executed endpoint '/ws/telemetry'
+2025-10-04 17:02:14.539 +05:30 [ERR] HTTP GET /ws/telemetry responded 500 in 236818.8428 ms
+System.OperationCanceledException: Aborted
+ ---> Microsoft.AspNetCore.Connections.ConnectionResetException: An existing connection was forcibly closed by the remote host.
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1UpgradeMessageBody.ReadAsyncInternalAwaited(ValueTask`1 readTask, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.IO.Stream.ReadAtLeastAsyncCore(Memory`1 buffer, Int32 minimumBytes, Boolean throwOnEndOfStream, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TResult](Memory`1 payloadBuffer, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TResult](Memory`1 payloadBuffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Anadrones\Anadrone_BackEnd\Program.cs:line 210
+--- End of stack trace from previous location ---
+   at Program.<>c.<<<Main>$>b__0_7>d.MoveNext() in C:\Anadrones\Anadrone_BackEnd\Program.cs:line 219
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-10-04 17:02:14.598 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/ws/telemetry - 101 null null 236973.0173ms

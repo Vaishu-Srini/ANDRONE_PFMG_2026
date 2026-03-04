@@ -1,0 +1,108 @@
+@layer base {
+  .page-heading {
+    @apply font-mono! text-xl! 2xl:text-2xl! not-italic! font-medium! leading-6! capitalize! /*used for all heading of the page*/;
+  }
+  .page-subheading {
+    @apply font-karla! text-xs! not-italic! font-normal! leading-normal! capitalize!/*used for all sub heading of page*/;
+  }
+  .btn-text {
+    @apply font-karla! text-sm 2xl:text-base! not-italic! font-bold! leading-normal! capitalize! /*btn-primary button text*/;
+  }
+  .btn-text-sm {
+    @apply font-karla! text-sm 2xl:text-base! not-italic! font-medium! leading-6! capitalize! /*btn like filter*/;
+  }
+  .label-text{
+    @apply font-karla! text-xs! not-italic! font-medium! leading-normal! capitalize!/*label text for form*/
+  }
+  .input-text {
+    @apply font-karla! text-sm! 2xl:text-base! not-italic! font-normal! leading-6! capitalize!/*placeholder and for the input text*/;
+  }
+  .display-input-text{
+    @apply font-karla! text-sm!  not-italic! font-medium! leading-6! tracking-[0.353px]!
+  }
+  .info-text {
+    @apply font-karla! text-sm! 2xl:text-base! not-italic! font-normal! leading-6! tracking-[0.353px]! capitalize! /*selected count text used for pagination count also*/;
+  }
+  .table-sm-text-header{
+    @apply  font-mono! text-[13px]! not-italic! font-medium! leading-6! uppercase!
+  }
+  .table-sm-cell-text{
+    @apply font-mono! text-[15px]! not-italic! font-normal! leading-6!
+  }
+  .table-header-text {
+    @apply font-mono text-sm not-italic font-medium leading-6 capitalize; /*table-header*/
+  }
+  .table-cell-text {
+    @apply font-karla! text-sm! 2xl:text-base! not-italic! font-normal! leading-6! capitalize! /*table-body*/;
+  }
+  .text-body-medium {
+    @apply font-karla! text-sm! 2xl:text-base! not-italic! font-medium! leading-normal!; /*body info title*/
+  }
+  .text-mono-heading {
+    @apply font-mono! text-base! 2xl:text-2xl! not-italic! font-bold! leading-8!; /*heading textof info*/
+  }
+  .text-tab {
+    @apply font-karla! text-sm 2xl:text-base! not-italic! font-bold! leading-6! tracking-[1px]! uppercase!;
+  }
+  .sub-heading {
+    @apply font-mono! text-sm! 2xl:text-base! not-italic! font-medium! leading-4! capitalize!;
+  }
+  .subheading-sm {
+    @apply font-mono! text-xs! 2xl:text-sm! not-italic! font-bold! leading-normal! capitalize!;
+  }
+  .card-text {
+    @apply text-start! font-mono! text-xl! 2xl:text-2xl! not-italic! font-medium! leading-[33.6px]! capitalize!;
+  }
+  .card-text-sm{
+    @apply font-karla! text-sm! 2xl:text-base! not-italic! font-medium! leading-normal! tracking-[0.32px]! uppercase!;
+  }
+  .alert-text{
+    @apply font-karla! text-xs! not-italic! font-normal! leading-normal! 
+  }
+  .mono-text-xs{
+    @apply font-mono! text-xs! not-italic! font-medium! leading-normal! capitalize!
+  }
+  .label-text-xs{
+    @apply font-mono! text-xs! not-italic! font-normal! leading-4! tracking-[0.8px]! uppercase!/*for last editied also same classname is used*/
+  }
+  .mono-text-lg{
+    @apply font-mono! text-base! 2xl:text-lg! not-italic! font-bold! leading-normal! uppercase!
+  }
+  .text-karla-sm{
+    @apply text-white/95! font-karla! text-xs! 2xl:text-sm! not-italic! font-bold! leading-normal!
+  }
+  .karla-text-xl{
+    @apply font-karla! text-lg! 2xl:text-[20px]! not-italic! font-semibold! leading-7! tracking-[0.353px]! 
+  }
+  .badge-text{
+    @apply font-din! text-sm! 2xl:text-base! not-italic! font-normal! leading-6! tracking-[0.353px]!
+  }
+  .mono-text-base{
+    @apply font-mono! text-sm! 2xl:text-base! not-italic! font-medium! leading-[22.4px]! tracking-[0.353px]!
+  }
+  .description-text{
+    @apply  font-karla! text-xs! 2xl:text-sm! not-italic! font-normal! leading-6! tracking-[0.353px]!
+  }
+  .btn-info-text{
+    @apply font-mono! text-xs! not-italic! font-bold! leading-4 tracking-[0.8px] uppercase;
+  }
+  .dialog-header{
+    @apply font-mono! text-sm! not-italic! font-medium! leading-normal! capitalize!;
+  }
+  
+  .modal-label{
+    @apply font-mono! text-base! not-italic! font-normal! leading-4!;
+  }
+  .modal-label-sm{
+    @apply font-mono! text-sm! not-italic! font-normal! leading-4!;
+  }
+  .modal-input{
+    @apply font-karla! text-base! not-italic!  font-medium! leading-normal!;
+  }
+  .mono-xs{
+    @apply font-mono! text-xs! not-italic! font-normal! leading-normal! uppercase!;
+  }
+  .mono-base{
+     @apply font-mono! text-base! not-italic! font-medium! leading-[22.4px]! tracking-[0.353px]! ;
+  }
+}

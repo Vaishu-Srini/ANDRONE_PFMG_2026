@@ -1,0 +1,75 @@
+{
+    "entities": [
+      {
+        "entity": "SenseFly EBee",
+        "entityId": "EX-02-158392",
+        "manufacturer": "Company Name",
+        "category": "Surveillance",
+        "class": "C1",
+        "endurance": 90,
+        "registered": "12/Jul/2025 12:00",
+        "status": "Under Maintenance"
+      },
+      {
+        "entity": "SenseFly EBee",
+        "entityId": "EX-02-158392",
+        "manufacturer": "Company Name",
+        "category": "Specific",
+        "class": "C1",
+        "endurance": 90,
+        "registered": "12/Jul/2025 12:00",
+        "status": "Active"
+      },
+      {
+        "entity": "DJI Phantom 4 RTK",
+        "entityId": "RTK-09-512678",
+        "manufacturer": "Company Name",
+        "category": "General",
+        "class": "A1",
+        "endurance": 85,
+        "registered": "12/Jul/2025 12:00",
+        "status": "Active"
+      },
+      {
+        "entity": "Parrot Anafi USA",
+        "entityId": "AN-05-148743",
+        "manufacturer": "Company Name",
+        "category": "Specific",
+        "class": "B2",
+        "endurance": 75,
+        "registered": "12/Jul/2025 12:00",
+        "status": "Active"
+      },
+      {
+        "entity": "Yuneec H520",
+        "entityId": "H520-11-375812",
+        "manufacturer": "Company Name",
+        "category": "General",
+        "class": "C3",
+        "endurance": 80,
+        "registered": "12/Jul/2025 12:00",
+        "status": "Active"
+      },
+      {
+        "entity": "Autel Robotics EVO Lite",
+        "entityId": "EVO-14-289416",
+        "manufacturer": "Company Name",
+        "category": "Specific",
+        "class": "D4",
+        "endurance": 70,
+        "registered": "12/Jul/2025 12:00",
+        "status": "Active"
+      },
+      {
+        "entity": "Skydio 2",
+        "entityId": "SKD-23-567890",
+        "manufacturer": "Company Name",
+        "category": "General",
+        "class": "E5",
+        "endurance": 95,
+        "registered": "12/Jul/2025 12:00",
+        "status": "Active"
+      }
+    ]
+  }
+  

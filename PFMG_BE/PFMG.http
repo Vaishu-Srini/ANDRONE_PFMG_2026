@@ -1,0 +1,6 @@
+@PFMG_HostAddress = http://localhost:5058
+
+GET {{PFMG_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

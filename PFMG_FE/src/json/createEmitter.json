@@ -1,0 +1,496 @@
+{
+    "id": "Emitter_1001",
+    "code": {
+      "symbolCodeType": "New",
+      "selectSymbol": "E1",
+      "alternateSymbol": "ALT-E1",
+      "fgColor": "#FFFFFF",
+      "bgColor": "#1E90FF"
+    },
+    "lastEdited": "15 Sep'25 11:45",
+    "details": {
+      "emitterName": "Emitter_Alpha",
+      "groundOnly": false,
+      "isUnknown": false,
+      "type": "Surveillance",
+      "location": "Sector-21",
+      "audioId": "AUDIO_1001",
+      "description": "Long-range surveillance radar with agile scanning"
+    },
+    "attachedModes": [
+      {
+        "id": "Mode_001",
+        "code": {
+          "symbolCodeType": "New",
+          "selectSymbol": "S1",
+          "alternateSymbol": "ALT-S1",
+          "fgColor": "#FFFFFF",
+          "bgColor": "#F7B500"
+        },
+        "lastEdited": "23 Jul'24 23:09",
+        "details": {
+          "emitterName": "Emitter_Alpha",
+          "groundOnly": false,
+          "isUnknown": false,
+          "type": "Search",
+          "location": "Sector-12",
+          "audioId": "AUDIO_001",
+          "description": "Search radar with wide coverage",
+          "platformType": "Air Platform",
+          "threatType": "Hostile",
+          "lethalRange": 120
+        },
+        "dispRangeEstimation": "EIRP",
+        "ewParameters": {
+          "frequency": {
+            "freqType": "Ex Type",
+            "frequencyClass": "Class A",
+            "frequencyTable": [
+              { "min": 2000, "max": 2200, "deviation": 5 },
+              { "min": 2300, "max": 2500, "deviation": 10 }
+            ]
+          },
+          "pri": {
+            "priType": "Type 3",
+            "priClass": "Class X",
+            "priTable": [
+              { "min": 100, "max": 120, "deviation": 2, "staggerLevel": 1 },
+              { "min": 130, "max": 150, "deviation": 3, "staggerLevel": 2 }
+            ]
+          },
+          "pulseWidth": {
+            "pwType": "Type 1",
+            "pwClass": "Class P",
+            "pulseWidthTable": [
+              { "min": 5, "max": 10, "deviation": 1 },
+              { "min": 12, "max": 15, "deviation": 2 }
+            ]
+          }
+        },
+        "scanDetails": {
+          "scanType": "Agile",
+          "minScanSector": 30,
+          "maxScanSector": 120,
+          "minScanRate": 5,
+          "normalScanRate": 10,
+          "sideLobeLevel": -15,
+          "sideLobeStd": 2,
+          "maxScanSection": 150,
+          "maxScanRate": 20,
+          "minTot": 3,
+          "maxTot": 8
+        },
+        "modeParams": {
+          "testName": "Mode_Test_A",
+          "testTimeInterval": 60,
+          "ageOut": 300,
+          "priority": 1,
+          "testType": "Functional",
+          "powerLevel": 80,
+          "pwTimeBase": 5,
+          "pvMinSamples": 10,
+          "pvMeasurementTime": "15s"
+        },
+        "comments": "Initial test mode for emitter Alpha",
+        "jammingData": {
+            "lastGenerated": "23 Jul'24 23:09",
+            "techniques": [
+              { "id": "T1", "name": "Technique 1" },
+              { "id": "T2", "name": "Technique 2" },
+              { "id": "T3", "name": "Technique 3" },
+              { "id": "T4", "name": "Technique 4" }
+            ],
+            "sequences": [
+              {
+                "id": "Sequence_1",
+                "segments": [
+                  {
+                    "id": "Segment_1",
+                    "techniqueId": "T1",
+                    "cycleType": "Tech Cycle", 
+                    "probability": 40,
+                    "cycleCount": 12,
+                    "chart": {
+                      "x": [0, 1, 2, 3, 4],
+                      "y": [10, 20, 15, 25, 18]
+                    }
+                  },
+                  {
+                    "id": "Segment_2",
+                    "techniqueId": "T2",
+                    "cycleType": "Tech Cycle",
+                    "probability": 40,
+                    "cycleCount": 12,
+                    "chart": {
+                      "x": [0, 1, 2, 3, 4],
+                      "y": [8, 15, 22, 18, 20]
+                    }
+                  },
+                  {
+                    "id": "Segment_3",
+                    "techniqueId": "T3",
+                    "cycleType": "Tech Cycle",
+                    "probability": 40,
+                    "cycleCount": 12,
+                    "chart": {
+                      "x": [0, 1, 2, 3, 4],
+                      "y": [12, 18, 14, 22, 19]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "Sequence_2",
+                "segments": [
+                  {
+                    "id": "Segment_1",
+                    "techniqueId": "T2",
+                    "cycleType": "Absolute Time", 
+                    "probability": 30,
+                    "cycleCount": 10,
+                    "chart": {
+                      "x": [0, 2, 4, 6, 8],
+                      "y": [5, 15, 10, 20, 12]
+                    }
+                  },
+                  {
+                    "id": "Segment_2",
+                    "techniqueId": "T4",
+                    "cycleType": "Tech Cycle",
+                    "probability": 50,
+                    "cycleCount": 15,
+                    "chart": {
+                      "x": [0, 2, 4, 6, 8],
+                      "y": [7, 12, 18, 22, 15]
+                    }
+                  },
+                  {
+                    "id": "Segment_3",
+                    "techniqueId": "T1",
+                    "cycleType": "Absolute Time",
+                    "probability": 20,
+                    "cycleCount": 8,
+                    "chart": {
+                      "x": [0, 2, 4, 6, 8],
+                      "y": [6, 9, 15, 10, 13]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "Sequence_3",
+                "segments": [
+                  {
+                    "id": "Segment_1",
+                    "techniqueId": "T3",
+                    "cycleType": "Tech Cycle",
+                    "probability": 60,
+                    "cycleCount": 20,
+                    "chart": {
+                      "x": [0, 5, 10, 15, 20],
+                      "y": [10, 25, 20, 30, 22]
+                    }
+                  },
+                  {
+                    "id": "Segment_2",
+                    "techniqueId": "T2",
+                    "cycleType": "Absolute Time",
+                    "probability": 35,
+                    "cycleCount": 11,
+                    "chart": {
+                      "x": [0, 5, 10, 15, 20],
+                      "y": [14, 18, 12, 20, 16]
+                    }
+                  },
+                  {
+                    "id": "Segment_3",
+                    "techniqueId": "T4",
+                    "cycleType": "Tech Cycle",
+                    "probability": 45,
+                    "cycleCount": 13,
+                    "chart": {
+                      "x": [0, 5, 10, 15, 20],
+                      "y": [8, 12, 17, 22, 18]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "Sequence_4",
+                "segments": [
+                  {
+                    "id": "Segment_1",
+                    "techniqueId": "T1",
+                    "cycleType": "Absolute Time",
+                    "probability": 25,
+                    "cycleCount": 9,
+                    "chart": {
+                      "x": [0, 3, 6, 9, 12],
+                      "y": [5, 10, 8, 12, 9]
+                    }
+                  },
+                  {
+                    "id": "Segment_2",
+                    "techniqueId": "T3",
+                    "cycleType": "Tech Cycle",
+                    "probability": 55,
+                    "cycleCount": 14,
+                    "chart": {
+                      "x": [0, 3, 6, 9, 12],
+                      "y": [9, 14, 19, 17, 20]
+                    }
+                  },
+                  {
+                    "id": "Segment_3",
+                    "techniqueId": "T2",
+                    "cycleType": "Absolute Time",
+                    "probability": 40,
+                    "cycleCount": 12,
+                    "chart": {
+                      "x": [0, 3, 6, 9, 12],
+                      "y": [6, 11, 15, 13, 14]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+      },
+      {
+        "id": "Mode_002",
+        "code": {
+          "symbolCodeType": "Old",
+          "selectSymbol": "S2",
+          "alternateSymbol": "ALT-S2",
+          "fgColor": "#000000",
+          "bgColor": "#4CAF50"
+        },
+        "lastEdited": "02 Aug'24 15:42",
+        "details": {
+          "emitterName": "Emitter_Alpha",
+          "groundOnly": true,
+          "isUnknown": false,
+          "type": "Tracking",
+          "location": "Sector-9",
+          "audioId": "AUDIO_002",
+          "description": "Precision tracking radar",
+          "platformType": "Air Platform",
+          "threatType": "Hostile",
+          "lethalRange": 120
+        },
+        "dispRangeEstimation": "EIRP",
+        "ewParameters": {
+          "frequency": {
+            "freqType": "Fixed",
+            "frequencyClass": "Class B",
+            "frequencyTable": [
+              { "min": 3000, "max": 3100, "deviation": 4 }
+            ]
+          },
+          "pri": {
+            "priType": "Type 1",
+            "priClass": "Class Y",
+            "priTable": [
+              { "min": 200, "max": 220, "deviation": 5, "staggerLevel": 1 }
+            ]
+          },
+          "pulseWidth": {
+            "pwType": "Type 2",
+            "pwClass": "Class Q",
+            "pulseWidthTable": [
+              { "min": 8, "max": 12, "deviation": 1 }
+            ]
+          }
+        },
+        "scanDetails": {
+          "scanType": "Stable",
+          "minScanSector": 40,
+          "maxScanSector": 90,
+          "minScanRate": 3,
+          "normalScanRate": 6,
+          "sideLobeLevel": -18,
+          "sideLobeStd": 1,
+          "maxScanSection": 100,
+          "maxScanRate": 12,
+          "minTot": 2,
+          "maxTot": 5
+        },
+        "modeParams": {
+          "testName": "Mode_Test_B",
+          "testTimeInterval": 45,
+          "ageOut": 200,
+          "priority": 2,
+          "testType": "Performance",
+          "powerLevel": 70,
+          "pwTimeBase": 4,
+          "pvMinSamples": 8,
+          "pvMeasurementTime": "10s"
+        },
+        "comments": "Used for target tracking validation",
+        "jammingData": {
+            "lastGenerated": "23 Jul'24 23:09",
+            "techniques": [
+              { "id": "T1", "name": "Technique 1" },
+              { "id": "T2", "name": "Technique 2" },
+              { "id": "T3", "name": "Technique 3" },
+              { "id": "T4", "name": "Technique 4" }
+            ],
+            "sequences": [
+              {
+                "id": "Sequence_1",
+                "segments": [
+                  {
+                    "id": "Segment_1",
+                    "techniqueId": "T1",
+                    "cycleType": "Tech Cycle", 
+                    "probability": 40,
+                    "cycleCount": 12,
+                    "chart": {
+                      "x": [0, 1, 2, 3, 4],
+                      "y": [10, 20, 15, 25, 18]
+                    }
+                  },
+                  {
+                    "id": "Segment_2",
+                    "techniqueId": "T2",
+                    "cycleType": "Tech Cycle",
+                    "probability": 40,
+                    "cycleCount": 12,
+                    "chart": {
+                      "x": [0, 1, 2, 3, 4],
+                      "y": [8, 15, 22, 18, 20]
+                    }
+                  },
+                  {
+                    "id": "Segment_3",
+                    "techniqueId": "T3",
+                    "cycleType": "Tech Cycle",
+                    "probability": 40,
+                    "cycleCount": 12,
+                    "chart": {
+                      "x": [0, 1, 2, 3, 4],
+                      "y": [12, 18, 14, 22, 19]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "Sequence_2",
+                "segments": [
+                  {
+                    "id": "Segment_1",
+                    "techniqueId": "T2",
+                    "cycleType": "Absolute Time", 
+                    "probability": 30,
+                    "cycleCount": 10,
+                    "chart": {
+                      "x": [0, 2, 4, 6, 8],
+                      "y": [5, 15, 10, 20, 12]
+                    }
+                  },
+                  {
+                    "id": "Segment_2",
+                    "techniqueId": "T4",
+                    "cycleType": "Tech Cycle",
+                    "probability": 50,
+                    "cycleCount": 15,
+                    "chart": {
+                      "x": [0, 2, 4, 6, 8],
+                      "y": [7, 12, 18, 22, 15]
+                    }
+                  },
+                  {
+                    "id": "Segment_3",
+                    "techniqueId": "T1",
+                    "cycleType": "Absolute Time",
+                    "probability": 20,
+                    "cycleCount": 8,
+                    "chart": {
+                      "x": [0, 2, 4, 6, 8],
+                      "y": [6, 9, 15, 10, 13]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "Sequence_3",
+                "segments": [
+                  {
+                    "id": "Segment_1",
+                    "techniqueId": "T3",
+                    "cycleType": "Tech Cycle",
+                    "probability": 60,
+                    "cycleCount": 20,
+                    "chart": {
+                      "x": [0, 5, 10, 15, 20],
+                      "y": [10, 25, 20, 30, 22]
+                    }
+                  },
+                  {
+                    "id": "Segment_2",
+                    "techniqueId": "T2",
+                    "cycleType": "Absolute Time",
+                    "probability": 35,
+                    "cycleCount": 11,
+                    "chart": {
+                      "x": [0, 5, 10, 15, 20],
+                      "y": [14, 18, 12, 20, 16]
+                    }
+                  },
+                  {
+                    "id": "Segment_3",
+                    "techniqueId": "T4",
+                    "cycleType": "Tech Cycle",
+                    "probability": 45,
+                    "cycleCount": 13,
+                    "chart": {
+                      "x": [0, 5, 10, 15, 20],
+                      "y": [8, 12, 17, 22, 18]
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "Sequence_4",
+                "segments": [
+                  {
+                    "id": "Segment_1",
+                    "techniqueId": "T1",
+                    "cycleType": "Absolute Time",
+                    "probability": 25,
+                    "cycleCount": 9,
+                    "chart": {
+                      "x": [0, 3, 6, 9, 12],
+                      "y": [5, 10, 8, 12, 9]
+                    }
+                  },
+                  {
+                    "id": "Segment_2",
+                    "techniqueId": "T3",
+                    "cycleType": "Tech Cycle",
+                    "probability": 55,
+                    "cycleCount": 14,
+                    "chart": {
+                      "x": [0, 3, 6, 9, 12],
+                      "y": [9, 14, 19, 17, 20]
+                    }
+                  },
+                  {
+                    "id": "Segment_3",
+                    "techniqueId": "T2",
+                    "cycleType": "Absolute Time",
+                    "probability": 40,
+                    "cycleCount": 12,
+                    "chart": {
+                      "x": [0, 3, 6, 9, 12],
+                      "y": [6, 11, 15, 13, 14]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+      }
+    ]
+  }
+  
