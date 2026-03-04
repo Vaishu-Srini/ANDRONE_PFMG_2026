@@ -1,0 +1,8 @@
+@layer components{
+    .table-wrapper{
+        @apply rounded-lg! overflow-hidden! mt-5!;
+    }
+    .table-container{
+        @apply border-white/10! bg-[#393A3E]!;
+    }
+}

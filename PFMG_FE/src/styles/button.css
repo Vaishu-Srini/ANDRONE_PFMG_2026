@@ -1,0 +1,20 @@
+@layer components {
+  .btn-primary {
+    @apply bg-[#7B70D6]! hover:bg-[#6B60C6]! rounded-sm! cursor-pointer!;
+  }
+  .btn-lavender {
+    @apply bg-[#C5BFFF]/10! hover:bg-[#C5BFFF]/20! cursor-pointer!;
+  }
+  .btn-disabled {
+    @apply opacity-50! disabled:cursor-not-allowed!;
+  }
+  .btn-outline{
+    @apply text-white/95 border! border-white/10! hover:bg-[#C5BFFF]! cursor-pointer!;
+  }
+  .btn-transparent{
+    @apply  bg-transparent! hover:bg-[#C5BFFF]/20! cursor-pointer!;
+  }
+  .hover-btn-transparent{
+    @apply cursor-pointer! hover:bg-transparent!;
+  }
+}

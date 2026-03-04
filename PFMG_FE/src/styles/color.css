@@ -1,0 +1,89 @@
+@layer base {
+  /* text colors */
+  .text-primary {
+    @apply text-white/95!;
+  }
+
+  .text-emphasis {
+    @apply text-white/80!;
+  }
+  .text-emphasis-strong {
+    @apply text-white/70!;
+  }
+
+  .text-secondary {
+    @apply text-white/65!;
+  }
+  .text-accent {
+    @apply text-[#C5BFFF]!;
+  }
+  .text-lavendar {
+    @apply text-[#B7AFFF]!;
+  }
+  .text-danger {
+    @apply text-red-500!;
+  }
+  /* bg colors */
+  .bg-graphite {
+    @apply bg-[#37383B]!;
+  }
+  .hover-bg-surface {
+    @apply hover:bg-[#404040]!;
+  }
+  .surface-active {
+    @apply bg-[#414141]!;
+  }
+  .surface-hover-strong {
+    @apply hover:bg-[#4A4B4E]!;
+  }
+  .bg-highlight {
+    @apply bg-[#7C6FD5]!;
+  }
+  .bg-glass {
+    @apply bg-white/10!;
+  }
+  .hover-bg-glass {
+    @apply hover:bg-white/10!;
+  }
+  .bg-surface {
+    @apply bg-white/5!;
+  }
+  .bg-surface-dark {
+    @apply bg-[#2C2D30]!;
+  }
+  .bg-accent-purple {
+    @apply bg-[#7b70d6];
+  }
+  .bg-modal{
+    @apply bg-[rgba(55,56,59,0.95)]
+  }
+  .bg-ink-strong{
+    @apply bg-[#393A3E]
+  }
+  .bg-danger{
+    @apply bg-red-600!
+  }
+  .bg-tile{
+    @apply bg-white
+  }
+  
+  /* border colors */
+  .black-soft-border {
+    @apply border-black/10!;
+  }
+  .border-neutral {
+    @apply border-[#555]!;
+  }
+  .border-accent {
+    @apply border-[#C5BFFF]!;
+  }
+  .border-focus {
+    @apply border-[#7B70D6];
+  }
+  .border-divider-invert {
+    @apply border border-[rgba(255,255,255,0.10)];
+  }
+  .border-divider {
+    @apply border-white/10;
+  }
+}

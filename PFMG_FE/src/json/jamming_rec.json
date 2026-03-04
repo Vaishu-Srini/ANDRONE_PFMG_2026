@@ -1,0 +1,164 @@
+{
+    "lastGenerated": "23 Jul'24 23:09",
+    "techniques": [
+      { "id": "T1", "name": "Technique 1" },
+      { "id": "T2", "name": "Technique 2" },
+      { "id": "T3", "name": "Technique 3" },
+      { "id": "T4", "name": "Technique 4" }
+    ],
+    "sequences": [
+      {
+        "id": "Sequence_1",
+        "segments": [
+          {
+            "id": "Segment_1",
+            "techniqueId": "T1",
+            "cycleType": "Tech Cycle", 
+            "probability": 40,
+            "cycleCount": 12,
+            "chart": {
+              "x": [0, 1, 2, 3, 4],
+              "y": [10, 20, 15, 25, 18]
+            }
+          },
+          {
+            "id": "Segment_2",
+            "techniqueId": "T2",
+            "cycleType": "Tech Cycle",
+            "probability": 40,
+            "cycleCount": 12,
+            "chart": {
+              "x": [0, 1, 2, 3, 4],
+              "y": [8, 15, 22, 18, 20]
+            }
+          },
+          {
+            "id": "Segment_3",
+            "techniqueId": "T3",
+            "cycleType": "Tech Cycle",
+            "probability": 40,
+            "cycleCount": 12,
+            "chart": {
+              "x": [0, 1, 2, 3, 4],
+              "y": [12, 18, 14, 22, 19]
+            }
+          }
+        ]
+      },
+      {
+        "id": "Sequence_2",
+        "segments": [
+          {
+            "id": "Segment_1",
+            "techniqueId": "T2",
+            "cycleType": "Absolute Time", 
+            "probability": 30,
+            "cycleCount": 10,
+            "chart": {
+              "x": [0, 2, 4, 6, 8],
+              "y": [5, 15, 10, 20, 12]
+            }
+          },
+          {
+            "id": "Segment_2",
+            "techniqueId": "T4",
+            "cycleType": "Tech Cycle",
+            "probability": 50,
+            "cycleCount": 15,
+            "chart": {
+              "x": [0, 2, 4, 6, 8],
+              "y": [7, 12, 18, 22, 15]
+            }
+          },
+          {
+            "id": "Segment_3",
+            "techniqueId": "T1",
+            "cycleType": "Absolute Time",
+            "probability": 20,
+            "cycleCount": 8,
+            "chart": {
+              "x": [0, 2, 4, 6, 8],
+              "y": [6, 9, 15, 10, 13]
+            }
+          }
+        ]
+      },
+      {
+        "id": "Sequence_3",
+        "segments": [
+          {
+            "id": "Segment_1",
+            "techniqueId": "T3",
+            "cycleType": "Tech Cycle",
+            "probability": 60,
+            "cycleCount": 20,
+            "chart": {
+              "x": [0, 5, 10, 15, 20],
+              "y": [10, 25, 20, 30, 22]
+            }
+          },
+          {
+            "id": "Segment_2",
+            "techniqueId": "T2",
+            "cycleType": "Absolute Time",
+            "probability": 35,
+            "cycleCount": 11,
+            "chart": {
+              "x": [0, 5, 10, 15, 20],
+              "y": [14, 18, 12, 20, 16]
+            }
+          },
+          {
+            "id": "Segment_3",
+            "techniqueId": "T4",
+            "cycleType": "Tech Cycle",
+            "probability": 45,
+            "cycleCount": 13,
+            "chart": {
+              "x": [0, 5, 10, 15, 20],
+              "y": [8, 12, 17, 22, 18]
+            }
+          }
+        ]
+      },
+      {
+        "id": "Sequence_4",
+        "segments": [
+          {
+            "id": "Segment_1",
+            "techniqueId": "T1",
+            "cycleType": "Absolute Time",
+            "probability": 25,
+            "cycleCount": 9,
+            "chart": {
+              "x": [0, 3, 6, 9, 12],
+              "y": [5, 10, 8, 12, 9]
+            }
+          },
+          {
+            "id": "Segment_2",
+            "techniqueId": "T3",
+            "cycleType": "Tech Cycle",
+            "probability": 55,
+            "cycleCount": 14,
+            "chart": {
+              "x": [0, 3, 6, 9, 12],
+              "y": [9, 14, 19, 17, 20]
+            }
+          },
+          {
+            "id": "Segment_3",
+            "techniqueId": "T2",
+            "cycleType": "Absolute Time",
+            "probability": 40,
+            "cycleCount": 12,
+            "chart": {
+              "x": [0, 3, 6, 9, 12],
+              "y": [6, 11, 15, 13, 14]
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

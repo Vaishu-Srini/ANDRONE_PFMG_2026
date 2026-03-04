@@ -1,0 +1,102 @@
+{
+    "id": "Mode_210923",
+    "code": {
+      "symbol" :"TGM",
+      "fgColor" :"#ffffff",
+      "bgColor" :"#F7B500"
+    },
+    "lastEdited": "23 Jul'24 23:09",
+    "description": "Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem.",
+    "details": {
+      "type": "Search",
+      "subModeType": "Scan",
+      "platformType": "Sea Platform",
+      "threatType": "Friendly",
+      "freqType": "Ex Type",
+      "priType": "Type 3",
+      "staggerLevel": 128,
+      "pwType": "Type 1",
+      "dispRangeEst": "Signal level",
+      "lethalRange": 10,
+      "emitterName": "Emitter_12",
+      "location": "Location_12",
+      "audioId": "Audio_12",
+      "groundOnly": false,
+      "isUnknown": true,
+      "symbolCodeType": "Old",
+      "selectSymbol": "LR Identifier Text",
+      "testTimeInterval": 1000,
+      "ageOut": 5000,
+      "priority": 1,
+      "testType": "Standard",
+      "powerLevel": 100,
+      "pwTimeBase": 1,
+      "pvMinSamples": 10,
+      "pvMeasurementTime": "100ms",
+      "frequencyClass": "Class A",
+      "priClass": "Class B",
+      "pwClass": "Class C",
+      "comments": "Additional mode comments"
+    },
+    "ewParameters": {
+      "frequency": [
+        {
+          "min": 230,
+          "max": 230,
+          "deviation": 230
+        }
+      ],
+      "pri": [
+        {
+          "min": 190,
+          "max": 230,
+          "deviation": 190,
+          "staggerLevel": 230
+        },
+        {
+          "min": 240,
+          "max": 89,
+          "deviation": 190,
+          "staggerLevel": 230
+        },
+        {
+          "min": 150,
+          "max": 89,
+          "deviation": 190,
+          "staggerLevel": 230
+        },
+        {
+          "min": 188,
+          "max": 89,
+          "deviation": 190,
+          "staggerLevel": 230
+        }
+      ],
+      "pulseWidth": [
+        {
+          "min": 190,
+          "max": 230,
+          "deviation": 230
+        },
+        {
+          "min": 240,
+          "max": 89,
+          "deviation": 230
+        }
+      ]
+    },
+    "scanType": {
+      "scanType": "Not Calculated",
+      "minScanSector": 190,
+      "maxScanSector": 240,
+      "minScanRate": 190,
+      "maxScanRate": 240,
+      "sideLobeLevel": 30,
+      "sideLobeStd": 90,
+      "minTot": 24,
+      "maxTot": 24,
+      "minBeamWidth": 30,
+      "maxBeamWidth": 90
+    }
+  }
+  

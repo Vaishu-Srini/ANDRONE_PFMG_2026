@@ -1,0 +1,7060 @@
+
+{
+  "name": "Emitter_1001",
+  "code": {
+    "symbol" :"AXZ",
+    "fgColor" :"#ffffff",
+    "bgColor" :"#F7B500"
+  },
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "lastEdited": "23 Jul24 23:09",
+  "details": {
+    "type": "Naval",
+    "numberOfModes": 80,
+    "latitude": "39\u00b025'30\"N",
+    "longitude": "211\u00b022'30\"E",
+    "altitude": "700 m"
+  },
+  "attachedModes": [
+    {
+      "id": "Emitter_1001-Mode_1",
+      "name": "Mode_1",
+      "code": {
+        "symbol" :"M1Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#CC299A"
+      },
+      "modeName": "Mode_210924", 
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-1",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 201,
+            "max": 211,
+            "deviation": 5
+          },
+          {
+            "min": 211,
+            "max": 221,
+            "deviation": 5
+          },
+          {
+            "min": 221,
+            "max": 231,
+            "deviation": 5
+          },
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 181,
+            "max": 191,
+            "deviation": 5
+          },
+          {
+            "min": 191,
+            "max": 201,
+            "deviation": 5
+          },
+          {
+            "min": 201,
+            "max": 211,
+            "deviation": 5
+          },
+          {
+            "min": 211,
+            "max": 221,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 181,
+            "max": 191,
+            "deviation": 5
+          },
+          {
+            "min": 191,
+            "max": 201,
+            "deviation": 5
+          },
+          {
+            "min": 201,
+            "max": 211,
+            "deviation": 5
+          },
+          {
+            "min": 211,
+            "max": 221,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_2",
+      "name": "Mode_2",
+      "code": {
+        "symbol" :"M2Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210925",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-2",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 202,
+            "max": 212,
+            "deviation": 5
+          },
+          {
+            "min": 212,
+            "max": 222,
+            "deviation": 5
+          },
+          {
+            "min": 222,
+            "max": 232,
+            "deviation": 5
+          },
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 182,
+            "max": 192,
+            "deviation": 5
+          },
+          {
+            "min": 192,
+            "max": 202,
+            "deviation": 5
+          },
+          {
+            "min": 202,
+            "max": 212,
+            "deviation": 5
+          },
+          {
+            "min": 212,
+            "max": 222,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 182,
+            "max": 192,
+            "deviation": 5
+          },
+          {
+            "min": 192,
+            "max": 202,
+            "deviation": 5
+          },
+          {
+            "min": 202,
+            "max": 212,
+            "deviation": 5
+          },
+          {
+            "min": 212,
+            "max": 222,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_3",
+      "name": "Mode_3",
+      "code": {
+        "symbol" :"M3Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210926",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-3",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 203,
+            "max": 213,
+            "deviation": 5
+          },
+          {
+            "min": 213,
+            "max": 223,
+            "deviation": 5
+          },
+          {
+            "min": 223,
+            "max": 233,
+            "deviation": 5
+          },
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 183,
+            "max": 193,
+            "deviation": 5
+          },
+          {
+            "min": 193,
+            "max": 203,
+            "deviation": 5
+          },
+          {
+            "min": 203,
+            "max": 213,
+            "deviation": 5
+          },
+          {
+            "min": 213,
+            "max": 223,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 183,
+            "max": 193,
+            "deviation": 5
+          },
+          {
+            "min": 193,
+            "max": 203,
+            "deviation": 5
+          },
+          {
+            "min": 203,
+            "max": 213,
+            "deviation": 5
+          },
+          {
+            "min": 213,
+            "max": 223,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_4",
+      "name": "Mode_4",
+      "code": {
+        "symbol" :"M4Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210927",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-4",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 204,
+            "max": 214,
+            "deviation": 5
+          },
+          {
+            "min": 214,
+            "max": 224,
+            "deviation": 5
+          },
+          {
+            "min": 224,
+            "max": 234,
+            "deviation": 5
+          },
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 184,
+            "max": 194,
+            "deviation": 5
+          },
+          {
+            "min": 194,
+            "max": 204,
+            "deviation": 5
+          },
+          {
+            "min": 204,
+            "max": 214,
+            "deviation": 5
+          },
+          {
+            "min": 214,
+            "max": 224,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 184,
+            "max": 194,
+            "deviation": 5
+          },
+          {
+            "min": 194,
+            "max": 204,
+            "deviation": 5
+          },
+          {
+            "min": 204,
+            "max": 214,
+            "deviation": 5
+          },
+          {
+            "min": 214,
+            "max": 224,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_5",
+      "name": "Mode_5",
+      "code": {
+        "symbol" :"M5Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210928",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-5",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 205,
+            "max": 215,
+            "deviation": 5
+          },
+          {
+            "min": 215,
+            "max": 225,
+            "deviation": 5
+          },
+          {
+            "min": 225,
+            "max": 235,
+            "deviation": 5
+          },
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 185,
+            "max": 195,
+            "deviation": 5
+          },
+          {
+            "min": 195,
+            "max": 205,
+            "deviation": 5
+          },
+          {
+            "min": 205,
+            "max": 215,
+            "deviation": 5
+          },
+          {
+            "min": 215,
+            "max": 225,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 185,
+            "max": 195,
+            "deviation": 5
+          },
+          {
+            "min": 195,
+            "max": 205,
+            "deviation": 5
+          },
+          {
+            "min": 205,
+            "max": 215,
+            "deviation": 5
+          },
+          {
+            "min": 215,
+            "max": 225,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_6",
+      "name": "Mode_6",
+      "code": {
+        "symbol" :"M6Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210929",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-6",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 206,
+            "max": 216,
+            "deviation": 5
+          },
+          {
+            "min": 216,
+            "max": 226,
+            "deviation": 5
+          },
+          {
+            "min": 226,
+            "max": 236,
+            "deviation": 5
+          },
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 186,
+            "max": 196,
+            "deviation": 5
+          },
+          {
+            "min": 196,
+            "max": 206,
+            "deviation": 5
+          },
+          {
+            "min": 206,
+            "max": 216,
+            "deviation": 5
+          },
+          {
+            "min": 216,
+            "max": 226,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 186,
+            "max": 196,
+            "deviation": 5
+          },
+          {
+            "min": 196,
+            "max": 206,
+            "deviation": 5
+          },
+          {
+            "min": 206,
+            "max": 216,
+            "deviation": 5
+          },
+          {
+            "min": 216,
+            "max": 226,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_7",
+      "name": "Mode_7",
+      "code": {
+        "symbol" :"M7Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210930",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-7",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 207,
+            "max": 217,
+            "deviation": 5
+          },
+          {
+            "min": 217,
+            "max": 227,
+            "deviation": 5
+          },
+          {
+            "min": 227,
+            "max": 237,
+            "deviation": 5
+          },
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 187,
+            "max": 197,
+            "deviation": 5
+          },
+          {
+            "min": 197,
+            "max": 207,
+            "deviation": 5
+          },
+          {
+            "min": 207,
+            "max": 217,
+            "deviation": 5
+          },
+          {
+            "min": 217,
+            "max": 227,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 187,
+            "max": 197,
+            "deviation": 5
+          },
+          {
+            "min": 197,
+            "max": 207,
+            "deviation": 5
+          },
+          {
+            "min": 207,
+            "max": 217,
+            "deviation": 5
+          },
+          {
+            "min": 217,
+            "max": 227,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_8",
+      "name": "Mode_8",
+      "code": {
+        "symbol" :"M8Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210931",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-8",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 208,
+            "max": 218,
+            "deviation": 5
+          },
+          {
+            "min": 218,
+            "max": 228,
+            "deviation": 5
+          },
+          {
+            "min": 228,
+            "max": 238,
+            "deviation": 5
+          },
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 188,
+            "max": 198,
+            "deviation": 5
+          },
+          {
+            "min": 198,
+            "max": 208,
+            "deviation": 5
+          },
+          {
+            "min": 208,
+            "max": 218,
+            "deviation": 5
+          },
+          {
+            "min": 218,
+            "max": 228,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 188,
+            "max": 198,
+            "deviation": 5
+          },
+          {
+            "min": 198,
+            "max": 208,
+            "deviation": 5
+          },
+          {
+            "min": 208,
+            "max": 218,
+            "deviation": 5
+          },
+          {
+            "min": 218,
+            "max": 228,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_9",
+      "name": "Mode_9",
+      "code": {
+        "symbol" :"M9Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210932",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-9",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 209,
+            "max": 219,
+            "deviation": 5
+          },
+          {
+            "min": 219,
+            "max": 229,
+            "deviation": 5
+          },
+          {
+            "min": 229,
+            "max": 239,
+            "deviation": 5
+          },
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 189,
+            "max": 199,
+            "deviation": 5
+          },
+          {
+            "min": 199,
+            "max": 209,
+            "deviation": 5
+          },
+          {
+            "min": 209,
+            "max": 219,
+            "deviation": 5
+          },
+          {
+            "min": 219,
+            "max": 229,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 189,
+            "max": 199,
+            "deviation": 5
+          },
+          {
+            "min": 199,
+            "max": 209,
+            "deviation": 5
+          },
+          {
+            "min": 209,
+            "max": 219,
+            "deviation": 5
+          },
+          {
+            "min": 219,
+            "max": 229,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_10",
+      "name": "Mode_10",
+      "code": {
+        "symbol" :"M10Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210933",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-10",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 210,
+            "max": 220,
+            "deviation": 5
+          },
+          {
+            "min": 220,
+            "max": 230,
+            "deviation": 5
+          },
+          {
+            "min": 230,
+            "max": 240,
+            "deviation": 5
+          },
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 190,
+            "max": 200,
+            "deviation": 5
+          },
+          {
+            "min": 200,
+            "max": 210,
+            "deviation": 5
+          },
+          {
+            "min": 210,
+            "max": 220,
+            "deviation": 5
+          },
+          {
+            "min": 220,
+            "max": 230,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 190,
+            "max": 200,
+            "deviation": 5
+          },
+          {
+            "min": 200,
+            "max": 210,
+            "deviation": 5
+          },
+          {
+            "min": 210,
+            "max": 220,
+            "deviation": 5
+          },
+          {
+            "min": 220,
+            "max": 230,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_11",
+      "name": "Mode_11",
+      "code": {
+        "symbol" :"M11Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210934",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-11",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 211,
+            "max": 221,
+            "deviation": 5
+          },
+          {
+            "min": 221,
+            "max": 231,
+            "deviation": 5
+          },
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          },
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 191,
+            "max": 201,
+            "deviation": 5
+          },
+          {
+            "min": 201,
+            "max": 211,
+            "deviation": 5
+          },
+          {
+            "min": 211,
+            "max": 221,
+            "deviation": 5
+          },
+          {
+            "min": 221,
+            "max": 231,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 191,
+            "max": 201,
+            "deviation": 5
+          },
+          {
+            "min": 201,
+            "max": 211,
+            "deviation": 5
+          },
+          {
+            "min": 211,
+            "max": 221,
+            "deviation": 5
+          },
+          {
+            "min": 221,
+            "max": 231,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_12",
+      "name": "Mode_12",
+      "code": {
+        "symbol" :"M12Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210935",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-12",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 212,
+            "max": 222,
+            "deviation": 5
+          },
+          {
+            "min": 222,
+            "max": 232,
+            "deviation": 5
+          },
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          },
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 192,
+            "max": 202,
+            "deviation": 5
+          },
+          {
+            "min": 202,
+            "max": 212,
+            "deviation": 5
+          },
+          {
+            "min": 212,
+            "max": 222,
+            "deviation": 5
+          },
+          {
+            "min": 222,
+            "max": 232,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 192,
+            "max": 202,
+            "deviation": 5
+          },
+          {
+            "min": 202,
+            "max": 212,
+            "deviation": 5
+          },
+          {
+            "min": 212,
+            "max": 222,
+            "deviation": 5
+          },
+          {
+            "min": 222,
+            "max": 232,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_13",
+      "name": "Mode_13",
+      "code": {
+        "symbol" :"M13Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210936",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-13",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 213,
+            "max": 223,
+            "deviation": 5
+          },
+          {
+            "min": 223,
+            "max": 233,
+            "deviation": 5
+          },
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          },
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 193,
+            "max": 203,
+            "deviation": 5
+          },
+          {
+            "min": 203,
+            "max": 213,
+            "deviation": 5
+          },
+          {
+            "min": 213,
+            "max": 223,
+            "deviation": 5
+          },
+          {
+            "min": 223,
+            "max": 233,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 193,
+            "max": 203,
+            "deviation": 5
+          },
+          {
+            "min": 203,
+            "max": 213,
+            "deviation": 5
+          },
+          {
+            "min": 213,
+            "max": 223,
+            "deviation": 5
+          },
+          {
+            "min": 223,
+            "max": 233,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_14",
+      "name": "Mode_14",
+      "code": {
+        "symbol" :"M14Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210937",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-14",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 214,
+            "max": 224,
+            "deviation": 5
+          },
+          {
+            "min": 224,
+            "max": 234,
+            "deviation": 5
+          },
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          },
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 194,
+            "max": 204,
+            "deviation": 5
+          },
+          {
+            "min": 204,
+            "max": 214,
+            "deviation": 5
+          },
+          {
+            "min": 214,
+            "max": 224,
+            "deviation": 5
+          },
+          {
+            "min": 224,
+            "max": 234,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 194,
+            "max": 204,
+            "deviation": 5
+          },
+          {
+            "min": 204,
+            "max": 214,
+            "deviation": 5
+          },
+          {
+            "min": 214,
+            "max": 224,
+            "deviation": 5
+          },
+          {
+            "min": 224,
+            "max": 234,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_15",
+      "name": "Mode_15",
+      "code": {
+        "symbol" :"M15Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210938",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-15",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 215,
+            "max": 225,
+            "deviation": 5
+          },
+          {
+            "min": 225,
+            "max": 235,
+            "deviation": 5
+          },
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          },
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 195,
+            "max": 205,
+            "deviation": 5
+          },
+          {
+            "min": 205,
+            "max": 215,
+            "deviation": 5
+          },
+          {
+            "min": 215,
+            "max": 225,
+            "deviation": 5
+          },
+          {
+            "min": 225,
+            "max": 235,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 195,
+            "max": 205,
+            "deviation": 5
+          },
+          {
+            "min": 205,
+            "max": 215,
+            "deviation": 5
+          },
+          {
+            "min": 215,
+            "max": 225,
+            "deviation": 5
+          },
+          {
+            "min": 225,
+            "max": 235,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_16",
+      "name": "Mode_16",
+      "code": {
+        "symbol" :"M16Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210939",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-16",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 216,
+            "max": 226,
+            "deviation": 5
+          },
+          {
+            "min": 226,
+            "max": 236,
+            "deviation": 5
+          },
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          },
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 196,
+            "max": 206,
+            "deviation": 5
+          },
+          {
+            "min": 206,
+            "max": 216,
+            "deviation": 5
+          },
+          {
+            "min": 216,
+            "max": 226,
+            "deviation": 5
+          },
+          {
+            "min": 226,
+            "max": 236,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 196,
+            "max": 206,
+            "deviation": 5
+          },
+          {
+            "min": 206,
+            "max": 216,
+            "deviation": 5
+          },
+          {
+            "min": 216,
+            "max": 226,
+            "deviation": 5
+          },
+          {
+            "min": 226,
+            "max": 236,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_17",
+      "name": "Mode_17",
+      "code": {
+        "symbol" :"M17Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210940",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-17",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 217,
+            "max": 227,
+            "deviation": 5
+          },
+          {
+            "min": 227,
+            "max": 237,
+            "deviation": 5
+          },
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          },
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 197,
+            "max": 207,
+            "deviation": 5
+          },
+          {
+            "min": 207,
+            "max": 217,
+            "deviation": 5
+          },
+          {
+            "min": 217,
+            "max": 227,
+            "deviation": 5
+          },
+          {
+            "min": 227,
+            "max": 237,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 197,
+            "max": 207,
+            "deviation": 5
+          },
+          {
+            "min": 207,
+            "max": 217,
+            "deviation": 5
+          },
+          {
+            "min": 217,
+            "max": 227,
+            "deviation": 5
+          },
+          {
+            "min": 227,
+            "max": 237,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_18",
+      "name": "Mode_18",
+      "code": {
+        "symbol" :"M18Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210941",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-18",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 218,
+            "max": 228,
+            "deviation": 5
+          },
+          {
+            "min": 228,
+            "max": 238,
+            "deviation": 5
+          },
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          },
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 198,
+            "max": 208,
+            "deviation": 5
+          },
+          {
+            "min": 208,
+            "max": 218,
+            "deviation": 5
+          },
+          {
+            "min": 218,
+            "max": 228,
+            "deviation": 5
+          },
+          {
+            "min": 228,
+            "max": 238,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 198,
+            "max": 208,
+            "deviation": 5
+          },
+          {
+            "min": 208,
+            "max": 218,
+            "deviation": 5
+          },
+          {
+            "min": 218,
+            "max": 228,
+            "deviation": 5
+          },
+          {
+            "min": 228,
+            "max": 238,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_19",
+      "name": "Mode_19",
+      "code": {
+        "symbol" :"M19Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210942",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-19",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 219,
+            "max": 229,
+            "deviation": 5
+          },
+          {
+            "min": 229,
+            "max": 239,
+            "deviation": 5
+          },
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          },
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 199,
+            "max": 209,
+            "deviation": 5
+          },
+          {
+            "min": 209,
+            "max": 219,
+            "deviation": 5
+          },
+          {
+            "min": 219,
+            "max": 229,
+            "deviation": 5
+          },
+          {
+            "min": 229,
+            "max": 239,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 199,
+            "max": 209,
+            "deviation": 5
+          },
+          {
+            "min": 209,
+            "max": 219,
+            "deviation": 5
+          },
+          {
+            "min": 219,
+            "max": 229,
+            "deviation": 5
+          },
+          {
+            "min": 229,
+            "max": 239,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_20",
+      "name": "Mode_20",
+      "code": {
+        "symbol" :"M20Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210943",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-20",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 220,
+            "max": 230,
+            "deviation": 5
+          },
+          {
+            "min": 230,
+            "max": 240,
+            "deviation": 5
+          },
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          },
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 200,
+            "max": 210,
+            "deviation": 5
+          },
+          {
+            "min": 210,
+            "max": 220,
+            "deviation": 5
+          },
+          {
+            "min": 220,
+            "max": 230,
+            "deviation": 5
+          },
+          {
+            "min": 230,
+            "max": 240,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 200,
+            "max": 210,
+            "deviation": 5
+          },
+          {
+            "min": 210,
+            "max": 220,
+            "deviation": 5
+          },
+          {
+            "min": 220,
+            "max": 230,
+            "deviation": 5
+          },
+          {
+            "min": 230,
+            "max": 240,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_21",
+      "name": "Mode_21",
+      "code": {
+        "symbol" :"M21Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210944",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-21",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 221,
+            "max": 231,
+            "deviation": 5
+          },
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          },
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          },
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 201,
+            "max": 211,
+            "deviation": 5
+          },
+          {
+            "min": 211,
+            "max": 221,
+            "deviation": 5
+          },
+          {
+            "min": 221,
+            "max": 231,
+            "deviation": 5
+          },
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 201,
+            "max": 211,
+            "deviation": 5
+          },
+          {
+            "min": 211,
+            "max": 221,
+            "deviation": 5
+          },
+          {
+            "min": 221,
+            "max": 231,
+            "deviation": 5
+          },
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_22",
+      "name": "Mode_22",
+      "code": {
+        "symbol" :"M22Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210945",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-22",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 222,
+            "max": 232,
+            "deviation": 5
+          },
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          },
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          },
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 202,
+            "max": 212,
+            "deviation": 5
+          },
+          {
+            "min": 212,
+            "max": 222,
+            "deviation": 5
+          },
+          {
+            "min": 222,
+            "max": 232,
+            "deviation": 5
+          },
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 202,
+            "max": 212,
+            "deviation": 5
+          },
+          {
+            "min": 212,
+            "max": 222,
+            "deviation": 5
+          },
+          {
+            "min": 222,
+            "max": 232,
+            "deviation": 5
+          },
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_23",
+      "name": "Mode_23",
+      "code": {
+        "symbol" :"M23Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210946",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-23",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 223,
+            "max": 233,
+            "deviation": 5
+          },
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          },
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          },
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 203,
+            "max": 213,
+            "deviation": 5
+          },
+          {
+            "min": 213,
+            "max": 223,
+            "deviation": 5
+          },
+          {
+            "min": 223,
+            "max": 233,
+            "deviation": 5
+          },
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 203,
+            "max": 213,
+            "deviation": 5
+          },
+          {
+            "min": 213,
+            "max": 223,
+            "deviation": 5
+          },
+          {
+            "min": 223,
+            "max": 233,
+            "deviation": 5
+          },
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_24",
+      "name": "Mode_24",
+      "code": {
+        "symbol" :"M24Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210947",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-24",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 224,
+            "max": 234,
+            "deviation": 5
+          },
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          },
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          },
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 204,
+            "max": 214,
+            "deviation": 5
+          },
+          {
+            "min": 214,
+            "max": 224,
+            "deviation": 5
+          },
+          {
+            "min": 224,
+            "max": 234,
+            "deviation": 5
+          },
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 204,
+            "max": 214,
+            "deviation": 5
+          },
+          {
+            "min": 214,
+            "max": 224,
+            "deviation": 5
+          },
+          {
+            "min": 224,
+            "max": 234,
+            "deviation": 5
+          },
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_25",
+      "name": "Mode_25",
+      "code": {
+        "symbol" :"M25Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210948",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-25",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 225,
+            "max": 235,
+            "deviation": 5
+          },
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          },
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          },
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 205,
+            "max": 215,
+            "deviation": 5
+          },
+          {
+            "min": 215,
+            "max": 225,
+            "deviation": 5
+          },
+          {
+            "min": 225,
+            "max": 235,
+            "deviation": 5
+          },
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 205,
+            "max": 215,
+            "deviation": 5
+          },
+          {
+            "min": 215,
+            "max": 225,
+            "deviation": 5
+          },
+          {
+            "min": 225,
+            "max": 235,
+            "deviation": 5
+          },
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_26",
+      "name": "Mode_26",
+      "code": {
+        "symbol" :"M26Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210949",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-26",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 226,
+            "max": 236,
+            "deviation": 5
+          },
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          },
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          },
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 206,
+            "max": 216,
+            "deviation": 5
+          },
+          {
+            "min": 216,
+            "max": 226,
+            "deviation": 5
+          },
+          {
+            "min": 226,
+            "max": 236,
+            "deviation": 5
+          },
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 206,
+            "max": 216,
+            "deviation": 5
+          },
+          {
+            "min": 216,
+            "max": 226,
+            "deviation": 5
+          },
+          {
+            "min": 226,
+            "max": 236,
+            "deviation": 5
+          },
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_27",
+      "name": "Mode_27",
+      "code": {
+        "symbol" :"M27Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210950",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-27",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 227,
+            "max": 237,
+            "deviation": 5
+          },
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          },
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          },
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 207,
+            "max": 217,
+            "deviation": 5
+          },
+          {
+            "min": 217,
+            "max": 227,
+            "deviation": 5
+          },
+          {
+            "min": 227,
+            "max": 237,
+            "deviation": 5
+          },
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 207,
+            "max": 217,
+            "deviation": 5
+          },
+          {
+            "min": 217,
+            "max": 227,
+            "deviation": 5
+          },
+          {
+            "min": 227,
+            "max": 237,
+            "deviation": 5
+          },
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_28",
+      "name": "Mode_28",
+      "code": {
+        "symbol" :"M28Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210951",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-28",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 228,
+            "max": 238,
+            "deviation": 5
+          },
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          },
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          },
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 208,
+            "max": 218,
+            "deviation": 5
+          },
+          {
+            "min": 218,
+            "max": 228,
+            "deviation": 5
+          },
+          {
+            "min": 228,
+            "max": 238,
+            "deviation": 5
+          },
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 208,
+            "max": 218,
+            "deviation": 5
+          },
+          {
+            "min": 218,
+            "max": 228,
+            "deviation": 5
+          },
+          {
+            "min": 228,
+            "max": 238,
+            "deviation": 5
+          },
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_29",
+      "name": "Mode_29",
+      "code": {
+        "symbol" :"M29Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210952",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-29",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 229,
+            "max": 239,
+            "deviation": 5
+          },
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          },
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          },
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 209,
+            "max": 219,
+            "deviation": 5
+          },
+          {
+            "min": 219,
+            "max": 229,
+            "deviation": 5
+          },
+          {
+            "min": 229,
+            "max": 239,
+            "deviation": 5
+          },
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 209,
+            "max": 219,
+            "deviation": 5
+          },
+          {
+            "min": 219,
+            "max": 229,
+            "deviation": 5
+          },
+          {
+            "min": 229,
+            "max": 239,
+            "deviation": 5
+          },
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_30",
+      "name": "Mode_30",
+      "code": {
+        "symbol" :"M30Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210953",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-30",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 230,
+            "max": 240,
+            "deviation": 5
+          },
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          },
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          },
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 210,
+            "max": 220,
+            "deviation": 5
+          },
+          {
+            "min": 220,
+            "max": 230,
+            "deviation": 5
+          },
+          {
+            "min": 230,
+            "max": 240,
+            "deviation": 5
+          },
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 210,
+            "max": 220,
+            "deviation": 5
+          },
+          {
+            "min": 220,
+            "max": 230,
+            "deviation": 5
+          },
+          {
+            "min": 230,
+            "max": 240,
+            "deviation": 5
+          },
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_31",
+      "name": "Mode_31",
+      "code": {
+        "symbol" :"M31Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210954",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-31",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          },
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          },
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          },
+          {
+            "min": 261,
+            "max": 271,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 211,
+            "max": 221,
+            "deviation": 5
+          },
+          {
+            "min": 221,
+            "max": 231,
+            "deviation": 5
+          },
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          },
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 211,
+            "max": 221,
+            "deviation": 5
+          },
+          {
+            "min": 221,
+            "max": 231,
+            "deviation": 5
+          },
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          },
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_32",
+      "name": "Mode_32",
+      "code": {
+        "symbol" :"M32Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210955",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-32",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          },
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          },
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          },
+          {
+            "min": 262,
+            "max": 272,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 212,
+            "max": 222,
+            "deviation": 5
+          },
+          {
+            "min": 222,
+            "max": 232,
+            "deviation": 5
+          },
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          },
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 212,
+            "max": 222,
+            "deviation": 5
+          },
+          {
+            "min": 222,
+            "max": 232,
+            "deviation": 5
+          },
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          },
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_33",
+      "name": "Mode_33",
+      "code": {
+        "symbol" :"M33Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210956",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-33",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          },
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          },
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          },
+          {
+            "min": 263,
+            "max": 273,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 213,
+            "max": 223,
+            "deviation": 5
+          },
+          {
+            "min": 223,
+            "max": 233,
+            "deviation": 5
+          },
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          },
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 213,
+            "max": 223,
+            "deviation": 5
+          },
+          {
+            "min": 223,
+            "max": 233,
+            "deviation": 5
+          },
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          },
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_34",
+      "name": "Mode_34",
+      "code": {
+        "symbol" :"M34Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210957",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-34",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          },
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          },
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          },
+          {
+            "min": 264,
+            "max": 274,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 214,
+            "max": 224,
+            "deviation": 5
+          },
+          {
+            "min": 224,
+            "max": 234,
+            "deviation": 5
+          },
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          },
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 214,
+            "max": 224,
+            "deviation": 5
+          },
+          {
+            "min": 224,
+            "max": 234,
+            "deviation": 5
+          },
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          },
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_35",
+      "name": "Mode_35",
+      "code": {
+        "symbol" :"M35Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210958",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-35",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          },
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          },
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          },
+          {
+            "min": 265,
+            "max": 275,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 215,
+            "max": 225,
+            "deviation": 5
+          },
+          {
+            "min": 225,
+            "max": 235,
+            "deviation": 5
+          },
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          },
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 215,
+            "max": 225,
+            "deviation": 5
+          },
+          {
+            "min": 225,
+            "max": 235,
+            "deviation": 5
+          },
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          },
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_36",
+      "name": "Mode_36",
+      "code": {
+        "symbol" :"M36Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210959",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-36",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          },
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          },
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          },
+          {
+            "min": 266,
+            "max": 276,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 216,
+            "max": 226,
+            "deviation": 5
+          },
+          {
+            "min": 226,
+            "max": 236,
+            "deviation": 5
+          },
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          },
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 216,
+            "max": 226,
+            "deviation": 5
+          },
+          {
+            "min": 226,
+            "max": 236,
+            "deviation": 5
+          },
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          },
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_37",
+      "name": "Mode_37",
+      "code": {
+        "symbol" :"M37Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210960",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-37",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          },
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          },
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          },
+          {
+            "min": 267,
+            "max": 277,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 217,
+            "max": 227,
+            "deviation": 5
+          },
+          {
+            "min": 227,
+            "max": 237,
+            "deviation": 5
+          },
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          },
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 217,
+            "max": 227,
+            "deviation": 5
+          },
+          {
+            "min": 227,
+            "max": 237,
+            "deviation": 5
+          },
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          },
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_38",
+      "name": "Mode_38",
+      "code": {
+        "symbol" :"M38Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210961",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-38",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          },
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          },
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          },
+          {
+            "min": 268,
+            "max": 278,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 218,
+            "max": 228,
+            "deviation": 5
+          },
+          {
+            "min": 228,
+            "max": 238,
+            "deviation": 5
+          },
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          },
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 218,
+            "max": 228,
+            "deviation": 5
+          },
+          {
+            "min": 228,
+            "max": 238,
+            "deviation": 5
+          },
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          },
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_39",
+      "name": "Mode_39",
+      "code": {
+        "symbol" :"M39Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210962",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-39",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          },
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          },
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          },
+          {
+            "min": 269,
+            "max": 279,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 219,
+            "max": 229,
+            "deviation": 5
+          },
+          {
+            "min": 229,
+            "max": 239,
+            "deviation": 5
+          },
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          },
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 219,
+            "max": 229,
+            "deviation": 5
+          },
+          {
+            "min": 229,
+            "max": 239,
+            "deviation": 5
+          },
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          },
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_40",
+      "name": "Mode_40",
+      "code": {
+        "symbol" :"M40Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210963",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-40",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          },
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          },
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          },
+          {
+            "min": 270,
+            "max": 280,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 220,
+            "max": 230,
+            "deviation": 5
+          },
+          {
+            "min": 230,
+            "max": 240,
+            "deviation": 5
+          },
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          },
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 220,
+            "max": 230,
+            "deviation": 5
+          },
+          {
+            "min": 230,
+            "max": 240,
+            "deviation": 5
+          },
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          },
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_41",
+      "name": "Mode_41",
+      "code": {
+        "symbol" :"M41Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210964",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-41",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          },
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          },
+          {
+            "min": 261,
+            "max": 271,
+            "deviation": 5
+          },
+          {
+            "min": 271,
+            "max": 281,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 221,
+            "max": 231,
+            "deviation": 5
+          },
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          },
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          },
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 221,
+            "max": 231,
+            "deviation": 5
+          },
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          },
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          },
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_42",
+      "name": "Mode_42",
+      "code": {
+        "symbol" :"M42Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210965",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-42",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          },
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          },
+          {
+            "min": 262,
+            "max": 272,
+            "deviation": 5
+          },
+          {
+            "min": 272,
+            "max": 282,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 222,
+            "max": 232,
+            "deviation": 5
+          },
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          },
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          },
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 222,
+            "max": 232,
+            "deviation": 5
+          },
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          },
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          },
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_43",
+      "name": "Mode_43",
+      "code": {
+        "symbol" :"M43Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210966",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-43",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          },
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          },
+          {
+            "min": 263,
+            "max": 273,
+            "deviation": 5
+          },
+          {
+            "min": 273,
+            "max": 283,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 223,
+            "max": 233,
+            "deviation": 5
+          },
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          },
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          },
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 223,
+            "max": 233,
+            "deviation": 5
+          },
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          },
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          },
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_44",
+      "name": "Mode_44",
+      "code": {
+        "symbol" :"M44Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210967",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-44",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          },
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          },
+          {
+            "min": 264,
+            "max": 274,
+            "deviation": 5
+          },
+          {
+            "min": 274,
+            "max": 284,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 224,
+            "max": 234,
+            "deviation": 5
+          },
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          },
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          },
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 224,
+            "max": 234,
+            "deviation": 5
+          },
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          },
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          },
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_45",
+      "name": "Mode_45",
+      "code": {
+        "symbol" :"M45Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210968",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-45",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          },
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          },
+          {
+            "min": 265,
+            "max": 275,
+            "deviation": 5
+          },
+          {
+            "min": 275,
+            "max": 285,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 225,
+            "max": 235,
+            "deviation": 5
+          },
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          },
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          },
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 225,
+            "max": 235,
+            "deviation": 5
+          },
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          },
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          },
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_46",
+      "name": "Mode_46",
+      "code": {
+        "symbol" :"M46Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210969",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-46",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          },
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          },
+          {
+            "min": 266,
+            "max": 276,
+            "deviation": 5
+          },
+          {
+            "min": 276,
+            "max": 286,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 226,
+            "max": 236,
+            "deviation": 5
+          },
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          },
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          },
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 226,
+            "max": 236,
+            "deviation": 5
+          },
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          },
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          },
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_47",
+      "name": "Mode_47",
+      "code": {
+        "symbol" :"M47Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210970",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-47",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          },
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          },
+          {
+            "min": 267,
+            "max": 277,
+            "deviation": 5
+          },
+          {
+            "min": 277,
+            "max": 287,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 227,
+            "max": 237,
+            "deviation": 5
+          },
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          },
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          },
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 227,
+            "max": 237,
+            "deviation": 5
+          },
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          },
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          },
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_48",
+      "name": "Mode_48",
+      "code": {
+        "symbol" :"M48Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210971",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-48",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          },
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          },
+          {
+            "min": 268,
+            "max": 278,
+            "deviation": 5
+          },
+          {
+            "min": 278,
+            "max": 288,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 228,
+            "max": 238,
+            "deviation": 5
+          },
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          },
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          },
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 228,
+            "max": 238,
+            "deviation": 5
+          },
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          },
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          },
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_49",
+      "name": "Mode_49",
+      "code": {
+        "symbol" :"M49Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210972",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-49",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          },
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          },
+          {
+            "min": 269,
+            "max": 279,
+            "deviation": 5
+          },
+          {
+            "min": 279,
+            "max": 289,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 229,
+            "max": 239,
+            "deviation": 5
+          },
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          },
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          },
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 229,
+            "max": 239,
+            "deviation": 5
+          },
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          },
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          },
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_50",
+      "name": "Mode_50",
+      "code": {
+        "symbol" :"M50Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210973",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-50",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          },
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          },
+          {
+            "min": 270,
+            "max": 280,
+            "deviation": 5
+          },
+          {
+            "min": 280,
+            "max": 290,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 230,
+            "max": 240,
+            "deviation": 5
+          },
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          },
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          },
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 230,
+            "max": 240,
+            "deviation": 5
+          },
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          },
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          },
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_51",
+      "name": "Mode_51",
+      "code": {
+        "symbol" :"M51Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210974",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-51",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          },
+          {
+            "min": 261,
+            "max": 271,
+            "deviation": 5
+          },
+          {
+            "min": 271,
+            "max": 281,
+            "deviation": 5
+          },
+          {
+            "min": 281,
+            "max": 291,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          },
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          },
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          },
+          {
+            "min": 261,
+            "max": 271,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 231,
+            "max": 241,
+            "deviation": 5
+          },
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          },
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          },
+          {
+            "min": 261,
+            "max": 271,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_52",
+      "name": "Mode_52",
+      "code": {
+        "symbol" :"M52Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210975",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-52",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          },
+          {
+            "min": 262,
+            "max": 272,
+            "deviation": 5
+          },
+          {
+            "min": 272,
+            "max": 282,
+            "deviation": 5
+          },
+          {
+            "min": 282,
+            "max": 292,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          },
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          },
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          },
+          {
+            "min": 262,
+            "max": 272,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 232,
+            "max": 242,
+            "deviation": 5
+          },
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          },
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          },
+          {
+            "min": 262,
+            "max": 272,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_53",
+      "name": "Mode_53",
+      "code": {
+        "symbol" :"M53Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210976",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-53",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          },
+          {
+            "min": 263,
+            "max": 273,
+            "deviation": 5
+          },
+          {
+            "min": 273,
+            "max": 283,
+            "deviation": 5
+          },
+          {
+            "min": 283,
+            "max": 293,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          },
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          },
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          },
+          {
+            "min": 263,
+            "max": 273,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 233,
+            "max": 243,
+            "deviation": 5
+          },
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          },
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          },
+          {
+            "min": 263,
+            "max": 273,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_54",
+      "name": "Mode_54",
+      "code": {
+        "symbol" :"M54Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210977",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-54",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          },
+          {
+            "min": 264,
+            "max": 274,
+            "deviation": 5
+          },
+          {
+            "min": 274,
+            "max": 284,
+            "deviation": 5
+          },
+          {
+            "min": 284,
+            "max": 294,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          },
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          },
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          },
+          {
+            "min": 264,
+            "max": 274,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 234,
+            "max": 244,
+            "deviation": 5
+          },
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          },
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          },
+          {
+            "min": 264,
+            "max": 274,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    { 
+      "id": "Emitter_1001-Mode_55",
+      "name": "Mode_55",
+      "code": {
+        "symbol" :"M55Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210978",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-55",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          },
+          {
+            "min": 265,
+            "max": 275,
+            "deviation": 5
+          },
+          {
+            "min": 275,
+            "max": 285,
+            "deviation": 5
+          },
+          {
+            "min": 285,
+            "max": 295,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          },
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          },
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          },
+          {
+            "min": 265,
+            "max": 275,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 235,
+            "max": 245,
+            "deviation": 5
+          },
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          },
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          },
+          {
+            "min": 265,
+            "max": 275,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_56",
+      "name": "Mode_56",
+      "code": {
+        "symbol" :"M56Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210979",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-56",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          },
+          {
+            "min": 266,
+            "max": 276,
+            "deviation": 5
+          },
+          {
+            "min": 276,
+            "max": 286,
+            "deviation": 5
+          },
+          {
+            "min": 286,
+            "max": 296,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          },
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          },
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          },
+          {
+            "min": 266,
+            "max": 276,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 236,
+            "max": 246,
+            "deviation": 5
+          },
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          },
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          },
+          {
+            "min": 266,
+            "max": 276,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_57",
+      "name": "Mode_57",
+      "code": {
+        "symbol" :"M57Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210980",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-57",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          },
+          {
+            "min": 267,
+            "max": 277,
+            "deviation": 5
+          },
+          {
+            "min": 277,
+            "max": 287,
+            "deviation": 5
+          },
+          {
+            "min": 287,
+            "max": 297,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          },
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          },
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          },
+          {
+            "min": 267,
+            "max": 277,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 237,
+            "max": 247,
+            "deviation": 5
+          },
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          },
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          },
+          {
+            "min": 267,
+            "max": 277,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_58",
+      "name": "Mode_58",
+      "code": {
+        "symbol" :"M58Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210981",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-58",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          },
+          {
+            "min": 268,
+            "max": 278,
+            "deviation": 5
+          },
+          {
+            "min": 278,
+            "max": 288,
+            "deviation": 5
+          },
+          {
+            "min": 288,
+            "max": 298,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          },
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          },
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          },
+          {
+            "min": 268,
+            "max": 278,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 238,
+            "max": 248,
+            "deviation": 5
+          },
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          },
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          },
+          {
+            "min": 268,
+            "max": 278,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_59",
+      "name": "Mode_59",
+      "code": {
+        "symbol" :"M59Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210982",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-59",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          },
+          {
+            "min": 269,
+            "max": 279,
+            "deviation": 5
+          },
+          {
+            "min": 279,
+            "max": 289,
+            "deviation": 5
+          },
+          {
+            "min": 289,
+            "max": 299,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          },
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          },
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          },
+          {
+            "min": 269,
+            "max": 279,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 239,
+            "max": 249,
+            "deviation": 5
+          },
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          },
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          },
+          {
+            "min": 269,
+            "max": 279,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_60",
+      "name": "Mode_60",
+      "code": {
+        "symbol" :"M60Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210983",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-60",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          },
+          {
+            "min": 270,
+            "max": 280,
+            "deviation": 5
+          },
+          {
+            "min": 280,
+            "max": 290,
+            "deviation": 5
+          },
+          {
+            "min": 290,
+            "max": 300,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          },
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          },
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          },
+          {
+            "min": 270,
+            "max": 280,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 240,
+            "max": 250,
+            "deviation": 5
+          },
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          },
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          },
+          {
+            "min": 270,
+            "max": 280,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_61",
+      "name": "Mode_61",
+      "code": {
+        "symbol" :"M61Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210984",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-61",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 261,
+            "max": 271,
+            "deviation": 5
+          },
+          {
+            "min": 271,
+            "max": 281,
+            "deviation": 5
+          },
+          {
+            "min": 281,
+            "max": 291,
+            "deviation": 5
+          },
+          {
+            "min": 291,
+            "max": 301,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          },
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          },
+          {
+            "min": 261,
+            "max": 271,
+            "deviation": 5
+          },
+          {
+            "min": 271,
+            "max": 281,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 241,
+            "max": 251,
+            "deviation": 5
+          },
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          },
+          {
+            "min": 261,
+            "max": 271,
+            "deviation": 5
+          },
+          {
+            "min": 271,
+            "max": 281,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_62",
+      "name": "Mode_62",
+      "code": {
+        "symbol" :"M62Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210985",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-62",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 262,
+            "max": 272,
+            "deviation": 5
+          },
+          {
+            "min": 272,
+            "max": 282,
+            "deviation": 5
+          },
+          {
+            "min": 282,
+            "max": 292,
+            "deviation": 5
+          },
+          {
+            "min": 292,
+            "max": 302,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          },
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          },
+          {
+            "min": 262,
+            "max": 272,
+            "deviation": 5
+          },
+          {
+            "min": 272,
+            "max": 282,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 242,
+            "max": 252,
+            "deviation": 5
+          },
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          },
+          {
+            "min": 262,
+            "max": 272,
+            "deviation": 5
+          },
+          {
+            "min": 272,
+            "max": 282,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_63",
+      "name": "Mode_63",
+      "code": {
+        "symbol" :"M63Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210986",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-63",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 263,
+            "max": 273,
+            "deviation": 5
+          },
+          {
+            "min": 273,
+            "max": 283,
+            "deviation": 5
+          },
+          {
+            "min": 283,
+            "max": 293,
+            "deviation": 5
+          },
+          {
+            "min": 293,
+            "max": 303,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          },
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          },
+          {
+            "min": 263,
+            "max": 273,
+            "deviation": 5
+          },
+          {
+            "min": 273,
+            "max": 283,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 243,
+            "max": 253,
+            "deviation": 5
+          },
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          },
+          {
+            "min": 263,
+            "max": 273,
+            "deviation": 5
+          },
+          {
+            "min": 273,
+            "max": 283,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_64",
+      "name": "Mode_64",
+      "code": {
+        "symbol" :"M64Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210987",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-64",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 264,
+            "max": 274,
+            "deviation": 5
+          },
+          {
+            "min": 274,
+            "max": 284,
+            "deviation": 5
+          },
+          {
+            "min": 284,
+            "max": 294,
+            "deviation": 5
+          },
+          {
+            "min": 294,
+            "max": 304,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          },
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          },
+          {
+            "min": 264,
+            "max": 274,
+            "deviation": 5
+          },
+          {
+            "min": 274,
+            "max": 284,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 244,
+            "max": 254,
+            "deviation": 5
+          },
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          },
+          {
+            "min": 264,
+            "max": 274,
+            "deviation": 5
+          },
+          {
+            "min": 274,
+            "max": 284,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_65",
+      "name": "Mode_65",
+      "code": {
+        "symbol" :"M65Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210988",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-65",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 265,
+            "max": 275,
+            "deviation": 5
+          },
+          {
+            "min": 275,
+            "max": 285,
+            "deviation": 5
+          },
+          {
+            "min": 285,
+            "max": 295,
+            "deviation": 5
+          },
+          {
+            "min": 295,
+            "max": 305,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          },
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          },
+          {
+            "min": 265,
+            "max": 275,
+            "deviation": 5
+          },
+          {
+            "min": 275,
+            "max": 285,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 245,
+            "max": 255,
+            "deviation": 5
+          },
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          },
+          {
+            "min": 265,
+            "max": 275,
+            "deviation": 5
+          },
+          {
+            "min": 275,
+            "max": 285,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_66",
+      "name": "Mode_66",
+      "code": {
+        "symbol" :"M66Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210989",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-66",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 266,
+            "max": 276,
+            "deviation": 5
+          },
+          {
+            "min": 276,
+            "max": 286,
+            "deviation": 5
+          },
+          {
+            "min": 286,
+            "max": 296,
+            "deviation": 5
+          },
+          {
+            "min": 296,
+            "max": 306,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          },
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          },
+          {
+            "min": 266,
+            "max": 276,
+            "deviation": 5
+          },
+          {
+            "min": 276,
+            "max": 286,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 246,
+            "max": 256,
+            "deviation": 5
+          },
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          },
+          {
+            "min": 266,
+            "max": 276,
+            "deviation": 5
+          },
+          {
+            "min": 276,
+            "max": 286,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_67",
+      "name": "Mode_67",
+      "code": {
+        "symbol" :"M67Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210990",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-67",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 267,
+            "max": 277,
+            "deviation": 5
+          },
+          {
+            "min": 277,
+            "max": 287,
+            "deviation": 5
+          },
+          {
+            "min": 287,
+            "max": 297,
+            "deviation": 5
+          },
+          {
+            "min": 297,
+            "max": 307,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          },
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          },
+          {
+            "min": 267,
+            "max": 277,
+            "deviation": 5
+          },
+          {
+            "min": 277,
+            "max": 287,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 247,
+            "max": 257,
+            "deviation": 5
+          },
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          },
+          {
+            "min": 267,
+            "max": 277,
+            "deviation": 5
+          },
+          {
+            "min": 277,
+            "max": 287,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_68",
+      "name": "Mode_68",
+      "code": {
+        "symbol" :"M68Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210991",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-68",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 268,
+            "max": 278,
+            "deviation": 5
+          },
+          {
+            "min": 278,
+            "max": 288,
+            "deviation": 5
+          },
+          {
+            "min": 288,
+            "max": 298,
+            "deviation": 5
+          },
+          {
+            "min": 298,
+            "max": 308,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          },
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          },
+          {
+            "min": 268,
+            "max": 278,
+            "deviation": 5
+          },
+          {
+            "min": 278,
+            "max": 288,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 248,
+            "max": 258,
+            "deviation": 5
+          },
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          },
+          {
+            "min": 268,
+            "max": 278,
+            "deviation": 5
+          },
+          {
+            "min": 278,
+            "max": 288,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_69",
+      "name": "Mode_69",
+      "code": {
+        "symbol" :"M69Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210992",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-69",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 269,
+            "max": 279,
+            "deviation": 5
+          },
+          {
+            "min": 279,
+            "max": 289,
+            "deviation": 5
+          },
+          {
+            "min": 289,
+            "max": 299,
+            "deviation": 5
+          },
+          {
+            "min": 299,
+            "max": 309,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          },
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          },
+          {
+            "min": 269,
+            "max": 279,
+            "deviation": 5
+          },
+          {
+            "min": 279,
+            "max": 289,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 249,
+            "max": 259,
+            "deviation": 5
+          },
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          },
+          {
+            "min": 269,
+            "max": 279,
+            "deviation": 5
+          },
+          {
+            "min": 279,
+            "max": 289,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_70",
+      "name": "Mode_70",
+      "code": {
+        "symbol" :"M70Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210993",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-70",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 270,
+            "max": 280,
+            "deviation": 5
+          },
+          {
+            "min": 280,
+            "max": 290,
+            "deviation": 5
+          },
+          {
+            "min": 290,
+            "max": 300,
+            "deviation": 5
+          },
+          {
+            "min": 300,
+            "max": 310,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          },
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          },
+          {
+            "min": 270,
+            "max": 280,
+            "deviation": 5
+          },
+          {
+            "min": 280,
+            "max": 290,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 250,
+            "max": 260,
+            "deviation": 5
+          },
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          },
+          {
+            "min": 270,
+            "max": 280,
+            "deviation": 5
+          },
+          {
+            "min": 280,
+            "max": 290,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_71",
+      "name": "Mode_71",
+      "code": {
+        "symbol" :"M71Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210994",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-71",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 271,
+            "max": 281,
+            "deviation": 5
+          },
+          {
+            "min": 281,
+            "max": 291,
+            "deviation": 5
+          },
+          {
+            "min": 291,
+            "max": 301,
+            "deviation": 5
+          },
+          {
+            "min": 301,
+            "max": 311,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          },
+          {
+            "min": 261,
+            "max": 271,
+            "deviation": 5
+          },
+          {
+            "min": 271,
+            "max": 281,
+            "deviation": 5
+          },
+          {
+            "min": 281,
+            "max": 291,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 251,
+            "max": 261,
+            "deviation": 5
+          },
+          {
+            "min": 261,
+            "max": 271,
+            "deviation": 5
+          },
+          {
+            "min": 271,
+            "max": 281,
+            "deviation": 5
+          },
+          {
+            "min": 281,
+            "max": 291,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_72",
+      "name": "Mode_72",
+      "code": {
+        "symbol" :"M72Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210995",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-72",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 272,
+            "max": 282,
+            "deviation": 5
+          },
+          {
+            "min": 282,
+            "max": 292,
+            "deviation": 5
+          },
+          {
+            "min": 292,
+            "max": 302,
+            "deviation": 5
+          },
+          {
+            "min": 302,
+            "max": 312,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          },
+          {
+            "min": 262,
+            "max": 272,
+            "deviation": 5
+          },
+          {
+            "min": 272,
+            "max": 282,
+            "deviation": 5
+          },
+          {
+            "min": 282,
+            "max": 292,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 252,
+            "max": 262,
+            "deviation": 5
+          },
+          {
+            "min": 262,
+            "max": 272,
+            "deviation": 5
+          },
+          {
+            "min": 272,
+            "max": 282,
+            "deviation": 5
+          },
+          {
+            "min": 282,
+            "max": 292,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_73",
+      "name": "Mode_73",
+      "code": {
+        "symbol" :"M73Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210996",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-73",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 273,
+            "max": 283,
+            "deviation": 5
+          },
+          {
+            "min": 283,
+            "max": 293,
+            "deviation": 5
+          },
+          {
+            "min": 293,
+            "max": 303,
+            "deviation": 5
+          },
+          {
+            "min": 303,
+            "max": 313,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          },
+          {
+            "min": 263,
+            "max": 273,
+            "deviation": 5
+          },
+          {
+            "min": 273,
+            "max": 283,
+            "deviation": 5
+          },
+          {
+            "min": 283,
+            "max": 293,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 253,
+            "max": 263,
+            "deviation": 5
+          },
+          {
+            "min": 263,
+            "max": 273,
+            "deviation": 5
+          },
+          {
+            "min": 273,
+            "max": 283,
+            "deviation": 5
+          },
+          {
+            "min": 283,
+            "max": 293,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_74",
+      "name": "Mode_74",
+      "code": {
+        "symbol" :"M74Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210997",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-74",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 274,
+            "max": 284,
+            "deviation": 5
+          },
+          {
+            "min": 284,
+            "max": 294,
+            "deviation": 5
+          },
+          {
+            "min": 294,
+            "max": 304,
+            "deviation": 5
+          },
+          {
+            "min": 304,
+            "max": 314,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          },
+          {
+            "min": 264,
+            "max": 274,
+            "deviation": 5
+          },
+          {
+            "min": 274,
+            "max": 284,
+            "deviation": 5
+          },
+          {
+            "min": 284,
+            "max": 294,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 254,
+            "max": 264,
+            "deviation": 5
+          },
+          {
+            "min": 264,
+            "max": 274,
+            "deviation": 5
+          },
+          {
+            "min": 274,
+            "max": 284,
+            "deviation": 5
+          },
+          {
+            "min": 284,
+            "max": 294,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_75",
+      "name": "Mode_75",
+      "code": {
+        "symbol" :"M75Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210998",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-75",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 275,
+            "max": 285,
+            "deviation": 5
+          },
+          {
+            "min": 285,
+            "max": 295,
+            "deviation": 5
+          },
+          {
+            "min": 295,
+            "max": 305,
+            "deviation": 5
+          },
+          {
+            "min": 305,
+            "max": 315,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          },
+          {
+            "min": 265,
+            "max": 275,
+            "deviation": 5
+          },
+          {
+            "min": 275,
+            "max": 285,
+            "deviation": 5
+          },
+          {
+            "min": 285,
+            "max": 295,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 255,
+            "max": 265,
+            "deviation": 5
+          },
+          {
+            "min": 265,
+            "max": 275,
+            "deviation": 5
+          },
+          {
+            "min": 275,
+            "max": 285,
+            "deviation": 5
+          },
+          {
+            "min": 285,
+            "max": 295,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_76",
+      "name": "Mode_76",
+      "code": {
+        "symbol" :"M76Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_210999",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-76",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 276,
+            "max": 286,
+            "deviation": 5
+          },
+          {
+            "min": 286,
+            "max": 296,
+            "deviation": 5
+          },
+          {
+            "min": 296,
+            "max": 306,
+            "deviation": 5
+          },
+          {
+            "min": 306,
+            "max": 316,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          },
+          {
+            "min": 266,
+            "max": 276,
+            "deviation": 5
+          },
+          {
+            "min": 276,
+            "max": 286,
+            "deviation": 5
+          },
+          {
+            "min": 286,
+            "max": 296,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 256,
+            "max": 266,
+            "deviation": 5
+          },
+          {
+            "min": 266,
+            "max": 276,
+            "deviation": 5
+          },
+          {
+            "min": 276,
+            "max": 286,
+            "deviation": 5
+          },
+          {
+            "min": 286,
+            "max": 296,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_77",
+      "name": "Mode_77",
+      "code": {
+        "symbol" :"M77Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_211000",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Air Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-77",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 277,
+            "max": 287,
+            "deviation": 5
+          },
+          {
+            "min": 287,
+            "max": 297,
+            "deviation": 5
+          },
+          {
+            "min": 297,
+            "max": 307,
+            "deviation": 5
+          },
+          {
+            "min": 307,
+            "max": 317,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          },
+          {
+            "min": 267,
+            "max": 277,
+            "deviation": 5
+          },
+          {
+            "min": 277,
+            "max": 287,
+            "deviation": 5
+          },
+          {
+            "min": 287,
+            "max": 297,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 257,
+            "max": 267,
+            "deviation": 5
+          },
+          {
+            "min": 267,
+            "max": 277,
+            "deviation": 5
+          },
+          {
+            "min": 277,
+            "max": 287,
+            "deviation": 5
+          },
+          {
+            "min": 287,
+            "max": 297,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_78",
+      "name": "Mode_78",
+      "code": {
+        "symbol" :"M78Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_211001",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Naval Platform",
+      "threat": "Friendly",
+      "freqType": "Hop-BTP-78",
+      "priType": "Stagger",
+      "staggerLevel": 64,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 278,
+            "max": 288,
+            "deviation": 5
+          },
+          {
+            "min": 288,
+            "max": 298,
+            "deviation": 5
+          },
+          {
+            "min": 298,
+            "max": 308,
+            "deviation": 5
+          },
+          {
+            "min": 308,
+            "max": 318,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          },
+          {
+            "min": 268,
+            "max": 278,
+            "deviation": 5
+          },
+          {
+            "min": 278,
+            "max": 288,
+            "deviation": 5
+          },
+          {
+            "min": 288,
+            "max": 298,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 258,
+            "max": 268,
+            "deviation": 5
+          },
+          {
+            "min": 268,
+            "max": 278,
+            "deviation": 5
+          },
+          {
+            "min": 278,
+            "max": 288,
+            "deviation": 5
+          },
+          {
+            "min": 288,
+            "max": 298,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    { 
+      "id": "Emitter_1001-Mode_79",
+      "name": "Mode_79",
+      "code": {
+        "symbol" :"M79Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_211002",
+      "modeSubnode": "Search-TWS",
+      "platformType": "Ground Platform",
+      "threat": "Hostile",
+      "freqType": "Hop-BTP-79",
+      "priType": "Stagger",
+      "staggerLevel": 128,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 279,
+            "max": 289,
+            "deviation": 5
+          },
+          {
+            "min": 289,
+            "max": 299,
+            "deviation": 5
+          },
+          {
+            "min": 299,
+            "max": 309,
+            "deviation": 5
+          },
+          {
+            "min": 309,
+            "max": 319,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          },
+          {
+            "min": 269,
+            "max": 279,
+            "deviation": 5
+          },
+          {
+            "min": 279,
+            "max": 289,
+            "deviation": 5
+          },
+          {
+            "min": 289,
+            "max": 299,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 259,
+            "max": 269,
+            "deviation": 5
+          },
+          {
+            "min": 269,
+            "max": 279,
+            "deviation": 5
+          },
+          {
+            "min": 279,
+            "max": 289,
+            "deviation": 5
+          },
+          {
+            "min": 289,
+            "max": 299,
+            "deviation": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "Emitter_1001-Mode_80",
+      "name": "Mode_80",
+      "code": {
+        "symbol" :"M80Y",
+        "fgColor" :"#ffffff",
+        "bgColor" :"#F7B500"
+      },
+      "modeName": "Mode_211003",
+      "modeSubnode": "Track-TWS",
+      "platformType": "Space Platform",
+      "threat": "Neutral",
+      "freqType": "Hop-BTP-80",
+      "priType": "Stagger",
+      "staggerLevel": 192,
+      "pwType": "Agile",
+      "scanType": "Agile",
+      "minScanSector": "Not Calculated",
+      "maxScanSector": "Not Calculated",
+      "jammingData": {
+        "frequency": [
+          {
+            "min": 280,
+            "max": 290,
+            "deviation": 5
+          },
+          {
+            "min": 290,
+            "max": 300,
+            "deviation": 5
+          },
+          {
+            "min": 300,
+            "max": 310,
+            "deviation": 5
+          },
+          {
+            "min": 310,
+            "max": 320,
+            "deviation": 5
+          }
+        ],
+        "pri": [
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          },
+          {
+            "min": 270,
+            "max": 280,
+            "deviation": 5
+          },
+          {
+            "min": 280,
+            "max": 290,
+            "deviation": 5
+          },
+          {
+            "min": 290,
+            "max": 300,
+            "deviation": 5
+          }
+        ],
+        "pulseWidth": [
+          {
+            "min": 260,
+            "max": 270,
+            "deviation": 5
+          },
+          {
+            "min": 270,
+            "max": 280,
+            "deviation": 5
+          },
+          {
+            "min": 280,
+            "max": 290,
+            "deviation": 5
+          },
+          {
+            "min": 290,
+            "max": 300,
+            "deviation": 5
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+@layer base {
+  .sq-2 { @apply h-2! w-2!; }
+  .sq-3 { @apply h-3! w-3!; }
+  .sq-4 { @apply h-4! w-4!; }
+  .sq-5 { @apply h-5! w-5!; }
+  .sq-6 { @apply h-6! w-6!; }
+  .sq-7 { @apply h-7! w-7!; }
+  .sq-8 { @apply h-8! w-8!; }
+  .sq-14{@apply w-14! h-14!;}
+  .sq-21{ @apply h-21! w-21!;}
+  .w-fixed-md { @apply w-[615.333px]!;}
+}

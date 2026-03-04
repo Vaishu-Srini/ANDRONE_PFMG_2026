@@ -1,0 +1,67 @@
+{
+    "weapons": [
+        {
+            "id": 1,
+            "weaponName": "Astra Mk-1",
+            "createdBy": "Raj",
+            "createdDate": "2025-09-14",
+            "modifiedBy": "Raj",
+            "modifiedDate": "2025-10-10",
+            "description": "Beyond Visual Range Air-to-Air Missile (BVRAAM) with active radar guidance, integrated on Su-30MKI."
+        },
+        {
+            "id": 2,
+            "weaponName": "BrahMos-A",
+            "createdBy": "Pavan",
+            "createdDate": "2025-07-22",
+            "modifiedBy": "Pavan",
+            "modifiedDate": "2025-08-29",
+            "description": "Supersonic air-launched cruise missile designed for precision strikes against ground and naval targets."
+        },
+        {
+            "id": 3,
+            "weaponName": "Helina ATGM",
+            "createdBy": "Srikanth",
+            "createdDate": "2025-05-18",
+            "modifiedBy": "Srikanth",
+            "modifiedDate": "2025-06-12",
+            "description": "Air-launched anti-tank guided missile based on Nag, with lock-on-before-launch capability."
+        },
+        {
+            "id": 4,
+            "weaponName": "SANT Missile",
+            "createdBy": "Rajesh",
+            "createdDate": "2025-03-08",
+            "modifiedBy": "Rajesh",
+            "modifiedDate": "2025-03-20",
+            "description": "Stand-Off Anti-Tank missile developed by DRDO with millimeter-wave active radar seeker."
+        },
+        {
+            "id": 5,
+            "weaponName": "Garuda Bomb",
+            "createdBy": "Pooja",
+            "createdDate": "2025-02-27",
+            "modifiedBy": "Pooja",
+            "modifiedDate": "2025-04-05",
+            "description": "Indigenous precision-guided glide bomb for long-range ground strike missions."
+        },
+        {
+            "id": 6,
+            "weaponName": "Python-5",
+            "createdBy": "Ananya",
+            "createdDate": "2025-01-10",
+            "modifiedBy": "Ananya",
+            "modifiedDate": "2025-03-01",
+            "description": "Fifth-generation short-range air-to-air missile with imaging infrared homing."
+        },
+        {
+            "id": 7,
+            "weaponName": "Spice-2000",
+            "createdBy": "Naveen",
+            "createdDate": "2025-04-01",
+            "modifiedBy": "Naveen",
+            "modifiedDate": "2025-05-12",
+            "description": "Precision-guided munition capable of delivering 1000 kg warhead with GPS/INS guidance."
+        }
+    ]
+}

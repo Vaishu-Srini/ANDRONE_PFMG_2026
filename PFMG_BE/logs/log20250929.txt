@@ -1,0 +1,130 @@
+2025-09-29 19:27:25.950 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-29 19:27:26.186 +05:30 [INF] Now listening on: http://localhost:5058
+2025-09-29 19:27:26.192 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-29 19:27:26.196 +05:30 [INF] Hosting environment: Development
+2025-09-29 19:27:26.199 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-09-29 19:27:39.641 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-09-29 19:27:40.387 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 748.5078ms
+2025-09-29 19:33:15.853 +05:30 [INF] Application is shutting down...
+2025-09-29 19:33:50.896 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-09-29 19:33:51.031 +05:30 [INF] Now listening on: http://localhost:5058
+2025-09-29 19:33:51.037 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-09-29 19:33:51.039 +05:30 [INF] Hosting environment: Development
+2025-09-29 19:33:51.042 +05:30 [INF] Content root path: C:\Anadrones\Anadrone_BackEnd
+2025-09-29 19:33:54.218 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/index.html - null null
+2025-09-29 19:33:54.325 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/index.html - 200 null text/html;charset=utf-8 107.7108ms
+2025-09-29 19:33:54.417 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-09-29 19:33:54.605 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 189.1327ms
+2025-09-29 19:35:52.625 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 740
+2025-09-29 19:35:52.661 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-09-29 19:35:52.707 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-09-29 19:35:52.741 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-09-29 19:35:53.132 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:35:53.150 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 391.6913ms
+2025-09-29 19:35:53.154 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-09-29 19:35:53.161 +05:30 [INF] HTTP POST /api/Emitter/save responded 400 in 500.3040 ms
+2025-09-29 19:35:53.168 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 400 null application/json; charset=utf-8 542.9834ms
+2025-09-29 19:36:35.983 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 737
+2025-09-29 19:36:35.999 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-09-29 19:36:36.003 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-09-29 19:36:36.024 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:36:36.031 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 19.2605ms
+2025-09-29 19:36:36.037 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-09-29 19:36:36.042 +05:30 [INF] HTTP POST /api/Emitter/save responded 400 in 46.3383 ms
+2025-09-29 19:36:36.053 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 400 null application/json; charset=utf-8 69.0848ms
+2025-09-29 19:36:45.269 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 739
+2025-09-29 19:36:45.302 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-09-29 19:36:45.308 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-09-29 19:36:45.328 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:36:45.337 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 17.5571ms
+2025-09-29 19:36:45.346 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-09-29 19:36:45.354 +05:30 [INF] HTTP POST /api/Emitter/save responded 400 in 76.3863 ms
+2025-09-29 19:36:45.365 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 400 null application/json; charset=utf-8 96.0328ms
+2025-09-29 19:45:11.647 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 518
+2025-09-29 19:45:11.669 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-09-29 19:45:11.697 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-09-29 19:45:11.765 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:45:11.775 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 64.2413ms
+2025-09-29 19:45:11.786 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-09-29 19:45:11.793 +05:30 [INF] HTTP POST /api/Platform/save responded 400 in 123.8164 ms
+2025-09-29 19:45:11.806 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 400 null application/json; charset=utf-8 158.5925ms
+2025-09-29 19:48:37.931 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 517
+2025-09-29 19:48:37.955 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-09-29 19:48:37.967 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-09-29 19:48:37.990 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:48:38.004 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 19.957ms
+2025-09-29 19:48:38.019 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-09-29 19:48:38.034 +05:30 [INF] HTTP POST /api/Platform/save responded 400 in 79.4862 ms
+2025-09-29 19:48:38.050 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 400 null application/json; charset=utf-8 118.322ms
+2025-09-29 19:48:49.604 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 516
+2025-09-29 19:48:49.621 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-09-29 19:48:49.629 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-09-29 19:48:49.650 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:48:49.659 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 18.3116ms
+2025-09-29 19:48:49.667 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-09-29 19:48:49.674 +05:30 [INF] HTTP POST /api/Platform/save responded 400 in 53.1868 ms
+2025-09-29 19:48:49.686 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 400 null application/json; charset=utf-8 81.128ms
+2025-09-29 19:52:34.359 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 736
+2025-09-29 19:52:34.381 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-09-29 19:52:34.389 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-09-29 19:52:34.408 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:52:34.418 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 13.2047ms
+2025-09-29 19:52:34.429 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-09-29 19:52:34.437 +05:30 [INF] HTTP POST /api/Emitter/save responded 400 in 56.8652 ms
+2025-09-29 19:52:34.450 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 400 null application/json; charset=utf-8 90.8259ms
+2025-09-29 19:52:51.367 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 736
+2025-09-29 19:52:51.400 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-09-29 19:52:51.409 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-09-29 19:52:51.428 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:52:51.438 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 13.1404ms
+2025-09-29 19:52:51.448 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-09-29 19:52:51.456 +05:30 [INF] HTTP POST /api/Emitter/save responded 400 in 56.2341 ms
+2025-09-29 19:52:51.470 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 400 null application/json; charset=utf-8 103.0408ms
+2025-09-29 19:56:06.760 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3549
+2025-09-29 19:56:06.773 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:56:06.793 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-09-29 19:56:07.097 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:56:07.107 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 302.8085ms
+2025-09-29 19:56:07.118 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:56:07.125 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 351.9441 ms
+2025-09-29 19:56:07.139 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 379.2712ms
+2025-09-29 19:56:24.539 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3547
+2025-09-29 19:56:24.555 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:56:24.561 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-09-29 19:56:24.581 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:56:24.588 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 17.585ms
+2025-09-29 19:56:24.598 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:56:24.606 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 51.2101 ms
+2025-09-29 19:56:24.617 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 77.4149ms
+2025-09-29 19:57:23.950 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3545
+2025-09-29 19:57:23.974 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:57:23.983 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-09-29 19:57:24.038 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:57:24.049 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 52.1451ms
+2025-09-29 19:57:24.059 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:57:24.068 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 93.7471 ms
+2025-09-29 19:57:24.082 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 131.675ms
+2025-09-29 19:57:43.758 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3545
+2025-09-29 19:57:43.788 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:57:43.797 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-09-29 19:57:43.819 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:57:43.830 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 15.1068ms
+2025-09-29 19:57:43.840 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:57:43.849 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 61.8254 ms
+2025-09-29 19:57:43.863 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 105.0578ms
+2025-09-29 19:59:25.692 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3544
+2025-09-29 19:59:25.710 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:59:25.721 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-09-29 19:59:25.739 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:59:25.749 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 14.7355ms
+2025-09-29 19:59:25.758 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:59:25.766 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 56.8006 ms
+2025-09-29 19:59:25.779 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 87.2444ms
+2025-09-29 19:59:49.298 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 3544
+2025-09-29 19:59:49.315 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:59:49.324 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-09-29 19:59:49.341 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-09-29 19:59:49.351 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 14.2308ms
+2025-09-29 19:59:49.361 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-09-29 19:59:49.369 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 54.6226 ms
+2025-09-29 19:59:49.382 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 84.456ms

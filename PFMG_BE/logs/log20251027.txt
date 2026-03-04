@@ -1,0 +1,1658 @@
+2025-10-27 10:46:19.444 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 10:46:20.595 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 10:46:20.806 +05:30 [INF] Executed DbCommand (193ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-27 10:46:21.063 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 10:46:21.199 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 10:46:21.225 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-27 10:46:21.305 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 10:46:21.308 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 10:46:21.312 +05:30 [INF] Hosting environment: Development
+2025-10-27 10:46:21.316 +05:30 [INF] Content root path: C:\Users\Admin\Anadrone_BackEnd
+2025-10-27 10:46:55.502 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Weapon/save - application/json 393
+2025-10-27 10:46:55.597 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-27 10:46:55.647 +05:30 [INF] Executing endpoint 'WeaponController.SaveWeapon (Anadrone_BackEnd)'
+2025-10-27 10:46:55.685 +05:30 [INF] Route matched with {action = "SaveWeapon", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveWeapon(Anadrone_BackEnd.DTOs.WeaponDto) on controller WeaponController (Anadrone_BackEnd).
+2025-10-27 10:46:56.213 +05:30 [INF] Executed DbCommand (76ms) [Parameters=[@__name_0='Weapon1' (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [w].[WeaponId], [w].[BackGroundColor], [w].[CreatedBy], [w].[CreatedDate], [w].[Description], [w].[DisplayStatus], [w].[ForeGroundColor], [w].[ModifiedBy], [w].[ModifiedDate], [w].[Priority], [w].[Symbol], [w].[ThreatType], [w].[WeaponDate], [w].[WeaponName]
+FROM [weapons] AS [w]
+WHERE [w].[WeaponName] = @__name_0
+2025-10-27 10:46:56.347 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 10:46:56.365 +05:30 [INF] Executed action WeaponController.SaveWeapon (Anadrone_BackEnd) in 673.8253ms
+2025-10-27 10:46:56.374 +05:30 [INF] Executed endpoint 'WeaponController.SaveWeapon (Anadrone_BackEnd)'
+2025-10-27 10:46:56.381 +05:30 [INF] HTTP POST /api/Weapon/save responded 400 in 782.6909 ms
+2025-10-27 10:46:56.399 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Weapon/save - 400 null application/json; charset=utf-8 899.9481ms
+2025-10-27 10:47:12.097 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Weapon/save - application/json 393
+2025-10-27 10:47:12.114 +05:30 [INF] Executing endpoint 'WeaponController.SaveWeapon (Anadrone_BackEnd)'
+2025-10-27 10:47:12.117 +05:30 [INF] Route matched with {action = "SaveWeapon", controller = "Weapon"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveWeapon(Anadrone_BackEnd.DTOs.WeaponDto) on controller WeaponController (Anadrone_BackEnd).
+2025-10-27 10:47:12.238 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__name_0='Weapon2' (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [w].[WeaponId], [w].[BackGroundColor], [w].[CreatedBy], [w].[CreatedDate], [w].[Description], [w].[DisplayStatus], [w].[ForeGroundColor], [w].[ModifiedBy], [w].[ModifiedDate], [w].[Priority], [w].[Symbol], [w].[ThreatType], [w].[WeaponDate], [w].[WeaponName]
+FROM [weapons] AS [w]
+WHERE [w].[WeaponName] = @__name_0
+2025-10-27 10:47:12.368 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@p0='string' (Nullable = false) (Size = 4000), @p1='ADMIN' (Nullable = false) (Size = 4000), @p2='2025-10-27T05:17:12.2441699Z', @p3='string' (Nullable = false) (Size = 4000), @p4='True', @p5='string' (Nullable = false) (Size = 4000), @p6='ADMIN' (Nullable = false) (Size = 4000), @p7='2025-10-27T05:17:12.2441943Z', @p8='0', @p9='string' (Nullable = false) (Size = 4000), @p10='0', @p11='2025-10-21T06:04:32.7680000Z', @p12='Weapon2' (Nullable = false) (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [weapons] ([BackGroundColor], [CreatedBy], [CreatedDate], [Description], [DisplayStatus], [ForeGroundColor], [ModifiedBy], [ModifiedDate], [Priority], [Symbol], [ThreatType], [WeaponDate], [WeaponName])
+OUTPUT INSERTED.[WeaponId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2025-10-27 10:47:12.404 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.WeaponDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 10:47:12.424 +05:30 [INF] Executed action WeaponController.SaveWeapon (Anadrone_BackEnd) in 299.3598ms
+2025-10-27 10:47:12.430 +05:30 [INF] Executed endpoint 'WeaponController.SaveWeapon (Anadrone_BackEnd)'
+2025-10-27 10:47:12.434 +05:30 [INF] HTTP POST /api/Weapon/save responded 201 in 324.0676 ms
+2025-10-27 10:47:12.447 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Weapon/save - 201 null application/json; charset=utf-8 350.7973ms
+2025-10-27 10:49:41.367 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 478
+2025-10-27 10:49:41.379 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-27 10:49:41.386 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-27 10:49:41.485 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__p_0='1567'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [w].[WeaponId], [w].[BackGroundColor], [w].[CreatedBy], [w].[CreatedDate], [w].[Description], [w].[DisplayStatus], [w].[ForeGroundColor], [w].[ModifiedBy], [w].[ModifiedDate], [w].[Priority], [w].[Symbol], [w].[ThreatType], [w].[WeaponDate], [w].[WeaponName]
+FROM [weapons] AS [w]
+WHERE [w].[WeaponId] = @__p_0
+2025-10-27 10:49:41.493 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 10:49:41.495 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 100.0936ms
+2025-10-27 10:49:41.498 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-27 10:49:41.501 +05:30 [INF] HTTP POST /api/Emitter/save responded 400 in 124.2424 ms
+2025-10-27 10:49:41.504 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 400 null application/json; charset=utf-8 137.5524ms
+2025-10-27 10:49:54.233 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 475
+2025-10-27 10:49:54.240 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-27 10:49:54.244 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-27 10:49:54.275 +05:30 [INF] Executed DbCommand (24ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [w].[WeaponId], [w].[BackGroundColor], [w].[CreatedBy], [w].[CreatedDate], [w].[Description], [w].[DisplayStatus], [w].[ForeGroundColor], [w].[ModifiedBy], [w].[ModifiedDate], [w].[Priority], [w].[Symbol], [w].[ThreatType], [w].[WeaponDate], [w].[WeaponName]
+FROM [weapons] AS [w]
+WHERE [w].[WeaponId] = @__p_0
+2025-10-27 10:49:54.345 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__dto_EmitterName_0='emitter101213' (Size = 200), @__dto_EmitterId_1='0'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[CreatedBy], [e].[CreatedDate], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[Latitude], [e].[Longitude], [e].[ModifiedBy], [e].[ModifiedDate], [e].[Symbol], [e].[WeaponId]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterName] = @__dto_EmitterName_0 AND [e].[EmitterId] <> @__dto_EmitterId_1
+2025-10-27 10:49:54.384 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 10:49:54.391 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 142.892ms
+2025-10-27 10:49:54.395 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-27 10:49:54.399 +05:30 [INF] HTTP POST /api/Emitter/save responded 400 in 158.2058 ms
+2025-10-27 10:49:54.406 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 400 null application/json; charset=utf-8 173.9204ms
+2025-10-27 10:50:02.164 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Emitter/save - application/json 471
+2025-10-27 10:50:02.172 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-27 10:50:02.175 +05:30 [INF] Route matched with {action = "SaveEmitter", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveEmitter(Anadrone_BackEnd.DTOs.EmitterDto) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-27 10:50:02.184 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [w].[WeaponId], [w].[BackGroundColor], [w].[CreatedBy], [w].[CreatedDate], [w].[Description], [w].[DisplayStatus], [w].[ForeGroundColor], [w].[ModifiedBy], [w].[ModifiedDate], [w].[Priority], [w].[Symbol], [w].[ThreatType], [w].[WeaponDate], [w].[WeaponName]
+FROM [weapons] AS [w]
+WHERE [w].[WeaponId] = @__p_0
+2025-10-27 10:50:02.193 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_EmitterName_0='emitter10' (Size = 200), @__dto_EmitterId_1='0'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[CreatedBy], [e].[CreatedDate], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[Latitude], [e].[Longitude], [e].[ModifiedBy], [e].[ModifiedDate], [e].[Symbol], [e].[WeaponId]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterName] = @__dto_EmitterName_0 AND [e].[EmitterId] <> @__dto_EmitterId_1
+2025-10-27 10:50:02.247 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@p0='#C0C0C0' (Nullable = false) (Size = 4000), @p1='ADMIN' (Nullable = false) (Size = 4000), @p2='2025-10-27T05:20:02.1977559Z', @p3='dfdfvj idhfsdhf dhi fiehrf' (Nullable = false) (Size = 4000), @p4='emitter10' (Nullable = false) (Size = 200), @p5='0', @p6='#FF5733' (Nullable = false) (Size = 4000), @p7='True', @p8='True', @p9='22.478687' (Nullable = false) (Size = 4000), @p10='69.078765' (Nullable = false) (Size = 4000), @p11='ADMIN' (Nullable = false) (Size = 4000), @p12='2025-10-27T05:20:02.1977856Z', @p13='0', @p14='2'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [emitters] ([BackgroundColor], [CreatedBy], [CreatedDate], [Description], [EmitterName], [EmitterType], [ForegroundColor], [IsGroundOnly], [IsUnknown], [Latitude], [Longitude], [ModifiedBy], [ModifiedDate], [Symbol], [WeaponId])
+OUTPUT INSERTED.[EmitterId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-10-27 10:50:02.254 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.EmitterDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 10:50:02.264 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd) in 86.104ms
+2025-10-27 10:50:02.268 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.SaveEmitter (Anadrone_BackEnd)'
+2025-10-27 10:50:02.269 +05:30 [INF] HTTP POST /api/Emitter/save responded 201 in 97.1915 ms
+2025-10-27 10:50:02.271 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Emitter/save - 201 null application/json; charset=utf-8 107.4125ms
+2025-10-27 10:50:25.843 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Emitter/all - null null
+2025-10-27 10:50:25.887 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetAllEmitters (Anadrone_BackEnd)'
+2025-10-27 10:50:25.892 +05:30 [INF] Route matched with {action = "GetAllEmitters", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllEmitters() on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-27 10:50:25.924 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [e].[EmitterId], [e].[BackgroundColor], [e].[CreatedBy], [e].[CreatedDate], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[Latitude], [e].[Longitude], [e].[ModifiedBy], [e].[ModifiedDate], [e].[Symbol], [e].[WeaponId]
+FROM [emitters] AS [e]
+2025-10-27 10:50:25.933 +05:30 [INF] Executing OkObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[Anadrone_BackEnd.DTOs.EmitterDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 10:50:25.940 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.GetAllEmitters (Anadrone_BackEnd) in 41.3769ms
+2025-10-27 10:50:25.946 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetAllEmitters (Anadrone_BackEnd)'
+2025-10-27 10:50:25.949 +05:30 [INF] HTTP GET /api/Emitter/all responded 200 in 61.8762 ms
+2025-10-27 10:50:25.952 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Emitter/all - 200 null application/json; charset=utf-8 108.6005ms
+2025-10-27 10:50:35.038 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Emitter/coordinates - null null
+2025-10-27 10:50:35.045 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetAllEmittersCoordinatesAsync (Anadrone_BackEnd)'
+2025-10-27 10:50:35.055 +05:30 [INF] Route matched with {action = "GetAllEmittersCoordinates", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllEmittersCoordinatesAsync() on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-27 10:50:35.101 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [e].[EmitterId], [e].[EmitterName], [e].[Latitude], [e].[Longitude]
+FROM [emitters] AS [e]
+2025-10-27 10:50:35.105 +05:30 [INF] Executing OkObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[Anadrone_BackEnd.DTOs.EmitterCoordinateDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 10:50:35.109 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.GetAllEmittersCoordinatesAsync (Anadrone_BackEnd) in 50.1161ms
+2025-10-27 10:50:35.111 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetAllEmittersCoordinatesAsync (Anadrone_BackEnd)'
+2025-10-27 10:50:35.113 +05:30 [INF] HTTP GET /api/Emitter/coordinates responded 200 in 68.8723 ms
+2025-10-27 10:50:35.119 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Emitter/coordinates - 200 null application/json; charset=utf-8 80.3682ms
+2025-10-27 10:51:01.183 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 2111
+2025-10-27 10:51:01.188 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-27 10:51:01.193 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-27 10:51:01.289 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='78'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[CreatedBy], [e].[CreatedDate], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[Latitude], [e].[Longitude], [e].[ModifiedBy], [e].[ModifiedDate], [e].[Symbol], [e].[WeaponId]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-27 10:51:01.298 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 10:51:01.304 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 106.711ms
+2025-10-27 10:51:01.306 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-27 10:51:01.307 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 119.6912 ms
+2025-10-27 10:51:01.311 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 127.6333ms
+2025-10-27 10:51:06.581 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 2110
+2025-10-27 10:51:06.585 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-27 10:51:06.587 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-27 10:51:06.596 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[CreatedBy], [e].[CreatedDate], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[Latitude], [e].[Longitude], [e].[ModifiedBy], [e].[ModifiedDate], [e].[Symbol], [e].[WeaponId]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-27 10:51:06.670 +05:30 [INF] Executed DbCommand (55ms) [Parameters=[@__dto_ModeName_0='Track Mode 2' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[ModeId], [m].[BgColor], [m].[CreatedBy], [m].[CreatedDate], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[FrequencyClass], [m].[FrequencyType], [m].[GroundOnly], [m].[LethalRange], [m].[ModeName], [m].[ModeSymbol], [m].[ModeType], [m].[ModifiedBy], [m].[ModifiedDate], [m].[PlatformType], [m].[PriClass], [m].[PriStaggerLevel], [m].[PriType], [m].[PwClass], [m].[PwType], [m].[RangeEstimation], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[ModeName] = @__dto_ModeName_0
+2025-10-27 10:51:06.733 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 10:51:06.738 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 147.3743ms
+2025-10-27 10:51:06.741 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-27 10:51:06.745 +05:30 [INF] HTTP POST /api/Mode/save responded 400 in 159.1245 ms
+2025-10-27 10:51:06.751 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 400 null application/json; charset=utf-8 169.6601ms
+2025-10-27 10:51:13.295 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mode/save - application/json 2111
+2025-10-27 10:51:13.302 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-27 10:51:13.305 +05:30 [INF] Route matched with {action = "SaveMode", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMode(Anadrone_BackEnd.DTOs.ModeDto) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-27 10:51:13.388 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [e].[EmitterId], [e].[BackgroundColor], [e].[CreatedBy], [e].[CreatedDate], [e].[Description], [e].[EmitterName], [e].[EmitterType], [e].[ForegroundColor], [e].[IsGroundOnly], [e].[IsUnknown], [e].[Latitude], [e].[Longitude], [e].[ModifiedBy], [e].[ModifiedDate], [e].[Symbol], [e].[WeaponId]
+FROM [emitters] AS [e]
+WHERE [e].[EmitterId] = @__p_0
+2025-10-27 10:51:13.420 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__dto_ModeName_0='Track Mode 12' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[ModeId], [m].[BgColor], [m].[CreatedBy], [m].[CreatedDate], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[FrequencyClass], [m].[FrequencyType], [m].[GroundOnly], [m].[LethalRange], [m].[ModeName], [m].[ModeSymbol], [m].[ModeType], [m].[ModifiedBy], [m].[ModifiedDate], [m].[PlatformType], [m].[PriClass], [m].[PriStaggerLevel], [m].[PriType], [m].[PwClass], [m].[PwType], [m].[RangeEstimation], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+FROM [modes] AS [m]
+WHERE [m].[ModeName] = @__dto_ModeName_0
+2025-10-27 10:51:13.487 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p0='#1E90FF' (Nullable = false) (Size = 4000), @p1='ADMIN' (Nullable = false) (Size = 4000), @p2='2025-10-27T05:21:13.4343282Z', @p3='This is a test mode for tracking operations' (Nullable = false) (Size = 4000), @p4='45', @p5='2', @p6='#FFFFFF' (Nullable = false) (Size = 4000), @p7='0', @p8='0', @p9='True', @p10='12', @p11='Track Mode 12' (Nullable = false) (Size = 200), @p12='ALT-001' (Nullable = false) (Size = 4000), @p13='0', @p14='ADMIN' (Nullable = false) (Size = 4000), @p15='2025-10-27T05:21:13.4343284Z', @p16='0', @p17='0', @p18='sdfsdf' (Nullable = false) (Size = 4000), @p19='0', @p20='0', @p21='0', @p22='string' (Nullable = false) (Size = 4000), @p23='0', @p24='1', @p25='0', @p26='0'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modes] ([BgColor], [CreatedBy], [CreatedDate], [Description], [EirpValue], [EmitterId], [FgColor], [FrequencyClass], [FrequencyType], [GroundOnly], [LethalRange], [ModeName], [ModeSymbol], [ModeType], [ModifiedBy], [ModifiedDate], [PlatformType], [PriClass], [PriStaggerLevel], [PriType], [PwClass], [PwType], [RangeEstimation], [SubMode], [SymbolCodeType], [TestType], [ThreatType])
+OUTPUT INSERTED.[ModeId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26);
+2025-10-27 10:51:13.522 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p0='3', @p1='2.5', @p2='2'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modeFrequencyDetails] ([MaxFrequency], [MinFrequency], [ModeId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-27 10:51:13.565 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@p0='15', @p1='3.5', @p2='30', @p3='360', @p4='18', @p5='2.5', @p6='10', @p7='0', @p8='12', @p9='2', @p10='20', @p11='1', @p12='-25', @p13='1.2'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modeScanDetails] ([CalculatedTot], [MaxBeamWidth], [MaxScanRate], [MaxScanSector], [MaxTot], [MinBeamWidth], [MinScanRate], [MinScanSector], [MinTot], [ModeId], [NominalScanRate], [ScanType], [SideLobeLevel], [SideLobeStd])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-27 10:51:13.600 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p0='5', @p1='2', @p2='0.3', @p3='1000', @p4='800', @p5='2'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modePriDetails] ([Deviation], [JitterMean], [JitterPercentage], [MaxPri], [MinPri], [ModeId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-27 10:51:13.632 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='1', @p1='0.5', @p2='2'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [modePwDetails] ([MaxPw], [MinPw], [ModeId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2025-10-27 10:51:13.644 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.ModeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 10:51:13.675 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd) in 364.4211ms
+2025-10-27 10:51:13.680 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.SaveMode (Anadrone_BackEnd)'
+2025-10-27 10:51:13.684 +05:30 [INF] HTTP POST /api/Mode/save responded 201 in 382.2236 ms
+2025-10-27 10:51:13.692 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mode/save - 201 null application/json; charset=utf-8 396.574ms
+2025-10-27 11:05:22.882 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Mode/all - null null
+2025-10-27 11:05:22.885 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetAllModes (Anadrone_BackEnd)'
+2025-10-27 11:05:22.899 +05:30 [INF] Route matched with {action = "GetAllModes", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllModes() on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-27 11:05:23.077 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-10-27 11:05:23.366 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [m].[ModeId], [m].[BgColor], [m].[CreatedBy], [m].[CreatedDate], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[FrequencyClass], [m].[FrequencyType], [m].[GroundOnly], [m].[LethalRange], [m].[ModeName], [m].[ModeSymbol], [m].[ModeType], [m].[ModifiedBy], [m].[ModifiedDate], [m].[PlatformType], [m].[PriClass], [m].[PriStaggerLevel], [m].[PriType], [m].[PwClass], [m].[PwType], [m].[RangeEstimation], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType], [m0].[Id], [m0].[MaxFrequency], [m0].[MinFrequency], [m0].[ModeId], [m1].[Id], [m1].[Deviation], [m1].[JitterMean], [m1].[JitterPercentage], [m1].[MaxPri], [m1].[MinPri], [m1].[ModeId], [m2].[Id], [m2].[CalculatedTot], [m2].[MaxBeamWidth], [m2].[MaxScanRate], [m2].[MaxScanSector], [m2].[MaxTot], [m2].[MinBeamWidth], [m2].[MinScanRate], [m2].[MinScanSector], [m2].[MinTot], [m2].[ModeId], [m2].[NominalScanRate], [m2].[ScanType], [m2].[SideLobeLevel], [m2].[SideLobeStd], [m3].[Id], [m3].[MaxPw], [m3].[MinPw], [m3].[ModeId]
+FROM [modes] AS [m]
+LEFT JOIN [modeFrequencyDetails] AS [m0] ON [m].[ModeId] = [m0].[ModeId]
+LEFT JOIN [modePriDetails] AS [m1] ON [m].[ModeId] = [m1].[ModeId]
+LEFT JOIN [modeScanDetails] AS [m2] ON [m].[ModeId] = [m2].[ModeId]
+LEFT JOIN [modePwDetails] AS [m3] ON [m].[ModeId] = [m3].[ModeId]
+ORDER BY [m].[ModeId], [m0].[Id], [m1].[Id], [m2].[Id]
+2025-10-27 11:05:23.392 +05:30 [INF] Executing OkObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[Anadrone_BackEnd.DTOs.ModeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 11:05:23.397 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.GetAllModes (Anadrone_BackEnd) in 490.5951ms
+2025-10-27 11:05:23.401 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetAllModes (Anadrone_BackEnd)'
+2025-10-27 11:05:23.403 +05:30 [INF] HTTP GET /api/Mode/all responded 200 in 518.5088 ms
+2025-10-27 11:05:23.409 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Mode/all - 200 null application/json; charset=utf-8 526.9814ms
+2025-10-27 11:05:38.218 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Jamming/save - application/json 394
+2025-10-27 11:05:38.221 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd)'
+2025-10-27 11:05:38.228 +05:30 [INF] Route matched with {action = "SaveJamming", controller = "Jamming"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveJamming(Anadrone_BackEnd.DTOs.JammingDto) on controller Anadrone_BackEnd.Controllers.JammingController (Anadrone_BackEnd).
+2025-10-27 11:05:38.294 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-10-27 11:05:38.356 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__id_0='1232'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m4].[ModeId], [m4].[BgColor], [m4].[CreatedBy], [m4].[CreatedDate], [m4].[Description], [m4].[EirpValue], [m4].[EmitterId], [m4].[FgColor], [m4].[FrequencyClass], [m4].[FrequencyType], [m4].[GroundOnly], [m4].[LethalRange], [m4].[ModeName], [m4].[ModeSymbol], [m4].[ModeType], [m4].[ModifiedBy], [m4].[ModifiedDate], [m4].[PlatformType], [m4].[PriClass], [m4].[PriStaggerLevel], [m4].[PriType], [m4].[PwClass], [m4].[PwType], [m4].[RangeEstimation], [m4].[SubMode], [m4].[SymbolCodeType], [m4].[TestType], [m4].[ThreatType], [m0].[Id], [m0].[MaxFrequency], [m0].[MinFrequency], [m0].[ModeId], [m1].[Id], [m1].[Deviation], [m1].[JitterMean], [m1].[JitterPercentage], [m1].[MaxPri], [m1].[MinPri], [m1].[ModeId], [m2].[Id], [m2].[CalculatedTot], [m2].[MaxBeamWidth], [m2].[MaxScanRate], [m2].[MaxScanSector], [m2].[MaxTot], [m2].[MinBeamWidth], [m2].[MinScanRate], [m2].[MinScanSector], [m2].[MinTot], [m2].[ModeId], [m2].[NominalScanRate], [m2].[ScanType], [m2].[SideLobeLevel], [m2].[SideLobeStd], [m3].[Id], [m3].[MaxPw], [m3].[MinPw], [m3].[ModeId]
+FROM (
+    SELECT TOP(1) [m].[ModeId], [m].[BgColor], [m].[CreatedBy], [m].[CreatedDate], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[FrequencyClass], [m].[FrequencyType], [m].[GroundOnly], [m].[LethalRange], [m].[ModeName], [m].[ModeSymbol], [m].[ModeType], [m].[ModifiedBy], [m].[ModifiedDate], [m].[PlatformType], [m].[PriClass], [m].[PriStaggerLevel], [m].[PriType], [m].[PwClass], [m].[PwType], [m].[RangeEstimation], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+    FROM [modes] AS [m]
+    WHERE [m].[ModeId] = @__id_0
+) AS [m4]
+LEFT JOIN [modeFrequencyDetails] AS [m0] ON [m4].[ModeId] = [m0].[ModeId]
+LEFT JOIN [modePriDetails] AS [m1] ON [m4].[ModeId] = [m1].[ModeId]
+LEFT JOIN [modeScanDetails] AS [m2] ON [m4].[ModeId] = [m2].[ModeId]
+LEFT JOIN [modePwDetails] AS [m3] ON [m4].[ModeId] = [m3].[ModeId]
+ORDER BY [m4].[ModeId], [m0].[Id], [m1].[Id], [m2].[Id]
+2025-10-27 11:05:38.361 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 11:05:38.364 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd) in 134.4418ms
+2025-10-27 11:05:38.366 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd)'
+2025-10-27 11:05:38.367 +05:30 [INF] HTTP POST /api/Jamming/save responded 400 in 146.3178 ms
+2025-10-27 11:05:38.370 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Jamming/save - 400 null application/json; charset=utf-8 152.2236ms
+2025-10-27 11:05:46.840 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Jamming/save - application/json 391
+2025-10-27 11:05:46.849 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd)'
+2025-10-27 11:05:46.851 +05:30 [INF] Route matched with {action = "SaveJamming", controller = "Jamming"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveJamming(Anadrone_BackEnd.DTOs.JammingDto) on controller Anadrone_BackEnd.Controllers.JammingController (Anadrone_BackEnd).
+2025-10-27 11:05:46.860 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m4].[ModeId], [m4].[BgColor], [m4].[CreatedBy], [m4].[CreatedDate], [m4].[Description], [m4].[EirpValue], [m4].[EmitterId], [m4].[FgColor], [m4].[FrequencyClass], [m4].[FrequencyType], [m4].[GroundOnly], [m4].[LethalRange], [m4].[ModeName], [m4].[ModeSymbol], [m4].[ModeType], [m4].[ModifiedBy], [m4].[ModifiedDate], [m4].[PlatformType], [m4].[PriClass], [m4].[PriStaggerLevel], [m4].[PriType], [m4].[PwClass], [m4].[PwType], [m4].[RangeEstimation], [m4].[SubMode], [m4].[SymbolCodeType], [m4].[TestType], [m4].[ThreatType], [m0].[Id], [m0].[MaxFrequency], [m0].[MinFrequency], [m0].[ModeId], [m1].[Id], [m1].[Deviation], [m1].[JitterMean], [m1].[JitterPercentage], [m1].[MaxPri], [m1].[MinPri], [m1].[ModeId], [m2].[Id], [m2].[CalculatedTot], [m2].[MaxBeamWidth], [m2].[MaxScanRate], [m2].[MaxScanSector], [m2].[MaxTot], [m2].[MinBeamWidth], [m2].[MinScanRate], [m2].[MinScanSector], [m2].[MinTot], [m2].[ModeId], [m2].[NominalScanRate], [m2].[ScanType], [m2].[SideLobeLevel], [m2].[SideLobeStd], [m3].[Id], [m3].[MaxPw], [m3].[MinPw], [m3].[ModeId]
+FROM (
+    SELECT TOP(1) [m].[ModeId], [m].[BgColor], [m].[CreatedBy], [m].[CreatedDate], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[FrequencyClass], [m].[FrequencyType], [m].[GroundOnly], [m].[LethalRange], [m].[ModeName], [m].[ModeSymbol], [m].[ModeType], [m].[ModifiedBy], [m].[ModifiedDate], [m].[PlatformType], [m].[PriClass], [m].[PriStaggerLevel], [m].[PriType], [m].[PwClass], [m].[PwType], [m].[RangeEstimation], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+    FROM [modes] AS [m]
+    WHERE [m].[ModeId] = @__id_0
+) AS [m4]
+LEFT JOIN [modeFrequencyDetails] AS [m0] ON [m4].[ModeId] = [m0].[ModeId]
+LEFT JOIN [modePriDetails] AS [m1] ON [m4].[ModeId] = [m1].[ModeId]
+LEFT JOIN [modeScanDetails] AS [m2] ON [m4].[ModeId] = [m2].[ModeId]
+LEFT JOIN [modePwDetails] AS [m3] ON [m4].[ModeId] = [m3].[ModeId]
+ORDER BY [m4].[ModeId], [m0].[Id], [m1].[Id], [m2].[Id]
+2025-10-27 11:05:46.949 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='00:00:10' (Nullable = false) (Size = 4000), @p1='500', @p2='350', @p3='457', @p4='200', @p5='2', @p6='True', @p7='50', @p8='25', @p9='00:00:15' (Nullable = false) (Size = 4000), @p10='Range Gate Pull-Off' (Nullable = false) (Size = 200), @p11='0', @p12='00:00:05' (Nullable = false) (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [jammings] ([HoldTime], [MaxRange], [MaxVelocity], [MinRange], [MinVelocity], [ModeId], [PullInOut], [RateOfChangeOfRange], [RateOfChangeOfVelocity], [StopTime], [TechniqueName], [TechniqueType], [WalkTime])
+OUTPUT INSERTED.[JammingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2025-10-27 11:05:46.954 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.JammingDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 11:05:46.962 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd) in 106.5879ms
+2025-10-27 11:05:46.965 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd)'
+2025-10-27 11:05:46.966 +05:30 [INF] HTTP POST /api/Jamming/save responded 201 in 116.8902 ms
+2025-10-27 11:05:46.968 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Jamming/save - 201 null application/json; charset=utf-8 127.8331ms
+2025-10-27 11:05:49.998 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Jamming/save - application/json 391
+2025-10-27 11:05:50.008 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd)'
+2025-10-27 11:05:50.011 +05:30 [INF] Route matched with {action = "SaveJamming", controller = "Jamming"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveJamming(Anadrone_BackEnd.DTOs.JammingDto) on controller Anadrone_BackEnd.Controllers.JammingController (Anadrone_BackEnd).
+2025-10-27 11:05:50.025 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [m4].[ModeId], [m4].[BgColor], [m4].[CreatedBy], [m4].[CreatedDate], [m4].[Description], [m4].[EirpValue], [m4].[EmitterId], [m4].[FgColor], [m4].[FrequencyClass], [m4].[FrequencyType], [m4].[GroundOnly], [m4].[LethalRange], [m4].[ModeName], [m4].[ModeSymbol], [m4].[ModeType], [m4].[ModifiedBy], [m4].[ModifiedDate], [m4].[PlatformType], [m4].[PriClass], [m4].[PriStaggerLevel], [m4].[PriType], [m4].[PwClass], [m4].[PwType], [m4].[RangeEstimation], [m4].[SubMode], [m4].[SymbolCodeType], [m4].[TestType], [m4].[ThreatType], [m0].[Id], [m0].[MaxFrequency], [m0].[MinFrequency], [m0].[ModeId], [m1].[Id], [m1].[Deviation], [m1].[JitterMean], [m1].[JitterPercentage], [m1].[MaxPri], [m1].[MinPri], [m1].[ModeId], [m2].[Id], [m2].[CalculatedTot], [m2].[MaxBeamWidth], [m2].[MaxScanRate], [m2].[MaxScanSector], [m2].[MaxTot], [m2].[MinBeamWidth], [m2].[MinScanRate], [m2].[MinScanSector], [m2].[MinTot], [m2].[ModeId], [m2].[NominalScanRate], [m2].[ScanType], [m2].[SideLobeLevel], [m2].[SideLobeStd], [m3].[Id], [m3].[MaxPw], [m3].[MinPw], [m3].[ModeId]
+FROM (
+    SELECT TOP(1) [m].[ModeId], [m].[BgColor], [m].[CreatedBy], [m].[CreatedDate], [m].[Description], [m].[EirpValue], [m].[EmitterId], [m].[FgColor], [m].[FrequencyClass], [m].[FrequencyType], [m].[GroundOnly], [m].[LethalRange], [m].[ModeName], [m].[ModeSymbol], [m].[ModeType], [m].[ModifiedBy], [m].[ModifiedDate], [m].[PlatformType], [m].[PriClass], [m].[PriStaggerLevel], [m].[PriType], [m].[PwClass], [m].[PwType], [m].[RangeEstimation], [m].[SubMode], [m].[SymbolCodeType], [m].[TestType], [m].[ThreatType]
+    FROM [modes] AS [m]
+    WHERE [m].[ModeId] = @__id_0
+) AS [m4]
+LEFT JOIN [modeFrequencyDetails] AS [m0] ON [m4].[ModeId] = [m0].[ModeId]
+LEFT JOIN [modePriDetails] AS [m1] ON [m4].[ModeId] = [m1].[ModeId]
+LEFT JOIN [modeScanDetails] AS [m2] ON [m4].[ModeId] = [m2].[ModeId]
+LEFT JOIN [modePwDetails] AS [m3] ON [m4].[ModeId] = [m3].[ModeId]
+ORDER BY [m4].[ModeId], [m0].[Id], [m1].[Id], [m2].[Id]
+2025-10-27 11:05:50.059 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@p0='00:00:10' (Nullable = false) (Size = 4000), @p1='500', @p2='350', @p3='457', @p4='200', @p5='2', @p6='True', @p7='50', @p8='25', @p9='00:00:15' (Nullable = false) (Size = 4000), @p10='Range Gate Pull-Off' (Nullable = false) (Size = 200), @p11='0', @p12='00:00:05' (Nullable = false) (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [jammings] ([HoldTime], [MaxRange], [MaxVelocity], [MinRange], [MinVelocity], [ModeId], [PullInOut], [RateOfChangeOfRange], [RateOfChangeOfVelocity], [StopTime], [TechniqueName], [TechniqueType], [WalkTime])
+OUTPUT INSERTED.[JammingId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2025-10-27 11:05:50.064 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.JammingDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 11:05:50.067 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd) in 51.2868ms
+2025-10-27 11:05:50.069 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.JammingController.SaveJamming (Anadrone_BackEnd)'
+2025-10-27 11:05:50.071 +05:30 [INF] HTTP POST /api/Jamming/save responded 201 in 63.4022 ms
+2025-10-27 11:05:50.074 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Jamming/save - 201 null application/json; charset=utf-8 76.1734ms
+2025-10-27 11:06:37.676 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mission/save - application/json 196
+2025-10-27 11:06:37.681 +05:30 [INF] Executing endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-27 11:06:37.691 +05:30 [INF] Route matched with {action = "SaveMission", controller = "Mission"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMission(Anadrone_BackEnd.DTOs.MissionDto) on controller MissionController (Anadrone_BackEnd).
+2025-10-27 11:06:37.798 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__name_0='Mission10230' (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionName] = @__name_0
+2025-10-27 11:06:37.826 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 11:06:37.827 +05:30 [INF] Executed action MissionController.SaveMission (Anadrone_BackEnd) in 134.1245ms
+2025-10-27 11:06:37.828 +05:30 [INF] Executed endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-27 11:06:37.831 +05:30 [INF] HTTP POST /api/Mission/save responded 400 in 150.1376 ms
+2025-10-27 11:06:37.833 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mission/save - 400 null application/json; charset=utf-8 157.0461ms
+2025-10-27 11:06:43.051 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Mission/save - application/json 193
+2025-10-27 11:06:43.059 +05:30 [INF] Executing endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-27 11:06:43.063 +05:30 [INF] Route matched with {action = "SaveMission", controller = "Mission"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveMission(Anadrone_BackEnd.DTOs.MissionDto) on controller MissionController (Anadrone_BackEnd).
+2025-10-27 11:06:43.070 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__name_0='Mission10' (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionName] = @__name_0
+2025-10-27 11:06:43.092 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='string' (Nullable = false) (Size = 4000), @p1='2025-10-13T10:33:51.7000000Z', @p2='Mission10' (Nullable = false) (Size = 4000), @p3='0', @p4='0', @p5='1'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [missions] ([Description], [MissionDate], [MissionName], [MissionType], [Status], [UserId])
+OUTPUT INSERTED.[MissionId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-10-27 11:06:43.098 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.MissionDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 11:06:43.102 +05:30 [INF] Executed action MissionController.SaveMission (Anadrone_BackEnd) in 34.7492ms
+2025-10-27 11:06:43.103 +05:30 [INF] Executed endpoint 'MissionController.SaveMission (Anadrone_BackEnd)'
+2025-10-27 11:06:43.105 +05:30 [INF] HTTP POST /api/Mission/save responded 201 in 45.8825 ms
+2025-10-27 11:06:43.107 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Mission/save - 201 null application/json; charset=utf-8 56.3225ms
+2025-10-27 11:07:23.015 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/AreaInterest/save - application/json 802
+2025-10-27 11:07:23.019 +05:30 [INF] Executing endpoint 'AreaInterestController.SaveAreaInterest (Anadrone_BackEnd)'
+2025-10-27 11:07:23.027 +05:30 [INF] Route matched with {action = "SaveAreaInterest", controller = "AreaInterest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveAreaInterest(Anadrone_BackEnd.DTOs.AreaInterestDto) on controller AreaInterestController (Anadrone_BackEnd).
+2025-10-27 11:07:23.079 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='1234'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__p_0
+2025-10-27 11:07:23.082 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 11:07:23.083 +05:30 [INF] Executed action AreaInterestController.SaveAreaInterest (Anadrone_BackEnd) in 50.9632ms
+2025-10-27 11:07:23.085 +05:30 [INF] Executed endpoint 'AreaInterestController.SaveAreaInterest (Anadrone_BackEnd)'
+2025-10-27 11:07:23.086 +05:30 [INF] HTTP POST /api/AreaInterest/save responded 400 in 67.5778 ms
+2025-10-27 11:07:23.088 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/AreaInterest/save - 400 null application/json; charset=utf-8 72.8124ms
+2025-10-27 11:07:33.789 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/AreaInterest/save - application/json 799
+2025-10-27 11:07:33.793 +05:30 [INF] Executing endpoint 'AreaInterestController.SaveAreaInterest (Anadrone_BackEnd)'
+2025-10-27 11:07:33.795 +05:30 [INF] Route matched with {action = "SaveAreaInterest", controller = "AreaInterest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveAreaInterest(Anadrone_BackEnd.DTOs.AreaInterestDto) on controller AreaInterestController (Anadrone_BackEnd).
+2025-10-27 11:07:33.802 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__p_0
+2025-10-27 11:07:33.825 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__name_0='AOI-101230' (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [a].[AreaInterestId], [a].[Area], [a].[AreaName], [a].[MissionId], [a].[Perimeter]
+FROM [areaInterests] AS [a]
+WHERE [a].[AreaName] = @__name_0
+2025-10-27 11:07:33.836 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 11:07:33.838 +05:30 [INF] Executed action AreaInterestController.SaveAreaInterest (Anadrone_BackEnd) in 39.4319ms
+2025-10-27 11:07:33.839 +05:30 [INF] Executed endpoint 'AreaInterestController.SaveAreaInterest (Anadrone_BackEnd)'
+2025-10-27 11:07:33.842 +05:30 [INF] HTTP POST /api/AreaInterest/save responded 400 in 48.3131 ms
+2025-10-27 11:07:33.845 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/AreaInterest/save - 400 null application/json; charset=utf-8 56.3396ms
+2025-10-27 11:07:41.392 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/AreaInterest/save - application/json 800
+2025-10-27 11:07:41.396 +05:30 [INF] Executing endpoint 'AreaInterestController.SaveAreaInterest (Anadrone_BackEnd)'
+2025-10-27 11:07:41.398 +05:30 [INF] Route matched with {action = "SaveAreaInterest", controller = "AreaInterest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveAreaInterest(Anadrone_BackEnd.DTOs.AreaInterestDto) on controller AreaInterestController (Anadrone_BackEnd).
+2025-10-27 11:07:41.463 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-27 11:07:41.484 +05:30 [INF] Executed action AreaInterestController.SaveAreaInterest (Anadrone_BackEnd) in 79.9299ms
+2025-10-27 11:07:41.488 +05:30 [INF] Executed endpoint 'AreaInterestController.SaveAreaInterest (Anadrone_BackEnd)'
+2025-10-27 11:07:41.489 +05:30 [INF] HTTP POST /api/AreaInterest/save responded 400 in 93.9549 ms
+2025-10-27 11:07:41.493 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/AreaInterest/save - 400 null application/problem+json; charset=utf-8 101.0496ms
+2025-10-27 11:07:48.421 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/AreaInterest/save - application/json 801
+2025-10-27 11:07:48.424 +05:30 [INF] Executing endpoint 'AreaInterestController.SaveAreaInterest (Anadrone_BackEnd)'
+2025-10-27 11:07:48.425 +05:30 [INF] Route matched with {action = "SaveAreaInterest", controller = "AreaInterest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveAreaInterest(Anadrone_BackEnd.DTOs.AreaInterestDto) on controller AreaInterestController (Anadrone_BackEnd).
+2025-10-27 11:07:48.433 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__p_0
+2025-10-27 11:07:48.443 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__name_0='AOI-10123054' (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [a].[AreaInterestId], [a].[Area], [a].[AreaName], [a].[MissionId], [a].[Perimeter]
+FROM [areaInterests] AS [a]
+WHERE [a].[AreaName] = @__name_0
+2025-10-27 11:07:48.460 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='234.234' (Nullable = false) (Size = 4000), @p1='AOI-10123054' (Nullable = false) (Size = 4000), @p2='2', @p3='2344.234' (Nullable = false) (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [areaInterests] ([Area], [AreaName], [MissionId], [Perimeter])
+OUTPUT INSERTED.[AreaInterestId]
+VALUES (@p0, @p1, @p2, @p3);
+2025-10-27 11:07:48.585 +05:30 [INF] Executed DbCommand (76ms) [Parameters=[@p0='12.33' (Nullable = false) (Size = 4000), @p1='2', @p2='22.478684' (Nullable = false) (Size = 4000), @p3='69.078363' (Nullable = false) (Size = 4000), @p4='12.33' (Nullable = false) (Size = 4000), @p5='2', @p6='22.479033' (Nullable = false) (Size = 4000), @p7='69.078440' (Nullable = false) (Size = 4000), @p8='12.33' (Nullable = false) (Size = 4000), @p9='2', @p10='22.478907' (Nullable = false) (Size = 4000), @p11='69.079327' (Nullable = false) (Size = 4000), @p12='12.33' (Nullable = false) (Size = 4000), @p13='2', @p14='22.478471' (Nullable = false) (Size = 4000), @p15='69.079224' (Nullable = false) (Size = 4000)], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [areacoordinates] USING (
+VALUES (@p0, @p1, @p2, @p3, 0),
+(@p4, @p5, @p6, @p7, 1),
+(@p8, @p9, @p10, @p11, 2),
+(@p12, @p13, @p14, @p15, 3)) AS i ([Altitude], [AreaInterestId], [Latitude], [Longitude], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Altitude], [AreaInterestId], [Latitude], [Longitude])
+VALUES (i.[Altitude], i.[AreaInterestId], i.[Latitude], i.[Longitude])
+OUTPUT INSERTED.[Id], i._Position;
+2025-10-27 11:07:48.602 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.AreaInterestDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 11:07:48.609 +05:30 [INF] Executed action AreaInterestController.SaveAreaInterest (Anadrone_BackEnd) in 181.896ms
+2025-10-27 11:07:48.613 +05:30 [INF] Executed endpoint 'AreaInterestController.SaveAreaInterest (Anadrone_BackEnd)'
+2025-10-27 11:07:48.618 +05:30 [INF] HTTP POST /api/AreaInterest/save responded 201 in 194.1434 ms
+2025-10-27 11:07:48.625 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/AreaInterest/save - 201 null application/json; charset=utf-8 203.7025ms
+2025-10-27 11:07:58.831 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 519
+2025-10-27 11:07:58.837 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-27 11:07:58.842 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-27 11:07:58.859 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='1345345'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__p_0
+2025-10-27 11:07:58.868 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 11:07:58.873 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 25.0981ms
+2025-10-27 11:07:58.877 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-27 11:07:58.879 +05:30 [INF] HTTP POST /api/Platform/save responded 400 in 42.3374 ms
+2025-10-27 11:07:58.883 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 400 null application/json; charset=utf-8 52.3633ms
+2025-10-27 11:08:04.668 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 513
+2025-10-27 11:08:04.672 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-27 11:08:04.673 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-27 11:08:04.680 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__p_0
+2025-10-27 11:08:04.755 +05:30 [INF] Executed DbCommand (60ms) [Parameters=[@__name_0='Test Platformrrtg Alpha12' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[PlatformName] = @__name_0
+2025-10-27 11:08:04.804 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 11:08:04.810 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 134.4872ms
+2025-10-27 11:08:04.813 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-27 11:08:04.814 +05:30 [INF] HTTP POST /api/Platform/save responded 400 in 142.6345 ms
+2025-10-27 11:08:04.819 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 400 null application/json; charset=utf-8 150.653ms
+2025-10-27 11:08:10.148 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5058/api/Platform/save - application/json 513
+2025-10-27 11:08:10.151 +05:30 [INF] Executing endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-27 11:08:10.152 +05:30 [INF] Route matched with {action = "SavePlatform", controller = "Platform"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SavePlatform(Anadrone_BackEnd.DTOs.PlatformDto) on controller PlatformController (Anadrone_BackEnd).
+2025-10-27 11:08:10.160 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId]
+FROM [missions] AS [m]
+WHERE [m].[MissionId] = @__p_0
+2025-10-27 11:08:10.170 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__name_0='Test Platformrrtg Alpha43' (Size = 200)], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[PlatformName] = @__name_0
+2025-10-27 11:08:10.248 +05:30 [INF] Executed DbCommand (45ms) [Parameters=[@p0='ALT-001' (Nullable = false) (Size = 4000), @p1='#000000' (Nullable = false) (Size = 4000), @p2='2025-09-11T05:05:38.5200000Z', @p3='This is a sample platform created for testing purposes.' (Nullable = false) (Size = 4000), @p4='True', @p5='#FF0000' (Nullable = false) (Size = 4000), @p6='2', @p7='Test Platformrrtg Alpha43' (Nullable = false) (Size = 200), @p8='0x536F6D65417564696F44617461' (Nullable = false) (Size = 8000), @p9='5', @p10='0', @p11='0', @p12='0x536F6D65417564696F44617461' (Nullable = false) (Size = 8000), @p13='101'], CommandType='"Text"', CommandTimeout='120']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [platforms] ([AlternateSymbol], [BackGroundColor], [CreatedAt], [Description], [DisplayStatus], [ForeGroundColor], [MissionId], [PlatformName], [PreviewSymbol], [Priority], [SymbolCodeType], [ThreatType], [ThumbnailImage], [UserId])
+OUTPUT INSERTED.[PlatformId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-27 11:08:10.272 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[Anadrone_BackEnd.DTOs.PlatformDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 11:08:10.287 +05:30 [INF] Executed action PlatformController.SavePlatform (Anadrone_BackEnd) in 132.4036ms
+2025-10-27 11:08:10.293 +05:30 [INF] Executed endpoint 'PlatformController.SavePlatform (Anadrone_BackEnd)'
+2025-10-27 11:08:10.298 +05:30 [INF] HTTP POST /api/Platform/save responded 201 in 147.0661 ms
+2025-10-27 11:08:10.302 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5058/api/Platform/save - 201 null application/json; charset=utf-8 154.1533ms
+2025-10-27 11:08:22.434 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Mission/tree/1 - null null
+2025-10-27 11:08:22.437 +05:30 [INF] Executing endpoint 'MissionController.GetMissionTree (Anadrone_BackEnd)'
+2025-10-27 11:08:22.454 +05:30 [INF] Route matched with {action = "GetMissionTree", controller = "Mission"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMissionTree(Int32) on controller MissionController (Anadrone_BackEnd).
+2025-10-27 11:08:22.492 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__missionId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [s].[MissionId], [s].[Description], [s].[MissionDate], [s].[MissionName], [s].[MissionType], [s].[Status], [s].[UserId], [s].[AreaInterestId], [s].[Area], [s].[AreaName], [s].[MissionId0], [s].[Perimeter], [a0].[Id], [a0].[Altitude], [a0].[AreaInterestId], [a0].[Latitude], [a0].[Longitude]
+FROM (
+    SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId], [a].[AreaInterestId], [a].[Area], [a].[AreaName], [a].[MissionId] AS [MissionId0], [a].[Perimeter]
+    FROM [missions] AS [m]
+    LEFT JOIN [areaInterests] AS [a] ON [m].[MissionId] = [a].[MissionId]
+    WHERE [m].[MissionId] = @__missionId_0
+) AS [s]
+LEFT JOIN [areacoordinates] AS [a0] ON [s].[AreaInterestId] = [a0].[AreaInterestId]
+ORDER BY [s].[MissionId], [s].[AreaInterestId]
+2025-10-27 11:08:22.526 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[MissionId] = @__p_0
+2025-10-27 11:08:22.568 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__p_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [e].[Id], [e].[AreaInterestId], [e].[EmitterId], [e].[EmitterName], [e].[JammingId], [e].[JammingName], [e].[ModeId], [e].[ModeName], [e].[WeaponId], [e].[WeaponName], [e].[weaponStandlone]
+FROM [emitterModeLinks] AS [e]
+WHERE [e].[AreaInterestId] = @__p_0
+2025-10-27 11:08:22.618 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[MissionTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 11:08:22.637 +05:30 [INF] Executed action MissionController.GetMissionTree (Anadrone_BackEnd) in 180.7305ms
+2025-10-27 11:08:22.641 +05:30 [INF] Executed endpoint 'MissionController.GetMissionTree (Anadrone_BackEnd)'
+2025-10-27 11:08:22.645 +05:30 [INF] HTTP GET /api/Mission/tree/1 responded 200 in 207.6609 ms
+2025-10-27 11:08:22.650 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Mission/tree/1 - 200 null application/json; charset=utf-8 215.4388ms
+2025-10-27 11:08:36.309 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Mission/tree/2 - null null
+2025-10-27 11:08:36.317 +05:30 [INF] Executing endpoint 'MissionController.GetMissionTree (Anadrone_BackEnd)'
+2025-10-27 11:08:36.319 +05:30 [INF] Route matched with {action = "GetMissionTree", controller = "Mission"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMissionTree(Int32) on controller MissionController (Anadrone_BackEnd).
+2025-10-27 11:08:36.324 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__missionId_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [s].[MissionId], [s].[Description], [s].[MissionDate], [s].[MissionName], [s].[MissionType], [s].[Status], [s].[UserId], [s].[AreaInterestId], [s].[Area], [s].[AreaName], [s].[MissionId0], [s].[Perimeter], [a0].[Id], [a0].[Altitude], [a0].[AreaInterestId], [a0].[Latitude], [a0].[Longitude]
+FROM (
+    SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId], [a].[AreaInterestId], [a].[Area], [a].[AreaName], [a].[MissionId] AS [MissionId0], [a].[Perimeter]
+    FROM [missions] AS [m]
+    LEFT JOIN [areaInterests] AS [a] ON [m].[MissionId] = [a].[MissionId]
+    WHERE [m].[MissionId] = @__missionId_0
+) AS [s]
+LEFT JOIN [areacoordinates] AS [a0] ON [s].[AreaInterestId] = [a0].[AreaInterestId]
+ORDER BY [s].[MissionId], [s].[AreaInterestId]
+2025-10-27 11:08:36.329 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[MissionId] = @__p_0
+2025-10-27 11:08:36.333 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [e].[Id], [e].[AreaInterestId], [e].[EmitterId], [e].[EmitterName], [e].[JammingId], [e].[JammingName], [e].[ModeId], [e].[ModeName], [e].[WeaponId], [e].[WeaponName], [e].[weaponStandlone]
+FROM [emitterModeLinks] AS [e]
+WHERE [e].[AreaInterestId] = @__p_0
+2025-10-27 11:08:36.336 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[MissionTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 11:08:36.338 +05:30 [INF] Executed action MissionController.GetMissionTree (Anadrone_BackEnd) in 16.6103ms
+2025-10-27 11:08:36.342 +05:30 [INF] Executed endpoint 'MissionController.GetMissionTree (Anadrone_BackEnd)'
+2025-10-27 11:08:36.344 +05:30 [INF] HTTP GET /api/Mission/tree/2 responded 200 in 26.7668 ms
+2025-10-27 11:08:36.346 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Mission/tree/2 - 200 null application/json; charset=utf-8 36.7444ms
+2025-10-27 12:09:28.027 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Mode/independent/all - null null
+2025-10-27 12:09:28.030 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetAllIndependentModesAsync (Anadrone_BackEnd)'
+2025-10-27 12:09:28.034 +05:30 [INF] Route matched with {action = "GetAllIndependentModes", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllIndependentModesAsync() on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-27 12:09:28.061 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-10-27 12:09:28.253 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT [i].[IndependentModeId], [i].[BgColor], [i].[CreatedBy], [i].[CreatedDate], [i].[Description], [i].[EirpValue], [i].[FgColor], [i].[FrequencyClass], [i].[FrequencyType], [i].[GroundOnly], [i].[LethalRange], [i].[ModeName], [i].[ModeSymbol], [i].[ModeType], [i].[ModifiedBy], [i].[ModifiedDate], [i].[PlatformType], [i].[PriClass], [i].[PriStaggerLevel], [i].[PriType], [i].[PwClass], [i].[PwType], [i].[RangeEstimation], [i].[SubMode], [i].[SymbolCodeType], [i].[TestType], [i].[ThreatType], [i0].[Id], [i0].[FrequencyClass], [i0].[FrequencyType], [i0].[IndependentModeId], [i0].[MaxFrequency], [i0].[MinFrequency], [i1].[Id], [i1].[Deviation], [i1].[IndependentModeId], [i1].[JitterMean], [i1].[JitterPercentage], [i1].[MaxPri], [i1].[MinPri], [i1].[PriClass], [i1].[PriType], [i2].[Id], [i2].[CalculatedTot], [i2].[IndependentModeId], [i2].[MaxBeamWidth], [i2].[MaxScanRate], [i2].[MaxScanSector], [i2].[MaxTot], [i2].[MinBeamWidth], [i2].[MinScanRate], [i2].[MinScanSector], [i2].[MinTot], [i2].[NominalScanRate], [i2].[ScanType], [i2].[SideLobeLevel], [i2].[SideLobeStd], [i3].[Id], [i3].[IndependentModeId], [i3].[MaxPw], [i3].[MinPw], [i3].[PwClass], [i3].[PwType]
+FROM [independentMode] AS [i]
+LEFT JOIN [independentModeFrequencyDetail] AS [i0] ON [i].[IndependentModeId] = [i0].[IndependentModeId]
+LEFT JOIN [independentModePriDetail] AS [i1] ON [i].[IndependentModeId] = [i1].[IndependentModeId]
+LEFT JOIN [independentModeScanDetail] AS [i2] ON [i].[IndependentModeId] = [i2].[IndependentModeId]
+LEFT JOIN [independentModePwDetail] AS [i3] ON [i].[IndependentModeId] = [i3].[IndependentModeId]
+ORDER BY [i].[IndependentModeId], [i0].[Id], [i1].[Id], [i2].[Id]
+2025-10-27 12:09:28.358 +05:30 [INF] Executing OkObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[Anadrone_BackEnd.DTOs.IndependentModeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-27 12:09:28.368 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.GetAllIndependentModesAsync (Anadrone_BackEnd) in 332.1942ms
+2025-10-27 12:09:28.371 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetAllIndependentModesAsync (Anadrone_BackEnd)'
+2025-10-27 12:09:28.373 +05:30 [INF] HTTP GET /api/Mode/independent/all responded 200 in 343.1433 ms
+2025-10-27 12:09:28.379 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Mode/independent/all - 200 null application/json; charset=utf-8 352.4708ms
+2025-10-27 13:01:21.950 +05:30 [INF] Application is shutting down...
+2025-10-27 14:23:04.224 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 14:23:04.696 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 14:23:04.777 +05:30 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-27 14:23:04.874 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 14:23:04.974 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 14:23:04.992 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-27 14:23:05.075 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 14:23:05.079 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 14:23:05.082 +05:30 [INF] Hosting environment: Development
+2025-10-27 14:23:05.084 +05:30 [INF] Content root path: C:\Users\Admin\Anadrone_BackEnd
+2025-10-27 14:57:44.096 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Mission/tree/2 - null null
+2025-10-27 14:57:44.133 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-27 14:57:44.150 +05:30 [INF] Executing endpoint 'MissionController.GetMissionTree (Anadrone_BackEnd)'
+2025-10-27 14:57:44.163 +05:30 [INF] Route matched with {action = "GetMissionTree", controller = "Mission"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMissionTree(Int32) on controller MissionController (Anadrone_BackEnd).
+2025-10-27 14:57:44.652 +05:30 [INF] Executed DbCommand (69ms) [Parameters=[@__missionId_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [s].[MissionId], [s].[Description], [s].[MissionDate], [s].[MissionName], [s].[MissionType], [s].[Status], [s].[UserId], [s].[AreaInterestId], [s].[Area], [s].[AreaName], [s].[MissionId0], [s].[Perimeter], [a0].[Id], [a0].[Altitude], [a0].[AreaInterestId], [a0].[Latitude], [a0].[Longitude]
+FROM (
+    SELECT TOP(1) [m].[MissionId], [m].[Description], [m].[MissionDate], [m].[MissionName], [m].[MissionType], [m].[Status], [m].[UserId], [a].[AreaInterestId], [a].[Area], [a].[AreaName], [a].[MissionId] AS [MissionId0], [a].[Perimeter]
+    FROM [missions] AS [m]
+    LEFT JOIN [areaInterests] AS [a] ON [m].[MissionId] = [a].[MissionId]
+    WHERE [m].[MissionId] = @__missionId_0
+) AS [s]
+LEFT JOIN [areacoordinates] AS [a0] ON [s].[AreaInterestId] = [a0].[AreaInterestId]
+ORDER BY [s].[MissionId], [s].[AreaInterestId]
+2025-10-27 14:57:44.781 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [p].[PlatformId], [p].[AlternateSymbol], [p].[BackGroundColor], [p].[CreatedAt], [p].[Description], [p].[DisplayStatus], [p].[ForeGroundColor], [p].[MissionId], [p].[PlatformName], [p].[PreviewSymbol], [p].[Priority], [p].[SymbolCodeType], [p].[ThreatType], [p].[ThumbnailImage], [p].[UserId]
+FROM [platforms] AS [p]
+WHERE [p].[MissionId] = @__p_0
+2025-10-27 14:57:44.848 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__p_0='2'], CommandType='"Text"', CommandTimeout='120']
+SELECT [e].[Id], [e].[AreaInterestId], [e].[EmitterId], [e].[EmitterName], [e].[JammingId], [e].[JammingName], [e].[ModeId], [e].[ModeName], [e].[WeaponId], [e].[WeaponName], [e].[weaponStandlone]
+FROM [emitterModeLinks] AS [e]
+WHERE [e].[AreaInterestId] = @__p_0
+2025-10-27 14:57:44.862 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[MissionTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 14:57:44.910 +05:30 [INF] Executed action MissionController.GetMissionTree (Anadrone_BackEnd) in 740.8781ms
+2025-10-27 14:57:44.915 +05:30 [INF] Executed endpoint 'MissionController.GetMissionTree (Anadrone_BackEnd)'
+2025-10-27 14:57:44.918 +05:30 [INF] HTTP GET /api/Mission/tree/2 responded 200 in 785.4720 ms
+2025-10-27 14:57:44.927 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Mission/tree/2 - 200 null application/json; charset=utf-8 831.083ms
+2025-10-27 16:26:24.732 +05:30 [INF] Application is shutting down...
+2025-10-27 16:27:38.424 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 16:27:39.645 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 16:27:39.856 +05:30 [INF] Executed DbCommand (200ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-27 16:27:40.048 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 16:27:40.113 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 16:27:40.158 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-27 16:27:40.256 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 16:27:40.258 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 16:27:40.259 +05:30 [INF] Hosting environment: Development
+2025-10-27 16:27:40.260 +05:30 [INF] Content root path: C:\Users\Admin\Anadrone_BackEnd
+2025-10-27 16:28:02.687 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-10-27 16:28:03.267 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 583.3028ms
+2025-10-27 16:28:14.680 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Emitter/tree/1 - null null
+2025-10-27 16:28:14.699 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-27 16:28:14.739 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:28:14.765 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-27 16:28:15.338 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-10-27 16:28:15.666 +05:30 [INF] Executed DbCommand (181ms) [Parameters=[@__emitterId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [s6].[EmitterId], [s6].[BackgroundColor], [s6].[CreatedBy], [s6].[CreatedDate], [s6].[Description], [s6].[EmitterName], [s6].[EmitterType], [s6].[ForegroundColor], [s6].[IsGroundOnly], [s6].[IsUnknown], [s6].[Latitude], [s6].[Longitude], [s6].[ModifiedBy], [s6].[ModifiedDate], [s6].[Symbol], [s7].[StandaloneModeId], [s7].[BgColor], [s7].[CreatedBy], [s7].[CreatedDate], [s7].[Description], [s7].[EirpValue], [s7].[EmitterId], [s7].[FgColor], [s7].[FrequencyClass], [s7].[FrequencyType], [s7].[GroundOnly], [s7].[LethalRange], [s7].[ModeName], [s7].[ModeSymbol], [s7].[ModeType], [s7].[ModifiedBy], [s7].[ModifiedDate], [s7].[PlatformType], [s7].[PriClass], [s7].[PriStaggerLevel], [s7].[PriType], [s7].[PwClass], [s7].[PwType], [s7].[RangeEstimation], [s7].[SubMode], [s7].[SymbolCodeType], [s7].[TestType], [s7].[ThreatType], [s7].[Id], [s7].[FrequencyClass0], [s7].[FrequencyType0], [s7].[MaxFrequency], [s7].[MinFrequency], [s7].[StandaloneModeId0], [s7].[Id0], [s7].[Deviation], [s7].[JitterMean], [s7].[JitterPercentage], [s7].[MaxPri], [s7].[MinPri], [s7].[PriClass0], [s7].[PriType0], [s7].[StandaloneModeId1], [s7].[Id1], [s7].[MaxPw], [s7].[MinPw], [s7].[PwClass0], [s7].[PwType0], [s7].[StandaloneModeId2], [s7].[Id2], [s7].[CalculatedTot], [s7].[MaxBeamWidth], [s7].[MaxScanRate], [s7].[MaxScanSector], [s7].[MaxTot], [s7].[MinBeamWidth], [s7].[MinScanRate], [s7].[MinScanSector], [s7].[MinTot], [s7].[NominalScanRate], [s7].[ScanType], [s7].[SideLobeLevel], [s7].[SideLobeStd], [s7].[StandaloneModeId3], [s7].[JammingId], [s7].[HoldTime], [s7].[MaxRange], [s7].[MaxVelocity], [s7].[MinRange], [s7].[MinVelocity], [s7].[PullInOut], [s7].[RateOfChangeOfRange], [s7].[RateOfChangeOfVelocity], [s7].[StandaloneModeId4], [s7].[StopTime], [s7].[TechniqueName], [s7].[TechniqueType], [s7].[WalkTime]
+FROM (
+    SELECT TOP(1) [s].[EmitterId], [s].[BackgroundColor], [s].[CreatedBy], [s].[CreatedDate], [s].[Description], [s].[EmitterName], [s].[EmitterType], [s].[ForegroundColor], [s].[IsGroundOnly], [s].[IsUnknown], [s].[Latitude], [s].[Longitude], [s].[ModifiedBy], [s].[ModifiedDate], [s].[Symbol]
+    FROM [standaloneEmitters] AS [s]
+    WHERE [s].[EmitterId] = @__emitterId_0
+) AS [s6]
+LEFT JOIN (
+    SELECT [s0].[StandaloneModeId], [s0].[BgColor], [s0].[CreatedBy], [s0].[CreatedDate], [s0].[Description], [s0].[EirpValue], [s0].[EmitterId], [s0].[FgColor], [s0].[FrequencyClass], [s0].[FrequencyType], [s0].[GroundOnly], [s0].[LethalRange], [s0].[ModeName], [s0].[ModeSymbol], [s0].[ModeType], [s0].[ModifiedBy], [s0].[ModifiedDate], [s0].[PlatformType], [s0].[PriClass], [s0].[PriStaggerLevel], [s0].[PriType], [s0].[PwClass], [s0].[PwType], [s0].[RangeEstimation], [s0].[SubMode], [s0].[SymbolCodeType], [s0].[TestType], [s0].[ThreatType], [s1].[Id], [s1].[FrequencyClass] AS [FrequencyClass0], [s1].[FrequencyType] AS [FrequencyType0], [s1].[MaxFrequency], [s1].[MinFrequency], [s1].[StandaloneModeId] AS [StandaloneModeId0], [s2].[Id] AS [Id0], [s2].[Deviation], [s2].[JitterMean], [s2].[JitterPercentage], [s2].[MaxPri], [s2].[MinPri], [s2].[PriClass] AS [PriClass0], [s2].[PriType] AS [PriType0], [s2].[StandaloneModeId] AS [StandaloneModeId1], [s3].[Id] AS [Id1], [s3].[MaxPw], [s3].[MinPw], [s3].[PwClass] AS [PwClass0], [s3].[PwType] AS [PwType0], [s3].[StandaloneModeId] AS [StandaloneModeId2], [s4].[Id] AS [Id2], [s4].[CalculatedTot], [s4].[MaxBeamWidth], [s4].[MaxScanRate], [s4].[MaxScanSector], [s4].[MaxTot], [s4].[MinBeamWidth], [s4].[MinScanRate], [s4].[MinScanSector], [s4].[MinTot], [s4].[NominalScanRate], [s4].[ScanType], [s4].[SideLobeLevel], [s4].[SideLobeStd], [s4].[StandaloneModeId] AS [StandaloneModeId3], [s5].[JammingId], [s5].[HoldTime], [s5].[MaxRange], [s5].[MaxVelocity], [s5].[MinRange], [s5].[MinVelocity], [s5].[PullInOut], [s5].[RateOfChangeOfRange], [s5].[RateOfChangeOfVelocity], [s5].[StandaloneModeId] AS [StandaloneModeId4], [s5].[StopTime], [s5].[TechniqueName], [s5].[TechniqueType], [s5].[WalkTime]
+    FROM [standaloneModes] AS [s0]
+    LEFT JOIN [standaloneModeFrequencies] AS [s1] ON [s0].[StandaloneModeId] = [s1].[StandaloneModeId]
+    LEFT JOIN [standaloneModePris] AS [s2] ON [s0].[StandaloneModeId] = [s2].[StandaloneModeId]
+    LEFT JOIN [standaloneModePws] AS [s3] ON [s0].[StandaloneModeId] = [s3].[StandaloneModeId]
+    LEFT JOIN [standaloneModeScans] AS [s4] ON [s0].[StandaloneModeId] = [s4].[StandaloneModeId]
+    LEFT JOIN [standaloneJammings] AS [s5] ON [s0].[StandaloneModeId] = [s5].[StandaloneModeId]
+) AS [s7] ON [s6].[EmitterId] = [s7].[EmitterId]
+ORDER BY [s6].[EmitterId], [s7].[StandaloneModeId], [s7].[Id], [s7].[Id0], [s7].[Id1], [s7].[Id2]
+2025-10-27 16:28:16.046 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[EmitterTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:28:16.132 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd) in 1359.0271ms
+2025-10-27 16:28:16.136 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:28:16.139 +05:30 [INF] HTTP GET /api/Emitter/tree/1 responded 200 in 1440.8086 ms
+2025-10-27 16:28:16.147 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Emitter/tree/1 - 200 null application/json; charset=utf-8 1467.1581ms
+2025-10-27 16:31:52.784 +05:30 [INF] Application is shutting down...
+2025-10-27 16:31:58.129 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 16:31:58.388 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 16:31:58.446 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-27 16:31:58.578 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 16:31:58.715 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 16:31:58.723 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-27 16:31:58.865 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 16:31:58.867 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 16:31:58.868 +05:30 [INF] Hosting environment: Development
+2025-10-27 16:31:58.869 +05:30 [INF] Content root path: C:\Users\Admin\Anadrone_BackEnd
+2025-10-27 16:32:02.513 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Emitter/tree/1 - null null
+2025-10-27 16:32:02.616 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-27 16:32:02.659 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:32:02.780 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-27 16:32:03.108 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-10-27 16:32:03.383 +05:30 [INF] Executed DbCommand (155ms) [Parameters=[@__emitterId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [s6].[EmitterId], [s6].[BackgroundColor], [s6].[CreatedBy], [s6].[CreatedDate], [s6].[Description], [s6].[EmitterName], [s6].[EmitterType], [s6].[ForegroundColor], [s6].[IsGroundOnly], [s6].[IsUnknown], [s6].[Latitude], [s6].[Longitude], [s6].[ModifiedBy], [s6].[ModifiedDate], [s6].[Symbol], [s7].[StandaloneModeId], [s7].[BgColor], [s7].[CreatedBy], [s7].[CreatedDate], [s7].[Description], [s7].[EirpValue], [s7].[EmitterId], [s7].[FgColor], [s7].[FrequencyClass], [s7].[FrequencyType], [s7].[GroundOnly], [s7].[LethalRange], [s7].[ModeName], [s7].[ModeSymbol], [s7].[ModeType], [s7].[ModifiedBy], [s7].[ModifiedDate], [s7].[PlatformType], [s7].[PriClass], [s7].[PriStaggerLevel], [s7].[PriType], [s7].[PwClass], [s7].[PwType], [s7].[RangeEstimation], [s7].[SubMode], [s7].[SymbolCodeType], [s7].[TestType], [s7].[ThreatType], [s7].[Id], [s7].[FrequencyClass0], [s7].[FrequencyType0], [s7].[MaxFrequency], [s7].[MinFrequency], [s7].[StandaloneModeId0], [s7].[Id0], [s7].[Deviation], [s7].[JitterMean], [s7].[JitterPercentage], [s7].[MaxPri], [s7].[MinPri], [s7].[PriClass0], [s7].[PriType0], [s7].[StandaloneModeId1], [s7].[Id1], [s7].[MaxPw], [s7].[MinPw], [s7].[PwClass0], [s7].[PwType0], [s7].[StandaloneModeId2], [s7].[Id2], [s7].[CalculatedTot], [s7].[MaxBeamWidth], [s7].[MaxScanRate], [s7].[MaxScanSector], [s7].[MaxTot], [s7].[MinBeamWidth], [s7].[MinScanRate], [s7].[MinScanSector], [s7].[MinTot], [s7].[NominalScanRate], [s7].[ScanType], [s7].[SideLobeLevel], [s7].[SideLobeStd], [s7].[StandaloneModeId3], [s7].[JammingId], [s7].[HoldTime], [s7].[MaxRange], [s7].[MaxVelocity], [s7].[MinRange], [s7].[MinVelocity], [s7].[PullInOut], [s7].[RateOfChangeOfRange], [s7].[RateOfChangeOfVelocity], [s7].[StandaloneModeId4], [s7].[StopTime], [s7].[TechniqueName], [s7].[TechniqueType], [s7].[WalkTime]
+FROM (
+    SELECT TOP(1) [s].[EmitterId], [s].[BackgroundColor], [s].[CreatedBy], [s].[CreatedDate], [s].[Description], [s].[EmitterName], [s].[EmitterType], [s].[ForegroundColor], [s].[IsGroundOnly], [s].[IsUnknown], [s].[Latitude], [s].[Longitude], [s].[ModifiedBy], [s].[ModifiedDate], [s].[Symbol]
+    FROM [standaloneEmitters] AS [s]
+    WHERE [s].[EmitterId] = @__emitterId_0
+) AS [s6]
+LEFT JOIN (
+    SELECT [s0].[StandaloneModeId], [s0].[BgColor], [s0].[CreatedBy], [s0].[CreatedDate], [s0].[Description], [s0].[EirpValue], [s0].[EmitterId], [s0].[FgColor], [s0].[FrequencyClass], [s0].[FrequencyType], [s0].[GroundOnly], [s0].[LethalRange], [s0].[ModeName], [s0].[ModeSymbol], [s0].[ModeType], [s0].[ModifiedBy], [s0].[ModifiedDate], [s0].[PlatformType], [s0].[PriClass], [s0].[PriStaggerLevel], [s0].[PriType], [s0].[PwClass], [s0].[PwType], [s0].[RangeEstimation], [s0].[SubMode], [s0].[SymbolCodeType], [s0].[TestType], [s0].[ThreatType], [s1].[Id], [s1].[FrequencyClass] AS [FrequencyClass0], [s1].[FrequencyType] AS [FrequencyType0], [s1].[MaxFrequency], [s1].[MinFrequency], [s1].[StandaloneModeId] AS [StandaloneModeId0], [s2].[Id] AS [Id0], [s2].[Deviation], [s2].[JitterMean], [s2].[JitterPercentage], [s2].[MaxPri], [s2].[MinPri], [s2].[PriClass] AS [PriClass0], [s2].[PriType] AS [PriType0], [s2].[StandaloneModeId] AS [StandaloneModeId1], [s3].[Id] AS [Id1], [s3].[MaxPw], [s3].[MinPw], [s3].[PwClass] AS [PwClass0], [s3].[PwType] AS [PwType0], [s3].[StandaloneModeId] AS [StandaloneModeId2], [s4].[Id] AS [Id2], [s4].[CalculatedTot], [s4].[MaxBeamWidth], [s4].[MaxScanRate], [s4].[MaxScanSector], [s4].[MaxTot], [s4].[MinBeamWidth], [s4].[MinScanRate], [s4].[MinScanSector], [s4].[MinTot], [s4].[NominalScanRate], [s4].[ScanType], [s4].[SideLobeLevel], [s4].[SideLobeStd], [s4].[StandaloneModeId] AS [StandaloneModeId3], [s5].[JammingId], [s5].[HoldTime], [s5].[MaxRange], [s5].[MaxVelocity], [s5].[MinRange], [s5].[MinVelocity], [s5].[PullInOut], [s5].[RateOfChangeOfRange], [s5].[RateOfChangeOfVelocity], [s5].[StandaloneModeId] AS [StandaloneModeId4], [s5].[StopTime], [s5].[TechniqueName], [s5].[TechniqueType], [s5].[WalkTime]
+    FROM [standaloneModes] AS [s0]
+    LEFT JOIN [standaloneModeFrequencies] AS [s1] ON [s0].[StandaloneModeId] = [s1].[StandaloneModeId]
+    LEFT JOIN [standaloneModePris] AS [s2] ON [s0].[StandaloneModeId] = [s2].[StandaloneModeId]
+    LEFT JOIN [standaloneModePws] AS [s3] ON [s0].[StandaloneModeId] = [s3].[StandaloneModeId]
+    LEFT JOIN [standaloneModeScans] AS [s4] ON [s0].[StandaloneModeId] = [s4].[StandaloneModeId]
+    LEFT JOIN [standaloneJammings] AS [s5] ON [s0].[StandaloneModeId] = [s5].[StandaloneModeId]
+) AS [s7] ON [s6].[EmitterId] = [s7].[EmitterId]
+ORDER BY [s6].[EmitterId], [s7].[StandaloneModeId], [s7].[Id], [s7].[Id0], [s7].[Id1], [s7].[Id2]
+2025-10-27 16:32:03.528 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[EmitterTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:32:03.600 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd) in 770.1836ms
+2025-10-27 16:32:03.603 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:32:03.606 +05:30 [INF] HTTP GET /api/Emitter/tree/1 responded 200 in 988.8135 ms
+2025-10-27 16:32:03.611 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Emitter/tree/1 - 200 null application/json; charset=utf-8 1099.4847ms
+2025-10-27 16:33:31.236 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Emitter/tree/1 - null null
+2025-10-27 16:33:31.249 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:33:31.250 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-27 16:33:31.376 +05:30 [INF] Executed DbCommand (69ms) [Parameters=[@__emitterId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [s6].[EmitterId], [s6].[BackgroundColor], [s6].[CreatedBy], [s6].[CreatedDate], [s6].[Description], [s6].[EmitterName], [s6].[EmitterType], [s6].[ForegroundColor], [s6].[IsGroundOnly], [s6].[IsUnknown], [s6].[Latitude], [s6].[Longitude], [s6].[ModifiedBy], [s6].[ModifiedDate], [s6].[Symbol], [s7].[StandaloneModeId], [s7].[BgColor], [s7].[CreatedBy], [s7].[CreatedDate], [s7].[Description], [s7].[EirpValue], [s7].[EmitterId], [s7].[FgColor], [s7].[FrequencyClass], [s7].[FrequencyType], [s7].[GroundOnly], [s7].[LethalRange], [s7].[ModeName], [s7].[ModeSymbol], [s7].[ModeType], [s7].[ModifiedBy], [s7].[ModifiedDate], [s7].[PlatformType], [s7].[PriClass], [s7].[PriStaggerLevel], [s7].[PriType], [s7].[PwClass], [s7].[PwType], [s7].[RangeEstimation], [s7].[SubMode], [s7].[SymbolCodeType], [s7].[TestType], [s7].[ThreatType], [s7].[Id], [s7].[FrequencyClass0], [s7].[FrequencyType0], [s7].[MaxFrequency], [s7].[MinFrequency], [s7].[StandaloneModeId0], [s7].[Id0], [s7].[Deviation], [s7].[JitterMean], [s7].[JitterPercentage], [s7].[MaxPri], [s7].[MinPri], [s7].[PriClass0], [s7].[PriType0], [s7].[StandaloneModeId1], [s7].[Id1], [s7].[MaxPw], [s7].[MinPw], [s7].[PwClass0], [s7].[PwType0], [s7].[StandaloneModeId2], [s7].[Id2], [s7].[CalculatedTot], [s7].[MaxBeamWidth], [s7].[MaxScanRate], [s7].[MaxScanSector], [s7].[MaxTot], [s7].[MinBeamWidth], [s7].[MinScanRate], [s7].[MinScanSector], [s7].[MinTot], [s7].[NominalScanRate], [s7].[ScanType], [s7].[SideLobeLevel], [s7].[SideLobeStd], [s7].[StandaloneModeId3], [s7].[JammingId], [s7].[HoldTime], [s7].[MaxRange], [s7].[MaxVelocity], [s7].[MinRange], [s7].[MinVelocity], [s7].[PullInOut], [s7].[RateOfChangeOfRange], [s7].[RateOfChangeOfVelocity], [s7].[StandaloneModeId4], [s7].[StopTime], [s7].[TechniqueName], [s7].[TechniqueType], [s7].[WalkTime]
+FROM (
+    SELECT TOP(1) [s].[EmitterId], [s].[BackgroundColor], [s].[CreatedBy], [s].[CreatedDate], [s].[Description], [s].[EmitterName], [s].[EmitterType], [s].[ForegroundColor], [s].[IsGroundOnly], [s].[IsUnknown], [s].[Latitude], [s].[Longitude], [s].[ModifiedBy], [s].[ModifiedDate], [s].[Symbol]
+    FROM [standaloneEmitters] AS [s]
+    WHERE [s].[EmitterId] = @__emitterId_0
+) AS [s6]
+LEFT JOIN (
+    SELECT [s0].[StandaloneModeId], [s0].[BgColor], [s0].[CreatedBy], [s0].[CreatedDate], [s0].[Description], [s0].[EirpValue], [s0].[EmitterId], [s0].[FgColor], [s0].[FrequencyClass], [s0].[FrequencyType], [s0].[GroundOnly], [s0].[LethalRange], [s0].[ModeName], [s0].[ModeSymbol], [s0].[ModeType], [s0].[ModifiedBy], [s0].[ModifiedDate], [s0].[PlatformType], [s0].[PriClass], [s0].[PriStaggerLevel], [s0].[PriType], [s0].[PwClass], [s0].[PwType], [s0].[RangeEstimation], [s0].[SubMode], [s0].[SymbolCodeType], [s0].[TestType], [s0].[ThreatType], [s1].[Id], [s1].[FrequencyClass] AS [FrequencyClass0], [s1].[FrequencyType] AS [FrequencyType0], [s1].[MaxFrequency], [s1].[MinFrequency], [s1].[StandaloneModeId] AS [StandaloneModeId0], [s2].[Id] AS [Id0], [s2].[Deviation], [s2].[JitterMean], [s2].[JitterPercentage], [s2].[MaxPri], [s2].[MinPri], [s2].[PriClass] AS [PriClass0], [s2].[PriType] AS [PriType0], [s2].[StandaloneModeId] AS [StandaloneModeId1], [s3].[Id] AS [Id1], [s3].[MaxPw], [s3].[MinPw], [s3].[PwClass] AS [PwClass0], [s3].[PwType] AS [PwType0], [s3].[StandaloneModeId] AS [StandaloneModeId2], [s4].[Id] AS [Id2], [s4].[CalculatedTot], [s4].[MaxBeamWidth], [s4].[MaxScanRate], [s4].[MaxScanSector], [s4].[MaxTot], [s4].[MinBeamWidth], [s4].[MinScanRate], [s4].[MinScanSector], [s4].[MinTot], [s4].[NominalScanRate], [s4].[ScanType], [s4].[SideLobeLevel], [s4].[SideLobeStd], [s4].[StandaloneModeId] AS [StandaloneModeId3], [s5].[JammingId], [s5].[HoldTime], [s5].[MaxRange], [s5].[MaxVelocity], [s5].[MinRange], [s5].[MinVelocity], [s5].[PullInOut], [s5].[RateOfChangeOfRange], [s5].[RateOfChangeOfVelocity], [s5].[StandaloneModeId] AS [StandaloneModeId4], [s5].[StopTime], [s5].[TechniqueName], [s5].[TechniqueType], [s5].[WalkTime]
+    FROM [standaloneModes] AS [s0]
+    LEFT JOIN [standaloneModeFrequencies] AS [s1] ON [s0].[StandaloneModeId] = [s1].[StandaloneModeId]
+    LEFT JOIN [standaloneModePris] AS [s2] ON [s0].[StandaloneModeId] = [s2].[StandaloneModeId]
+    LEFT JOIN [standaloneModePws] AS [s3] ON [s0].[StandaloneModeId] = [s3].[StandaloneModeId]
+    LEFT JOIN [standaloneModeScans] AS [s4] ON [s0].[StandaloneModeId] = [s4].[StandaloneModeId]
+    LEFT JOIN [standaloneJammings] AS [s5] ON [s0].[StandaloneModeId] = [s5].[StandaloneModeId]
+) AS [s7] ON [s6].[EmitterId] = [s7].[EmitterId]
+ORDER BY [s6].[EmitterId], [s7].[StandaloneModeId], [s7].[Id], [s7].[Id0], [s7].[Id1], [s7].[Id2]
+2025-10-27 16:33:31.383 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[EmitterTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:33:31.387 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd) in 134.0229ms
+2025-10-27 16:33:31.389 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:33:31.392 +05:30 [INF] HTTP GET /api/Emitter/tree/1 responded 200 in 143.3227 ms
+2025-10-27 16:33:31.395 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Emitter/tree/1 - 200 null application/json; charset=utf-8 158.2089ms
+2025-10-27 16:48:41.929 +05:30 [INF] Application is shutting down...
+2025-10-27 16:48:48.931 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 16:48:49.202 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 16:48:49.253 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-27 16:48:49.317 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 16:48:49.336 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 16:48:49.344 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-27 16:48:49.378 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 16:48:49.379 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 16:48:49.380 +05:30 [INF] Hosting environment: Development
+2025-10-27 16:48:49.381 +05:30 [INF] Content root path: C:\Users\Admin\Anadrone_BackEnd
+2025-10-27 16:48:55.594 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/index.html - null null
+2025-10-27 16:48:55.668 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/index.html - 200 null text/html;charset=utf-8 75.3788ms
+2025-10-27 16:48:55.830 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-10-27 16:48:55.932 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 101.5515ms
+2025-10-27 16:49:04.923 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Mode/tree/1 - null null
+2025-10-27 16:49:04.941 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-27 16:49:04.989 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:49:05.018 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-27 16:49:05.519 +05:30 [INF] Executed DbCommand (101ms) [Parameters=[@__modeId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT TOP(1) [i].[IndependentModeId], [i].[BgColor], [i].[CreatedBy], [i].[CreatedDate], [i].[Description], [i].[EirpValue], [i].[FgColor], [i].[FrequencyClass], [i].[FrequencyType], [i].[GroundOnly], [i].[LethalRange], [i].[ModeName], [i].[ModeSymbol], [i].[ModeType], [i].[ModifiedBy], [i].[ModifiedDate], [i].[PlatformType], [i].[PriClass], [i].[PriStaggerLevel], [i].[PriType], [i].[PwClass], [i].[PwType], [i].[RangeEstimation], [i].[SubMode], [i].[SymbolCodeType], [i].[TestType], [i].[ThreatType]
+FROM [independentMode] AS [i]
+WHERE [i].[IndependentModeId] = @__modeId_0
+2025-10-27 16:49:05.869 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[ModeTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:49:05.965 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd) in 938.3631ms
+2025-10-27 16:49:05.971 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:49:05.977 +05:30 [INF] HTTP GET /api/Mode/tree/1 responded 200 in 1036.5325 ms
+2025-10-27 16:49:05.992 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Mode/tree/1 - 200 null application/json; charset=utf-8 1068.9459ms
+2025-10-27 16:51:30.557 +05:30 [INF] Application is shutting down...
+2025-10-27 16:51:35.437 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 16:51:35.743 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 16:51:35.787 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-27 16:51:35.858 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 16:51:35.885 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 16:51:35.897 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-27 16:51:35.940 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 16:51:35.942 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 16:51:35.944 +05:30 [INF] Hosting environment: Development
+2025-10-27 16:51:35.945 +05:30 [INF] Content root path: C:\Users\Admin\Anadrone_BackEnd
+2025-10-27 16:51:41.257 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Mode/tree/1 - null null
+2025-10-27 16:51:41.286 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-27 16:51:41.300 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:51:41.312 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-27 16:51:41.536 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-10-27 16:51:41.771 +05:30 [INF] Executed DbCommand (154ms) [Parameters=[@__modeId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [i5].[IndependentModeId], [i5].[BgColor], [i5].[CreatedBy], [i5].[CreatedDate], [i5].[Description], [i5].[EirpValue], [i5].[FgColor], [i5].[FrequencyClass], [i5].[FrequencyType], [i5].[GroundOnly], [i5].[LethalRange], [i5].[ModeName], [i5].[ModeSymbol], [i5].[ModeType], [i5].[ModifiedBy], [i5].[ModifiedDate], [i5].[PlatformType], [i5].[PriClass], [i5].[PriStaggerLevel], [i5].[PriType], [i5].[PwClass], [i5].[PwType], [i5].[RangeEstimation], [i5].[SubMode], [i5].[SymbolCodeType], [i5].[TestType], [i5].[ThreatType], [i0].[Id], [i0].[FrequencyClass], [i0].[FrequencyType], [i0].[IndependentModeId], [i0].[MaxFrequency], [i0].[MinFrequency], [i1].[Id], [i1].[Deviation], [i1].[IndependentModeId], [i1].[JitterMean], [i1].[JitterPercentage], [i1].[MaxPri], [i1].[MinPri], [i1].[PriClass], [i1].[PriType], [i2].[Id], [i2].[CalculatedTot], [i2].[IndependentModeId], [i2].[MaxBeamWidth], [i2].[MaxScanRate], [i2].[MaxScanSector], [i2].[MaxTot], [i2].[MinBeamWidth], [i2].[MinScanRate], [i2].[MinScanSector], [i2].[MinTot], [i2].[NominalScanRate], [i2].[ScanType], [i2].[SideLobeLevel], [i2].[SideLobeStd], [i3].[Id], [i3].[IndependentModeId], [i3].[MaxPw], [i3].[MinPw], [i3].[PwClass], [i3].[PwType], [i4].[JammingId], [i4].[HoldTime], [i4].[IndependentModeId], [i4].[MaxRange], [i4].[MaxVelocity], [i4].[MinRange], [i4].[MinVelocity], [i4].[PullInOut], [i4].[RateOfChangeOfRange], [i4].[RateOfChangeOfVelocity], [i4].[StopTime], [i4].[TechniqueName], [i4].[TechniqueType], [i4].[WalkTime]
+FROM (
+    SELECT TOP(1) [i].[IndependentModeId], [i].[BgColor], [i].[CreatedBy], [i].[CreatedDate], [i].[Description], [i].[EirpValue], [i].[FgColor], [i].[FrequencyClass], [i].[FrequencyType], [i].[GroundOnly], [i].[LethalRange], [i].[ModeName], [i].[ModeSymbol], [i].[ModeType], [i].[ModifiedBy], [i].[ModifiedDate], [i].[PlatformType], [i].[PriClass], [i].[PriStaggerLevel], [i].[PriType], [i].[PwClass], [i].[PwType], [i].[RangeEstimation], [i].[SubMode], [i].[SymbolCodeType], [i].[TestType], [i].[ThreatType]
+    FROM [independentMode] AS [i]
+    WHERE [i].[IndependentModeId] = @__modeId_0
+) AS [i5]
+LEFT JOIN [independentModeFrequencyDetail] AS [i0] ON [i5].[IndependentModeId] = [i0].[IndependentModeId]
+LEFT JOIN [independentModePriDetail] AS [i1] ON [i5].[IndependentModeId] = [i1].[IndependentModeId]
+LEFT JOIN [independentModeScanDetail] AS [i2] ON [i5].[IndependentModeId] = [i2].[IndependentModeId]
+LEFT JOIN [independentModePwDetail] AS [i3] ON [i5].[IndependentModeId] = [i3].[IndependentModeId]
+LEFT JOIN [independentJamming] AS [i4] ON [i5].[IndependentModeId] = [i4].[IndependentModeId]
+ORDER BY [i5].[IndependentModeId], [i0].[Id], [i1].[Id], [i2].[Id], [i3].[Id]
+2025-10-27 16:51:41.943 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[ModeTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:51:42.005 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd) in 689.2509ms
+2025-10-27 16:51:42.008 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:51:42.011 +05:30 [INF] HTTP GET /api/Mode/tree/1 responded 200 in 723.9586 ms
+2025-10-27 16:51:42.016 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Mode/tree/1 - 200 null application/json; charset=utf-8 759.9239ms
+2025-10-27 16:53:10.624 +05:30 [INF] Application is shutting down...
+2025-10-27 16:53:16.420 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 16:53:16.690 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 16:53:16.739 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-27 16:53:16.801 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 16:53:16.820 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 16:53:16.828 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-27 16:53:16.866 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 16:53:16.867 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 16:53:16.867 +05:30 [INF] Hosting environment: Development
+2025-10-27 16:53:16.868 +05:30 [INF] Content root path: C:\Users\Admin\Anadrone_BackEnd
+2025-10-27 16:53:26.805 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Mode/tree/1 - null null
+2025-10-27 16:53:26.840 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-27 16:53:26.906 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:53:26.919 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-27 16:53:27.163 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-10-27 16:53:27.269 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[@__modeId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [i5].[IndependentModeId], [i5].[BgColor], [i5].[CreatedBy], [i5].[CreatedDate], [i5].[Description], [i5].[EirpValue], [i5].[FgColor], [i5].[FrequencyClass], [i5].[FrequencyType], [i5].[GroundOnly], [i5].[LethalRange], [i5].[ModeName], [i5].[ModeSymbol], [i5].[ModeType], [i5].[ModifiedBy], [i5].[ModifiedDate], [i5].[PlatformType], [i5].[PriClass], [i5].[PriStaggerLevel], [i5].[PriType], [i5].[PwClass], [i5].[PwType], [i5].[RangeEstimation], [i5].[SubMode], [i5].[SymbolCodeType], [i5].[TestType], [i5].[ThreatType], [i0].[Id], [i0].[FrequencyClass], [i0].[FrequencyType], [i0].[IndependentModeId], [i0].[MaxFrequency], [i0].[MinFrequency], [i1].[Id], [i1].[Deviation], [i1].[IndependentModeId], [i1].[JitterMean], [i1].[JitterPercentage], [i1].[MaxPri], [i1].[MinPri], [i1].[PriClass], [i1].[PriType], [i2].[Id], [i2].[CalculatedTot], [i2].[IndependentModeId], [i2].[MaxBeamWidth], [i2].[MaxScanRate], [i2].[MaxScanSector], [i2].[MaxTot], [i2].[MinBeamWidth], [i2].[MinScanRate], [i2].[MinScanSector], [i2].[MinTot], [i2].[NominalScanRate], [i2].[ScanType], [i2].[SideLobeLevel], [i2].[SideLobeStd], [i3].[Id], [i3].[IndependentModeId], [i3].[MaxPw], [i3].[MinPw], [i3].[PwClass], [i3].[PwType], [i4].[JammingId], [i4].[HoldTime], [i4].[IndependentModeId], [i4].[MaxRange], [i4].[MaxVelocity], [i4].[MinRange], [i4].[MinVelocity], [i4].[PullInOut], [i4].[RateOfChangeOfRange], [i4].[RateOfChangeOfVelocity], [i4].[StopTime], [i4].[TechniqueName], [i4].[TechniqueType], [i4].[WalkTime]
+FROM (
+    SELECT TOP(1) [i].[IndependentModeId], [i].[BgColor], [i].[CreatedBy], [i].[CreatedDate], [i].[Description], [i].[EirpValue], [i].[FgColor], [i].[FrequencyClass], [i].[FrequencyType], [i].[GroundOnly], [i].[LethalRange], [i].[ModeName], [i].[ModeSymbol], [i].[ModeType], [i].[ModifiedBy], [i].[ModifiedDate], [i].[PlatformType], [i].[PriClass], [i].[PriStaggerLevel], [i].[PriType], [i].[PwClass], [i].[PwType], [i].[RangeEstimation], [i].[SubMode], [i].[SymbolCodeType], [i].[TestType], [i].[ThreatType]
+    FROM [independentMode] AS [i]
+    WHERE [i].[IndependentModeId] = @__modeId_0
+) AS [i5]
+LEFT JOIN [independentModeFrequencyDetail] AS [i0] ON [i5].[IndependentModeId] = [i0].[IndependentModeId]
+LEFT JOIN [independentModePriDetail] AS [i1] ON [i5].[IndependentModeId] = [i1].[IndependentModeId]
+LEFT JOIN [independentModeScanDetail] AS [i2] ON [i5].[IndependentModeId] = [i2].[IndependentModeId]
+LEFT JOIN [independentModePwDetail] AS [i3] ON [i5].[IndependentModeId] = [i3].[IndependentModeId]
+LEFT JOIN [independentJamming] AS [i4] ON [i5].[IndependentModeId] = [i4].[IndependentModeId]
+ORDER BY [i5].[IndependentModeId], [i0].[Id], [i1].[Id], [i2].[Id], [i3].[Id]
+2025-10-27 16:53:27.400 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[ModeTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:53:27.466 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd) in 543.9919ms
+2025-10-27 16:53:27.469 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:53:27.472 +05:30 [INF] HTTP GET /api/Mode/tree/1 responded 200 in 631.7467 ms
+2025-10-27 16:53:27.478 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Mode/tree/1 - 200 null application/json; charset=utf-8 674.1399ms
+2025-10-27 16:54:38.194 +05:30 [INF] Application is shutting down...
+2025-10-27 16:54:43.514 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 16:54:43.770 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 16:54:43.816 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-27 16:54:43.879 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 16:54:43.902 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 16:54:43.909 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-27 16:54:43.944 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 16:54:43.945 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 16:54:43.948 +05:30 [INF] Hosting environment: Development
+2025-10-27 16:54:43.948 +05:30 [INF] Content root path: C:\Users\Admin\Anadrone_BackEnd
+2025-10-27 16:54:48.374 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/index.html - null null
+2025-10-27 16:54:48.431 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/index.html - 200 null text/html;charset=utf-8 57.2862ms
+2025-10-27 16:54:48.583 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-10-27 16:54:48.754 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 170.8246ms
+2025-10-27 16:55:47.498 +05:30 [INF] Application is shutting down...
+2025-10-27 16:55:51.664 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 16:55:52.035 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 16:55:52.082 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-27 16:55:52.152 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 16:55:52.177 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 16:55:52.186 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-27 16:55:52.281 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 16:55:52.283 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 16:55:52.283 +05:30 [INF] Hosting environment: Development
+2025-10-27 16:55:52.284 +05:30 [INF] Content root path: C:\Users\Admin\Anadrone_BackEnd
+2025-10-27 16:55:55.718 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/index.html - null null
+2025-10-27 16:55:55.784 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/index.html - 200 null text/html;charset=utf-8 65.9842ms
+2025-10-27 16:55:55.843 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-10-27 16:55:55.951 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 108.0574ms
+2025-10-27 16:56:03.043 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Emitter/standalone-tree/1 - null null
+2025-10-27 16:56:03.059 +05:30 [WRN] Failed to determine the https port for redirect.
+2025-10-27 16:56:03.078 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:56:03.092 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-27 16:56:03.318 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-10-27 16:56:03.459 +05:30 [INF] Executed DbCommand (66ms) [Parameters=[@__emitterId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [s6].[EmitterId], [s6].[BackgroundColor], [s6].[CreatedBy], [s6].[CreatedDate], [s6].[Description], [s6].[EmitterName], [s6].[EmitterType], [s6].[ForegroundColor], [s6].[IsGroundOnly], [s6].[IsUnknown], [s6].[Latitude], [s6].[Longitude], [s6].[ModifiedBy], [s6].[ModifiedDate], [s6].[Symbol], [s7].[StandaloneModeId], [s7].[BgColor], [s7].[CreatedBy], [s7].[CreatedDate], [s7].[Description], [s7].[EirpValue], [s7].[EmitterId], [s7].[FgColor], [s7].[FrequencyClass], [s7].[FrequencyType], [s7].[GroundOnly], [s7].[LethalRange], [s7].[ModeName], [s7].[ModeSymbol], [s7].[ModeType], [s7].[ModifiedBy], [s7].[ModifiedDate], [s7].[PlatformType], [s7].[PriClass], [s7].[PriStaggerLevel], [s7].[PriType], [s7].[PwClass], [s7].[PwType], [s7].[RangeEstimation], [s7].[SubMode], [s7].[SymbolCodeType], [s7].[TestType], [s7].[ThreatType], [s7].[Id], [s7].[FrequencyClass0], [s7].[FrequencyType0], [s7].[MaxFrequency], [s7].[MinFrequency], [s7].[StandaloneModeId0], [s7].[Id0], [s7].[Deviation], [s7].[JitterMean], [s7].[JitterPercentage], [s7].[MaxPri], [s7].[MinPri], [s7].[PriClass0], [s7].[PriType0], [s7].[StandaloneModeId1], [s7].[Id1], [s7].[MaxPw], [s7].[MinPw], [s7].[PwClass0], [s7].[PwType0], [s7].[StandaloneModeId2], [s7].[Id2], [s7].[CalculatedTot], [s7].[MaxBeamWidth], [s7].[MaxScanRate], [s7].[MaxScanSector], [s7].[MaxTot], [s7].[MinBeamWidth], [s7].[MinScanRate], [s7].[MinScanSector], [s7].[MinTot], [s7].[NominalScanRate], [s7].[ScanType], [s7].[SideLobeLevel], [s7].[SideLobeStd], [s7].[StandaloneModeId3], [s7].[JammingId], [s7].[HoldTime], [s7].[MaxRange], [s7].[MaxVelocity], [s7].[MinRange], [s7].[MinVelocity], [s7].[PullInOut], [s7].[RateOfChangeOfRange], [s7].[RateOfChangeOfVelocity], [s7].[StandaloneModeId4], [s7].[StopTime], [s7].[TechniqueName], [s7].[TechniqueType], [s7].[WalkTime]
+FROM (
+    SELECT TOP(1) [s].[EmitterId], [s].[BackgroundColor], [s].[CreatedBy], [s].[CreatedDate], [s].[Description], [s].[EmitterName], [s].[EmitterType], [s].[ForegroundColor], [s].[IsGroundOnly], [s].[IsUnknown], [s].[Latitude], [s].[Longitude], [s].[ModifiedBy], [s].[ModifiedDate], [s].[Symbol]
+    FROM [standaloneEmitters] AS [s]
+    WHERE [s].[EmitterId] = @__emitterId_0
+) AS [s6]
+LEFT JOIN (
+    SELECT [s0].[StandaloneModeId], [s0].[BgColor], [s0].[CreatedBy], [s0].[CreatedDate], [s0].[Description], [s0].[EirpValue], [s0].[EmitterId], [s0].[FgColor], [s0].[FrequencyClass], [s0].[FrequencyType], [s0].[GroundOnly], [s0].[LethalRange], [s0].[ModeName], [s0].[ModeSymbol], [s0].[ModeType], [s0].[ModifiedBy], [s0].[ModifiedDate], [s0].[PlatformType], [s0].[PriClass], [s0].[PriStaggerLevel], [s0].[PriType], [s0].[PwClass], [s0].[PwType], [s0].[RangeEstimation], [s0].[SubMode], [s0].[SymbolCodeType], [s0].[TestType], [s0].[ThreatType], [s1].[Id], [s1].[FrequencyClass] AS [FrequencyClass0], [s1].[FrequencyType] AS [FrequencyType0], [s1].[MaxFrequency], [s1].[MinFrequency], [s1].[StandaloneModeId] AS [StandaloneModeId0], [s2].[Id] AS [Id0], [s2].[Deviation], [s2].[JitterMean], [s2].[JitterPercentage], [s2].[MaxPri], [s2].[MinPri], [s2].[PriClass] AS [PriClass0], [s2].[PriType] AS [PriType0], [s2].[StandaloneModeId] AS [StandaloneModeId1], [s3].[Id] AS [Id1], [s3].[MaxPw], [s3].[MinPw], [s3].[PwClass] AS [PwClass0], [s3].[PwType] AS [PwType0], [s3].[StandaloneModeId] AS [StandaloneModeId2], [s4].[Id] AS [Id2], [s4].[CalculatedTot], [s4].[MaxBeamWidth], [s4].[MaxScanRate], [s4].[MaxScanSector], [s4].[MaxTot], [s4].[MinBeamWidth], [s4].[MinScanRate], [s4].[MinScanSector], [s4].[MinTot], [s4].[NominalScanRate], [s4].[ScanType], [s4].[SideLobeLevel], [s4].[SideLobeStd], [s4].[StandaloneModeId] AS [StandaloneModeId3], [s5].[JammingId], [s5].[HoldTime], [s5].[MaxRange], [s5].[MaxVelocity], [s5].[MinRange], [s5].[MinVelocity], [s5].[PullInOut], [s5].[RateOfChangeOfRange], [s5].[RateOfChangeOfVelocity], [s5].[StandaloneModeId] AS [StandaloneModeId4], [s5].[StopTime], [s5].[TechniqueName], [s5].[TechniqueType], [s5].[WalkTime]
+    FROM [standaloneModes] AS [s0]
+    LEFT JOIN [standaloneModeFrequencies] AS [s1] ON [s0].[StandaloneModeId] = [s1].[StandaloneModeId]
+    LEFT JOIN [standaloneModePris] AS [s2] ON [s0].[StandaloneModeId] = [s2].[StandaloneModeId]
+    LEFT JOIN [standaloneModePws] AS [s3] ON [s0].[StandaloneModeId] = [s3].[StandaloneModeId]
+    LEFT JOIN [standaloneModeScans] AS [s4] ON [s0].[StandaloneModeId] = [s4].[StandaloneModeId]
+    LEFT JOIN [standaloneJammings] AS [s5] ON [s0].[StandaloneModeId] = [s5].[StandaloneModeId]
+) AS [s7] ON [s6].[EmitterId] = [s7].[EmitterId]
+ORDER BY [s6].[EmitterId], [s7].[StandaloneModeId], [s7].[Id], [s7].[Id0], [s7].[Id1], [s7].[Id2]
+2025-10-27 16:56:03.599 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[EmitterTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:56:03.639 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd) in 542.6314ms
+2025-10-27 16:56:03.642 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:56:03.644 +05:30 [INF] HTTP GET /api/Emitter/standalone-tree/1 responded 200 in 585.2456 ms
+2025-10-27 16:56:03.648 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Emitter/standalone-tree/1 - 200 null application/json; charset=utf-8 604.8844ms
+2025-10-27 16:56:23.562 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Mode/independent-tree/1 - null null
+2025-10-27 16:56:23.567 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:56:23.572 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-27 16:56:23.635 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-10-27 16:56:23.725 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__modeId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [i5].[IndependentModeId], [i5].[BgColor], [i5].[CreatedBy], [i5].[CreatedDate], [i5].[Description], [i5].[EirpValue], [i5].[FgColor], [i5].[FrequencyClass], [i5].[FrequencyType], [i5].[GroundOnly], [i5].[LethalRange], [i5].[ModeName], [i5].[ModeSymbol], [i5].[ModeType], [i5].[ModifiedBy], [i5].[ModifiedDate], [i5].[PlatformType], [i5].[PriClass], [i5].[PriStaggerLevel], [i5].[PriType], [i5].[PwClass], [i5].[PwType], [i5].[RangeEstimation], [i5].[SubMode], [i5].[SymbolCodeType], [i5].[TestType], [i5].[ThreatType], [i0].[Id], [i0].[FrequencyClass], [i0].[FrequencyType], [i0].[IndependentModeId], [i0].[MaxFrequency], [i0].[MinFrequency], [i1].[Id], [i1].[Deviation], [i1].[IndependentModeId], [i1].[JitterMean], [i1].[JitterPercentage], [i1].[MaxPri], [i1].[MinPri], [i1].[PriClass], [i1].[PriType], [i2].[Id], [i2].[CalculatedTot], [i2].[IndependentModeId], [i2].[MaxBeamWidth], [i2].[MaxScanRate], [i2].[MaxScanSector], [i2].[MaxTot], [i2].[MinBeamWidth], [i2].[MinScanRate], [i2].[MinScanSector], [i2].[MinTot], [i2].[NominalScanRate], [i2].[ScanType], [i2].[SideLobeLevel], [i2].[SideLobeStd], [i3].[Id], [i3].[IndependentModeId], [i3].[MaxPw], [i3].[MinPw], [i3].[PwClass], [i3].[PwType], [i4].[JammingId], [i4].[HoldTime], [i4].[IndependentModeId], [i4].[MaxRange], [i4].[MaxVelocity], [i4].[MinRange], [i4].[MinVelocity], [i4].[PullInOut], [i4].[RateOfChangeOfRange], [i4].[RateOfChangeOfVelocity], [i4].[StopTime], [i4].[TechniqueName], [i4].[TechniqueType], [i4].[WalkTime]
+FROM (
+    SELECT TOP(1) [i].[IndependentModeId], [i].[BgColor], [i].[CreatedBy], [i].[CreatedDate], [i].[Description], [i].[EirpValue], [i].[FgColor], [i].[FrequencyClass], [i].[FrequencyType], [i].[GroundOnly], [i].[LethalRange], [i].[ModeName], [i].[ModeSymbol], [i].[ModeType], [i].[ModifiedBy], [i].[ModifiedDate], [i].[PlatformType], [i].[PriClass], [i].[PriStaggerLevel], [i].[PriType], [i].[PwClass], [i].[PwType], [i].[RangeEstimation], [i].[SubMode], [i].[SymbolCodeType], [i].[TestType], [i].[ThreatType]
+    FROM [independentMode] AS [i]
+    WHERE [i].[IndependentModeId] = @__modeId_0
+) AS [i5]
+LEFT JOIN [independentModeFrequencyDetail] AS [i0] ON [i5].[IndependentModeId] = [i0].[IndependentModeId]
+LEFT JOIN [independentModePriDetail] AS [i1] ON [i5].[IndependentModeId] = [i1].[IndependentModeId]
+LEFT JOIN [independentModeScanDetail] AS [i2] ON [i5].[IndependentModeId] = [i2].[IndependentModeId]
+LEFT JOIN [independentModePwDetail] AS [i3] ON [i5].[IndependentModeId] = [i3].[IndependentModeId]
+LEFT JOIN [independentJamming] AS [i4] ON [i5].[IndependentModeId] = [i4].[IndependentModeId]
+ORDER BY [i5].[IndependentModeId], [i0].[Id], [i1].[Id], [i2].[Id], [i3].[Id]
+2025-10-27 16:56:23.793 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[ModeTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:56:23.798 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd) in 224.4483ms
+2025-10-27 16:56:23.799 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:56:23.801 +05:30 [INF] HTTP GET /api/Mode/independent-tree/1 responded 200 in 234.4733 ms
+2025-10-27 16:56:23.803 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Mode/independent-tree/1 - 200 null application/json; charset=utf-8 241.0714ms
+2025-10-27 16:57:12.961 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Mode/independent-tree/1 - null null
+2025-10-27 16:57:12.976 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:57:12.978 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-27 16:57:12.987 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__modeId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [i5].[IndependentModeId], [i5].[BgColor], [i5].[CreatedBy], [i5].[CreatedDate], [i5].[Description], [i5].[EirpValue], [i5].[FgColor], [i5].[FrequencyClass], [i5].[FrequencyType], [i5].[GroundOnly], [i5].[LethalRange], [i5].[ModeName], [i5].[ModeSymbol], [i5].[ModeType], [i5].[ModifiedBy], [i5].[ModifiedDate], [i5].[PlatformType], [i5].[PriClass], [i5].[PriStaggerLevel], [i5].[PriType], [i5].[PwClass], [i5].[PwType], [i5].[RangeEstimation], [i5].[SubMode], [i5].[SymbolCodeType], [i5].[TestType], [i5].[ThreatType], [i0].[Id], [i0].[FrequencyClass], [i0].[FrequencyType], [i0].[IndependentModeId], [i0].[MaxFrequency], [i0].[MinFrequency], [i1].[Id], [i1].[Deviation], [i1].[IndependentModeId], [i1].[JitterMean], [i1].[JitterPercentage], [i1].[MaxPri], [i1].[MinPri], [i1].[PriClass], [i1].[PriType], [i2].[Id], [i2].[CalculatedTot], [i2].[IndependentModeId], [i2].[MaxBeamWidth], [i2].[MaxScanRate], [i2].[MaxScanSector], [i2].[MaxTot], [i2].[MinBeamWidth], [i2].[MinScanRate], [i2].[MinScanSector], [i2].[MinTot], [i2].[NominalScanRate], [i2].[ScanType], [i2].[SideLobeLevel], [i2].[SideLobeStd], [i3].[Id], [i3].[IndependentModeId], [i3].[MaxPw], [i3].[MinPw], [i3].[PwClass], [i3].[PwType], [i4].[JammingId], [i4].[HoldTime], [i4].[IndependentModeId], [i4].[MaxRange], [i4].[MaxVelocity], [i4].[MinRange], [i4].[MinVelocity], [i4].[PullInOut], [i4].[RateOfChangeOfRange], [i4].[RateOfChangeOfVelocity], [i4].[StopTime], [i4].[TechniqueName], [i4].[TechniqueType], [i4].[WalkTime]
+FROM (
+    SELECT TOP(1) [i].[IndependentModeId], [i].[BgColor], [i].[CreatedBy], [i].[CreatedDate], [i].[Description], [i].[EirpValue], [i].[FgColor], [i].[FrequencyClass], [i].[FrequencyType], [i].[GroundOnly], [i].[LethalRange], [i].[ModeName], [i].[ModeSymbol], [i].[ModeType], [i].[ModifiedBy], [i].[ModifiedDate], [i].[PlatformType], [i].[PriClass], [i].[PriStaggerLevel], [i].[PriType], [i].[PwClass], [i].[PwType], [i].[RangeEstimation], [i].[SubMode], [i].[SymbolCodeType], [i].[TestType], [i].[ThreatType]
+    FROM [independentMode] AS [i]
+    WHERE [i].[IndependentModeId] = @__modeId_0
+) AS [i5]
+LEFT JOIN [independentModeFrequencyDetail] AS [i0] ON [i5].[IndependentModeId] = [i0].[IndependentModeId]
+LEFT JOIN [independentModePriDetail] AS [i1] ON [i5].[IndependentModeId] = [i1].[IndependentModeId]
+LEFT JOIN [independentModeScanDetail] AS [i2] ON [i5].[IndependentModeId] = [i2].[IndependentModeId]
+LEFT JOIN [independentModePwDetail] AS [i3] ON [i5].[IndependentModeId] = [i3].[IndependentModeId]
+LEFT JOIN [independentJamming] AS [i4] ON [i5].[IndependentModeId] = [i4].[IndependentModeId]
+ORDER BY [i5].[IndependentModeId], [i0].[Id], [i1].[Id], [i2].[Id], [i3].[Id]
+2025-10-27 16:57:12.991 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[ModeTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:57:12.992 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd) in 12.1842ms
+2025-10-27 16:57:12.994 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:57:12.994 +05:30 [INF] HTTP GET /api/Mode/independent-tree/1 responded 200 in 19.4666 ms
+2025-10-27 16:57:12.995 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Mode/independent-tree/1 - 200 null application/json; charset=utf-8 33.8667ms
+2025-10-27 16:57:41.403 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Mode/independent-tree/1 - null null
+2025-10-27 16:57:41.404 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:57:41.405 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Mode"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.ModeController (Anadrone_BackEnd).
+2025-10-27 16:57:41.440 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__modeId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [i5].[IndependentModeId], [i5].[BgColor], [i5].[CreatedBy], [i5].[CreatedDate], [i5].[Description], [i5].[EirpValue], [i5].[FgColor], [i5].[FrequencyClass], [i5].[FrequencyType], [i5].[GroundOnly], [i5].[LethalRange], [i5].[ModeName], [i5].[ModeSymbol], [i5].[ModeType], [i5].[ModifiedBy], [i5].[ModifiedDate], [i5].[PlatformType], [i5].[PriClass], [i5].[PriStaggerLevel], [i5].[PriType], [i5].[PwClass], [i5].[PwType], [i5].[RangeEstimation], [i5].[SubMode], [i5].[SymbolCodeType], [i5].[TestType], [i5].[ThreatType], [i0].[Id], [i0].[FrequencyClass], [i0].[FrequencyType], [i0].[IndependentModeId], [i0].[MaxFrequency], [i0].[MinFrequency], [i1].[Id], [i1].[Deviation], [i1].[IndependentModeId], [i1].[JitterMean], [i1].[JitterPercentage], [i1].[MaxPri], [i1].[MinPri], [i1].[PriClass], [i1].[PriType], [i2].[Id], [i2].[CalculatedTot], [i2].[IndependentModeId], [i2].[MaxBeamWidth], [i2].[MaxScanRate], [i2].[MaxScanSector], [i2].[MaxTot], [i2].[MinBeamWidth], [i2].[MinScanRate], [i2].[MinScanSector], [i2].[MinTot], [i2].[NominalScanRate], [i2].[ScanType], [i2].[SideLobeLevel], [i2].[SideLobeStd], [i3].[Id], [i3].[IndependentModeId], [i3].[MaxPw], [i3].[MinPw], [i3].[PwClass], [i3].[PwType], [i4].[JammingId], [i4].[HoldTime], [i4].[IndependentModeId], [i4].[MaxRange], [i4].[MaxVelocity], [i4].[MinRange], [i4].[MinVelocity], [i4].[PullInOut], [i4].[RateOfChangeOfRange], [i4].[RateOfChangeOfVelocity], [i4].[StopTime], [i4].[TechniqueName], [i4].[TechniqueType], [i4].[WalkTime]
+FROM (
+    SELECT TOP(1) [i].[IndependentModeId], [i].[BgColor], [i].[CreatedBy], [i].[CreatedDate], [i].[Description], [i].[EirpValue], [i].[FgColor], [i].[FrequencyClass], [i].[FrequencyType], [i].[GroundOnly], [i].[LethalRange], [i].[ModeName], [i].[ModeSymbol], [i].[ModeType], [i].[ModifiedBy], [i].[ModifiedDate], [i].[PlatformType], [i].[PriClass], [i].[PriStaggerLevel], [i].[PriType], [i].[PwClass], [i].[PwType], [i].[RangeEstimation], [i].[SubMode], [i].[SymbolCodeType], [i].[TestType], [i].[ThreatType]
+    FROM [independentMode] AS [i]
+    WHERE [i].[IndependentModeId] = @__modeId_0
+) AS [i5]
+LEFT JOIN [independentModeFrequencyDetail] AS [i0] ON [i5].[IndependentModeId] = [i0].[IndependentModeId]
+LEFT JOIN [independentModePriDetail] AS [i1] ON [i5].[IndependentModeId] = [i1].[IndependentModeId]
+LEFT JOIN [independentModeScanDetail] AS [i2] ON [i5].[IndependentModeId] = [i2].[IndependentModeId]
+LEFT JOIN [independentModePwDetail] AS [i3] ON [i5].[IndependentModeId] = [i3].[IndependentModeId]
+LEFT JOIN [independentJamming] AS [i4] ON [i5].[IndependentModeId] = [i4].[IndependentModeId]
+ORDER BY [i5].[IndependentModeId], [i0].[Id], [i1].[Id], [i2].[Id], [i3].[Id]
+2025-10-27 16:57:41.445 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[ModeTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:57:41.446 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd) in 40.9017ms
+2025-10-27 16:57:41.447 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.ModeController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:57:41.448 +05:30 [INF] HTTP GET /api/Mode/independent-tree/1 responded 200 in 44.1352 ms
+2025-10-27 16:57:41.449 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Mode/independent-tree/1 - 200 null application/json; charset=utf-8 46.6291ms
+2025-10-27 16:58:44.308 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Emitter/standalone-tree/1 - null null
+2025-10-27 16:58:44.313 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:58:44.315 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-27 16:58:44.375 +05:30 [INF] Executed DbCommand (57ms) [Parameters=[@__emitterId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [s6].[EmitterId], [s6].[BackgroundColor], [s6].[CreatedBy], [s6].[CreatedDate], [s6].[Description], [s6].[EmitterName], [s6].[EmitterType], [s6].[ForegroundColor], [s6].[IsGroundOnly], [s6].[IsUnknown], [s6].[Latitude], [s6].[Longitude], [s6].[ModifiedBy], [s6].[ModifiedDate], [s6].[Symbol], [s7].[StandaloneModeId], [s7].[BgColor], [s7].[CreatedBy], [s7].[CreatedDate], [s7].[Description], [s7].[EirpValue], [s7].[EmitterId], [s7].[FgColor], [s7].[FrequencyClass], [s7].[FrequencyType], [s7].[GroundOnly], [s7].[LethalRange], [s7].[ModeName], [s7].[ModeSymbol], [s7].[ModeType], [s7].[ModifiedBy], [s7].[ModifiedDate], [s7].[PlatformType], [s7].[PriClass], [s7].[PriStaggerLevel], [s7].[PriType], [s7].[PwClass], [s7].[PwType], [s7].[RangeEstimation], [s7].[SubMode], [s7].[SymbolCodeType], [s7].[TestType], [s7].[ThreatType], [s7].[Id], [s7].[FrequencyClass0], [s7].[FrequencyType0], [s7].[MaxFrequency], [s7].[MinFrequency], [s7].[StandaloneModeId0], [s7].[Id0], [s7].[Deviation], [s7].[JitterMean], [s7].[JitterPercentage], [s7].[MaxPri], [s7].[MinPri], [s7].[PriClass0], [s7].[PriType0], [s7].[StandaloneModeId1], [s7].[Id1], [s7].[MaxPw], [s7].[MinPw], [s7].[PwClass0], [s7].[PwType0], [s7].[StandaloneModeId2], [s7].[Id2], [s7].[CalculatedTot], [s7].[MaxBeamWidth], [s7].[MaxScanRate], [s7].[MaxScanSector], [s7].[MaxTot], [s7].[MinBeamWidth], [s7].[MinScanRate], [s7].[MinScanSector], [s7].[MinTot], [s7].[NominalScanRate], [s7].[ScanType], [s7].[SideLobeLevel], [s7].[SideLobeStd], [s7].[StandaloneModeId3], [s7].[JammingId], [s7].[HoldTime], [s7].[MaxRange], [s7].[MaxVelocity], [s7].[MinRange], [s7].[MinVelocity], [s7].[PullInOut], [s7].[RateOfChangeOfRange], [s7].[RateOfChangeOfVelocity], [s7].[StandaloneModeId4], [s7].[StopTime], [s7].[TechniqueName], [s7].[TechniqueType], [s7].[WalkTime]
+FROM (
+    SELECT TOP(1) [s].[EmitterId], [s].[BackgroundColor], [s].[CreatedBy], [s].[CreatedDate], [s].[Description], [s].[EmitterName], [s].[EmitterType], [s].[ForegroundColor], [s].[IsGroundOnly], [s].[IsUnknown], [s].[Latitude], [s].[Longitude], [s].[ModifiedBy], [s].[ModifiedDate], [s].[Symbol]
+    FROM [standaloneEmitters] AS [s]
+    WHERE [s].[EmitterId] = @__emitterId_0
+) AS [s6]
+LEFT JOIN (
+    SELECT [s0].[StandaloneModeId], [s0].[BgColor], [s0].[CreatedBy], [s0].[CreatedDate], [s0].[Description], [s0].[EirpValue], [s0].[EmitterId], [s0].[FgColor], [s0].[FrequencyClass], [s0].[FrequencyType], [s0].[GroundOnly], [s0].[LethalRange], [s0].[ModeName], [s0].[ModeSymbol], [s0].[ModeType], [s0].[ModifiedBy], [s0].[ModifiedDate], [s0].[PlatformType], [s0].[PriClass], [s0].[PriStaggerLevel], [s0].[PriType], [s0].[PwClass], [s0].[PwType], [s0].[RangeEstimation], [s0].[SubMode], [s0].[SymbolCodeType], [s0].[TestType], [s0].[ThreatType], [s1].[Id], [s1].[FrequencyClass] AS [FrequencyClass0], [s1].[FrequencyType] AS [FrequencyType0], [s1].[MaxFrequency], [s1].[MinFrequency], [s1].[StandaloneModeId] AS [StandaloneModeId0], [s2].[Id] AS [Id0], [s2].[Deviation], [s2].[JitterMean], [s2].[JitterPercentage], [s2].[MaxPri], [s2].[MinPri], [s2].[PriClass] AS [PriClass0], [s2].[PriType] AS [PriType0], [s2].[StandaloneModeId] AS [StandaloneModeId1], [s3].[Id] AS [Id1], [s3].[MaxPw], [s3].[MinPw], [s3].[PwClass] AS [PwClass0], [s3].[PwType] AS [PwType0], [s3].[StandaloneModeId] AS [StandaloneModeId2], [s4].[Id] AS [Id2], [s4].[CalculatedTot], [s4].[MaxBeamWidth], [s4].[MaxScanRate], [s4].[MaxScanSector], [s4].[MaxTot], [s4].[MinBeamWidth], [s4].[MinScanRate], [s4].[MinScanSector], [s4].[MinTot], [s4].[NominalScanRate], [s4].[ScanType], [s4].[SideLobeLevel], [s4].[SideLobeStd], [s4].[StandaloneModeId] AS [StandaloneModeId3], [s5].[JammingId], [s5].[HoldTime], [s5].[MaxRange], [s5].[MaxVelocity], [s5].[MinRange], [s5].[MinVelocity], [s5].[PullInOut], [s5].[RateOfChangeOfRange], [s5].[RateOfChangeOfVelocity], [s5].[StandaloneModeId] AS [StandaloneModeId4], [s5].[StopTime], [s5].[TechniqueName], [s5].[TechniqueType], [s5].[WalkTime]
+    FROM [standaloneModes] AS [s0]
+    LEFT JOIN [standaloneModeFrequencies] AS [s1] ON [s0].[StandaloneModeId] = [s1].[StandaloneModeId]
+    LEFT JOIN [standaloneModePris] AS [s2] ON [s0].[StandaloneModeId] = [s2].[StandaloneModeId]
+    LEFT JOIN [standaloneModePws] AS [s3] ON [s0].[StandaloneModeId] = [s3].[StandaloneModeId]
+    LEFT JOIN [standaloneModeScans] AS [s4] ON [s0].[StandaloneModeId] = [s4].[StandaloneModeId]
+    LEFT JOIN [standaloneJammings] AS [s5] ON [s0].[StandaloneModeId] = [s5].[StandaloneModeId]
+) AS [s7] ON [s6].[EmitterId] = [s7].[EmitterId]
+ORDER BY [s6].[EmitterId], [s7].[StandaloneModeId], [s7].[Id], [s7].[Id0], [s7].[Id1], [s7].[Id2]
+2025-10-27 16:58:44.379 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[EmitterTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:58:44.380 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd) in 63.3781ms
+2025-10-27 16:58:44.381 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:58:44.382 +05:30 [INF] HTTP GET /api/Emitter/standalone-tree/1 responded 200 in 68.2137 ms
+2025-10-27 16:58:44.383 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Emitter/standalone-tree/1 - 200 null application/json; charset=utf-8 74.4685ms
+2025-10-27 16:58:52.169 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/api/Emitter/standalone-tree/1 - null null
+2025-10-27 16:58:52.172 +05:30 [INF] Executing endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:58:52.172 +05:30 [INF] Route matched with {action = "GetEmitterTree", controller = "Emitter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmitterTree(Int32) on controller Anadrone_BackEnd.Controllers.EmitterController (Anadrone_BackEnd).
+2025-10-27 16:58:52.184 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__emitterId_0='1'], CommandType='"Text"', CommandTimeout='120']
+SELECT [s6].[EmitterId], [s6].[BackgroundColor], [s6].[CreatedBy], [s6].[CreatedDate], [s6].[Description], [s6].[EmitterName], [s6].[EmitterType], [s6].[ForegroundColor], [s6].[IsGroundOnly], [s6].[IsUnknown], [s6].[Latitude], [s6].[Longitude], [s6].[ModifiedBy], [s6].[ModifiedDate], [s6].[Symbol], [s7].[StandaloneModeId], [s7].[BgColor], [s7].[CreatedBy], [s7].[CreatedDate], [s7].[Description], [s7].[EirpValue], [s7].[EmitterId], [s7].[FgColor], [s7].[FrequencyClass], [s7].[FrequencyType], [s7].[GroundOnly], [s7].[LethalRange], [s7].[ModeName], [s7].[ModeSymbol], [s7].[ModeType], [s7].[ModifiedBy], [s7].[ModifiedDate], [s7].[PlatformType], [s7].[PriClass], [s7].[PriStaggerLevel], [s7].[PriType], [s7].[PwClass], [s7].[PwType], [s7].[RangeEstimation], [s7].[SubMode], [s7].[SymbolCodeType], [s7].[TestType], [s7].[ThreatType], [s7].[Id], [s7].[FrequencyClass0], [s7].[FrequencyType0], [s7].[MaxFrequency], [s7].[MinFrequency], [s7].[StandaloneModeId0], [s7].[Id0], [s7].[Deviation], [s7].[JitterMean], [s7].[JitterPercentage], [s7].[MaxPri], [s7].[MinPri], [s7].[PriClass0], [s7].[PriType0], [s7].[StandaloneModeId1], [s7].[Id1], [s7].[MaxPw], [s7].[MinPw], [s7].[PwClass0], [s7].[PwType0], [s7].[StandaloneModeId2], [s7].[Id2], [s7].[CalculatedTot], [s7].[MaxBeamWidth], [s7].[MaxScanRate], [s7].[MaxScanSector], [s7].[MaxTot], [s7].[MinBeamWidth], [s7].[MinScanRate], [s7].[MinScanSector], [s7].[MinTot], [s7].[NominalScanRate], [s7].[ScanType], [s7].[SideLobeLevel], [s7].[SideLobeStd], [s7].[StandaloneModeId3], [s7].[JammingId], [s7].[HoldTime], [s7].[MaxRange], [s7].[MaxVelocity], [s7].[MinRange], [s7].[MinVelocity], [s7].[PullInOut], [s7].[RateOfChangeOfRange], [s7].[RateOfChangeOfVelocity], [s7].[StandaloneModeId4], [s7].[StopTime], [s7].[TechniqueName], [s7].[TechniqueType], [s7].[WalkTime]
+FROM (
+    SELECT TOP(1) [s].[EmitterId], [s].[BackgroundColor], [s].[CreatedBy], [s].[CreatedDate], [s].[Description], [s].[EmitterName], [s].[EmitterType], [s].[ForegroundColor], [s].[IsGroundOnly], [s].[IsUnknown], [s].[Latitude], [s].[Longitude], [s].[ModifiedBy], [s].[ModifiedDate], [s].[Symbol]
+    FROM [standaloneEmitters] AS [s]
+    WHERE [s].[EmitterId] = @__emitterId_0
+) AS [s6]
+LEFT JOIN (
+    SELECT [s0].[StandaloneModeId], [s0].[BgColor], [s0].[CreatedBy], [s0].[CreatedDate], [s0].[Description], [s0].[EirpValue], [s0].[EmitterId], [s0].[FgColor], [s0].[FrequencyClass], [s0].[FrequencyType], [s0].[GroundOnly], [s0].[LethalRange], [s0].[ModeName], [s0].[ModeSymbol], [s0].[ModeType], [s0].[ModifiedBy], [s0].[ModifiedDate], [s0].[PlatformType], [s0].[PriClass], [s0].[PriStaggerLevel], [s0].[PriType], [s0].[PwClass], [s0].[PwType], [s0].[RangeEstimation], [s0].[SubMode], [s0].[SymbolCodeType], [s0].[TestType], [s0].[ThreatType], [s1].[Id], [s1].[FrequencyClass] AS [FrequencyClass0], [s1].[FrequencyType] AS [FrequencyType0], [s1].[MaxFrequency], [s1].[MinFrequency], [s1].[StandaloneModeId] AS [StandaloneModeId0], [s2].[Id] AS [Id0], [s2].[Deviation], [s2].[JitterMean], [s2].[JitterPercentage], [s2].[MaxPri], [s2].[MinPri], [s2].[PriClass] AS [PriClass0], [s2].[PriType] AS [PriType0], [s2].[StandaloneModeId] AS [StandaloneModeId1], [s3].[Id] AS [Id1], [s3].[MaxPw], [s3].[MinPw], [s3].[PwClass] AS [PwClass0], [s3].[PwType] AS [PwType0], [s3].[StandaloneModeId] AS [StandaloneModeId2], [s4].[Id] AS [Id2], [s4].[CalculatedTot], [s4].[MaxBeamWidth], [s4].[MaxScanRate], [s4].[MaxScanSector], [s4].[MaxTot], [s4].[MinBeamWidth], [s4].[MinScanRate], [s4].[MinScanSector], [s4].[MinTot], [s4].[NominalScanRate], [s4].[ScanType], [s4].[SideLobeLevel], [s4].[SideLobeStd], [s4].[StandaloneModeId] AS [StandaloneModeId3], [s5].[JammingId], [s5].[HoldTime], [s5].[MaxRange], [s5].[MaxVelocity], [s5].[MinRange], [s5].[MinVelocity], [s5].[PullInOut], [s5].[RateOfChangeOfRange], [s5].[RateOfChangeOfVelocity], [s5].[StandaloneModeId] AS [StandaloneModeId4], [s5].[StopTime], [s5].[TechniqueName], [s5].[TechniqueType], [s5].[WalkTime]
+    FROM [standaloneModes] AS [s0]
+    LEFT JOIN [standaloneModeFrequencies] AS [s1] ON [s0].[StandaloneModeId] = [s1].[StandaloneModeId]
+    LEFT JOIN [standaloneModePris] AS [s2] ON [s0].[StandaloneModeId] = [s2].[StandaloneModeId]
+    LEFT JOIN [standaloneModePws] AS [s3] ON [s0].[StandaloneModeId] = [s3].[StandaloneModeId]
+    LEFT JOIN [standaloneModeScans] AS [s4] ON [s0].[StandaloneModeId] = [s4].[StandaloneModeId]
+    LEFT JOIN [standaloneJammings] AS [s5] ON [s0].[StandaloneModeId] = [s5].[StandaloneModeId]
+) AS [s7] ON [s6].[EmitterId] = [s7].[EmitterId]
+ORDER BY [s6].[EmitterId], [s7].[StandaloneModeId], [s7].[Id], [s7].[Id0], [s7].[Id1], [s7].[Id2]
+2025-10-27 16:58:52.189 +05:30 [INF] Executing ObjectResult, writing value of type 'Anadrone_BackEnd.Utilities.ApiResponse`1[[EmitterTreeDto, Anadrone_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-27 16:58:52.192 +05:30 [INF] Executed action Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd) in 18.7644ms
+2025-10-27 16:58:52.194 +05:30 [INF] Executed endpoint 'Anadrone_BackEnd.Controllers.EmitterController.GetEmitterTree (Anadrone_BackEnd)'
+2025-10-27 16:58:52.195 +05:30 [INF] HTTP GET /api/Emitter/standalone-tree/1 responded 200 in 23.8121 ms
+2025-10-27 16:58:52.197 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/api/Emitter/standalone-tree/1 - 200 null application/json; charset=utf-8 28.471ms
+2025-10-27 16:59:28.969 +05:30 [INF] Application is shutting down...
+2025-10-27 17:51:24.552 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 17:51:24.913 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 17:51:24.966 +05:30 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-27 17:51:25.079 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 17:51:25.109 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 17:51:25.156 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\Anadrone_BackEnd\wwwroot. Static files may be unavailable.
+2025-10-27 17:51:25.214 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 17:51:25.215 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 17:51:25.216 +05:30 [INF] Hosting environment: Development
+2025-10-27 17:51:25.217 +05:30 [INF] Content root path: C:\Users\Admin\Anadrone_BackEnd
+2025-10-27 17:55:04.915 +05:30 [INF] Application is shutting down...
+2025-10-27 18:13:45.068 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 18:15:35.589 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 18:15:36.560 +05:30 [INF] Executed DbCommand (569ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE DATABASE [anadronev_latest98hd373];
+2025-10-27 18:15:37.461 +05:30 [INF] Executed DbCommand (897ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [anadronev_latest98hd373] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-10-27 18:15:37.496 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 18:15:37.659 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [drones] (
+    [DroneId] int NOT NULL IDENTITY,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_drones] PRIMARY KEY ([DroneId])
+);
+2025-10-27 18:15:37.669 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitterReadings] (
+    [Id] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(max) NOT NULL,
+    [TimeUtc] datetime2 NOT NULL,
+    [BoresightError] smallint NOT NULL,
+    CONSTRAINT [PK_emitterReadings] PRIMARY KEY ([Id])
+);
+2025-10-27 18:15:37.680 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [independentMode] (
+    [IndependentModeId] int NOT NULL IDENTITY,
+    [ModeName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ModeType] int NOT NULL,
+    [PlatformType] int NOT NULL,
+    [SubMode] int NOT NULL,
+    [ThreatType] int NOT NULL,
+    [TestType] int NOT NULL,
+    [PriStaggerLevel] nvarchar(max) NOT NULL,
+    [SymbolCodeType] smallint NOT NULL,
+    [ModeSymbol] nvarchar(max) NOT NULL,
+    [BgColor] nvarchar(max) NOT NULL,
+    [FgColor] nvarchar(max) NOT NULL,
+    [EirpValue] int NOT NULL,
+    [LethalRange] int NOT NULL,
+    [GroundOnly] bit NOT NULL,
+    [CreatedBy] nvarchar(max) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [ModifiedBy] nvarchar(max) NOT NULL,
+    [ModifiedDate] datetime2 NOT NULL,
+    [RangeEstimation] nvarchar(max) NOT NULL,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    CONSTRAINT [PK_independentMode] PRIMARY KEY ([IndependentModeId])
+);
+2025-10-27 18:15:37.688 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [missions] (
+    [MissionId] int NOT NULL IDENTITY,
+    [MissionName] nvarchar(max) NOT NULL,
+    [MissionDate] datetime2 NOT NULL,
+    [MissionType] int NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    [Status] int NOT NULL,
+    CONSTRAINT [PK_missions] PRIMARY KEY ([MissionId])
+);
+2025-10-27 18:15:37.694 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [platformLibraries] (
+    [PlatformId] int NOT NULL IDENTITY,
+    [PlatformName] nvarchar(200) NOT NULL,
+    [ThreatType] int NOT NULL,
+    [Priority] int NOT NULL,
+    [DisplayStatus] bit NOT NULL,
+    [SymbolCodeType] int NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [ForeGroundColor] nvarchar(max) NOT NULL,
+    [BackGroundColor] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ThumbnailImage] varbinary(max) NOT NULL,
+    [PreviewSymbol] varbinary(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_platformLibraries] PRIMARY KEY ([PlatformId])
+);
+2025-10-27 18:15:37.706 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [standaloneEmitters] (
+    [EmitterId] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [EmitterType] int NOT NULL,
+    [Symbol] int NOT NULL,
+    [ForegroundColor] nvarchar(max) NOT NULL,
+    [BackgroundColor] nvarchar(max) NOT NULL,
+    [IsUnknown] bit NOT NULL,
+    [IsGroundOnly] bit NOT NULL,
+    [CreatedBy] nvarchar(max) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [ModifiedBy] nvarchar(max) NOT NULL,
+    [ModifiedDate] datetime2 NOT NULL,
+    [Latitude] nvarchar(max) NOT NULL,
+    [Longitude] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_standaloneEmitters] PRIMARY KEY ([EmitterId])
+);
+2025-10-27 18:15:37.712 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(max) NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    [Role] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2025-10-27 18:15:37.717 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [userTokens] (
+    [Id] int NOT NULL IDENTITY,
+    [Token] nvarchar(max) NOT NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_userTokens] PRIMARY KEY ([Id])
+);
+2025-10-27 18:15:37.734 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [weapons] (
+    [WeaponId] int NOT NULL IDENTITY,
+    [WeaponName] nvarchar(max) NOT NULL,
+    [WeaponDate] datetime2 NOT NULL,
+    [ThreatType] int NOT NULL,
+    [ForeGroundColor] nvarchar(max) NOT NULL,
+    [BackGroundColor] nvarchar(max) NOT NULL,
+    [Symbol] nvarchar(max) NOT NULL,
+    [DisplayStatus] bit NOT NULL,
+    [Priority] int NOT NULL,
+    [CreatedBy] nvarchar(max) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [ModifiedBy] nvarchar(max) NOT NULL,
+    [ModifiedDate] datetime2 NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_weapons] PRIMARY KEY ([WeaponId])
+);
+2025-10-27 18:15:37.746 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [independentJamming] (
+    [JammingId] int NOT NULL IDENTITY,
+    [TechniqueName] nvarchar(200) NOT NULL,
+    [TechniqueType] int NOT NULL,
+    [PullInOut] bit NOT NULL,
+    [MinRange] real NOT NULL,
+    [MaxRange] real NOT NULL,
+    [RateOfChangeOfRange] real NOT NULL,
+    [MinVelocity] real NOT NULL,
+    [MaxVelocity] real NOT NULL,
+    [RateOfChangeOfVelocity] real NOT NULL,
+    [WalkTime] nvarchar(max) NOT NULL,
+    [HoldTime] nvarchar(max) NOT NULL,
+    [StopTime] nvarchar(max) NOT NULL,
+    [IndependentModeId] int NOT NULL,
+    CONSTRAINT [PK_independentJamming] PRIMARY KEY ([JammingId]),
+    CONSTRAINT [FK_independentJamming_independentMode_IndependentModeId] FOREIGN KEY ([IndependentModeId]) REFERENCES [independentMode] ([IndependentModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.751 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [independentModeFrequencyDetail] (
+    [Id] int NOT NULL IDENTITY,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [MinFrequency] real NOT NULL,
+    [MaxFrequency] real NOT NULL,
+    [IndependentModeId] int NOT NULL,
+    CONSTRAINT [PK_independentModeFrequencyDetail] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_independentModeFrequencyDetail_independentMode_IndependentModeId] FOREIGN KEY ([IndependentModeId]) REFERENCES [independentMode] ([IndependentModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.757 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [independentModePriDetail] (
+    [Id] int NOT NULL IDENTITY,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [MinPri] real NOT NULL,
+    [MaxPri] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [JitterMean] real NOT NULL,
+    [JitterPercentage] real NOT NULL,
+    [IndependentModeId] int NOT NULL,
+    CONSTRAINT [PK_independentModePriDetail] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_independentModePriDetail_independentMode_IndependentModeId] FOREIGN KEY ([IndependentModeId]) REFERENCES [independentMode] ([IndependentModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.767 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [independentModePwDetail] (
+    [Id] int NOT NULL IDENTITY,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [MinPw] real NOT NULL,
+    [MaxPw] real NOT NULL,
+    [IndependentModeId] int NOT NULL,
+    CONSTRAINT [PK_independentModePwDetail] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_independentModePwDetail_independentMode_IndependentModeId] FOREIGN KEY ([IndependentModeId]) REFERENCES [independentMode] ([IndependentModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.774 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [independentModeScanDetail] (
+    [Id] int NOT NULL IDENTITY,
+    [ScanType] int NOT NULL,
+    [MinScanSector] real NOT NULL,
+    [MaxScanSector] real NOT NULL,
+    [MinScanRate] real NOT NULL,
+    [MaxScanRate] real NOT NULL,
+    [NominalScanRate] real NOT NULL,
+    [SideLobeLevel] real NOT NULL,
+    [SideLobeStd] real NOT NULL,
+    [MinBeamWidth] real NOT NULL,
+    [MaxBeamWidth] real NOT NULL,
+    [CalculatedTot] real NOT NULL,
+    [MinTot] real NOT NULL,
+    [MaxTot] real NOT NULL,
+    [IndependentModeId] int NOT NULL,
+    CONSTRAINT [PK_independentModeScanDetail] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_independentModeScanDetail_independentMode_IndependentModeId] FOREIGN KEY ([IndependentModeId]) REFERENCES [independentMode] ([IndependentModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.790 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [areaInterests] (
+    [AreaInterestId] int NOT NULL IDENTITY,
+    [AreaName] nvarchar(max) NOT NULL,
+    [Area] nvarchar(max) NOT NULL,
+    [Perimeter] nvarchar(max) NOT NULL,
+    [MissionId] int NOT NULL,
+    CONSTRAINT [PK_areaInterests] PRIMARY KEY ([AreaInterestId]),
+    CONSTRAINT [FK_areaInterests_missions_MissionId] FOREIGN KEY ([MissionId]) REFERENCES [missions] ([MissionId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.799 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [platforms] (
+    [PlatformId] int NOT NULL IDENTITY,
+    [PlatformName] nvarchar(200) NOT NULL,
+    [ThreatType] int NOT NULL,
+    [Priority] int NOT NULL,
+    [DisplayStatus] bit NOT NULL,
+    [SymbolCodeType] int NOT NULL,
+    [AlternateSymbol] nvarchar(max) NOT NULL,
+    [ForeGroundColor] nvarchar(max) NOT NULL,
+    [BackGroundColor] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ThumbnailImage] varbinary(max) NOT NULL,
+    [PreviewSymbol] varbinary(max) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UserId] int NOT NULL,
+    [MissionId] int NOT NULL,
+    CONSTRAINT [PK_platforms] PRIMARY KEY ([PlatformId]),
+    CONSTRAINT [FK_platforms_missions_MissionId] FOREIGN KEY ([MissionId]) REFERENCES [missions] ([MissionId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.809 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [standaloneModes] (
+    [StandaloneModeId] int NOT NULL IDENTITY,
+    [ModeName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ModeType] int NOT NULL,
+    [PlatformType] int NOT NULL,
+    [SubMode] int NOT NULL,
+    [ThreatType] int NOT NULL,
+    [TestType] int NOT NULL,
+    [PriStaggerLevel] nvarchar(max) NOT NULL,
+    [SymbolCodeType] smallint NOT NULL,
+    [ModeSymbol] nvarchar(max) NOT NULL,
+    [BgColor] nvarchar(max) NOT NULL,
+    [FgColor] nvarchar(max) NOT NULL,
+    [RangeEstimation] nvarchar(max) NOT NULL,
+    [EirpValue] int NOT NULL,
+    [LethalRange] int NOT NULL,
+    [GroundOnly] bit NOT NULL,
+    [CreatedBy] nvarchar(max) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [ModifiedBy] nvarchar(max) NOT NULL,
+    [ModifiedDate] datetime2 NOT NULL,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [EmitterId] int NOT NULL,
+    CONSTRAINT [PK_standaloneModes] PRIMARY KEY ([StandaloneModeId]),
+    CONSTRAINT [FK_standaloneModes_standaloneEmitters_EmitterId] FOREIGN KEY ([EmitterId]) REFERENCES [standaloneEmitters] ([EmitterId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.818 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitters] (
+    [EmitterId] int NOT NULL IDENTITY,
+    [EmitterName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [EmitterType] int NOT NULL,
+    [Symbol] int NOT NULL,
+    [ForegroundColor] nvarchar(max) NOT NULL,
+    [BackgroundColor] nvarchar(max) NOT NULL,
+    [IsUnknown] bit NOT NULL,
+    [IsGroundOnly] bit NOT NULL,
+    [CreatedBy] nvarchar(max) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [ModifiedBy] nvarchar(max) NOT NULL,
+    [ModifiedDate] datetime2 NOT NULL,
+    [Latitude] nvarchar(max) NOT NULL,
+    [Longitude] nvarchar(max) NOT NULL,
+    [WeaponId] int NOT NULL,
+    CONSTRAINT [PK_emitters] PRIMARY KEY ([EmitterId]),
+    CONSTRAINT [FK_emitters_weapons_WeaponId] FOREIGN KEY ([WeaponId]) REFERENCES [weapons] ([WeaponId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.861 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [areacoordinates] (
+    [Id] int NOT NULL IDENTITY,
+    [Latitude] nvarchar(max) NOT NULL,
+    [Longitude] nvarchar(max) NOT NULL,
+    [Altitude] nvarchar(max) NOT NULL,
+    [AreaInterestId] int NOT NULL,
+    CONSTRAINT [PK_areacoordinates] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_areacoordinates_areaInterests_AreaInterestId] FOREIGN KEY ([AreaInterestId]) REFERENCES [areaInterests] ([AreaInterestId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.873 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [emitterModeLinks] (
+    [Id] int NOT NULL IDENTITY,
+    [WeaponId] int NOT NULL,
+    [WeaponName] nvarchar(max) NOT NULL,
+    [EmitterId] int NOT NULL,
+    [EmitterName] nvarchar(max) NOT NULL,
+    [ModeId] int NOT NULL,
+    [ModeName] nvarchar(max) NOT NULL,
+    [JammingId] int NOT NULL,
+    [JammingName] nvarchar(max) NOT NULL,
+    [weaponStandlone] int NOT NULL,
+    [AreaInterestId] int NOT NULL,
+    CONSTRAINT [PK_emitterModeLinks] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_emitterModeLinks_areaInterests_AreaInterestId] FOREIGN KEY ([AreaInterestId]) REFERENCES [areaInterests] ([AreaInterestId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.885 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [standaloneJammings] (
+    [JammingId] int NOT NULL IDENTITY,
+    [TechniqueName] nvarchar(200) NOT NULL,
+    [TechniqueType] int NOT NULL,
+    [PullInOut] bit NOT NULL,
+    [MinRange] real NOT NULL,
+    [MaxRange] real NOT NULL,
+    [RateOfChangeOfRange] real NOT NULL,
+    [MinVelocity] real NOT NULL,
+    [MaxVelocity] real NOT NULL,
+    [RateOfChangeOfVelocity] real NOT NULL,
+    [WalkTime] nvarchar(max) NOT NULL,
+    [HoldTime] nvarchar(max) NOT NULL,
+    [StopTime] nvarchar(max) NOT NULL,
+    [StandaloneModeId] int NOT NULL,
+    CONSTRAINT [PK_standaloneJammings] PRIMARY KEY ([JammingId]),
+    CONSTRAINT [FK_standaloneJammings_standaloneModes_StandaloneModeId] FOREIGN KEY ([StandaloneModeId]) REFERENCES [standaloneModes] ([StandaloneModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.893 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [standaloneModeFrequencies] (
+    [Id] int NOT NULL IDENTITY,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [MinFrequency] real NOT NULL,
+    [MaxFrequency] real NOT NULL,
+    [StandaloneModeId] int NOT NULL,
+    CONSTRAINT [PK_standaloneModeFrequencies] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_standaloneModeFrequencies_standaloneModes_StandaloneModeId] FOREIGN KEY ([StandaloneModeId]) REFERENCES [standaloneModes] ([StandaloneModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.909 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [standaloneModePris] (
+    [Id] int NOT NULL IDENTITY,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [MinPri] real NOT NULL,
+    [MaxPri] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [JitterMean] real NOT NULL,
+    [JitterPercentage] real NOT NULL,
+    [StandaloneModeId] int NOT NULL,
+    CONSTRAINT [PK_standaloneModePris] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_standaloneModePris_standaloneModes_StandaloneModeId] FOREIGN KEY ([StandaloneModeId]) REFERENCES [standaloneModes] ([StandaloneModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.918 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [standaloneModePws] (
+    [Id] int NOT NULL IDENTITY,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [MinPw] real NOT NULL,
+    [MaxPw] real NOT NULL,
+    [StandaloneModeId] int NOT NULL,
+    CONSTRAINT [PK_standaloneModePws] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_standaloneModePws_standaloneModes_StandaloneModeId] FOREIGN KEY ([StandaloneModeId]) REFERENCES [standaloneModes] ([StandaloneModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.926 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [standaloneModeScans] (
+    [Id] int NOT NULL IDENTITY,
+    [ScanType] int NOT NULL,
+    [MinScanSector] real NOT NULL,
+    [MaxScanSector] real NOT NULL,
+    [MinScanRate] real NOT NULL,
+    [MaxScanRate] real NOT NULL,
+    [NominalScanRate] real NOT NULL,
+    [SideLobeLevel] real NOT NULL,
+    [SideLobeStd] real NOT NULL,
+    [MinBeamWidth] real NOT NULL,
+    [MaxBeamWidth] real NOT NULL,
+    [CalculatedTot] real NOT NULL,
+    [MinTot] real NOT NULL,
+    [MaxTot] real NOT NULL,
+    [StandaloneModeId] int NOT NULL,
+    CONSTRAINT [PK_standaloneModeScans] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_standaloneModeScans_standaloneModes_StandaloneModeId] FOREIGN KEY ([StandaloneModeId]) REFERENCES [standaloneModes] ([StandaloneModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.936 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modes] (
+    [ModeId] int NOT NULL IDENTITY,
+    [ModeName] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [ModeType] int NOT NULL,
+    [PlatformType] int NOT NULL,
+    [SubMode] int NOT NULL,
+    [ThreatType] int NOT NULL,
+    [TestType] int NOT NULL,
+    [PriStaggerLevel] nvarchar(max) NOT NULL,
+    [SymbolCodeType] smallint NOT NULL,
+    [ModeSymbol] nvarchar(max) NOT NULL,
+    [BgColor] nvarchar(max) NOT NULL,
+    [FgColor] nvarchar(max) NOT NULL,
+    [EirpValue] int NOT NULL,
+    [LethalRange] int NOT NULL,
+    [GroundOnly] bit NOT NULL,
+    [CreatedBy] nvarchar(max) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [ModifiedBy] nvarchar(max) NOT NULL,
+    [ModifiedDate] datetime2 NOT NULL,
+    [RangeEstimation] nvarchar(max) NOT NULL,
+    [PriType] int NOT NULL,
+    [PriClass] int NOT NULL,
+    [PwType] int NOT NULL,
+    [PwClass] int NOT NULL,
+    [FrequencyType] int NOT NULL,
+    [FrequencyClass] int NOT NULL,
+    [EmitterId] int NOT NULL,
+    CONSTRAINT [PK_modes] PRIMARY KEY ([ModeId]),
+    CONSTRAINT [FK_modes_emitters_EmitterId] FOREIGN KEY ([EmitterId]) REFERENCES [emitters] ([EmitterId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.944 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [jammings] (
+    [JammingId] int NOT NULL IDENTITY,
+    [TechniqueName] nvarchar(200) NOT NULL,
+    [TechniqueType] int NOT NULL,
+    [PullInOut] bit NOT NULL,
+    [MinRange] real NOT NULL,
+    [MaxRange] real NOT NULL,
+    [RateOfChangeOfRange] real NOT NULL,
+    [MinVelocity] real NOT NULL,
+    [MaxVelocity] real NOT NULL,
+    [RateOfChangeOfVelocity] real NOT NULL,
+    [WalkTime] nvarchar(max) NOT NULL,
+    [HoldTime] nvarchar(max) NOT NULL,
+    [StopTime] nvarchar(max) NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_jammings] PRIMARY KEY ([JammingId]),
+    CONSTRAINT [FK_jammings_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.965 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeFrequencyDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [MinFrequency] real NOT NULL,
+    [MaxFrequency] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modeFrequencyDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeFrequencyDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.972 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePriDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [MinPri] real NOT NULL,
+    [MaxPri] real NOT NULL,
+    [Deviation] real NOT NULL,
+    [JitterMean] real NOT NULL,
+    [JitterPercentage] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modePriDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePriDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.983 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modePwDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [MinPw] real NOT NULL,
+    [MaxPw] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modePwDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modePwDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:37.992 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE TABLE [modeScanDetails] (
+    [Id] int NOT NULL IDENTITY,
+    [ScanType] int NOT NULL,
+    [MinScanSector] real NOT NULL,
+    [MaxScanSector] real NOT NULL,
+    [MinScanRate] real NOT NULL,
+    [MaxScanRate] real NOT NULL,
+    [NominalScanRate] real NOT NULL,
+    [SideLobeLevel] real NOT NULL,
+    [SideLobeStd] real NOT NULL,
+    [MinBeamWidth] real NOT NULL,
+    [MaxBeamWidth] real NOT NULL,
+    [CalculatedTot] real NOT NULL,
+    [MinTot] real NOT NULL,
+    [MaxTot] real NOT NULL,
+    [ModeId] int NOT NULL,
+    CONSTRAINT [PK_modeScanDetails] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_modeScanDetails_modes_ModeId] FOREIGN KEY ([ModeId]) REFERENCES [modes] ([ModeId]) ON DELETE CASCADE
+);
+2025-10-27 18:15:38.004 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_areacoordinates_AreaInterestId] ON [areacoordinates] ([AreaInterestId]);
+2025-10-27 18:15:38.008 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE UNIQUE INDEX [IX_areaInterests_MissionId] ON [areaInterests] ([MissionId]);
+2025-10-27 18:15:38.011 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_emitterModeLinks_AreaInterestId] ON [emitterModeLinks] ([AreaInterestId]);
+2025-10-27 18:15:38.015 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_emitters_WeaponId] ON [emitters] ([WeaponId]);
+2025-10-27 18:15:38.022 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_independentJamming_IndependentModeId] ON [independentJamming] ([IndependentModeId]);
+2025-10-27 18:15:38.025 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_independentModeFrequencyDetail_IndependentModeId] ON [independentModeFrequencyDetail] ([IndependentModeId]);
+2025-10-27 18:15:38.029 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_independentModePriDetail_IndependentModeId] ON [independentModePriDetail] ([IndependentModeId]);
+2025-10-27 18:15:38.033 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_independentModePwDetail_IndependentModeId] ON [independentModePwDetail] ([IndependentModeId]);
+2025-10-27 18:15:38.040 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_independentModeScanDetail_IndependentModeId] ON [independentModeScanDetail] ([IndependentModeId]);
+2025-10-27 18:15:38.044 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_jammings_ModeId] ON [jammings] ([ModeId]);
+2025-10-27 18:15:38.048 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeFrequencyDetails_ModeId] ON [modeFrequencyDetails] ([ModeId]);
+2025-10-27 18:15:38.054 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePriDetails_ModeId] ON [modePriDetails] ([ModeId]);
+2025-10-27 18:15:38.058 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modePwDetails_ModeId] ON [modePwDetails] ([ModeId]);
+2025-10-27 18:15:38.061 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modes_EmitterId] ON [modes] ([EmitterId]);
+2025-10-27 18:15:38.065 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_modeScanDetails_ModeId] ON [modeScanDetails] ([ModeId]);
+2025-10-27 18:15:38.118 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_platforms_MissionId] ON [platforms] ([MissionId]);
+2025-10-27 18:15:38.123 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_standaloneJammings_StandaloneModeId] ON [standaloneJammings] ([StandaloneModeId]);
+2025-10-27 18:15:38.126 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_standaloneModeFrequencies_StandaloneModeId] ON [standaloneModeFrequencies] ([StandaloneModeId]);
+2025-10-27 18:15:38.130 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_standaloneModePris_StandaloneModeId] ON [standaloneModePris] ([StandaloneModeId]);
+2025-10-27 18:15:38.133 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_standaloneModePws_StandaloneModeId] ON [standaloneModePws] ([StandaloneModeId]);
+2025-10-27 18:15:38.138 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_standaloneModes_EmitterId] ON [standaloneModes] ([EmitterId]);
+2025-10-27 18:15:38.142 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+CREATE INDEX [IX_standaloneModeScans_StandaloneModeId] ON [standaloneModeScans] ([StandaloneModeId]);
+2025-10-27 18:15:38.254 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 18:15:38.373 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 18:15:38.386 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\PFMG\wwwroot. Static files may be unavailable.
+2025-10-27 18:15:38.417 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 18:15:38.419 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 18:15:38.420 +05:30 [INF] Hosting environment: Development
+2025-10-27 18:15:38.422 +05:30 [INF] Content root path: C:\Users\Admin\PFMG
+2025-10-27 18:16:02.159 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/index.html - null null
+2025-10-27 18:16:02.271 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/index.html - 200 null text/html;charset=utf-8 114.3327ms
+2025-10-27 18:16:02.403 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - null null
+2025-10-27 18:16:02.550 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5058/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 144.3959ms
+2025-10-27 18:18:30.288 +05:30 [INF] Application is shutting down...
+2025-10-27 18:18:33.654 +05:30 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-27 18:18:34.020 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+SELECT 1
+2025-10-27 18:18:34.162 +05:30 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='120']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-10-27 18:18:34.226 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-27 18:18:34.249 +05:30 [INF] Telemetry TCP listening on 0.0.0.0:5055
+2025-10-27 18:18:34.257 +05:30 [WRN] The WebRootPath was not found: C:\Users\Admin\PFMG\wwwroot. Static files may be unavailable.
+2025-10-27 18:18:34.289 +05:30 [INF] Now listening on: http://0.0.0.0:5058
+2025-10-27 18:18:34.291 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-27 18:18:34.293 +05:30 [INF] Hosting environment: Development
+2025-10-27 18:18:34.294 +05:30 [INF] Content root path: C:\Users\Admin\PFMG
+2025-10-27 19:05:45.026 +05:30 [INF] Application is shutting down...
