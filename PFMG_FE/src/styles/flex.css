@@ -21,10 +21,13 @@
     @apply flex! flex-col! justify-center! gap-1.5!; /*6px*/
   }
   .flex-col-2{
-      @apply flex! flex-col! items-center! gap-2!
+      @apply flex! flex-col! items-center gap-2!
   }
   .flex-col-gap-5 {
     @apply flex flex-col gap-5; /*20px*/
+  }
+    .flex-row-gap-6 {
+    @apply flex flex-col gap-1.5; 
   }
   .flex-col-10{
     @apply flex flex-col items-start gap-10;

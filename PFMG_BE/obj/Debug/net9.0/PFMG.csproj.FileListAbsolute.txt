@@ -755,3 +755,4 @@ F:\Androne\Androne\PFMG_BE\obj\Debug\net9.0\refint\PFMG.dll
 F:\Androne\Androne\PFMG_BE\obj\Debug\net9.0\PFMG.pdb
 F:\Androne\Androne\PFMG_BE\obj\Debug\net9.0\PFMG.genruntimeconfig.cache
 F:\Androne\Androne\PFMG_BE\obj\Debug\net9.0\ref\PFMG.dll
+F:\Androne\Androne\PFMG_BE\obj\Debug\net9.0\PFMG.sourcelink.json

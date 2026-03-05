@@ -17,4 +17,7 @@
   .hover-btn-transparent{
     @apply cursor-pointer! hover:bg-transparent!;
   }
+  .btn-border-accent {
+    @apply bg-transparent! hover:bg-[#C5BFFF]/20! border border-[#C5BFFF] cursor-pointer;
+  }
 }

@@ -114,21 +114,23 @@ export default function EntitySelection() {
   ];
 
   return (
-    <div className="bg-[#414141] text-white relative min-h-screen">
-      <div className="max-w-5xl mx-auto pb-[120px]">
-        <h1 className="text-3xl font-bold mb-8 text-center py-7 font-mono">
-          Select Entity Type To Create
+    <div className="bg-[#414141] text-white relative min-h-screen md:w-170 xl:w-auto mx-auto ">
+      <div>
+        <h1 className="page-heading text-primary mb-8 text-center py-2.5 px-5 xl:py-5 xl:px-10">
+           Select Entity Type To Create 
+          
         </h1>
 
         <FormProvider {...methods}>
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* ENTITY TYPE SECTION */}
-            <div className="mt-30">
-              <h2 className="text-base font-semibold flex justify-start mb-4 text-white/70 font-mono text-center">
-                Choose an Entity Type
+            <div className=" xl:mt-16!">
+              <h2 className=" flex justify-start mb-2 xl:mb-8 text-secondary subheading-sm ">
+                {/* Choose an Entity Type */}
+                Select mission type
               </h2>
 
-              <div className="flex gap-6 flex-wrap justify-center">
+              <div className="flex gap-6 flex-wrap justify-start">
                 {entityOptions.map((item) => (
                   <Button
                     key={item.label}
@@ -136,8 +138,8 @@ export default function EntitySelection() {
                     variant="outline"
                     className={`w-[320px] h-[160px] border transition-all duration-300 rounded-xl ${
                       entityType === item.label
-                        ? "bg-white/10 border-white/30 scale-105 shadow-lg"
-                        : "bg-transparent border-white/10 hover:bg-white/5"
+                        ? "bg-white/10 text-accent border-focus scale-105 shadow-lg hover-bg-glass font-bold! cursor-pointer"
+                        : "bg-transparent border-divider hover-bg-glass card-text-sm cursor-pointer"
                     }`}
                     onClick={() => setValue("entityType", item.label)}
                   >
@@ -145,7 +147,7 @@ export default function EntitySelection() {
                       <img
                         src={item.icon}
                         alt={item.label}
-                        className="w-[64px] h-[64px]"
+                        className="w-6 h-6"
                       />
                       <span
                         className={`text-base font-semibold transition-colors ${
@@ -167,22 +169,68 @@ export default function EntitySelection() {
                 </p>
               )}
             </div>
+            {/* Important:the following form was not commented already-->developed by vaishnavi on {05-03-2026(12:00pm)} */}
+              <div className="pt-5 xl:pt-10 pb-2 xl:pb-8">
+              <label className="block text-secondary subheading-sm">
+                Add Details
+              </label>
+            </div>
+            {/* Mission Details */}
+            <div className="mb-8 space-y-8">
+              <div className="flex-col-2 items-start!" >
+                <label className="block label-text text-emphasis-strong ">
+                  Entity Name
+                </label>
+                <Input
+                   {...register("entityName")}
+                  className="bg-white/5 border border-white/5 input-text text-primary
+  focus:border-[#7B70D6] focus:outline-none!
+  focus:ring-0! focus-visible:ring-0! focus:ring-offset-0!
+  focus:shadow-none! shadow-none!"
+                  placeholder="Enter mission name"
+                />
+                {errors.missionName && (
+                  <p className="text-sm text-red-500 mt-1">
+                    {errors.missionName.message}
+                  </p>
+                )}
+              </div>
+
+              <div className="flex-col-2 items-start!" >
+                <label className="block label-text text-emphasis-strong ">
+                  Description 
+                </label>
+                <Textarea
+                    {...register("description")}
+                  rows={4}
+                  className="bg-white/5 border-white/10 input-text text-primary focus:border-[#7B70D6] focus:outline-none!
+  focus:ring-0! focus-visible:ring-0! focus:ring-offset-0!
+  focus:shadow-none! shadow-none!resize-none"
+                  placeholder="Enter mission description"
+                />
+                {errors.description && (
+                  <p className="text-sm text-red-500 mt-1">
+                    {errors.description.message}
+                  </p>
+                )}
+              </div>
+            </div>
 
             {/* FOOTER BUTTONS */}
-            <div className="flex justify-between fixed bottom-0 left-0 right-0 w-full bg-[#fff]/5 p-4 backdrop-blur-md border-t border-white/10">
+            <div className="flex justify-between items-center px-10 fixed bottom-0 left-0 right-0 w-full py-4 bg-white/5 backdrop-blur-md border-t border-white/10">
               <Button
                 type="button"
                 variant="outline"
-                className="bg-transparent border-[#C5BFFF] text-[#C5BFFF]"
+                className="btn-border-accent  px-6"
                 onClick={handleCancel}
               >
-                Cancel
+                  <span className="text-accent"> Cancel</span>
               </Button>
 
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#7B70D6]"
+                 className="btn-primary px-6 "
               >
                 {isSubmitting ? "Saving..." : "Continue →"}
               </Button>

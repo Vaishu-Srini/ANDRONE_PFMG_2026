@@ -86,4 +86,7 @@
   .border-divider {
     @apply border-white/10;
   }
+  .input-surface-dark {
+  @apply bg-white/5! border-white/10;
+}
 }

@@ -1197,7 +1197,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Eye, EyeOff, Plus, Trash2 } from "lucide-react";
+import { Eye, EyeIcon, EyeOff, Plus, Trash2 } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -1220,7 +1220,8 @@ import noise from "@/assets/images/noise.svg";
 import { Switch } from "../components/ui/switch";
 import JammingPlot from "../components/JammingPlot";
 import { yupResolver } from "@hookform/resolvers/yup";
-import closedEye from "@/assets/images/eyeClosed.png";
+import closedEye from "@/assets/images/AddIcon.svg";
+import Eyes from "@/assets/images/Eye.svg";
 import uploadFileIcon from "@/assets/images/uploadIcon.png";
 import saveButton from "@/assets/images/SaveButton.png";
 import zoomOutIcon from "@/assets/images/ico_zoomout.png";
@@ -1962,15 +1963,16 @@ const JammingRecForMode = () => {
       </div>
     );
   }
+  // changes done by vaishnavi on 05-03-2026 {4:00pm}
   return (
-    <div className="bg-[#414141] text-gray-100 min-h-screen">
-      <div className="flex justify-between items-start p-10 pb-6">
-        <div>
-          <h1 className="text-3xl font-semibold text-gray-200 mb-2">
+    <div className="surface-active text-primary min-h-screen">
+      <div className=" flex-between p-10 py-6">
+        <div className="flex-col-gap-6">
+          <h1 className="page-heading text-primary">
             Jamming_
             {modeData?.modeName || watchedValues.scenarioName || "Standalone"}
           </h1>
-          <p className="text-gray-300">Add jamming parameters to the mode</p>
+          <p className="text-secondary page-subheading">Add jamming parameters to the mode</p>
         </div>
         <div className="flex items-center gap-10">
           <div>
@@ -1979,17 +1981,18 @@ const JammingRecForMode = () => {
               onClick={() => setShowModeDetails(!showModeDetails)}
             >
               <img
-                src={showModeDetails ? closedEye : Eye}
+                src={showModeDetails ? closedEye : Eyes}
                 alt="Toggle View"
-                className="w-5 h-5"
+                className="w-6 h-6"
               />
-              <p className="text-[#C5BFFF]">
+              <p className="text-accent btn-text-sm">
                 {showModeDetails ? "Hide Mode Details" : "Show Mode Details"}
               </p>
             </button>
           </div>
           <div className=" flex items-center gap-2">
-            <span className="uppercase">Jamming</span>
+            <span className="text-secondary mono-xs">Jamming</span>
+            {/* vaishnavi added the className on 05-03-2026 {6:00pm}  */}
             <Switch
               checked={jammingEnabled}
               onCheckedChange={setJammingEnabled}
@@ -2001,6 +2004,7 @@ const JammingRecForMode = () => {
               uncheckedThumb="bg-[#545454]"
               checkedTextColor="text-[#313040]"
               uncheckedTextColor="text-[#545454]"
+               className="border-none h-6 w-16 btn-info-text text-black"
             />
           </div>
         </div>
@@ -2412,8 +2416,8 @@ const JammingRecForMode = () => {
           </div>
         </div>
       )}
-
-      <hr className="bg-[#545454] h-px border-0 my-6 mx-10" />
+{/* removed by vaishnavi in hr tag is h-px border-0 my-6 mx-10 on 05-003-2026 */}
+      {/* <hr className="bg-[#545454] h-px border-0 my-6 mx-10" /> */}
 
       <form onSubmit={handleSubmit(handleMasterSave)} className="pb-10">
         <div className="flex items-center justify-between gap-6 mb-10 px-10">

@@ -470,15 +470,15 @@ const AppLayout = () => {
         toast.error("Failed to clear data.", { position: "top-center" });
       }
     };
-
+// changes in header font is done  by vaishnavi with responsiveness on the 05-03-2026{03:13pm}
     return (
       <header
-        className={`${baseHeader} gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 h-[57px] px-6 py-3`}
+        className={`${baseHeader} gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 h-14.25 px-6 py-3`}
       >
         <div className="flex items-center  gap-6 px-4 ">
           <SidebarTrigger className="-ml-1 text-gray-300 hover:text-white h-6 w-6" />
           <div
-            className="bg-white/10 h-[32.625px] w-[32.625px] p-[5px] rounded-[4px] flex justify-center items-center cursor-pointer hover:bg-white/20 transition-colors"
+            className="bg-white/10 h-[32.625px] w-[32.625px] p-1.25 rounded-lg flex justify-center items-center cursor-pointer hover:bg-white/20 transition-colors"
             onClick={handleLogoClick}
           >
             <img
@@ -487,12 +487,12 @@ const AppLayout = () => {
               className="w-[14.625px] h-[14.625px]"
             />
           </div>
-          <span className="text-white/95 font-bold font-karla not-italic text-[22px] capitalize ">
+          <span className="logo-text text-primary">
             {title}
           </span>
         </div>
         <div className="ml-auto flex items-center gap-3 px-4">
-          <span className="text-white/95 text-sm font-mono not-italic font-medium leading-normal capitalize">
+          <span className="username-text text-primary">
             Ra-066
           </span>
           <img

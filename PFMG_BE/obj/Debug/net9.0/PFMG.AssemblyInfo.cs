@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PFMG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd47eb0498aeda3a50a5c109ae495478b4a05ee9")]
 [assembly: System.Reflection.AssemblyProductAttribute("PFMG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PFMG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

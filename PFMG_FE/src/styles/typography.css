@@ -105,4 +105,10 @@
   .mono-base{
      @apply font-mono! text-base! not-italic! font-medium! leading-[22.4px]! tracking-[0.353px]! ;
   }
+  .logo-text{
+    @apply font-karla! text-[20px] 2xl:text-[22px] not-italic font-bold leading-normal capitalize;
+  }
+  .username-text{
+    @apply font-mono! text-xs 2xl:text-sm! not-italic font-medium leading-normal capitalize;
+  }
 }
