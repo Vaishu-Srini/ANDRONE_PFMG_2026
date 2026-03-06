@@ -1222,7 +1222,7 @@ import JammingPlot from "../components/JammingPlot";
 import { yupResolver } from "@hookform/resolvers/yup";
 import closedEye from "@/assets/images/AddIcon.svg";
 import Eyes from "@/assets/images/Eye.svg";
-import uploadFileIcon from "@/assets/images/uploadIcon.png";
+import uploadFileIcon from "@/assets/images/UploadSimple.svg";
 import saveButton from "@/assets/images/SaveButton.png";
 import zoomOutIcon from "@/assets/images/ico_zoomout.png";
 import { createJammingSchema } from "../config/jammingFormValidationSchema";
@@ -1259,8 +1259,10 @@ const FormField = ({
 }) => {
   const fieldName = Object.keys(field)[0];
   const fieldConfig = field[fieldName];
-  const { type, label, options, placeholder, unit, disabled, onUnitClick } =
-    fieldConfig;
+  // added the labelclass &  inputClassName  wrapperClassName to this retuen by vaishnavi 06-03-2026 {10:00am}
+  // const { type, label, options, placeholder, unit, disabled, onUnitClick, labelClassName, inputClassName} =
+  //   fieldConfig;
+  const { type, label, options, placeholder, unit, disabled, onUnitClick, labelClassName, inputClassName, wrapperClassName } = fieldConfig;
 
   const commonClasses =
     "bg-[#FFFFFF0D] border-black/10 text-white focus-visible:ring-[#7B70D6]";
@@ -1308,7 +1310,8 @@ const FormField = ({
           onChange={onChange}
           onBlur={handleBlur}
           disabled={disabled}
-          className={`${commonClasses} ${unit ? "pr-12" : ""} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+          // className={`${commonClasses} ${unit ? "pr-12" : ""} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+          className={`${commonClasses} ${unit ? "pr-12" : ""} ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${inputClassName || ""}`}
           placeholder={placeholder || ""}
         />
         {unit && (
@@ -1326,10 +1329,10 @@ const FormField = ({
       </div>
     );
   };
-
+// added the labelclass to this retuen by vaishnavi 06-03-2026 {10:00am}
   return (
-    <div className="w-full">
-      <Label className="block text-sm font-medium text-gray-300 mb-2">
+    <div className={`w-full ${wrapperClassName || ""}`}>
+      <Label className={`block text-sm font-medium text-gray-300 mb-2 ${labelClassName || ""}`}>
         {label}
       </Label>
       {renderField()}
@@ -1967,7 +1970,7 @@ const JammingRecForMode = () => {
   return (
     <div className="surface-active text-primary min-h-screen">
       <div className=" flex-between p-10 py-6">
-        <div className="flex-col-gap-6">
+        <div className="flex-col-6">
           <h1 className="page-heading text-primary">
             Jamming_
             {modeData?.modeName || watchedValues.scenarioName || "Standalone"}
@@ -2419,12 +2422,12 @@ const JammingRecForMode = () => {
 {/* removed by vaishnavi in hr tag is h-px border-0 my-6 mx-10 on 05-003-2026 */}
       {/* <hr className="bg-[#545454] h-px border-0 my-6 mx-10" /> */}
 
-      <form onSubmit={handleSubmit(handleMasterSave)} className="pb-10">
-        <div className="flex items-center justify-between gap-6 mb-10 px-10">
+      <form onSubmit={handleSubmit(handleMasterSave)} >
+        <div className="flex items-center justify-between gap-6 py-4 px-10">
           <div className="flex gap-5 items-center w-full max-w-2xl">
             <FormField
               field={{
-                scenarioName: { type: "input", label: "Scenario Name" },
+                scenarioName: { type: "input", label: "Scenario Name", labelClassName: "label-text text-emphasis-strong" },
               }}
               register={register}
               errors={errors}
@@ -2443,11 +2446,14 @@ const JammingRecForMode = () => {
                   label: "Scenario Time",
                   unit: scenarioTimeUnit,
                   disabled: true,
+                  labelClassName: "label-text text-emphasis-strong",
                   onUnitClick: () =>
                     setScenarioTimeUnit((prev) =>
                       prev === "Sec" ? "Min" : "Sec",
                     ),
+                    
                 },
+              
               }}
               register={register}
               errors={errors}
@@ -2457,13 +2463,13 @@ const JammingRecForMode = () => {
           </div>
           <div className="flex gap-5 items-center p-5">
             <LoadScenarioModal>
-              <button type="button">
-                <img src={uploadFileIcon} className="h-11" alt="Load" />
+              <button type="button"  className="hover:opacity-80 transition-opacity cursor-pointer">
+                <img src={uploadFileIcon} className="2xl:h-10.5 2xl:w-10.5 cursor-pointer border border-divider rounded-sm p-2" alt="Load" />
               </button>
             </LoadScenarioModal>
             <button
               type="submit"
-              className="hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity cursor-pointer"
             >
               <img src={saveButton} alt="Save" />
             </button>
@@ -2471,10 +2477,10 @@ const JammingRecForMode = () => {
         </div>
 
         {/* Main Target Profile Graph */}
-        <div className="bg-[#FFFFFF0D] p-6 mb-8 border border-[#545454]/50">
+        <div className="bg-[#FFFFFF0D] py-6 px-10 border border-[#545454]/50">
           <div className="flex items-center justify-between mb-4 relative h-10">
             {/* Left Title */}
-            <h3 className="absolute left-0 top-1/2 -translate-y-1/2 text-sm font-semibold tracking-wider text-gray-200 uppercase font-mono">
+            <h3 className="absolute left-0 top-1/2 -translate-y-1/2 mono-text-base ">
               Target Profile
             </h3>
 
@@ -2484,7 +2490,7 @@ const JammingRecForMode = () => {
                 <button
                   type="button"
                   onClick={() => setActiveTab("range")}
-                  className={`px-6 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
+                  className={`px-6 py-1.5 modal-label-sm rounded-md transition-all duration-200 cursor-pointer ${
                     activeTab === "range"
                       ? "bg-[#7B70D6] text-white shadow-sm"
                       : "text-gray-400 hover:text-white hover:bg-[#FFFFFF0D]"
@@ -2495,7 +2501,7 @@ const JammingRecForMode = () => {
                 <button
                   type="button"
                   onClick={() => setActiveTab("velocity")}
-                  className={`px-6 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
+                  className={`px-6 py-1.5 modal-label-sm rounded-md transition-all duration-200 cursor-pointer ${
                     activeTab === "velocity"
                       ? "bg-[#7B70D6] text-white shadow-sm"
                       : "text-gray-400 hover:text-white hover:bg-[#FFFFFF0D]"
@@ -2511,7 +2517,7 @@ const JammingRecForMode = () => {
               <button
                 type="button"
                 onClick={() => setIsGraphExpanded(true)}
-                className="hover:opacity-80 transition-opacity"
+                className="hover:opacity-80 transition-opacity cursor-pointer"
               >
                 <img src={zoomOutIcon} alt="expand button" />
               </button>
@@ -2531,53 +2537,53 @@ const JammingRecForMode = () => {
         </div>
 
         {/* Global Units Bar */}
-        <div className="flex justify-center bg-[#37383b] items-center gap-4 mb-2 px-5 py-5 text-sm font-medium text-gray-300">
-          <div className=" flex flex-row items-center justify-center gap-4">
-            <span>Set The Units For The Phases</span>
+        <div className="flex  bg-[#37383b] items-center gap-6  px-10 py-3 text-sm font-medium text-gray-300">
+          <div className=" flex  items-center justify-center gap-6 w-full">
+            <span className="label-text text-emphasis-strong">Set The Units For The Phases</span>
             <div className="w-auto">
               <Select value={velUnit} onValueChange={setVelUnit}>
-                <SelectTrigger className="bg-[#FFFFFF1A] border-none text-white h-8 focus:ring-[#7B70D6]">
+                <SelectTrigger className="bg-[#FFFFFF1A] border-none text-white w-27.25 h-9 focus:ring-[#7B70D6] rounded-xs! cursor-pointer mono-text-xs lowercase! ">
                   <SelectValue placeholder="Velocity" />
                 </SelectTrigger>
                 <SelectContent className="bg-[#2C2D30] text-white border-[#545454]">
-                  <SelectItem value="kmph">kmph</SelectItem>
-                  <SelectItem value="m/s">m/s</SelectItem>
+                  <SelectItem value="kmph" className="hover:cursor-pointer mono-text-xs lowercase!">kmph</SelectItem>
+                  <SelectItem value="m/s"className="hover:cursor-pointer mono-text-xs lowercase!">m/s</SelectItem>
                 </SelectContent>
               </Select>
             </div>
-
-            <div className="w-24">
+{/* width of every dropdown removed by vaishnavi on 06-03-2026 {12:18pm} */}
+            <div className="">
               <Select value={rangeUnit} onValueChange={setRangeUnit}>
-                <SelectTrigger className="bg-[#FFFFFF1A] border-none text-white h-8 focus:ring-[#7B70D6]">
+                <SelectTrigger className="bg-[#FFFFFF1A] border-none text-white  focus:ring-[#7B70D6] h-9 w-23.75 rounded-xs! cursor-pointer mono-text-xs lowercase!">
                   <SelectValue placeholder="Range" />
                 </SelectTrigger>
                 <SelectContent className="bg-[#2C2D30] text-white border-[#545454]">
-                  <SelectItem value="km">km</SelectItem>
-                  <SelectItem value="m">m</SelectItem>
+                  <SelectItem value="km" className="hover:cursor-pointer mono-text-xs lowercase!">km</SelectItem>
+                  <SelectItem value="m" className="hover:cursor-pointer mono-text-xs lowercase!">m</SelectItem>
                 </SelectContent>
               </Select>
             </div>
-            <div className="w-24">
+            <div className="">
               <Select value={freqUnit} onValueChange={setFreqUnit}>
-                <SelectTrigger className="bg-[#FFFFFF1A] border-none text-white h-8 focus:ring-[#7B70D6]">
+                <SelectTrigger className="bg-[#FFFFFF1A] border-none text-white  focus:ring-[#7B70D6] h-9 w-23.75 rounded-xs! cursor-pointer mono-text-xs lowercase!">
                   <SelectValue placeholder="Freq" />
                 </SelectTrigger>
-                <SelectContent className="bg-[#2C2D30] text-white border-[#545454]">
-                  <SelectItem value="Hz">Hz</SelectItem>
-                  <SelectItem value="kHz">kHz</SelectItem>
-                  <SelectItem value="MHz">MHz</SelectItem>
+                <SelectContent className="bg-[#2C2D30] text-white border-[#545454] ">
+                  <SelectItem value="Hz" className="hover:cursor-pointer mono-text-xs lowercase!">Hz</SelectItem>
+                  <SelectItem value="kHz"className="hover:cursor-pointer mono-text-xs lowercase!">kHz</SelectItem>
+                  <SelectItem value="MHz"className="hover:cursor-pointer mono-text-xs lowercase!">MHz</SelectItem>
                 </SelectContent>
               </Select>
             </div>
-            <div className="w-24">
+            <div className="">
               <Select value={timeUnit} onValueChange={setTimeUnit}>
-                <SelectTrigger className="bg-[#FFFFFF1A] border-none text-white h-8 focus:ring-[#7B70D6]">
+                <SelectTrigger className="bg-[#FFFFFF1A] border-none text-white  focus:ring-[#7B70D6] h-9 w-23.75 rounded-xs! cursor-pointer mono-text-xs lowercase!">
                   <SelectValue placeholder="Time" />
                 </SelectTrigger>
                 <SelectContent className="bg-[#2C2D30] text-white border-[#545454]">
-                  <SelectItem value="Sec">Sec</SelectItem>
-                  <SelectItem value="ms">ms</SelectItem>
-                  <SelectItem value="us">us</SelectItem>
+                  <SelectItem value="Sec" className="hover:cursor-pointer mono-text-xs lowercase!">Sec</SelectItem>
+                  <SelectItem value="ms" className="hover:cursor-pointer mono-text-xs lowercase!">ms</SelectItem>
+                  <SelectItem value="us" className="hover:cursor-pointer mono-text-xs lowercase!">us</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -2587,7 +2593,7 @@ const JammingRecForMode = () => {
             <button
               type="button"
               onClick={handleMasterSave}
-              className="hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity cursor-pointer h-8 w-8"
             >
               <img src={saveButton} alt="Save" />
             </button>
@@ -2596,8 +2602,8 @@ const JammingRecForMode = () => {
 
         <div className="flex bg-[#37383b] shadow-xl overflow-hidden min-h-[500px]  -mt-2 border border-[#545454]">
           <div className="w-56 bg-[#37383b] border-r border-[#545454] flex flex-col ">
-            <div className="flex items-center justify-between p-5 border-b border-[#545454]">
-              <span className="text-sm font-semibold text-gray-300 tracking-wider">
+            <div className="flex items-center justify-between p-5">
+              <span className="sidebar-base">
                 Jamming
               </span>
               <button
@@ -2616,17 +2622,17 @@ const JammingRecForMode = () => {
                   className={`group flex items-center justify-between p-3 rounded-md cursor-pointer transition-all 
                     ${
                       activePhaseId === phase.id
-                        ? "bg-[#4B4A5D] text-white border-l-2 border-[#7B70D6]"
-                        : "text-gray-400 hover:bg-[#FFFFFF0D] border-l-2 border-transparent"
+                        ? "bg-glass text-accent border-l-2 border-[#7B70D6]"
+                        : "text-primary hover:bg-[#FFFFFF0D] border-l-2 border-transparent"
                     }`}
                 >
-                  <span className="text-sm font-medium">{phase.name}</span>
+                  <span className="sidebar-base">{phase.name}</span>
                   <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                     {phases.length > 1 && (
                       <button
                         type="button"
                         onClick={(e) => deletePhase(phase.id, e)}
-                        className="p-1 hover:bg-red-500/20 rounded text-gray-500 hover:text-red-400 transition-colors"
+                        className="p-1 hover:bg-red-500/20 rounded text-gray-500 hover:text-red-400 transition-colors cursor-pointer"
                       >
                         <Trash2 className="w-4 h-4" />
                       </button>
@@ -2634,17 +2640,21 @@ const JammingRecForMode = () => {
                   </div>
                 </div>
               ))}
+
             </div>
           </div>
 
           <div className="flex-1 p-8 space-y-10 bg-[#414141]">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+            <div className="grid grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-6 items-end">
               <FormField
                 field={{
                   acceleration: {
                     type: "input",
                     label: "Acceleration",
                     unit: "m/s²",
+                    inputClassName: "input-text lowercase",
+                    labelClassName:"label-text text-emphasis-strong ",
+                     wrapperClassName: "max-w-[221px] "
                   },
                 }}
                 register={register}
@@ -2653,10 +2663,10 @@ const JammingRecForMode = () => {
                 setValue={setValue}
               />
               <div className="flex flex-col">
-                <Label className="block text-sm font-medium text-gray-300 mb-2">
+                <Label className="block label-text text-emphasis-strong mb-2">
                   Target Direction
                 </Label>
-                <div className="flex gap-2 h-10 w-full max-w-sm">
+                <div className="flex gap-2 h-10 w-full max-w-xs">
                   <Button
                     type="button"
                     onClick={() =>
@@ -2664,8 +2674,8 @@ const JammingRecForMode = () => {
                         shouldValidate: true,
                       })
                     }
-                    className={`flex-1 h-full rounded-md transition-colors 
-                      ${targetDir === "inbound" ? "bg-[#7B70D6] text-white" : "bg-[#FFFFFF1A] text-gray-300 hover:bg-[#FFFFFF2A]"}`}
+                    className={`flex-1 h-full rounded-md transition-colors input-text cursor-pointer
+                      ${targetDir === "inbound" ? "bg-[#7B70D6] text-white hover:bg-[#FFFFFF1A]" : "bg-[#FFFFFF1A] text-gray-300 hover:bg-[#7B70D6]"}`}
                   >
                     Inbound
                   </Button>
@@ -2676,8 +2686,8 @@ const JammingRecForMode = () => {
                         shouldValidate: true,
                       })
                     }
-                    className={`flex-1 h-full rounded-md transition-colors 
-                      ${targetDir === "outbound" ? "bg-[#7B70D6] text-white" : "bg-[#FFFFFF1A] text-gray-300 hover:bg-[#FFFFFF2A]"}`}
+                    className={`flex-1 h-full rounded-md transition-colors input-text cursor-pointer
+                      ${targetDir === "outbound" ? "bg-[#7B70D6] text-white hover:bg-[#FFFFFF1A]" : "bg-[#FFFFFF1A] text-gray-300 hover:bg-[#7B70D6]"}`}
                   >
                     Outbound
                   </Button>
@@ -2686,16 +2696,20 @@ const JammingRecForMode = () => {
             </div>
 
             <div className="space-y-6">
-              <h3 className="text-sm font-semibold text-gray-300 uppercase">
+              {/* commeted by vaishnavi if need please uncomment it on 06-03-2026{3:00pm} */}
+              {/* <h3 className="modal-label-sm uppercase text-emphasis-strong">
                 Range Parameters
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              </h3> */}
+              <div className="grid grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-6 items-end">
                 <FormField
                   field={{
                     minVelocity: {
                       type: "input",
                       label: velLabel,
                       unit: velUnit,
+                      inputClassName: "input-text lowercase",
+                    labelClassName:"label-text text-emphasis-strong ",
+                     wrapperClassName: "max-w-[221px] "
                     },
                   }}
                   register={register}
@@ -2713,6 +2727,9 @@ const JammingRecForMode = () => {
                         type: "input",
                         label: "Max Velocity",
                         unit: velUnit,
+                        inputClassName: "input-text lowercase",
+                    labelClassName:"label-text text-emphasis-strong ",
+                     wrapperClassName: "max-w-[221px] "
                       },
                     }}
                     register={register}
@@ -2730,6 +2747,9 @@ const JammingRecForMode = () => {
                       type: "input",
                       label: rangeLabel,
                       unit: rangeUnit,
+                      inputClassName: "input-text lowercase",
+                    labelClassName:"label-text text-emphasis-strong ",
+                     wrapperClassName: "max-w-[221px] "
                     },
                   }}
                   register={register}
@@ -2747,6 +2767,9 @@ const JammingRecForMode = () => {
                         type: "input",
                         label: "Max Range",
                         unit: rangeUnit,
+                        inputClassName: "input-text lowercase",
+                    labelClassName:"label-text text-emphasis-strong ",
+                     wrapperClassName: "max-w-[221px] "
                       },
                     }}
                     register={register}
@@ -2758,11 +2781,11 @@ const JammingRecForMode = () => {
                 )}
               </div>
             </div>
-
-            <div className="flex flex-wrap items-start gap-16">
-              <div className="flex flex-row gap-4 items-center">
+{/* yes or no label removed by vaishnavi on 06-03-2026 {3:30pm} */}
+            <div className="flex flex-wrap items-center gap-24 py-5">
+              <div className="flex flex-row gap-20 items-end">
                 <div className="flex items-center gap-4 p-2">
-                  <span className="uppercase text-sm font-medium text-gray-300 tracking-wider">
+                  <span className="label-text text-emphasis-strong">
                     FIXED DOPPLER
                   </span>
                   <Switch
@@ -2772,14 +2795,15 @@ const JammingRecForMode = () => {
                         shouldValidate: true,
                       })
                     }
-                    checkedText="YES"
-                    uncheckedText="NO"
+                    checkedText=""
+                    uncheckedText=""
                     checkedBg="#C5BFFF"
-                    uncheckedBg="#A7A7A7"
+                    uncheckedBg="#888888"
                     checkedThumb="bg-[#7B70D6]"
-                    uncheckedThumb="bg-[#545454]"
+                    uncheckedThumb="bg-black"
                     checkedTextColor="text-[#313040]"
                     uncheckedTextColor="text-[#545454]"
+                     className="border-none h-6 w-15 btn-info-text text-black hidden:text"
                   />
                 </div>
                 {fixedDop === "YES" && (
@@ -2790,6 +2814,9 @@ const JammingRecForMode = () => {
                           type: "input",
                           label: "Doppler Shift",
                           unit: freqUnit,
+                           inputClassName: "input-text lowercase",
+                    labelClassName:"label-text text-emphasis-strong ",
+                     wrapperClassName: "max-w-[221px] "
                         },
                       }}
                       register={register}
@@ -2800,9 +2827,9 @@ const JammingRecForMode = () => {
                   </div>
                 )}
               </div>
-              <div className="flex flex-row gap-4 items-center">
+              <div className="flex flex-row gap-20 items-center">
                 <div className="flex items-center gap-4 p-2">
-                  <span className="uppercase text-sm font-medium text-gray-300 tracking-wider">
+                  <span className="label-text text-emphasis-strong">
                     FIXED POWER
                   </span>
                   <Switch
@@ -2812,21 +2839,27 @@ const JammingRecForMode = () => {
                         shouldValidate: true,
                       })
                     }
-                    checkedText="YES"
-                    uncheckedText="NO"
+                    checkedText=""
+                    uncheckedText=""
                     checkedBg="#C5BFFF"
-                    uncheckedBg="#A7A7A7"
+                   uncheckedBg="#888888"
                     checkedThumb="bg-[#7B70D6]"
-                    uncheckedThumb="bg-[#545454]"
+                    uncheckedThumb="bg-black"
                     checkedTextColor="text-[#313040]"
                     uncheckedTextColor="text-[#545454]"
+                    className="border-none h-6 w-15 btn-info-text text-black"
                   />
                 </div>
                 {fixedPow === "YES" && (
                   <div className="w-48 animate-in fade-in duration-200 -mt-7">
                     <FormField
                       field={{
-                        power: { type: "input", label: "Power", unit: "dBm" },
+                        power: { type: "input", label: "Power", unit: "dBm",
+                           inputClassName: "input-text lowercase",
+                    labelClassName:"label-text text-emphasis-strong ",
+                     wrapperClassName: "max-w-[221px] "
+                         },
+                        
                       }}
                       register={register}
                       errors={errors}
@@ -2840,7 +2873,7 @@ const JammingRecForMode = () => {
 
             <hr className="border-[#545454]" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+            <div className="grid grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 gap-6 items-end">
               <FormField
                 field={{
                   selectedPhaseDuration: {
@@ -2848,6 +2881,9 @@ const JammingRecForMode = () => {
                     label: "Selected Phase Duration",
                     unit: "Sec",
                     disabled: true,
+                     inputClassName: "input-text lowercase",
+                    labelClassName:"label-text text-emphasis-strong ",
+                     wrapperClassName: "max-w-[221px] "
                   },
                 }}
                 register={register}
@@ -2867,6 +2903,9 @@ const JammingRecForMode = () => {
                       { label: "Swerling III", value: "Swerling III" },
                       { label: "Swerling IV", value: "Swerling IV" },
                     ],
+                     inputClassName: "input-text lowercase",
+                    labelClassName:"label-text text-emphasis-strong ",
+                     wrapperClassName: "max-w-[221px] "
                   },
                 }}
                 register={register}
@@ -2875,7 +2914,7 @@ const JammingRecForMode = () => {
                 setValue={setValue}
               />
               <div className="flex flex-col">
-                <Label className="block text-sm font-medium text-gray-300 mb-2">
+                <Label className="block label-text text-emphasis-strong mb-2">
                   RCS Update Type
                 </Label>
                 <div className="flex gap-2 h-10 w-full">
@@ -2922,6 +2961,9 @@ const JammingRecForMode = () => {
                     type: "input",
                     label: "Average RCS",
                     unit: "m²",
+                    inputClassName: "input-text lowercase",
+                    labelClassName:"label-text text-emphasis-strong ",
+                     wrapperClassName: "max-w-[221px] "
                   },
                 }}
                 register={register}
@@ -2975,8 +3017,7 @@ const JammingRecForMode = () => {
           >
             <div className="flex items-center justify-between mb-6 relative h-10">
               <h2
-                className="absolute left-0 top-1/2 -translate-y-1/2 text-xl 
-              font-semibold text-gray-200 uppercase tracking-wider font-mono"
+                className="absolute left-0 top-1/2 -translate-y-1/2 mono-text-basetext-emphasis-strong"
               >
                 Expanded Target Profile
               </h2>
@@ -2986,7 +3027,7 @@ const JammingRecForMode = () => {
                   <button
                     type="button"
                     onClick={() => setActiveTab("range")}
-                    className={`px-10 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                    className={`px-10 py-2 modal-label-sm rounded-md transition-all duration-200 cursor-pointer ${
                       activeTab === "range"
                         ? "bg-[#7B70D6] text-white shadow-sm"
                         : "text-gray-400 hover:text-white hover:bg-[#FFFFFF0D]"
@@ -2997,7 +3038,7 @@ const JammingRecForMode = () => {
                   <button
                     type="button"
                     onClick={() => setActiveTab("velocity")}
-                    className={`px-10 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                    className={`px-10 py-2 modal-label-sm rounded-md transition-all duration-200 cursor-pointer ${
                       activeTab === "velocity"
                         ? "bg-[#7B70D6] text-white shadow-sm"
                         : "text-gray-400 hover:text-white hover:bg-[#FFFFFF0D]"
@@ -3012,7 +3053,7 @@ const JammingRecForMode = () => {
                 type="button"
                 onClick={() => setIsGraphExpanded(false)}
                 className="absolute right-0 top-1/2 -translate-y-1/2 p-2 
-                text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-colors"
+                text-gray-400 hover:text-white rounded-full transition-colors cursor-pointer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

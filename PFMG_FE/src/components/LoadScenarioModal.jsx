@@ -43,7 +43,7 @@ const LoadScenarioModal = ({ children }) => {
     console.log("Loading scenario into form:", scenario);
     setOpen(false);
   };
-
+// css Changes done by vaishnavi for resposniveness on 06-03-2026{4:30pm}
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
@@ -54,9 +54,9 @@ const LoadScenarioModal = ({ children }) => {
         aria-describedby="load-scenario-desc"
       >
         {/* ── Header ── */}
-        <div className="flex justify-between items-center px-8 pt-7 pb-3">
+        <div className="flex justify-between items-center px-4 py-3">
           {/* This is the REAL DialogTitle — Radix needs it for a11y */}
-          <DialogTitle className="text-base font-mono tracking-wide font-semibold text-gray-100">
+          <DialogTitle className="mono-text-xs text-primary">
             Load Jamming Scenarios
           </DialogTitle>
           <button
@@ -69,11 +69,11 @@ const LoadScenarioModal = ({ children }) => {
         </div>
 
         {/* ── Body ── */}
-        <div className="px-8 pb-6">
+        <div className="mt-6 px-6">
           {/* This is the REAL DialogDescription — Radix needs it for a11y */}
           <DialogDescription
             id="load-scenario-desc"
-            className="text-sm font-mono text-gray-500 mb-5"
+            className="mono-text-xs text-secondary mb-5"
           >
             Select A Scenario To Load
           </DialogDescription>
@@ -83,13 +83,13 @@ const LoadScenarioModal = ({ children }) => {
             {/* Table Header */}
             <div className="grid grid-cols-[40px_2fr_1.5fr_1fr_44px] items-center bg-[#393A3E] px-4 py-3">
               <div />
-              <span className="text-[13px] text-gray-400 font-medium font-mono">
+              <span className="mono-text-xs text-secondary">
                 Scenario Name
               </span>
-              <span className="text-[13px] text-gray-400 font-medium font-mono">
+              <span className="mono-text-xs text-secondary">
                 Created Date
               </span>
-              <span className="text-[13px] text-gray-400 font-medium font-mono">
+              <span className="mono-text-xs text-secondary">
                 Phase No's
               </span>
               <div />
@@ -128,7 +128,7 @@ const LoadScenarioModal = ({ children }) => {
                     <div className="flex items-center justify-center">
                       <div
                         className={`
-                          w-[18px] h-[18px] rounded flex items-center justify-center
+                          w-4.5 h-4.5 rounded flex items-center justify-center
                           transition-all duration-150 border
                           ${
                             isSelected
@@ -148,7 +148,7 @@ const LoadScenarioModal = ({ children }) => {
 
                     {/* Scenario Name */}
                     <span
-                      className={`text-[15px] font-medium font-mono ${
+                      className={`table-cell-text font-medium! ${
                         isSelected ? "text-gray-300" : "text-gray-200"
                       }`}
                     >
@@ -157,7 +157,7 @@ const LoadScenarioModal = ({ children }) => {
 
                     {/* Created Date */}
                     <span
-                      className={`text-[15px] font-mono ${
+                      className={`table-cell-text ${
                         isSelected ? "text-gray-400" : "text-gray-300"
                       }`}
                     >
@@ -166,7 +166,7 @@ const LoadScenarioModal = ({ children }) => {
 
                     {/* Phases */}
                     <span
-                      className={`text-[15px] font-mono ${
+                      className={`table-cell-text ${
                         isSelected ? "text-gray-400" : "text-gray-300"
                       }`}
                     >
@@ -180,7 +180,7 @@ const LoadScenarioModal = ({ children }) => {
                       className="flex items-center justify-center text-gray-500 hover:text-white transition-colors cursor-pointer p-1"
                       title="Preview Scenario"
                     >
-                      <Eye strokeWidth={1.5} className="w-5 h-5" />
+                      <Eye strokeWidth={1.5} className="w-6 h-6" />
                     </button>
                   </div>
                 );
@@ -190,14 +190,14 @@ const LoadScenarioModal = ({ children }) => {
         </div>
 
         {/* ── Footer ── */}
-        <div className="flex justify-end px-8 pb-7 pt-2">
+        <div className="flex justify-end px-8 pb-7 pt-8">
           <Button
             type="button"
             onClick={handleLoad}
             disabled={!selectedId}
-            className="bg-[#7B70D6] hover:bg-[#6a60c5] text-white px-8 py-2.5 rounded-lg
+            className="bg-[#7B70D6] hover:bg-[#6a60c5] text-white px-8 py-2.5 
                        disabled:opacity-40 disabled:cursor-not-allowed
-                       transition-colors font-medium text-sm"
+                       transition-colors btn-text cursor-pointer"
           >
             Load Scenario
           </Button>

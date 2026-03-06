@@ -33,7 +33,7 @@
     @apply font-mono text-sm not-italic font-medium leading-6 capitalize; /*table-header*/
   }
   .table-cell-text {
-    @apply font-karla! text-sm! 2xl:text-base! not-italic! font-normal! leading-6! capitalize! /*table-body*/;
+    @apply font-karla! text-sm! 2xl:text-base! not-italic! font-normal leading-6! capitalize! /*table-body*/;
   }
   .text-body-medium {
     @apply font-karla! text-sm! 2xl:text-base! not-italic! font-medium! leading-normal!; /*body info title*/
@@ -60,7 +60,7 @@
     @apply font-karla! text-xs! not-italic! font-normal! leading-normal! 
   }
   .mono-text-xs{
-    @apply font-mono! text-xs! not-italic! font-medium! leading-normal! capitalize!
+    @apply font-mono! text-xs! not-italic! font-medium! leading-normal! capitalize
   }
   .label-text-xs{
     @apply font-mono! text-xs! not-italic! font-normal! leading-4! tracking-[0.8px]! uppercase!/*for last editied also same classname is used*/
@@ -110,5 +110,8 @@
   }
   .username-text{
     @apply font-mono! text-xs 2xl:text-sm! not-italic font-medium leading-normal capitalize;
+  }
+  .sidebar-base{
+    @apply font-karla! text-sm! 2xl:text-base! not-italic font-normal capitalize;
   }
 }
